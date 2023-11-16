@@ -162,7 +162,7 @@ TODO: colors, 12 animals of the chinese calendar, fruits, veggies
 一半年以后左右我固定的电脑中文键盘输入法。
 今天以前我用工作的笔记本电脑写我的句子。
 品味 pin3 wen tast
-味道 weidao taste/flavor
+味道 wedao taste/flavor
 电脑鼠标 dian4nao3 shu3biao1 computer mouse
 我对Linux的品问很奇怪因为我不喜欢用一台电脑鼠标
 导航用 dao3hang2 yong4 navigate with...
@@ -171,3 +171,37 @@ TODO: colors, 12 animals of the chinese calendar, fruits, veggies
 自从我的太太有时候用我的工作笔记本电。这台机有容易用的Linux
 未来 wei4lai2 future
 当然我们未来的孩子会用容易用的Linux的电脑
+
+november
+有风 you3feng1 windy
+
+上个星期五的天气开始不错的但是有风的可是中午的时候以后
+
+薄雾 bo2wu4 mist/fog
+更近 geng4jin4 closer
+
+那个工作的天没什么特别的但是我可以看着薄雾越来越更近
+收到 shou1 dao4 accept
+接受 jie1 shou4 receive
+信息 xinxi message
+渡船 du4chuan2 ferry
+当下午我受到一个新闻从我的太太为渡船
+取消 wu3xiao1 cancelled
+读 du2 read 
+新闻读起来像这样每一个渡船晚上6点以后取消
+应该 ying1gai1 should
+我读到这个新闻大概下午3点半左右然后我对老板说“我应该离开现在”
+匆忙的 cong1mang2de be in a hurry
+手机 shou3ji telephone
+桌子 zhuozi table
+自从我匆忙的我忘记了哪里我上办公室桌子我的手机
+
+公共汽车gong1gong4 qi4che1 bus
+旅行lv3xing2 trip
+压力 ya1li4 pressure
+情况 qing2kuang4 situation
+旅程 lv3cheng2 journey
+公共汽车的旅行有压力的因为很多人的情况一样我的
+更长 gengzhang3 longer
+渡船的旅程是百分之百五十更长了
+pattern: 新闻读起来像这样
