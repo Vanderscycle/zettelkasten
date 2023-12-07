@@ -360,7 +360,7 @@ _不_跟我有什么关系
 圣诞节 sheng4dan4 jie2 christmas (n)
 圣诞树 sheng4dan4 shu4 christmas tree
 
-检查 (v examine) (n examination)
+检查 jian3cha2 (v examine) (n examination)
 我不喜欢警察的检查 I don't like police checks
 
 超音波 chao1yin1bo ultrasound
@@ -368,7 +368,7 @@ _不_跟我有什么关系
 音 yin sound
 波 bo1 waves
 
-报告 
+报告 bao4gao4 report(v)/ lecture/speech(n)
 
 工程 ging1cheng2 project
 计划 ji4hua4 plan
@@ -378,3 +378,30 @@ _不_跟我有什么关系
 
 不公允 bu4 gon1yun3 unfair
 放轻松 fang4qing1song1 take it easy
+
+计算机程序 ji4suan4ji1 cheng2xu4 computer program
+
+计算 ji4suan4 calculate (v) count (n)
+机 ji1 machine
+程序 cheng2xu4 program (n)
+
+免费 mian3fei4 free ()
+容易地 rong2yi4di4 easily (adv)
+
+积累 ji lei accumulate:
+我再一次开始工作在我网页的计划
+但是现在比上一次我做更放轻松
+我忘记了很多的事情因为工作别用这个计算机程序
+费用 fei4yong4 cost (v) fees/expenses (n)
+自从AWS费是太贵了比如你最容易地积累费用
+云服务提供商 yun2 fu2wu4 ti2gong1 shang1 cloud service provider
+云 yun cloud (n)
+商 shang1 business
+所以我用一个云服务提供商叫Linode
+这个商有一个有用的程序叫Kubernetes。
+这个计算机程序是很便宜只是每月大概一百左右快
+服务器 fu2wu4qi4 server
+总共 zong3gong4 in total
+
+空间 kong1jian1 space
+对于那个价格我有三个服务器总共4个CPU核心和160 GB 存储空间
