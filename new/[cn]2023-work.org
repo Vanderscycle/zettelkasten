@@ -408,19 +408,71 @@ _不_跟我有什么关系
 
 
 你记不记得上个周我告诉你关于AWS的费用
-账单 
-积累 
+账单 zhang4dan1 bill
+积累 ji1lei3 accumulation
 上个星期四我积累六千钱的账单 
+得知 de2zhi1 learn(v)
+错误 cuo4wu4 
 我得知关于我的错误在星期五早上
-帐户
-警报
+帐户 zhang4hu4 account
+警报 jing3bao4 alarm
 为我的辩护我的工作AWS的账户没有警报
-厉害
-感激
+厉害 li4hai4 sharp
+感激 gan3ji1 grattiude
 但是我的老板不觉得我厉害但是他感激我告诉了他
 所以我还有我的工作但是我从来没有想我可能积累六千钱的费用几个小时
-创造
+创造 chuang4zao4 create
 我现在最小心那时候创造新的AWS资源
-原因
+原因 yuan2yin reason
 Check the yun
 这是还有一个原因我最喜欢Linode云服务提供商
+
+
+乌克兰 wu1ke4lan2 ukraine
+
+飞行的无人机 fei1xing2dewu2ren2ji1 flying drones
+
+邮件 you2jian4 mail (n)
+单位 dan1wei4 unit
+士兵 shi4bing soldier(n)
+正常 zheng4chang2 normally (n)
+
+项目 xiang4mu4 project (n)
+
+其实 qi2shi2 actually (adv)
+顾客 gu4ke4 customer/client (n)
+服务 fu2wu5 serve (v)/service(n)
+
+玩家 wan2jia1 player
+
+几天一前 jitian1 yi1qian2 a few days ago
+
+韩文 han2wen2 korean language
+
+注意 zhu4yi4 notice
+云端商 yun2duan1shang1 cloud provider
+事物 shi4wu4 things 
+俱乐部 ju4le4bu4 club
+
+
+
+我买了很奇怪的咖啡
+冷泡kafei leng3pao4 cold brew coffee
+十三年以前左右我发现很强大的冷泡咖啡
+
+酿酒师 niang4jiu3shi1 brewer
+ 这个冷泡咖啡制品做在美国的小酿酒师
+大地 da4di1 earth (n)
+血 xue4 blood
+这个冷泡咖啡叫“大地黑血”但是我从来没有试试看
+维也纳 wie2ye3na4
+技术 ji4shu4 techinal/technique (adj/n)
+
+生产厂家 sheng1xhang3 chang3jia1 manufacturer (n)
+
+保证 bao3zhneg4 assures (v)
+三重冷萃咖啡 Sānchóng lěng cuì kāfēi triple cold extraction coffee
+这个酿酒师用维也纳的三重冷萃咖啡技术为酝酿他的食品
+
+强的 qiang2de strong
+这个技术是什么意思我不确定但生产厂家保证它的咖啡非常强的
