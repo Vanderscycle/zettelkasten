@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       foo
+:END:
+#+title: Foo
+
+* Bar
+:PROPERTIES:
+:ID:       bar
+:END:
+
+
+* test
+** brorro
