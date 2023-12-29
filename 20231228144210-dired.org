@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       e1fbdd0b-9648-4609-987f-f986ea8e22bc
+:END:
+#+title: Dired
+

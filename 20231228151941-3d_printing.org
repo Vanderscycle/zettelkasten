@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e599332d-c8fd-4a8a-96f2-cf6c770891e7
+:END:
+#+title: 3D Printing
+
+* Printers
+** Rat Rig V-minion
+

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       b3c13621-8f46-48b8-86a3-a3e7c1f8846f
+:END:
+#+title: Emacs Packages
+
+* Life changing packages
+- [[id:bc6d2677-4fc9-44cc-9598-2a2e1d465e7d][Org-Roam]] : Allows use to leverage Org-mode to create a zettelkasten note taking format
+- [[id:fba29882-1e9f-473f-a128-a2cb7a162a51][Org-Mode]] : Emacs most life changing feature
+- [[id:a7d63c28-c087-45fe-804c-49a953b1154c][Maggit]] : Emacs's more powerful version of Lazygit
+- [[id:e1fbdd0b-9648-4609-987f-f986ea8e22bc][Dired]] : Emacs's version of [[https://github.com/jarun/nnn][nnn]]
