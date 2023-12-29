@@ -2,12 +2,19 @@
 :ID:       238b84ac-58d9-4e8c-b0d7-074f5e0dc02c
 :END:
 #+title: Knowlege base
+* Themes
+** 2024
+*** Q1 Optimization
+Optimize tools and processes to do things more effectively and quicker
 
 * Knowledge notes
-
-[[id:88e5f689-bf23-46cf-bef4-2ff4d0c048b3][Emacs]]
-[[id:e599332d-c8fd-4a8a-96f2-cf6c770891e7][3D Printing]]
-[[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
+- [[id:88e5f689-bf23-46cf-bef4-2ff4d0c048b3][Emacs]]
+- [[id:e599332d-c8fd-4a8a-96f2-cf6c770891e7][3D Printing]]
+- [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
+- [[id:020480e0-77cd-4e0b-9dc5-85e63ac43f9a][Certifications]]
 
 * Todo list
 
+** Short term
+** Medium term
+** Long term

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       020480e0-77cd-4e0b-9dc5-85e63ac43f9a
+:END:
+#+title: Certifications
+
+* Computer
+[[id:24d43f89-27be-44a7-8a31-0a949dbf96b6][AWS Solutions Architect]] 
+
