@@ -5,4 +5,7 @@
 
 * Printers
 ** Rat Rig V-minion
+*** Current upgrades
+- [[https://www.printables.com/model/675516-v-minion-wobblex-adapter][WobbleX]]
+- [[https://www.printables.com/model/675495-v-minion-sfs-wobblex-cap][filament guide + wobblex support]]
 

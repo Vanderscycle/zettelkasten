@@ -16,5 +16,9 @@ Optimize tools and processes to do things more effectively and quicker
 * Todo list
 
 ** Short term
+*** Renos Q1 2024
+- Elect: figure out why we can't dim lights
+- Elect: random flickering when
+
 ** Medium term
 ** Long term
