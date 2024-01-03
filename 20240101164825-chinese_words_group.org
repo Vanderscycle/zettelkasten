@@ -16,7 +16,11 @@
 
 需要 xu4yao1 need
 觉得 jue2de2 think
+提醒 ti2xing3 reminds
+记得 ji4de2 remember
+
 运动 yun4dong4 exercise
+成为 cheng2wei2 become
 
 ** Nouns
 *** UNDECIDED YET
@@ -25,7 +29,10 @@
 语言 yu3yuan2 language
 锻炼 duan4lian4 exercise
 感动 gan3dong4 moved??
-
+军队 jun1dui4 army
+海军 hai3jun1 navy 
+目标 mu4biao1 goal
+强 qinang2 strength
 *** Colors
 
 *** Fruits / Vegetables
@@ -49,7 +56,8 @@
 日本 ri4ben3 Japan
 加拿大 jia1nada1 Canada
 
-*** Body/Healty
+*** Body/Health
+生活 sheng1huo2 life
 体重 ti3zhong1 body weigth
 身体 shen1ti3 health/body
 
@@ -69,6 +77,7 @@
 ** Adjectives
 *** Qualifier
 客气 ke4qi polite
+强 qiang2 powerful
 
 ** Adverbs
 *** qualifier
