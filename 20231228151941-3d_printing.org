@@ -4,8 +4,38 @@
 #+title: 3D Printing
 
 * Printers
+** Tuning
+- [[https://www.youtube.com/watch?v=er7q-CJL1lc][Pressure advance + input shaping]]
+-
+** Klipper
+*** Filament runout sensor
+Current configuration for btt_sfs sensor, however it gives plenty of false runout.
+#+begin_src cfg
+[filament_motion_sensor btt_sfs]
+detection_length: 7.0
+extruder: extruder
+switch_pin: PF4
+pause_on_runout: true
+runout_gcode:
+    RESPOND TYPE=error MSG="filament runout!"
+    M117 filament runout!
+#insert_gcode:
+#event_delay: 3.0
+pause_delay: 2.0
+#+end_src
+
 ** Rat Rig V-minion
+The goal of the printer is to be able to print PLA at .3 layer height, while being able to print petg
 *** Current upgrades
+- [Hotend] [[https://www.sliceengineering.com/products/mosquito-magnum-hotend][mosquito magnum]] 30mm3/s
 - [[https://www.printables.com/model/675516-v-minion-wobblex-adapter][WobbleX]]
 - [[https://www.printables.com/model/675495-v-minion-sfs-wobblex-cap][filament guide + wobblex support]]
 
+** Peopoly Magneto X
+The goal of the printer is to be able to print high quality ABS, Nylon, and ASA. These filament may be of the carbon fiber type so possibly quite abrasive
+
+** Wanted upgrades
+- [Klipper/hardware] Auto z-offset
+- [Klipper] only bed probe the
+- [Peopoly] Use [[https://beacon3d.com/product/beacon/][beacon surface scaner]]
+- [Peopoly] Fully enclosed

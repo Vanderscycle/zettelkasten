@@ -8,3 +8,7 @@
 - [[id:fba29882-1e9f-473f-a128-a2cb7a162a51][Org-Mode]] : Emacs most life changing feature
 - [[id:a7d63c28-c087-45fe-804c-49a953b1154c][Maggit]] : Emacs's more powerful version of Lazygit
 - [[id:e1fbdd0b-9648-4609-987f-f986ea8e22bc][Dired]] : Emacs's version of [[https://github.com/jarun/nnn][nnn]]
+- [[id:6f516df0-0dc7-4744-b998-1c248ad78006][Tramp]] : ssh into anything
+ 
+  ssh using emacs (tramp)
+- tabs using emacs

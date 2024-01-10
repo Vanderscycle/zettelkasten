@@ -11,7 +11,7 @@ Follows this pattern: =[[LINK][DESCRIPTION]]=
 *** Shortcuts
   Toggle links: =,Tl=
 *** References
-- [[https://orgmode.org/guide/Hyperlinks.html
+- https://orgmode.org/guide/Hyperlinks.html
 
 ** Code blocks
 Both = and ~ are used to denote inline code in Org mode.
@@ -42,3 +42,14 @@ return foo(5)
 
 *** References
 - [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html]]
+
+** Org-deadline
+
+#+begin_example
+*** TODO write article about the Earth for the Guide
+    DEADLINE: <2004-02-29 Sun>
+    The editor in charge is [[bbdb:Ford Prefect]]
+#+end_example
+
+*** References
+- https://orgmode.org/manual/Deadlines-and-Scheduling.html

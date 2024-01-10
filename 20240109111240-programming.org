@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       660c7092-9b98-4fa2-b271-2bbeabe1c249
+:END:
+#+title: Programming
+
+* Programming
+
+** Languages
+- js/ts
+-  [[id:ab427009-adbf-49e0-befe-8ed8439b161b][Nix]]
+** Servers
+- rpi cluster
+- Rpi Blade
+** IaC
+- Kubernetes
+- terraform
+** Misc concepts
+[[id:d12273c0-3a15-4d81-96b7-b16f73c791a7][ssh]]

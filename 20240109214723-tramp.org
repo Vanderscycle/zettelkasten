@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       6f516df0-0dc7-4744-b998-1c248ad78006
+:END:
+#+title: Tramp
+
+* Tramp (ssh from emacs)
+
+** Docker
+
+=C-x C-f= (the helm find files) then type /docker:sha-running-container:/workspaces/...
