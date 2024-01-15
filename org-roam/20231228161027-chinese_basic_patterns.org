@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       d2b75711-ccdf-46f8-b645-f82a43bf2a36
+:END:
+#+title: Chinese basic patterns
+
+* Basic patterns of Chinese grammar
+** Word Order
+** Time Expressions
+
+

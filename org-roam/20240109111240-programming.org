@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       660c7092-9b98-4fa2-b271-2bbeabe1c249
+:END:
+#+title: Programming
+
+* Programming
+
+** Languages
+- js/ts
+- [[id:ab427009-adbf-49e0-befe-8ed8439b161b][Nix]]
+- [[id:c6d76fdd-2edb-4a07-ae6f-0b6a71d027bb][Lisp]] 
+** Servers
+- rpi cluster
+- Rpi Blade
+** IaC
+- Kubernetes
+- terraform
+** Linux
+*** CLI
+*** Tiling hwindow Manager
+- [[id:0c4ca108-5518-4d39-a361-541288e0a65f][Hyprland]] 
+** Misc concepts
+[[id:d12273c0-3a15-4d81-96b7-b16f73c791a7][ssh]]

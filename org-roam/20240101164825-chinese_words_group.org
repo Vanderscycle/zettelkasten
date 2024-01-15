@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       a36e062b-16a6-4b54-9a05-4f97fff5d744
+:END:
+#+title: Chinese words group
+
+* Words
+** TODO:
+
+** Verbs
+*** Action verbs
+学习 xue2xi2 study
+复习 fu4xi2 review
+预习 yu4xi2 previe
+练习 lian4xi2 cise
+感觉 gan3jue2 feel
+
+需要 xu4yao1 need
+觉得 jue2de2 think
+提醒 ti2xing3 reminds
+记得 ji4de2 remember
+
+运动 yun4dong4 exercise
+成为 cheng2wei2 become
+
+** Nouns
+*** UNDECIDED YET
+赢 ying2 win
+员 yuan2 member
+语言 yu3yuan2 language
+锻炼 duan4lian4 exercise
+感动 gan3dong4 moved??
+军队 jun1dui4 army
+海军 hai3jun1 navy 
+目标 mu4biao1 goal
+强 qinang2 strength
+*** Colors
+
+*** Fruits / Vegetables
+
+*** Food
+汤 tang soup
+
+*** Buildings
+餐厅 can1ting1 restaurant
+
+*** Professions
+厨师 chu2shi1 chef / cook
+
+*** Measurements / units
+公斤 gong1jin1 kilos
+克 ke4 grams
+米 mi3 meter/rice
+公里 gong1li3 kilometer
+
+*** Countries
+日本 ri4ben3 Japan
+加拿大 jia1nada1 Canada
+
+*** Body/Health
+生活 sheng1huo2 life
+体重 ti3zhong1 body weigth
+身体 shen1ti3 health/body
+
+*** Clothing/Fashion
+
+*** Sports
+运动 yun4dong4 sport (n)
+**** Types
+相扑 xiang1pu1 Sumo wrestling
+**** Anciliaries
+比赛 bi3sai4 match
+运动员 yun4dong4yuan2 athlete
+
+*** Food
+米 mi3 rice
+
+** Adjectives
+*** Qualifier
+客气 ke4qi polite
+强 qiang2 powerful
+
+** Adverbs
+*** qualifier
+独自 du2zi alone
+
+*** transitions
+当然 dang1ran2 certainly/of course
+
+*** linking
+可是 ke3shi but
+但是 dan4shi but
+
+

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       88e5f689-bf23-46cf-bef4-2ff4d0c048b3
+:END:
+#+title: Emacs
+
+* Topics
+- [[id:b3c13621-8f46-48b8-86a3-a3e7c1f8846f][Emacs Packages]]
+- [[id:a16d868e-65c2-4735-9104-822f3d1a7d22][Spacemacs]]
+- [[id:338d95c5-0d38-4089-8e16-ff853ced3834][Styling]]
+- [[id:6c7c13d8-f06b-4ff1-83b2-564ea572da83][Emacs Shell]]
+
+** Tutorials
+- [[https://www.youtube.com/watch?v=AyhPmypHDEw][Org roam]]
+- [[https://www.youtube.com/watch?v=PNE-mgkZ6HM][Org mode tutorial]]
+- [[https://www.youtube.com/watch?v=INTu30BHZGk][projectile + maggit]]
+
+

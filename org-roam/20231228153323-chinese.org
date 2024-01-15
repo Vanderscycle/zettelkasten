@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       31c43342-c4dd-4fff-bef5-a4ee1cd04f42
+:END:
+#+title: Chinese
+
+Once and for all become able to speak chinese
+
+
+[[id:160a412d-1318-4967-8eaf-134f2b119fd6][Chinese Radicals]]
+[[id:d2b75711-ccdf-46f8-b645-f82a43bf2a36][Chinese basic patterns]]
+
+* Chinese classes
+
+[[id:6d4dddae-e062-4be1-a06c-251d7232b1cc][Chinese sentences]]
+[[id:57f6f7f9-dd12-4d99-b2dc-aeeb43908340][Chinese often forgotten words]]
+[[id:0f85085c-38b5-474b-984b-b3f6c94e6404][Chinese class notes]]
+[[id:a36e062b-16a6-4b54-9a05-4f97fff5d744][Chinese words group]]

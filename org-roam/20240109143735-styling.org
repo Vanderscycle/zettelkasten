@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       338d95c5-0d38-4089-8e16-ff853ced3834
+:END:
+#+title: Styling
+
+* Styling Emacs
+** Tab bar mode
+
+#+begin_example
+  (custom-set-faces
+   '(tab-bar-tab ((t (:background "#1e1e2e" :foreground "#cba6f7"
+                                  :box (:line-width 2 :color "#7f849c" :style released-button)
+                                  :overline "#7f849c" :underline "#f38ba8"))))
+   '(tab-bar-tab-inactive ((t (:background "#1e1e2e" :foreground "#f5e0dc"
+                                           :box (:line-width 2 :color "#7f849c" :style released-button))))))
+#+end_example

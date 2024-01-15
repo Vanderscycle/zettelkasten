@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       fd4fd69d-9adb-4d30-9d80-e1af8ec6ba3e
+:END:
+#+title: Tasks
+
+* Unorganized tasks
+** TODO Work [0/2]
+*** TODO Fix prefect PR
+DEADLINE: <2024-01-18 Thu>
+*** TODO Create a small nix-flake for the work laptop
+DEADLINE: <2024-01-19 Fri>
+*** TODO Go to the office
+DEADLINE: <2024-01-19 Fri>
+** TODO Emacs []
+*** TODO Create binding that v
+** TODO 3D printing [0/0]                                              :slicer:
+*** TODO Remove the elephant foot from the prints
+*** TODO Add fitted inserts to printed parts
+
+* Todo list
+** Short term
+*** Renos Q1 2024
+- Elect: figure out why we can't dim lights
+- Elect: random flickering when
+*** TODO Complete kodekloud cert
+SCHEDULED: <2024-02-23 Fri>
+*** TODO Rebuild v-minion
+SCHEDULED: <2024-03-08 Fri>
+
+** Medium term
+** Long term

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       24d43f89-27be-44a7-8a31-0a949dbf96b6
+:END:
+#+title: AWS Solutions Architect
+
+* Notes
+** ECS
+** EKS
+** Load Balancer

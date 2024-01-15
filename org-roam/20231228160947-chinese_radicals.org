@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       160a412d-1318-4967-8eaf-134f2b119fd6
+:END:
+#+title: Chinese Radicals
+
+There are 200 of them but they greatly help with sounds and meaning.
