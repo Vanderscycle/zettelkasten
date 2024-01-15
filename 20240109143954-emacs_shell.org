@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       6c7c13d8-f06b-4ff1-83b2-564ea572da83
-:END:
-#+title: Emacs Shell
-
-* Shell in Emacs
-

@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       0f85085c-38b5-474b-984b-b3f6c94e6404
-:END:
-#+title: Chinese class notes
-
