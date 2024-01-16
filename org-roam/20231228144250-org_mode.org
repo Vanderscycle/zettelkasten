@@ -11,9 +11,8 @@ This is done
 Selecting the date is done by using =org-schedule= command  =, d s=
 Once the menu is up use =S+<arrow-keys>= to move around the calendar
 
-** Checkboxes
-*** References
-- https://orgmode.org/manual/Checkboxes.html
+There is also a monthly and yearly view (y)
+
 ** Links/Hyperlinks
 Follows this pattern: =[[LINK][DESCRIPTION]]= 
 *** Shortcuts
@@ -51,13 +50,42 @@ return foo(5)
 *** References
 - [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html]]
 
+** TODOS
+To create a simpple TODO =C-c C-t=
+
+** Checkboxes 
+
+*** References
+- https://orgmode.org/manual/Checkboxes.html
+
+** Org Tags
+To create a tag =C-c C-q=
+*** References
+- https://orgmode.org/manual/Tags.html
+https://orgmode.org/manual/Tags.html
+
+** Creating timestamps
+To create a timestamp =C-c .=
+*** references
+- https://orgmode.org/manual/Creating-Timestamps.html
+** Repeating tasks
+To create a repeating task
+Create a timestamp then you can add a repeating pattern using <date+n(d/w/m/y)>
+#+begin_example
+Learn more about emacs + programming <2024-01-19 Fri+2w> 
+#+end_example
+
 ** Org-deadline
 
+To create a deadline =C-c C-d= 
 #+begin_example
-*** TODO write article about the Earth for the Guide
+*** write article about the Earth for the Guide
     DEADLINE: <2004-02-29 Sun>
     The editor in charge is [[bbdb:Ford Prefect]]
 #+end_example
 
 *** References
 - https://orgmode.org/manual/Deadlines-and-Scheduling.html
+
+** Org-schedule
+Similar to deadline =C-c C-s= 

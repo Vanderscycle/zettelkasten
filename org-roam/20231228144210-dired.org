@@ -2,4 +2,10 @@
 :ID:       e1fbdd0b-9648-4609-987f-f986ea8e22bc
 :END:
 #+title: Dired
+* Dired
+
+Easy way to access dired =Spc f j=
+
+** File manipulation
+- Create a file =C-x c-f=
 

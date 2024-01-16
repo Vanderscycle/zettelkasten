@@ -4,21 +4,26 @@
 #+title: Tasks
 
 * Unorganized tasks
-** TODO Work [0/2]
+** TODO Work [0/3]
 *** TODO Fix prefect PR
 DEADLINE: <2024-01-18 Thu>
 *** TODO Create a small nix-flake for the work laptop
 DEADLINE: <2024-01-19 Fri>
 *** TODO Go to the office
 DEADLINE: <2024-01-19 Fri>
-** TODO Emacs []
+** TODO Emacs [0/1]
 *** TODO Create binding that v
-** TODO 3D printing [0/0]                                              :slicer:
+** TODO 3D printing [0/3]                                            ::
 *** TODO Remove the elephant foot from the prints
 *** TODO Add fitted inserts to printed parts
+*** TODO replace .4 nozzle
+**** NEXT adjust the the z offset
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2024-01-16 Tue 10:07]
+:END:
 
 * Todo list
-** Short term
+** TODO Short term [0/2]
 *** Renos Q1 2024
 - Elect: figure out why we can't dim lights
 - Elect: random flickering when

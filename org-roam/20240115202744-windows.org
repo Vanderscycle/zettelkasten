@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       421fda6d-346b-4c72-b88d-8080922da724
+:END:
+#+title: Windows
+* Windows
+
+** Spliting
+- split-window-below =(C-x -) (C-x 2)=
+- split-window-right =(C-x /) (C-x 3)=
