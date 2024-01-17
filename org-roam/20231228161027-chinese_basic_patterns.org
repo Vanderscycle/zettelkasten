@@ -6,5 +6,6 @@
 * Basic patterns of Chinese grammar
 ** Word Order
 ** Time Expressions
-
-
+** Misc
+(在两次装修)之间 zhi1jian1 in between (two renovations
+(在厨师的)旁边 pang2bian1 next to (the chef)

@@ -13,7 +13,8 @@
 预习 yu4xi2 previe
 练习 lian4xi2 cise
 感觉 gan3jue2 feel
-
+洗碗 xi3wan3 mop
+尽力 jin4li4 do/try one's best
 需要 xu4yao1 need
 觉得 jue2de2 think
 提醒 ti2xing3 reminds
@@ -21,7 +22,10 @@
 
 运动 yun4dong4 exercise
 成为 cheng2wei2 become
+冻 dong4 freeze
 
+*** Finance
+存钱 cun2 (qian) save (money)
 ** Nouns
 *** UNDECIDED YET
 赢 ying2 win
@@ -33,12 +37,28 @@
 海军 hai3jun1 navy 
 目标 mu4biao1 goal
 强 qinang2 strength
+运气 yun4qi4 luck/fortune
+保护 protection (n) protect (v)
+*** House/
+装修 zhuang1xiu1 renovations
+地下室 di4xia4shi4 basement
+厨房 chu2fang2 kitchen
+洗手间 xishoujian toilet
+水槽 shuo3cao2 sink
+碟 die2 dish(es)
+冰箱 bing1xiang1 fridge
+冷冻库 leng3dong4 ku4 freezer
+
 *** Colors
+红色
+绿色
 
 *** Fruits / Vegetables
 
 *** Food
 汤 tang soup
+剩菜 sheng4cai4 leftovers
+外带 wai4dai4 takeaway (food)
 
 *** Buildings
 餐厅 can1ting1 restaurant
@@ -60,6 +80,8 @@
 生活 sheng1huo2 life
 体重 ti3zhong1 body weigth
 身体 shen1ti3 health/body
+压力 ya1li4 pressure/stress
+耳朵 er3duo3 ear
 
 *** Clothing/Fashion
 
@@ -78,9 +100,13 @@
 *** Qualifier
 客气 ke4qi polite
 强 qiang2 powerful
+幸运 xing4yun4 lucky
 
 ** Adverbs
-*** qualifier
+*** ?
+已经 yi3jing1 already
+
+**** qualifier
 独自 du2zi alone
 
 *** transitions
