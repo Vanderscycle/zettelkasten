@@ -14,6 +14,7 @@
 - describe value in emacs =SPC h d v=
 - Emacs freezes =C-g= to try to save it
 - dired helm find files to copy `C-y`
+- when a word is highlighted you can find all instances by typing =$=
 ** Tutorials
 - [[https://www.youtube.com/watch?v=AyhPmypHDEw][Org roam]]
 - [[https://www.youtube.com/watch?v=PNE-mgkZ6HM][Org mode tutorial]]

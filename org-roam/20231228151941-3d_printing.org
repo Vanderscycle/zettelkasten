@@ -10,6 +10,8 @@
 -
 *** Task
 ** Klipper
+*** Calibrate z offset
+First home the printer =G28= and square the gantry if necessary =G32= then run =probe_calibrate=
 *** Filament runout sensor
 Current configuration for btt_sfs sensor, however it gives plenty of false runout.
 #+begin_src cfg

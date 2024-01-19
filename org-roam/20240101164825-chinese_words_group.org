@@ -26,6 +26,7 @@
 
 *** Finance
 存钱 cun2 (qian) save (money)
+
 ** Nouns
 *** UNDECIDED YET
 赢 ying2 win
@@ -39,6 +40,10 @@
 强 qinang2 strength
 运气 yun4qi4 luck/fortune
 保护 protection (n) protect (v)
+
+*** Infrastructure
+马路 ma3lu4 road (lit. horse road)
+
 *** House/
 装修 zhuang1xiu1 renovations
 地下室 di4xia4shi4 basement
@@ -105,6 +110,7 @@
 ** Adverbs
 *** ?
 已经 yi3jing1 already
+一般 yiban1 generally
 
 **** qualifier
 独自 du2zi alone
@@ -117,3 +123,6 @@
 但是 dan4shi but
 
 
+** Modal particles
+嘛 ma well
+呵 he1 ah
