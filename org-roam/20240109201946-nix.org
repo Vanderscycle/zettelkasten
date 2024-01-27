@@ -15,10 +15,12 @@ Granted you have =node2nix= installed, create a package.json
 #+end_src
 
 ** Upgrading channel (non-flakes)
-
 Upgrading your configuration.nix w/ or without home-manager to an updated version e.g. 23.11
 #+begin_src bash
 sudo nix-channel --add https://nixos.org/channels/nixos-23.11 nixos
 sudo nix-channel --update
 sudo nixos-rebuild switch --upgrade
 #+end_src
+
+** Flakes
+Running nixos configurations flakes

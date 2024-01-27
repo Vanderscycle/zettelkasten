@@ -19,14 +19,18 @@
 觉得 jue2de2 think
 提醒 ti2xing3 reminds
 记得 ji4de2 remember
-
+建造 jian4zao4 build
+重建 chong2jian4 rebuild
 运动 yun4dong4 exercise
 成为 cheng2wei2 become
 冻 dong4 freeze
+请求 qing3qiu2 request/ask
+成立 cheng2li4 found
 
 *** Finance
 存钱 cun2 (qian) save (money)
 
+???
 ** Nouns
 *** UNDECIDED YET
 赢 ying2 win
@@ -40,12 +44,14 @@
 强 qinang2 strength
 运气 yun4qi4 luck/fortune
 保护 protection (n) protect (v)
+请求 qing3qiu2 request
 
 *** Infrastructure
 马路 ma3lu4 road (lit. horse road)
 
 *** House/
 装修 zhuang1xiu1 renovations
+维修 wei2xiu1 repair/maintain
 地下室 di4xia4shi4 basement
 厨房 chu2fang2 kitchen
 洗手间 xishoujian toilet
@@ -55,10 +61,13 @@
 冷冻库 leng3dong4 ku4 freezer
 
 *** Colors
-红色
-绿色
+红色 hong se red
+绿色 
 
 *** Fruits / Vegetables
+
+*** Countries
+比利时 bi3li4shi2 Belgium
 
 *** Food
 汤 tang soup
@@ -67,6 +76,9 @@
 
 *** Buildings
 餐厅 can1ting1 restaurant
+
+*** machine
+(部)打印机 (bu4) da3yin4ji1 printer
 
 *** Professions
 厨师 chu2shi1 chef / cook
@@ -101,11 +113,23 @@
 *** Food
 米 mi3 rice
 
+*** Computers/electronics etc.
+软件 ruan3jian4 software
+
 ** Adjectives
 *** Qualifier
-客气 ke4qi polite
+**** Person
+客气 ke4qi4 polite
+泄气 xieqi4 frustrating
+生气 sheng1qi4 angry
+担心 dan1xin1 worried
+高兴 gao1xing4 happy
+
 强 qiang2 powerful
 幸运 xing4yun4 lucky
+
+**** other
+糟糕 zao1gao1 bad
 
 ** Adverbs
 *** ?
@@ -126,3 +150,6 @@
 ** Modal particles
 嘛 ma well
 呵 he1 ah
+
+???
+礼拜 li3bai4 week (its also about worship so its weird)

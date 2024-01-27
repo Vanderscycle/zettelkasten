@@ -89,3 +89,4 @@ To create a deadline =C-c C-d=
 
 ** Org-schedule
 Similar to deadline =C-c C-s= 
+

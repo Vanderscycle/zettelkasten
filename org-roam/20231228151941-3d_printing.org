@@ -12,6 +12,10 @@
 ** Klipper
 *** Calibrate z offset
 First home the printer =G28= and square the gantry if necessary =G32= then run =probe_calibrate=
+**** References
+- https://www.youtube.com/watch?v=U8EGKLJpQmo
+- https://www.klipper3d.org/Probe_Calibrate.html
+
 *** Filament runout sensor
 Current configuration for btt_sfs sensor, however it gives plenty of false runout.
 #+begin_src cfg
@@ -30,16 +34,37 @@ pause_delay: 2.0
 
 ** Rat Rig V-minion
 The goal of the printer is to be able to print PLA at .3 layer height, while being able to print petg
+*** Official docs
+- https://docs.ratrig.com/v-minion-1-0/v-minion-mechanical
+
+** Future upgrades
+- [[https://www.printables.com/model/675495-v-minion-sfs-wobblex-cap][filament guide + wobblex support]]
+ 
+**** Goal
+Create a box that goes under the 3060 extrusion frame of the rat minion with a open front door. Use 2020 for the frame and locally source the acrylic sheet.
+**** Information
+https://ratrig.com/3d-printers/printer-enclosre-kits/v-hive-3d-printer-enclosure-kit.html
+https://docs.ratrig.com/product-details/v-hive
+
 *** Current upgrades
 - [Hotend] [[https://www.sliceengineering.com/products/mosquito-magnum-hotend][mosquito magnum]] 30mm3/s
-- [[https://www.printables.com/model/675516-v-minion-wobblex-adapter][WobbleX]]
-- [[https://www.printables.com/model/675495-v-minion-sfs-wobblex-cap][filament guide + wobblex support]]
+- [[https://www.printables.com/model/675516-v-minion-wobblex-adapter][WobbleX]] (not installed)
 
 ** Peopoly Magneto X
 The goal of the printer is to be able to print high quality ABS, Nylon, and ASA. These filament may be of the carbon fiber type so possibly quite abrasive
+Do not preorder, wait and see and fix the v-minion.
 
 ** Wanted upgrades
 - [Klipper/hardware] Auto z-offset
 - [Klipper] only probe the printed surface
 - [Peopoly] Use [[https://beacon3d.com/product/beacon/][beacon surface scaner]] but on a bigger printer
 - [Peopoly] Fully enclosed
+
+* Electronics
+
+** JST-XH connectors
+How to crimp JST-XH connector (the ones
+- https://www.youtube.com/watch?v=SGwrfrt8KJw
+
+** Dupont connectors
+- Learn more about when to use dupong connectors.
