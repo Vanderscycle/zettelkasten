@@ -8,10 +8,7 @@
 
 ** Verbs
 *** Action verbs
-学习 xue2xi2 study
-复习 fu4xi2 review
-预习 yu4xi2 previe
-练习 lian4xi2 cise
+背诵 
 感觉 gan3jue2 feel
 洗碗 xi3wan3 mop
 尽力 jin4li4 do/try one's best
@@ -26,7 +23,16 @@
 冻 dong4 freeze
 请求 qing3qiu2 request/ask
 成立 cheng2li4 found
+还给 hai2gei3 return
+解决 jie3jue2 solve
 
+*** School
+学习 xue2xi2 study
+复习 fu4xi2 review
+预习 yu4xi2 preview
+练习 lian4xi2 practise
+*** Company
+招聘 zhao1pin4 recruitment 
 *** Finance
 存钱 cun2 (qian) save (money)
 
@@ -45,7 +51,7 @@
 运气 yun4qi4 luck/fortune
 保护 protection (n) protect (v)
 请求 qing3qiu2 request
-
+内容 nei4rong2 content ()
 *** Infrastructure
 马路 ma3lu4 road (lit. horse road)
 
@@ -60,6 +66,8 @@
 冰箱 bing1xiang1 fridge
 冷冻库 leng3dong4 ku4 freezer
 
+*** Clothing
+一件衣服 yijian4 yi1fu2 a piece of clothing
 *** Colors
 红色 hong se red
 绿色 
@@ -116,6 +124,9 @@
 *** Computers/electronics etc.
 软件 ruan3jian4 software
 
+*** Finance/money
+价钱 jiaqian price
+
 ** Adjectives
 *** Qualifier
 **** Person
@@ -124,7 +135,7 @@
 生气 sheng1qi4 angry
 担心 dan1xin1 worried
 高兴 gao1xing4 happy
-
+(不)合理 he2li3 (un)reasonable
 强 qiang2 powerful
 幸运 xing4yun4 lucky
 
@@ -135,13 +146,14 @@
 *** ?
 已经 yi3jing1 already
 一般 yiban1 generally
+才 cai2 only e.g. 只有
 
 **** qualifier
 独自 du2zi alone
 
 *** transitions
 当然 dang1ran2 certainly/of course
-
+几乎 ji1hu1 almost
 *** linking
 可是 ke3shi but
 但是 dan4shi but
@@ -153,3 +165,6 @@
 
 ???
 礼拜 li3bai4 week (its also about worship so its weird)
+
+** prepositions/linking words
+好像 hao3xiang4 like

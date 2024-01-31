@@ -24,3 +24,37 @@ sudo nixos-rebuild switch --upgrade
 
 ** Flakes
 Running nixos configurations flakes
+*** Errors
+When getting this error:
+#+begin_example
+❯ sudo nixos-rebuild switch --flake .#laptop --impure
+[sudo] password for henri: 
+warning: Git tree '/home/henri/Documents/dotFiles' is dirty
+building the system configuration...
+warning: Git tree '/home/henri/Documents/dotFiles' is dirty
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/wcidiyklj0nrljlz5m3qlkvhv8f2ddv8-source/lib/attrsets.nix:960:11:
+
+          959|         || pred here (elemAt values 1) (head values) then
+          960|           head values
+             |           ^
+          961|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/wcidiyklj0nrljlz5m3qlkvhv8f2ddv8-source/lib/modules.nix:809:9:
+
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          810|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: file 'nixpkgs-unstable' was not found in the Nix search path (add it using $NIX_PATH or -I)
+
+       at «none»:0: (source not available)
+#+end_example
+

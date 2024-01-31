@@ -7,6 +7,34 @@
 
 * Unorganized tasks
 
+** Nixos
+*** TODO Redo programs by pulling from docker for latest updates
+*** TODO update the flake for running slicer instead of using fish-docker cmds
+#+begin_src  nix
+
+  # ----------------------
+  # Docker + Containers
+  # ---------------------
+  virtualisation = {
+    oci-containers = {
+      backend = "docker";
+      containers = {
+        "jsoncrack" = {
+          image = "shokohsc/jsoncrack";
+          ports = [ "8888:8080" ];
+        };
+      };
+    };
+    docker = {
+      enable = true;
+      # storageDriver = "btrfs";
+      rootless = {
+        setSocketVariable = true;
+        enable = true;
+      };
+    };
+  };
+ #+end_src
 ** Security
 *** TODO Rethink of the gitops practices here
 ** TODO Work [0/3]
@@ -16,29 +44,31 @@ DEADLINE: <2024-01-18 Thu>
 DEADLINE: <2024-01-19 Fri>
 *** TODO Go to the office
 DEADLINE: <2024-01-19 Fri>
-** TODO Emacs [0/4]
+** TODO Emacs [1/6]
 *** TODO Create binding that v
-*** TODO Create a binding that creates a todo and does the heading correctly
-*** TODO Figure out how to reference a heading from another 
-*** TODO Include this file in dashboard for ease of acces
+*** COMPLETED Create a binding that creates a todo and does the heading correctly
+**** NEXT make it enter insert mode instead of your name
+CLOSED: [2024-01-27 Sat 09:47]
+*** TODO Figure out how to reference a heading from another org-file
+*** TODO Include this file in dashboard for ease of access
 *** TODO change the =CLOSED= org-todo color
-** TODO 3D printing [1/3]                                            ::
+*** TODO create a binding to create a code block and another one for example block
+*** TODO Figure out 
+** TODO 3D printing [1/4]
 *** TODO Fix the motor issue
 The motor makes lots of noise at idle
 *** TODO Remove the elephant foot from the prints
+*** TODO consider wuxn3d for next printer
 *** DONE Add fitted inserts to printed parts
 CLOSED: [2024-01-26 Fri 20:40]
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2024-01-26 Fri 20:40]
 :END:
-
 *** TODO replace .4 nozzle to a .6
 **** NEXT adjust the the z offset
-****
 :LOGBOOK:
 - State "DONE"       from "NEXT"       [2024-01-16 Tue 10:07]
 :END:
-
 * Todo list
 ** TODO Short term [0/2]
 *** Renos Q1 2024
