@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       9f5774f3-ed8e-4f59-ba4a-31a202e25128
+:END:
+#+title: RPI k3s cluster
+
+* Raspberry pi
+
+** Current set-up
+- single pi guest@192.168.1.100 (psswd guest)
+** Troubleshooting
+*** find your rpi4
+#+begin_src bash
+arp -na | grep -i dc:a6:32
+#+end_src
+
+

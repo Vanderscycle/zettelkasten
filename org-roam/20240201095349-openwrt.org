@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       b19092d6-d8e7-47e0-b2b3-0940dd54ddc9
+:END:
+#+title: OpenWRT
+
+* OpenWRT
+
+** Current setup
+- Single wrt1900ac
+
+** Tutorial
+- https://www.youtube.com/watch?v=GVjIOzErKcc
+** Maintenance
+*** Running load test
+ssh into the router but, if using kitty terminal, specify the xterm as such
+#+begin_src bash
+TERM=xterm ssh root@192.168.1.1
+#+end_src
+*** SSH
+
+#+begin_src bash
+# use the root password of the router to login
+  ssh root@192.168.1.1
+#+end_src
+*** Upgrade all packages
+
+#+begin_src bash
+opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade
+#+end_src
