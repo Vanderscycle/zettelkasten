@@ -50,6 +50,15 @@ https://docs.ratrig.com/product-details/v-hive
 - [Hotend] [[https://www.sliceengineering.com/products/mosquito-magnum-hotend][mosquito magnum]] 30mm3/s
 - [[https://www.printables.com/model/675516-v-minion-wobblex-adapter][WobbleX]] (not installed)
 
+*** Recent benchmarks
+- Flow rate 26 mm3/s (limiting factor bgx lgx-lite skipping)
+- x/y frequency
+  #+begin_comment
+  [input_shaper]
+  shaper_freq_x: 71.48
+  shaper_freq_y: 61.09
+  shaper_type: ei
+  #+end_comment
 ** Peopoly Magneto X
 The goal of the printer is to be able to print high quality ABS, Nylon, and ASA. These filament may be of the carbon fiber type so possibly quite abrasive
 Do not preorder, wait and see and fix the v-minion.

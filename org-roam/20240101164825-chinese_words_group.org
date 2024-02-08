@@ -68,6 +68,10 @@
 
 *** Clothing
 一件衣服 yijian4 yi1fu2 a piece of clothing
+裤子 ku4zi pants
+一双鞋 yi1shuang1 xie2 pair of shoes
+衬衫 chen4shan1 shirt
+外套 wai4tao4 coat
 *** Colors
 红色 hong se red
 绿色 
