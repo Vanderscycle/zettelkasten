@@ -9,7 +9,11 @@
 
 ** Nixos
 *** TODO Redo programs by pulling from docker for latest updates
-*** TODO update the flake for running slicer instead of using fish-docker cmds
+*** DONE update the flake for running slicer instead of using fish-docker cmds
+CLOSED: [2024-02-08 Thu 20:38]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:38]
+:END:
 #+begin_src  nix
 
   # ----------------------
@@ -37,15 +41,22 @@
  #+end_src
 ** Security
 *** TODO Rethink of the gitops practices here
-** TODO Work [0/3]
+** TODO Work [2/4]
 *** TODO Fix prefect PR
 DEADLINE: <2024-01-18 Thu>
-*** TODO Create a small nix-flake for the work laptop
-DEADLINE: <2024-01-19 Fri>
-*** TODO Go to the office
-DEADLINE: <2024-01-19 Fri>
+*** DONE Create a small nix-flake for the work laptop
+CLOSED: [2024-02-08 Thu 20:39] DEADLINE: <2024-01-19 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:39]
+:END:
+*** TODO move the desktop config to nix-flakes
+*** DONE Go to the office 
+CLOSED: [2024-02-08 Thu 20:39] DEADLINE: <2024-01-19 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:39]
+:END:
+
 ** TODO Emacs [1/6]
-*** TODO Create binding that v
 *** COMPLETED Create a binding that creates a todo and does the heading correctly
 **** NEXT make it enter insert mode instead of your name
 CLOSED: [2024-01-27 Sat 09:47]
@@ -53,31 +64,58 @@ CLOSED: [2024-01-27 Sat 09:47]
 *** TODO Include this file in dashboard for ease of access
 *** TODO change the =CLOSED= org-todo color
 *** TODO create a binding to create a code block and another one for example block
-*** TODO Figure out 
-** TODO 3D printing [1/4]
-*** TODO Fix the motor issue
-The motor makes lots of noise at idle
-*** TODO Remove the elephant foot from the prints
+** TODO 3D printing [4/5]
+*** DONE Fix the motor issue (x motor was dead)
+CLOSED: [2024-02-08 Thu 20:40]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:40]
+:END:
+*** DONE Remove the elephant foot from the prints
+CLOSED: [2024-02-08 Thu 20:40]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:40]
+:END:
+
 *** TODO consider wuxn3d for next printer
 *** DONE Add fitted inserts to printed parts
 CLOSED: [2024-01-26 Fri 20:40]
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2024-01-26 Fri 20:40]
 :END:
-*** TODO replace .4 nozzle to a .6
-**** NEXT adjust the the z offset
+*** DONE replace .4 nozzle to a .6
+CLOSED: [2024-02-08 Thu 20:40]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:40]
+:END:
+
+**** DONE adjust the the z offset
+CLOSED: [2024-02-08 Thu 20:40]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2024-02-08 Thu 20:40]
 - State "DONE"       from "NEXT"       [2024-01-16 Tue 10:07]
 :END:
 * Todo list
-** TODO Short term [0/2]
+** TODO Short term [1/8]
 *** Renos Q1 2024
 - Elect: figure out why we can't dim lights
-- Elect: random flickering when
+- Elect: random flickering when 
+*** TODO replace all the dimming lights with better quality ones.
 *** TODO Complete kodekloud cert
 SCHEDULED: <2024-02-23 Fri>
-*** TODO Rebuild v-minion
-SCHEDULED: <2024-03-08 Fri>
-
+*** DONE Rebuild v-minion
+CLOSED: [2024-02-08 Thu 20:41] SCHEDULED: <2024-03-08 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 20:41]
+:END:
+*** TODO build the v-hive, enclose the printer and print abs
+*** NEXT cut and prepare the acrylic panels, print the parts
+*** TODO make the front panel the same as the voron 2.4, [[https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/Manual/Assembly_Manual_2.4r2.pdf][build guide]] p.240
+*** TODO create a charcoal filter to clean the abs fumes
+*** TODO cut a 14 inch round crystalized transparent plastic cover for the skylights
+*** TODO create a 3d printed black edge that is glued together and covers the edge
+*** TODO finish the rpi flakes for master/worker k3 cluster
 ** Medium term
+*** TODO Create the blade pi cluster and host media servers, backup nas + other
+*** TODO Make the blade cluster available outside
 ** Long term
+*** TODO replenish my savings
