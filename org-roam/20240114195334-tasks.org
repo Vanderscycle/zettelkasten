@@ -9,6 +9,7 @@
 
 ** Nixos
 *** TODO Redo programs by pulling from docker for latest updates
+*** TODO Fix fcitx profile
 *** DONE update the flake for running slicer instead of using fish-docker cmds
 CLOSED: [2024-02-08 Thu 20:38]
 :LOGBOOK:
@@ -39,8 +40,10 @@ CLOSED: [2024-02-08 Thu 20:38]
     };
   };
  #+end_src
+ 
 ** Security
 *** TODO Rethink of the gitops practices here
+
 ** TODO Work [2/4]
 *** TODO Fix prefect PR
 DEADLINE: <2024-01-18 Thu>
@@ -55,7 +58,9 @@ CLOSED: [2024-02-08 Thu 20:39] DEADLINE: <2024-01-19 Fri>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2024-02-08 Thu 20:39]
 :END:
-
+*** TODO improve public speaking by not filling the silence with =hum/ahh= and do not say =you know=
+** Life
+*** TODO Get my dad another 11E pair of shoe
 ** TODO Emacs [1/6]
 *** COMPLETED Create a binding that creates a todo and does the heading correctly
 **** NEXT make it enter insert mode instead of your name
@@ -64,7 +69,9 @@ CLOSED: [2024-01-27 Sat 09:47]
 *** TODO Include this file in dashboard for ease of access
 *** TODO change the =CLOSED= org-todo color
 *** TODO create a binding to create a code block and another one for example block
-** TODO 3D printing [4/5]
+*** TODO Make the font bigger by default, especially for chinese chars
+
+** DONE 3D printing [5/5]
 *** DONE Fix the motor issue (x motor was dead)
 CLOSED: [2024-02-08 Thu 20:40]
 :LOGBOOK:
@@ -76,7 +83,12 @@ CLOSED: [2024-02-08 Thu 20:40]
 - State "DONE"       from "TODO"       [2024-02-08 Thu 20:40]
 :END:
 
-*** TODO consider wuxn3d for next printer
+*** DONE consider wuxn3d for next printer
+CLOSED: [2024-02-08 Thu 21:39]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-08 Thu 21:39]
+:END:
+
 *** DONE Add fitted inserts to printed parts
 CLOSED: [2024-01-26 Fri 20:40]
 :LOGBOOK:
@@ -94,6 +106,7 @@ CLOSED: [2024-02-08 Thu 20:40]
 - State "DONE"       from "NEXT"       [2024-02-08 Thu 20:40]
 - State "DONE"       from "NEXT"       [2024-01-16 Tue 10:07]
 :END:
+
 * Todo list
 ** TODO Short term [1/8]
 *** Renos Q1 2024
@@ -114,8 +127,10 @@ CLOSED: [2024-02-08 Thu 20:41] SCHEDULED: <2024-03-08 Fri>
 *** TODO cut a 14 inch round crystalized transparent plastic cover for the skylights
 *** TODO create a 3d printed black edge that is glued together and covers the edge
 *** TODO finish the rpi flakes for master/worker k3 cluster
+
 ** Medium term
 *** TODO Create the blade pi cluster and host media servers, backup nas + other
 *** TODO Make the blade cluster available outside
+*** TODO Get a second printer, v-minion again?
 ** Long term
 *** TODO replenish my savings
