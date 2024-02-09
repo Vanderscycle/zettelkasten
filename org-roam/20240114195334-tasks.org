@@ -134,3 +134,5 @@ CLOSED: [2024-02-08 Thu 20:41] SCHEDULED: <2024-03-08 Fri>
 *** TODO Get a second printer, v-minion again?
 ** Long term
 *** TODO replenish my savings
+*** TODO Update website
+*** TODO Create wife's website
