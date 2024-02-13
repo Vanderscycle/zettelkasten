@@ -13,8 +13,6 @@
 ** Quick tips
 - describe value in emacs =SPC h d v=
 - Emacs freezes =C-g= to try to save it
-- project dired =c-x p D= (just like nnn)
-- dired helm find files to copy `C-y`
 - when a word is highlighted you can find all instances by typing =$=
 - Access Dashboard 
 ** Tutorials
@@ -23,3 +21,9 @@
 - [[https://www.youtube.com/watch?v=INTu30BHZGk][projectile + maggit]]
 
 
+*** TODO move the following to emacs packages
+
+- project dired =c-x p D= (just like nnn)
+Select files/folders using m, then press C to copy the files in the clipboard then use dired to move them
+
+- dired helm find files to copy `C-y`
