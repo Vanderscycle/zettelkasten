@@ -3,6 +3,10 @@
 :END:
 #+title: Chinese words group
 
+* Related
+[[id:d2b75711-ccdf-46f8-b645-f82a43bf2a36][Chinese basic patterns]]
+[[id:57f6f7f9-dd12-4d99-b2dc-aeeb43908340][Chinese often forgotten words]]
+[[id:0f85085c-38b5-474b-984b-b3f6c94e6404][Chinese class notes]]
 * Words
 ** TODO:
 
@@ -72,6 +76,7 @@
 一双鞋 yi1shuang1 xie2 pair of shoes
 衬衫 chen4shan1 shirt
 外套 wai4tao4 coat
+
 *** Colors
 红色 hong se red
 绿色 
@@ -86,8 +91,9 @@
 剩菜 sheng4cai4 leftovers
 外带 wai4dai4 takeaway (food)
 
-*** Buildings
+*** Buildings/places
 餐厅 can1ting1 restaurant
+杂货店 za2huo4 dian4 grocery store
 
 *** machine
 (部)打印机 (bu4) da3yin4ji1 printer
@@ -124,6 +130,8 @@
 
 *** Food
 米 mi3 rice
+冰淇淋 bing1qi2lin2 ice cream
+香草 xiang1cao3 vanilla
 
 *** Computers/electronics etc.
 软件 ruan3jian4 software
@@ -151,7 +159,8 @@
 已经 yi3jing1 already
 一般 yiban1 generally
 才 cai2 only e.g. 只有
-
+就是 jiushi that is
+重新 
 **** qualifier
 独自 du2zi alone
 
@@ -172,3 +181,4 @@
 
 ** prepositions/linking words
 好像 hao3xiang4 like
+其实 qi2shi2 actually

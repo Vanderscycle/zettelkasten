@@ -2,8 +2,6 @@
 :ID:       fd4fd69d-9adb-4d30-9d80-e1af8ec6ba3e
 :END:
 #+title: Tasks
-* Quick Notes
-*** Create a new task
 
 * Unorganized tasks
 
@@ -132,7 +130,9 @@ CLOSED: [2024-02-08 Thu 20:41] SCHEDULED: <2024-03-08 Fri>
 *** TODO Create the blade pi cluster and host media servers, backup nas + other
 *** TODO Make the blade cluster available outside
 *** TODO Get a second printer, v-minion again?
-** Long term
-*** TODO replenish my savings
+*** TODO Update the tls certificate for nextcloud and see how it can be done automatically in kubernetes
 *** TODO Update website
 *** TODO Create wife's website
+
+** Long term
+*** TODO replenish my savings

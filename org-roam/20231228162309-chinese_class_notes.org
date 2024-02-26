@@ -3,7 +3,18 @@
 :END:
 #+title: Chinese class notes
 
-* 
+* Related
+[[id:a36e062b-16a6-4b54-9a05-4f97fff5d744][Chinese words group]]
+[[id:d2b75711-ccdf-46f8-b645-f82a43bf2a36][Chinese basic patterns]]
+[[id:57f6f7f9-dd12-4d99-b2dc-aeeb43908340][Chinese often forgotten words]]
+* Mandarin corner notes
+
+有趣 you3qu4 interresting
+有意思 you3yi4si interresting
+社交媒体 she4jiao1 mei2ti3 social media
+话题 hua4ti2 topic
+YouTube 频道 pin2dao4 channel 
+* Class notes
 ** Since 24 Jan 24
 
 我会有很多像他学习的地方 
@@ -21,3 +32,15 @@
 挺不错 ting3bu4cuo4 (pretty good)
 很不错 ...
 非常不错 ...
+
+** since 21 日 02 月 2024 年
+相信 xiang1xin4 believe
+想 xiang3 think 
+肉店 rou4dian4 butcher shop
+中国城 zhong1guo2cheng2 chinatown
+城市 cheng2shi4 city
+同性恋 tong2xing4lian4 gay
+严重大 yaszhong da seriously big
+严重 yazhong seriousy
+重要 zhong4yao4 important
+讨论 tao3lun4 discuss
