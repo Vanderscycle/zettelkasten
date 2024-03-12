@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0796908e-3cd0-459b-b752-b351a6165f51
+:END:
+#+title: Programming - Sveltekit
+
+* Sveltekit
+** Import secrets
+** Server Side Rendering (SSR)
+[[https://learn.svelte.dev/tutorial/env-static-private][Interactive example]]

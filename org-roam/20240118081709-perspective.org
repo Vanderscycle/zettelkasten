@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       4924e28f-6f18-4f8c-b97a-fd1d35dc5dc1
 :END:
-#+title: Perspective
+#+title: Emacs - Perspective
 * Workspace management
 ** key bindings
 - =C-x C-b= `persp-list-buffer`

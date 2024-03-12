@@ -125,7 +125,12 @@ CLOSED: [2024-02-08 Thu 20:41] SCHEDULED: <2024-03-08 Fri>
 *** TODO cut a 14 inch round crystalized transparent plastic cover for the skylights
 *** TODO create a 3d printed black edge that is glued together and covers the edge
 *** TODO finish the rpi flakes for master/worker k3 cluster
-
+*** TODO figure out the formatters/linters for the following languages [/]
+**** TODO JS/TS/Svelte also ensure that the default tab width is of 2 spaces
+**** TODO Python 
+**** TODO Terraform/yaml/json
+*** TODO Rename Org-roam notes so that they fit a pattern that is easier to find.
+*** TODO Last month for optimization <2024-03-29 Fri>
 ** Medium term
 *** TODO Create the blade pi cluster and host media servers, backup nas + other
 *** TODO Make the blade cluster available outside

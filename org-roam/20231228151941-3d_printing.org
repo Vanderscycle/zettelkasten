@@ -5,9 +5,25 @@
 
 * Printers
 ** Tuning
+
 - [[https://www.youtube.com/watch?v=er7q-CJL1lc][Pressure advance + input shaping]]
 - [[https://ellis3dp.com/Print-Tuning-Guide/][Excellent tuning guide]]
--
+ 
+*** First steps
+**** PID calibration (heaters)
+- PID_CALIBRATE HEATER=heater_bed TARGET=60
+- PID_CALIBRATE HEATER=extruder TARGET=170
+- Save config at the end.
+
+**** Pressure advance
+Use orcaslicer to generate the test
+https://www.klipper3d.org/Pressure_Advance.html
+
+
+**** Resonance testing
+Use printingTech for more details
+https://www.klipper3d.org/Resonance_Compensation.html
+
 *** Task
 ** Klipper
 *** Calibrate z offset

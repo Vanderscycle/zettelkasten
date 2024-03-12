@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       6f516df0-0dc7-4744-b998-1c248ad78006
 :END:
-#+title: Tramp
+#+title: Emacs - Tramp
 
 * Tramp (ssh from emacs)
 
