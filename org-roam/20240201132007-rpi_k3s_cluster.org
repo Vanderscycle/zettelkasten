@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       9f5774f3-ed8e-4f59-ba4a-31a202e25128
 :END:
-#+title: RPI k3s cluster
+#+title: Hobby - RPI k3s cluster
 
 * Raspberry pi
 

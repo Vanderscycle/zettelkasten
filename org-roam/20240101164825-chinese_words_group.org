@@ -12,6 +12,7 @@
 
 ** Verbs
 *** Action verbs
+收集 shou1ji2 collect
 背诵 
 感觉 gan3jue2 feel
 洗碗 xi3wan3 mop
@@ -43,6 +44,7 @@
 ???
 ** Nouns
 *** UNDECIDED YET
+兴趣 xing4qu4 interest 
 赢 ying2 win
 员 yuan2 member
 语言 yu3yuan2 language
@@ -87,6 +89,7 @@
 比利时 bi3li4shi2 Belgium
 
 *** Food
+汉堡包 han4bao3bao1 hamburger
 汤 tang soup
 剩菜 sheng4cai4 leftovers
 外带 wai4dai4 takeaway (food)
@@ -117,6 +120,7 @@
 身体 shen1ti3 health/body
 压力 ya1li4 pressure/stress
 耳朵 er3duo3 ear
+肚子 du4zi belly
 
 *** Clothing/Fashion
 
@@ -132,6 +136,10 @@
 米 mi3 rice
 冰淇淋 bing1qi2lin2 ice cream
 香草 xiang1cao3 vanilla
+主菜 zhu3cai4 main course
+菜单 cai4dan1 menu
+味道 wei4dao4 smell
+闻到 wen2dao4 taste
 
 *** Computers/electronics etc.
 软件 ruan3jian4 software

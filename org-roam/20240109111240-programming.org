@@ -5,6 +5,10 @@
 
 * Programming
 
+** Certifications
+- [[id:24d43f89-27be-44a7-8a31-0a949dbf96b6][Certs - AWS Solutions Architect]] 
+- [[id:0f6a9f76-2e51-4084-aa44-4486023a4b61][Certs - Certified Kubernetes Application Developper (CKAD)]]
+
 ** Languages
 - js/ts
 - [[id:ab427009-adbf-49e0-befe-8ed8439b161b][Nix]]
@@ -13,12 +17,15 @@
 ** Servers
 - rpi cluster
 - Rpi Blade
+
 ** IaC
-- Kubernetes
-- terraform
+- [[id:62ee5710-d887-4f83-8ffd-fffa418c5c79][kubernetes]]
+- [[id:2dee5225-459e-4b46-a03f-a625aa098f3b][Terraform]]
+
 ** Linux
 *** CLI
 *** Tiling hwindow Manager
 - [[id:0c4ca108-5518-4d39-a361-541288e0a65f][Hyprland]]
+
 ** Misc concepts
 - [[id:d12273c0-3a15-4d81-96b7-b16f73c791a7][ssh]]

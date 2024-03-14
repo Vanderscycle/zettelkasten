@@ -1,9 +1,109 @@
 :PROPERTIES:
 :ID:       24d43f89-27be-44a7-8a31-0a949dbf96b6
 :END:
-#+title: AWS Solutions Architect
+#+title: Certs - AWS Solutions Architect
 
+* TODO: install windows on the work laptop
 * Notes
+** Networking
+*** VPC (Virtual Private Cloud)
+Allow for resources to be isolated while in the same account giving full control over networking:
+- Subnets: IP address
+- Route tables: what path information to and from takes place
+- Firewall: Security Groups/NACLS
+- Gateways
+*** NOTES: VPC are specific to a single region only
+
+Every VPC has a range of IP addresses assigned through a CIDR block. Can only be between size 16 and 28
+#+begin_example
+0 -> 255 = 8 bits
+192.168.0.0/16 grants
+192.168.0.0 -> 192.168.255.255
+
+0 -> 15 = 4 bits
+192.168.0.0/28 grants
+192.168.0.1 -> 192.168.0.14
+#+end_example
+
+AWS gives a default VPC with a default config, a custom VPC is configured by yourself.
+Default:
+- One Default VPC per region
+- /16 ipv4 CIDR 172.31.0.0/16
+- /20 default subnet in each AZ 
+- Internet gateway
+- a route that points all traffic (0.0.0.0/0) accessible from the internet
+  
+*** Subnets
+Groups of IP address within a VPC.
+- Subnets within a VPC must be within the CIDR range.
+- subnet block size must be between /16 /28
+- the first 4 IP addresses of a subnet are reserved and cannot be used e.g. =192.168.10.1 -> 192.168.10.3=
+#+begin_example
+10.0.1.0/24
+10.0.1.0 -> 10.0.1.255
+with the exception of the first 3 and the last one
+#+end_example
+**** CRIT: Subnets cannot overlap with other subnets in the vpc. Still be careful about VPC peering
+- Subnets can communicate with other subnets in the VPC (by default)
+There is an option to auto-assign public ipv4/ipv6 to a private address
+Subnets can be made public/private using internet gateways/nat gateways
+
+*** Route Table
+Each VPC has a VPC router which has a router interface in each subnet of the vpc using the first address of each subnet for traffic routing. e.g. =10.0.1.0/24= will give =10.0.1.1= Its main purpose is to wrap traffic between subnets and VPC.
+Route tables is a set of rules that the router uses to forward traffic. Each rules are =routes= using the destination ip to match the target resources/ip/gateway/ec2
+AWS gives preference to overlaping packet that uses a greater rule e.g. /24 > /16
+**** CRIT: One subnet can only be associated with one route table. A route table may have more than one subnet associated to
+
+*** Internet Gateways
+To make a subnet public you must use an Internet Gateway and, using a route table, points the default =0.0.0.0/0= to the IGW. IGW are region and VPC specific. 
+**** CRIT: An internet gateway can only be attached to one VPC at a time. A VPC can only have one Internet Gateway
+
+*** Nat Gateways
+Used for Private subnets that needs access to the internet, but only if the connection is initiated from withing AWS and not from the internet. You still require a public subnet + IGW with =0.0.0.0/0= default route and the NAT Gateway deployed to the public subnet. You need to configure the private subnet to have a default route =0.0.0.0/0= that point to the nat gateway. Costs: Charged by the hour and per GB of data processed.
+**** CRIT: NAT gateways aren't region resilient as it is only installed on a specific subnet. They are AZ-reliant service. Also uses Elactic IPs
+If building for resilience/redundancy ensure that you deploy private sunets in different AZ, each with a NAT gateway. This means 1:1 relation private subnets:Route Tables each with a distinct NAT on a different public subnet
+
+*** Private/Public subnets
+Should devices on the internet be able to interact with our services? If its a webpage, then yes! If its a db, then no place it in a private subnet.
+
+*** Lab
+How to ssh into a private EC2/resource from a public EC2
+#+begin_src bash
+
+  scp -i ec2-user.pem ec2-user.pem ec2-user@<public-IP>:~/
+  ssh -i ec2-user.pem ec2-user@<insert-public-ip>
+  ssh -i ec2-user.pem ec2-user@<insert-private-ip>
+#+end_src
+
+*** DNS(VPC)
+auto-generated AWS dns for resources.
+AWS DNS server can be accessed on the second IP of the VPC CIDR block as well as 169.254.169.253
+Device private IPs will automatically be assinged a DNS entry
+enabledDNSHostnames: whether the VPC supprot assigning public DNS hostnames to instances with public IP addresses (false by default)
+enableDnsSupport: determines whether the VPC supports DNS resolution through AWS provided DNS server. If doing so you must provide your own dns resolver (either custom or 8.8.8.8)
+#+begin_example
+In a public EC2 you can check the resolv.conf
+cat /etc/resolv.conf
+If for example the vpc CIDR block is 10.0.0.0/16 the dns nameserver would be 10.0.0.2
+
+#+end_example
+
+Can be modified later
+
+*** Elastic IP
+AWS static IPv4 address reserved for your acct. By default upblics IPs are not static and, if an EC@ instances goes down, then it will get a new public IP. One elastic IP per resource can be assigned, more inquires charges
+**** CRIT: region specific
+
+*** Security Group and NACL
+
+*** Load Balancers
+
+*** VPN
+
+*** Direct 
+
 ** ECS
+
 ** EKS
+
 ** Load Balancer

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       bc6d2677-4fc9-44cc-9598-2a2e1d465e7d
 :END:
-#+title: Org-Roam
+#+title: Emacs - Org-Roam
 
 - `Tab` to expand the properties tags inside

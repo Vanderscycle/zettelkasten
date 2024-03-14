@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       d12273c0-3a15-4d81-96b7-b16f73c791a7
 :END:
-#+title: ssh
+#+title: Linux - ssh
 
 * Ssh
 

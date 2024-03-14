@@ -1,5 +1,5 @@
 :PROPERTIES:
 :ID:       a7d63c28-c087-45fe-804c-49a953b1154c
 :END:
-#+title: Maggit
+#+title: Emacs - Maggit
 
