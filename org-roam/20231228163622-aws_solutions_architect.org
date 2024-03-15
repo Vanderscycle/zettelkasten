@@ -4,7 +4,7 @@
 #+title: Certs - AWS Solutions Architect
 
 * TODO: install windows on the work laptop
-* Notes
+* Knowledge
 ** Networking
 *** VPC (Virtual Private Cloud)
 Allow for resources to be isolated while in the same account giving full control over networking:
@@ -94,16 +94,83 @@ Can be modified later
 AWS static IPv4 address reserved for your acct. By default upblics IPs are not static and, if an EC@ instances goes down, then it will get a new public IP. One elastic IP per resource can be assigned, more inquires charges
 **** CRIT: region specific
 
-*** Security Group and NACL
+*** Security Group and NACL (firewall)
+Stateless firewall (Default firewalls): must be configured to allow both inbound & outbound traffic declaratively.
+Statefull firewall: firewall that is smart enough to understand which request and response are part of the same connection (port-wise)
+
+network access control list (NACL): filter traffic entering and leaving a subnet, are stateless firewalls so rules must be be for both inbound/outbound, and doesn't filter traffic within a subnet. Every subnet within a VPC must be assicuated with a NACL however a NACL can be associated with multiple subnets
+Security Group : act as statefull firewall for individual AWS resources. Unless SG rules are specified they are denied by default. More than one SG can be applied to a resources and will be merged at evaluation time.
+nacl, the smaller the rule number the sooner they will be processed.
+
+**** CRIT: NACL act as firewall for subnets while SG act as firewalls for individual AWS resources. NACL can allow or deny traffic while SG only allow.
+**** CRIT: SG by default contains an inbound/outbound rule that allows for all traffic
 
 *** Load Balancers
+Acts as a single ingress point for multiple resources directing traffic.
+3 types of load balancer:
+- classic lb
+- application lb (application L7): https until the ALB then http to the resources
+- network lb (TCP/UDP L4): meant for apps that don't use http/https, faster than ALB, forwards the connections
 
-*** VPN
+You configure the availability zone to the LB by assigning subnets by deploying a Load balancing node to the specific subnet (public).
+cross-zone LB: Allows for traffic to be rerouted between AZ compute resources
 
-*** Direct 
+Public LB (deployed on public subnets) Private LB (deployed on private subnets). Uses cases: multiple API compute behind a public LB talking to a private LB (db connections)
 
-** ECS
+Listener: forwards incoming request to a target group based on defined parameters e.g. app1.com vs app2.com/auth 
+Target groups: forwards to specific compute resources
+You can also configure health checks
 
-** EKS
+*** Virtual Private Network (VPN)
+Use case: communicate between on-premise network with AWS Virtual Private cloud (VPC) safely and securely. First you create a VPN gateway on the VPC and Customer gateway on-premise They both get an IP address and communicates between encrypted.
+To route traffic between we can use a route in a routing table (static) or exchange route dynamically using bgp. (dynamic)
+Costs: per hour per VPN connections + data transfer
+limits 1.25 gbps bandwith
 
-** Load Balancer
+*** Direct Connect
+
+*** VPC Peering
+
+*** Transit Gateway
+
+*** PrivateLink
+
+*** Cloudfront
+
+*** Lambda@Edge
+
+*** Global Accelerator
+
+*** route53
+
+** Service Storage
+
+** Service Compute
+
+** Service Database
+
+** Services Application Integrations
+
+** Services Data and ML
+
+** Services Migration and ...
+
+** Services Management and ...
+
+** Services Security
+
+* Design
+
+** Security
+
+** Reliability
+
+** Performance
+
+** Cost-optimization
+
+** Applying your desing skills
+
+* Conclusion
+
+
