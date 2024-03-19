@@ -128,8 +128,22 @@ Costs: per hour per VPN connections + data transfer
 limits 1.25 gbps bandwith
 
 *** Direct Connect
+Alternative to VPN, allows you to to =physically= connect with AWS. Essentially directly connect to a regional data center where AWS rents a few server racks.
+Charged by port/hours + outbound data transfer. Faster + more secure than VPN
 
 *** VPC Peering
+reminder, a vpc acts as a network boundary unless a connection between them are established e.g. VPC peering connections.
+No costs for VPC peering connections, no costs for data transfer within a VPC, data transfer across AZ through a VPC peering incurs charges.
+
+#+begin_example
+VPC 1 10.1.0.0/16
+VPC 2 10.2.0.0/16
+Create the connection then update each VPC's route table to access each other's VPC
+rt-1 in vpc-1
+(dest) 10.2.0.0/16 (target) vpc-2
+rt-2 in vpc-2
+(dest) 10.1.0.0/16 (target) vpc-1
+#+end_example
 
 *** Transit Gateway
 

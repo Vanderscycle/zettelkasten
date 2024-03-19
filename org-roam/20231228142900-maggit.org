@@ -3,3 +3,12 @@
 :END:
 #+title: Emacs - Maggit
 
+* Maggit
+
+** Resolving conflicts
+  - Open Magit status with M-x magit-status.
+  - Navigate to the conflicted file and press RET to visit it.
+  - In the buffer, navigate to the conflict.
+  - Press e on the conflicting hunk to start the ediff session, which is a powerful tool for merging and resolving conflicts.
+  - Ediff will open a new interface with multiple windows, showing both sides of the conflict and a merge result window. Use a or b to choose the version from either side (HEAD or main in your case).
+  - Once you've resolved the conflict, you can save and exit the ediff session by following the prompts, which usually involve pressing q to quit and then confirming to save the merged file.
