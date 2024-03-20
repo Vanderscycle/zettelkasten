@@ -58,3 +58,14 @@ error:
        at «none»:0: (source not available)
 #+end_example
 
+** Managing/Reverting nixos builds
+
+#+begin_src  bash
+  # list all versions
+  sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+  # If you are deleting the current gen, switch to a previous generation
+  sudo nix-env --switch-generation 553 --profile /nix/var/nix/profiles/system
+  # delete a generation
+  sudo nix-env --delete-generations 554 --profile /nix/var/nix/profiles/system
+
+#+end_src
