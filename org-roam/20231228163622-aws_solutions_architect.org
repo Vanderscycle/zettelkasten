@@ -243,9 +243,16 @@ sudo blkid shows UUID of drive
 
 *** Instance Store
 
-Temporary block level storage physically located on the compute instance (ec2)
+Temporary block level storage physically located on the compute instance (ec2). Volume associated with the ec2. lost if the ec2 changes hosts. you can tell because the public ip address would have changed.
 
 *** Elastic File System (EFS)
+
+VPC specific mounted on mount target (use one with AZ resilient) on a subnet which will give an ip address.
+2 types General Purpose performance mode (latency-sensitive applications) and elastic throughput mode (automatically scales) and burst
+
+sudo mkdir /mnt
+sudo dnf -y install amazon-efs-utils
+sudo mount.efs efs:id /directory (id comes from the AWS console)
 
 *** Simple Storage Services (S3)
 
