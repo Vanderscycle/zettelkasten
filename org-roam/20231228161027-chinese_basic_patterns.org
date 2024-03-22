@@ -3,7 +3,7 @@
 :END:
 #+title: Chinese basic patterns
 
-* Basic patterns of Chinese grammar
+f Basic patterns of Chinese grammar
 ** just plain expressions
 想办法 xiang3ban4fa3 think of ways to ...
 即将结束 Jíjiāng jiéshù comes to a close
@@ -22,3 +22,6 @@
 之...在间 in between
 我什么都没有... wo3shenme dou mei2you3
 我今天去商店的时候，发现我什么都没有买
+
+不仅。。。而且 bu4jin er2qie1 not only
+不但。。。而且

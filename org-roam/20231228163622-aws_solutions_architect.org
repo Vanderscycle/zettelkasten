@@ -212,6 +212,44 @@ recovery group is a collection of cells that represent an application that I wan
 
 ** Service Storage
 
+*** Elastic Block Storage
+**** CRIT: Block storage can both be mounted as a file storage and boot of it.
+
+Separate from a EC2 instance, can be moved to another one and even attached to multiple ec2 (granted the write is controlled). They are AZ resilient e.g. us-east-1a.
+Both the EBS and EC2 must be in the same availability zone. If data must be migrated from one AZ to the other AZ a snapshot (volume snapshot) must be made and EBS booted from in the correct AZ.
+
+**** NOTES: IOPS: Input/output operations per second is an input/output performance measurement used to characterize computer storage devices
+
+EBS Volume types:
+- General purpose SSD gp2/3: balance price/performance recommended for most workload. multi-attach not supported
+  - GP2 performance scales with size
+- Provisioned IOPS SSD: IOPS intensive, most performant. multi-attach supported
+- Throughput-optimized HDD and cold HDD: cheaper than ssd but slow: boot/multi-attached not supported
+  - throughput optimized HDD: big data, data warehouse
+  - Cold SSD: lowest cost storage 
+- magnetic volumes: performance not important
+
+costs: fast IOPS more costs, snapshots per gb/months
+
+*** TODO move later
+lsblk
+sudo file -s /dev/drive # shows if theres' file
+sudo mkfs -f xfs /dev/drive create file system
+mkdir -p /mnt create mounting point
+sudo mount /dev/drive /mnt
+df -k shows drives
+sudo blkid shows UUID of drive
+/etc/fcstab ( to permananently mount the drive sys)
+
+*** Instance Store
+
+Temporary block level storage physically located on the compute instance (ec2)
+
+*** Elastic File System (EFS)
+
+*** Simple Storage Services (S3)
+
+
 ** Service Compute
 
 ** Service Database

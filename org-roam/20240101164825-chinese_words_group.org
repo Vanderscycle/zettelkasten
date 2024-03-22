@@ -30,6 +30,7 @@
 成立 cheng2li4 found
 还给 hai2gei3 return
 解决 jie3jue2 solve
+踢 ti1 kick (football)
 
 *** School
 学习 xue2xi2 study
@@ -126,6 +127,10 @@
 
 *** Sports
 运动 yun4dong4 sport (n)
+足球 zu2qiu2 football
+篮球 lan2qiu2 basketball
+棒球 bang4qiu2 basketball
+
 **** Types
 相扑 xiang1pu1 Sumo wrestling
 **** Anciliaries
