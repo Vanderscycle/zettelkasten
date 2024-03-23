@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       a1341eaa-7b41-4b02-9854-375755ae8440
+:END:
+#+title: linux - Core
+test
+
+* Linux
+
+** Drives
+#+begin_src bash
+  ls
+#+end_src

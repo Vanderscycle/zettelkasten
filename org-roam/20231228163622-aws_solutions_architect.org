@@ -254,8 +254,110 @@ sudo mkdir /mnt
 sudo dnf -y install amazon-efs-utils
 sudo mount.efs efs:id /directory (id comes from the AWS console)
 
+*** FSx for windows
+
+EFS for windows:
+- 1 AWS FSx for Windows File Server, easily integrate with MS active Dir
+- 2 AWS FSx for Lustre, high performance data, integratest with S3, dataSync (only supports linux)
+- 3 AWS FSx for NetAPP ONTAP high performance accessible on Linux, macos, windows
+- 4 AWS FSx for OpenZFS
+
 *** Simple Storage Services (S3)
 
+**** General
+Object storage service, cannot be mounted to an ec2 like EBS. Think of it like Dropbox/google drive. Major usecase: since storing data on a webserver drive is expensive and cumbersome, its cheaper to store the data in s3 and fetch to the webserver as needed.
+
+S3 has a flat file structure, even if you can create folders within it. Its more for pathing for prefix. It 
+Restrictions:
+- unlimited number of objects stored
+- max individual file size 5TB
+- AWS account can support up to 100 buckets
+
+**** Storage classes
+3 key criterias:
+- Data acess
+- Resiliency
+- costs
+
+Types:
+***** Default
+Objects copied across 3 AZ, costs per GB/month, low latency, costs per egress gb
+
+***** S3 std-IA (infrequent access) 
+Objects copied across 3 AZ, costs per GB/month, cheaper than s3 default, has a retrival fee + egress costs
+
+***** S3 One Zone IA
+Objects only present in one AZ, cheaper, but not resilient
+
+***** S3 Glacier Instant
+Low costs option for rarely accessed data (but available in miliseconds), multi AZ + low latency, has retrival fee 
+
+***** S3 Glacier Flexible
+Objects not immediately accessible (cold start), multi-az, retrival fees varies based on desired retrival speeds
+
+***** S3 Glacier Deep archive
+Objects not immediately accessible, multi-az, retrival fee, longer retrival time
+
+***** S3 Intelligent-tiering
+automatically reduces storage costs by intelligently moving data
+
+**** S3 versioning 
+
+Globally enabled in a bucket, allows to have multi version of a file, much like source control. Each object is given a versionID.
+Charged for all version of a file. so if v1 and v2 are each 10gb you will be charged for 20gb total.
+
+Cannot be disabled only suspended. If you add a new version of a file after versioning has been suspended then a null version-ID will be given and each new upload of the same file will replaced the null version.
+
+You can have MFA delete
+
+**** S3 ACL/Bucket policies
+By default only the creater + root user can access the content of the bucket.
+#+begin_src json
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1474996930912",
+    "Statement": [ // can have more than one one statment
+        {
+            "Sid": "Stmt1474996926670",
+            "Effect": "Allow", // either allow or deny
+            "Principal": "*", // who it applies to in this case its all
+            "Action": "s3:GetObject", // list of thing that the principal can/can't do.
+            "Resource": "arn:aws:s3:::example-bucket/*"
+        }
+    ]
+}
+#+end_src
+
+Another one
+#+begin_src  json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowSpecificIPAccessToSpecificFolder",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::example-bucket/media/photos/*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "192.0.2.0/24"
+                }
+            }
+        }
+    ]
+}
+
+#+end_src
+
+If you want to expose the bucket to the world you also need to uncheck =block all public access= even with permessive bucket policy.
+IAM policy are attached to authenticated users, resources policies are attached to resources (ec2/iam/etc.) and can also apply to unauthenticated user.
+
+ACL policies are legacy (READ/WRITE/FULL_CONTRL) etc... do not use
+
+**** Static hosting hosting (s3)
+
+Does not work with any SSR (server side rendering). There are costs associated with GET requests per 1000. If you use a DNS you need to name your bucket the same e.b. bestcar.com bucket must be named bestcar.
 
 ** Service Compute
 
