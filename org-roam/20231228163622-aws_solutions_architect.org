@@ -73,6 +73,7 @@ How to ssh into a private EC2/resource from a public EC2
   scp -i ec2-user.pem ec2-user.pem ec2-user@<public-IP>:~/
   ssh -i ec2-user.pem ec2-user@<insert-public-ip>
   ssh -i ec2-user.pem ec2-user@<insert-private-ip>
+  # for ubuntu images the default user is: ubuntu and not ec2-user
 #+end_src
 
 *** DNS(VPC)
@@ -97,8 +98,11 @@ AWS static IPv4 address reserved for your acct. By default upblics IPs are not s
 Stateless firewall (Default firewalls): must be configured to allow both inbound & outbound traffic declaratively.
 Statefull firewall: firewall that is smart enough to understand which request and response are part of the same connection (port-wise)
 
-network access control list (NACL): filter traffic entering and leaving a subnet, are stateless firewalls so rules must be be for both inbound/outbound, and doesn't filter traffic within a subnet. Every subnet within a VPC must be assicuated with a NACL however a NACL can be associated with multiple subnets
-Security Group : act as statefull firewall for individual AWS resources. Unless SG rules are specified they are denied by default. More than one SG can be applied to a resources and will be merged at evaluation time.
+**** network access control list (NACL)
+Filter traffic entering and leaving a subnet, are stateless firewalls so rules must be be for both inbound/outbound, and doesn't filter traffic within a subnet. Every subnet within a VPC must be assicuated with a NACL however a NACL can be associated with multiple subnets
+
+**** Security Group
+Act as statefull firewall for individual AWS resources. Unless SG rules are specified they are denied by default. More than one SG can be applied to a resources and will be merged at evaluation time.
 nacl, the smaller the rule number the sooner they will be processed.
 
 **** CRIT: NACL act as firewall for subnets while SG act as firewalls for individual AWS resources. NACL can allow or deny traffic while SG only allow.
@@ -416,8 +420,53 @@ A database administrator is deploying a high-performance OLTP database system on
 A media company needs a high-performance file system for their compute-intensive workloads, such as high-performance computing (HPC), machine learning, and media data processing workflows. Which AWS service should they use? A. FSx lustre
 
 A web development company wants to improve the upload speed to their S3 bucket for global users. Which feature should they enable on their S3 bucket? A. S3 transfer accel
+
 ** Service Compute
 
+*** EC2
+A server instance in the cloud.
+
+**** Instances types
+- General purpose: General good for most 
+- Compute optimized:  more cpu power less of everything else (network/memory)
+- Memory optimized: fast performance for workload processing large data in memory
+- Storage optimized: best for read and write operations
+- GPU instances: ML/AI
+
+**** Amazon machine images (AMI)
+What types of operating system the ec2 will use e.g. red hat, centos, etc.
+There are also private AMIs (have your own OS iso images)
+Also shared AMIs
+
+**** ssh
+to ssh into an ec2 you need an ssh key defined
+
+**** Instances lifecyle
+- pending state: init when an ec2 is first launched.
+- running state: the default state
+- stopping state: preparing to stop
+- stopped state: ec2 is offline
+- shutting down:
+- terminated: instance is gone forever
+
+Bootsrap script: you can pass a set of instructions for the ec2 to execute at start. e.g. install software/download repos. 
+A security group must be defined. resource firewall
+An EBS volume can be assigned to extend the storage of the ec2 (needs to be mounted) and snapshots can be taken. Gives persistent data storage
+An ELB can allow for the traffice + autoscaling
+An elastic IP can be assigned so that the EC2 doesn't change IP during reboots
+**** Instances placements:
+- cluster placement group: place ec2 as close as possible (low latency/high throughput) same server/rack
+- Partition placement group: instances in one partitions do not share the same hardware as ones in other partitions + anciliaries
+- spread placement group: each instances are placed on different hardware + anciliaries
+
+**** EC2 Instances types 
+- On demand: pay for compute capacity by the hour with no long term commitment.
+- spot instances: bid on unused ec2 capacity. Code and application must be flexible enough to make use and can be shutdown at anytime.
+- saving plans: low price on ec2 but requires a commitment 1 to 3 year term. (money)
+- reserved instances: low price on ec2 but requires a commitment 1 to 3 year term. (compute power)
+- dedicated hosts: renting your own dedicated ec2 hosts (but the server rack/host can change). great for licenses tied to machines
+- dedicated instances: get your own server but unsure about which one.
+  
 ** Service Database
 
 ** Services Application Integrations
