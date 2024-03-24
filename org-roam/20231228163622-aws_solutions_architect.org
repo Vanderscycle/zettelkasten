@@ -262,6 +262,8 @@ EFS for windows:
 - 3 AWS FSx for NetAPP ONTAP high performance accessible on Linux, macos, windows
 - 4 AWS FSx for OpenZFS
 
+Lustre: Lustre is a type of parallel distributed file system, generally used for large-scale cluster computing.  
+
 *** Simple Storage Services (S3)
 
 **** General
@@ -359,6 +361,61 @@ ACL policies are legacy (READ/WRITE/FULL_CONTRL) etc... do not use
 
 Does not work with any SSR (server side rendering). There are costs associated with GET requests per 1000. If you use a DNS you need to name your bucket the same e.b. bestcar.com bucket must be named bestcar.
 
+**** Pres-signed urls
+Share a few files to an unauthenticated user without giving that person an AWS acct. however the pre-signed url thinks its you. Usefull for private bucket for file sharing.
+Another use case is to upload files to the bucket directly instead of making a POST request to the backend server.
+
+**** S3 Access points
+For use when legal/admin/infra/dev needs access to different folder or have different scope in a certain bucket. This would make for a very complicated bucket policy. You can restrict VPC using access points. Every group/user can be given their own access point.
+
+*** AWS Backup/disaster recovery
+Planning and responding to disaster
+
+Backups: essential part of disaster recovery by creating copies of data to restore in case of data loss
+Disaster recovery: encompasses a broader strategy, including backup. Planning for system and application recovery
+- s3: multi az
+- ebs: snapshots
+- AWS backup: AWS service
+
+Components:
+- Backup vault, Backup plan, recovery point.
+To use that service we need to create first a backup plan, schedule, duration.
+
+*** Elastic Disaster recovery
+Fully managed disaster recovery service for physical, virtual and cloud-based servers (other than AWS). Can use AWS as a recovery site instead of investing in on-premises disaster recovery infra.
+Uses a template
+
+*** Storage Gateway
+Bridge between on-premise and cloud base storage. Can be used as an extension to on-premises, backups, disaster recovery (assists migrations). Either a virtual machine or physical server deployed on your on-prems.
+
+There are 3 types: volume, file and tape. based on what you use on-prems
+Volume stored:
+- Data is stored locally on-prems, replicated on AWS s3, doesn't increase datacenter storage capacity (usefull backup/disaster recovery)
+Volume cached:
+- acts as a datacenter extension increases customers storage capacity.
+
+File:
+- stored in s3
+
+Tape:
+- Essentially for deep storage
+
+*** Questions
+A developer wants to trigger a Lambda function for processing images each time a new image is uploaded to their S3 bucket. Use S3 event notifications
+
+A company wants to protect their S3 objects from being accidentally deleted or overwritten. Which S3 feature should they enable. A. S3 versioning + s3 object lock
+
+An organization needs a solution to minimize downtime and data loss with fast, reliable recovery of physical, virtual, and cloud-based servers into AWS. Which service should they use?. A: AWS Elastic Disaster Recovery
+
+A data engineer needs to upload large files over a high-latency network to S3. Which method should they use to maximize the upload efficiency? A: s3 multipart upload
+
+A company wants to analyze their S3 object access patterns to determine when to transition objects to less expensive storage classes. Which tool can they use to obtain these insights? A. S3 analytics - storage class analysis
+
+A database administrator is deploying a high-performance OLTP database system on AWS. Which Amazon EBS volume type should they choose to ensure consistent I/O performance and low latency? A. Provisioned IOPS SSD (io2)
+
+A media company needs a high-performance file system for their compute-intensive workloads, such as high-performance computing (HPC), machine learning, and media data processing workflows. Which AWS service should they use? A. FSx lustre
+
+A web development company wants to improve the upload speed to their S3 bucket for global users. Which feature should they enable on their S3 bucket? A. S3 transfer accel
 ** Service Compute
 
 ** Service Database
