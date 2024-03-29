@@ -46,8 +46,9 @@ Enter the dbcli
   USE database_name;
   -- from them on all sql commands are apply
 
+  -- list all tables within a db
+  SHOW TABLES;
 
-  -- list all tables
 
 #+end_src
 
