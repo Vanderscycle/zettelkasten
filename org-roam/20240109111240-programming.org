@@ -22,6 +22,9 @@
 - [[id:62ee5710-d887-4f83-8ffd-fffa418c5c79][kubernetes]]
 - [[id:2dee5225-459e-4b46-a03f-a625aa098f3b][Terraform]]
 
+** DBs
+- [[id:0ceb4ec1-9e99-4832-9eaa-98d33304d746][DB - mariadb]]
+
 ** Linux
 *** CLI
 *** Tiling hwindow Manager

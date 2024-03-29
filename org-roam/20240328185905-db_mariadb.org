@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       0ceb4ec1-9e99-4832-9eaa-98d33304d746
+:END:
+#+title: DB - mariadb
+
+* MariaDB
+
+MariaDB is an open-source relational database management system (RDBMS) that emerged as a fork of MySQL, created by the original developers of MySQL after concerns over Oracle's acquisition of MySQL in 2009.
+** Basic commands
+
+Enter the dbcli
+#+begin_src bash
+  mysql -u username -p
+
+#+end_src
+
+#+begin_src sql
+
+  -- exit
+  EXIT;
+  -- apply changes
+  FLUSH PRIVILEGES;
+  -- list all users
+  SELECT User, Host FROM mysql.user;
+
+  -- create  user
+  --- localhost only access
+  CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password';
+  --- specific ip only access
+  CREATE USER 'new_user'@'192.168.1.5' IDENTIFIED BY 'password';
+  --- everywhere
+  CREATE USER 'new_user'@'%' IDENTIFIED BY 'password';
+
+  -- delete user
+  DROP USER 'new_user'@'localhost';
+  DROP USER 'new_user'@'%';
+
+  -- grant admin privileges
+  GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%';
+  -- specific operation to table
+  GRANT SELECT, INSERT, UPDATE ON database_name.* TO 'new_user'@'%';
+
+  -- list all dbs 
+  SHOW DATABASES;
+  -- enter dbcli
+  USE database_name;
+  -- from them on all sql commands are apply
+
+
+  -- list all tables
+
+#+end_src
+
+In mariadb all accounts are managed at a global level
