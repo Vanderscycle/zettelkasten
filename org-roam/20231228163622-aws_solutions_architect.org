@@ -466,7 +466,76 @@ An elastic IP can be assigned so that the EC2 doesn't change IP during reboots
 - reserved instances: low price on ec2 but requires a commitment 1 to 3 year term. (compute power)
 - dedicated hosts: renting your own dedicated ec2 hosts (but the server rack/host can change). great for licenses tied to machines
 - dedicated instances: get your own server but unsure about which one.
-  
+
+*** EC2 Image builder
+Much like dockerfiles AWS allows you to create images so that the ec2 instances generated from it starts will all of the required software/config/etc.
+
+=Golder Image= the prefered organization image to base future images from
+To create a golden/any image
+1. select base image e.g. ubuntu
+2. build phase (install all necessary tools/apps)
+3. customize 
+4. test
+5. distribute
+
+*** Elastic Network Interfaces
+Virtual network card for your ec2. Essentially allows you to decouple the networking from the ec2 instance allowing for greater flexibility. Since it is separate from the ec2 you can attach it to any other ec2
+
+There are primary and secondary ENIs:
+- primary deleted with the ec2
+- secondary and can be detached to another ec2 instance and with different SG. Can assign a specific elastic ip
+
+*** Elastic Beanstalk
+Allow to quickly deploy web applications without having to worry about the infrastructure like vpc, subnets, igw, ec2, eg, etc... just upload the code, configure beanstalk, and run.
+environment: collection of all AWS resources for an environment to run.
+
+Essentially, that services will create and manage all the relevant dbs, load balancers, sg. Could be usefull for prototyping.
+
+*** Lightsail
+The quickest way to deploy code, without having to understand everything about it.
+
+*** Elastic Container Services (ECS)
+AWS's version of kubernetes. Fully managed container orchestration service that helps manager, and scale containerized applications.
+There are 2 types:
+- ec2: you manually provision ec2, install docker and everything else. Servers are always running. Greater control + felxibility.
+- Fargate (serverless): (AWS manages the underlying infra)
+
+**** ECS task
+Essentially the pod in kubernetes terms
+**** ECS service
+Essentially the deployment in kubernetes terms
+
+*** Elastic Kubernetes Service
+Managed kubernetes service by AWS (bring your own manifests files). Makes file easier for the following: (because running and scaling k8s can be difficult)
+- control plane
+- scaling and backups
+- install control place processes
+
+Also integrations with ssm, lbs, s3, rds etc.
+3 options:
+1. Self-managed nodes: create ec2 instances, install kubernets on them, update them (you handle all of them)
+2. Managed node group: managed group of nodes
+3. Fargate: serverless
+
+*** Elastic container Repository (ECR)
+store your docker containers iamages in AWS. Can be either public/private ecr
+
+you can use AWS Codecommit to push your code (aws git repos) then AWS CodeBuild can be your CI/CD pipelines
+
+*** App runner
+AWS version of vercel. Can be used directly from a container (ECR), Can be tied with AWS CodeCommit, AWS CodeBuild and then AppRunner.
+Can link with s3/dynamodb, etc.
+
+*** AWS Batch
+For jobs like compressings files, crunching data, etc that is in a sporadic nature instead of having an ec2 running half the time empty you can let AWS figure it out.
+Allows to queue jobs, priorities,
+Dynanmic resource provisioning, cost efficient
+
+*** AWS Lambda
+Serverless, event driven, compute service that can run code without provisioning servers. Set a trigger, lambda run, next-step
+
+Example, trigger a lambda whenever an image file is uploaded to an s3 bucket and convert it from whatever format (.svg/jpeg) to png in an output bucklet
+
 ** Service Database
 
 ** Services Application Integrations
