@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       ec9cc936-965c-4077-b1c8-29f9650be243
+:END:
+#+title: Emacs - evil-surround
+
+* Evil surround
+
+** Basic usage
+- Move the cursor to the word you want to surround.
+- Press ys (for "yank surround") followed by a motion command to select the word. For a single word, the motion command would be iw (inner word).
+- Finally, type the character you want to surround the word with, such as " for double quotes or ' for single quotes.
+ 
+** Basic Motions
+
+    w: Start of the next word.
+    e: End of the next word.
+    b: Start of the previous word.
+    $: End of the line.
+    ^: Start of the line (first non-blank character).
+    0: Very start of the line (including whitespace).
+
+** Text Objects
+
+Text objects refer to predefined or user-defined regions of text. They are particularly useful with commands like ys for surrounding operations.
+
+    iw: Inner word. The word under the cursor, not including surrounding whitespace.
+    aw: A word. The word under the cursor, including surrounding whitespace.
+    is: Inner sentence.
+    as: A sentence. The sentence under the cursor, including surrounding whitespace.
+    ip: Inner paragraph.
+    ap: A paragraph. The paragraph under the cursor, including surrounding whitespace.
+    i': Inner single quotes. The content inside single quotes, excluding the quotes themselves.
+    a': A single quote. The content inside single quotes, including the quotes.
+    i": Inner double quotes. The content inside double quotes, excluding the quotes themselves.
+    a": A double quote. The content inside double quotes, including the quotes.
+    i( or ib: Inner parentheses. The content inside parentheses, excluding the parentheses themselves.
+    a( or ab: A parentheses. The content inside parentheses, including the parentheses.
+    i[ or iB: Inner square brackets. The content inside square brackets, excluding the brackets themselves.
+    a[ or aB: A square brackets. The content inside square brackets, including the brackets.
+    i{ or iB: Inner curly braces. The content inside curly braces, excluding the braces themselves.
+    a{ or aB: A curly brace. The content inside curly braces, including the braces.
+    it: Inner tag (HTML/XML). The content inside the tag, excluding the tag itself.
+    at: A tag (HTML/XML). The content inside the tag, including the tag itself.

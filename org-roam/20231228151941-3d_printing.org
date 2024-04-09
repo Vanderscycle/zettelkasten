@@ -93,3 +93,12 @@ How to crimp JST-XH connector (the ones
 
 ** Dupont connectors
 - Learn more about when to use dupong connectors.
+
+* 3d modelling (onshape)
+** To create a model
+1. sktech an outline (select the face)
+2. adjust the dimensions d
+   - if you need to alter the dimensions you can select edit.
+   - if you need to specify inches (in) else cm
+3. extrude the sketch (shift-e)
+   - if you need to alter the dimensions you can select edit.
