@@ -538,6 +538,100 @@ Example, trigger a lambda whenever an image file is uploaded to an s3 bucket and
 
 ** Service Database
 
+*** AWS Relational Databases (SQL)
+Why use an RDS db over self hosting one/on prem?
+- Low risk of hardware failure + downtine
+- Disaster recovery
+- security, access lockdown + compliance
+
+Supported types: Postgresql, MariaDB, Oracle, MS SQL, MySQL
+Instances types: General purposes vs memory optimized (best for workloads with large datasets)
+Deployment types:
+- Single RDS setup (single copy/single AZ). If the AZ goes down you lose your data. Its really cheap tho. Do not use for Prd. high latency 
+- Multi-AZ RDS setup. Multiple copies
+- RDS read replicas. You can have multiple read replicas but only one write replica. Allows the db to act as a load balancer. Can promote a read to a write in case of failure. Allows to scale out the read heavy database workloads.
+- RDS Cross-region read replicas. Can set read replicas in Asia for example to reduce latancy
+- Multi-AZ cluster
+
+Blue/green deployment. Blue production/green staging. Allows to test changes to the db without affecting prod. Expensive because you are running a double rds cluster instances.
+Storage types: GP SSD, IOPS SSD (low I/O and consistent throughput), magnetic (HDD) to be phased out
+**** RDS Configurations:
+DB parameter groups: customize db
+DB Option Groups:
+DB Subnet Groups:
+DB SG: access 
+DB snapshots: backups
+performance insights
+
+*** Aurora/Aurora serverless
+Can act as drop-in replacement from mysql and postgresql. DB is typically a combination of compute and storage in a single instance. Aurora decouples compute and storage for easier scalability, durability, and availability.
+
+Continuous backup to s3, storage volume spread accross multiple AZ. Storage volume segmented in 10gb protection nodes (PG), each PG contains 6 10gb segments and copies of the same data on different storage nodes (two in each AZ).
+
+Due to its configuration it can expand up to 128TBs without downtime. Uses quorum model for write + read (4/6 writes must agree), maintains write capability if an AZ fails.
+
+https://geekflare.com/wp-content/uploads/2022/12/Screenshot-2022-12-06-at-23.47.45-1500x795.png
+
+aurora types: provisioned (fixed Capacity/global), serverless (on-demand scaling.usefull for variable and unpredictable workloads)
+Unit of measure is Aurora capacity unit (ACU): 1 ACU = 2 gib mem corresponding cpu/networking
+Aurora global: provision data across the globe. Uses the same structure as above but everything is cluster
+https://digitalcloud.training/wp-content/uploads/2022/01/aurora-global-database.jpeg
+
+*** Redshift (data warehouse)
+Fully managed petabyte-scale data warehouse service in the cloud. Supports client connections with business intelligence (BI), reporting data and analytics tools.
+https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2021/01/20/ARYIR-1.jpg
+
+Designed to consolidate data from various location, optimized for analytics (unlike std dbs which are optimzed for transactions), mostly used for historical analysis. Data transformation focus (ETL). Cost efficient for data analytics
+
+features:
+- integrations (s3, etc.)
+- columnar stoage
+- Data compression
+- scalability
+- data ingestion
+- sql compatibility
+- integration wiht BI tools (tableau)
+- data lake ingestion
+
+Uses cases:
+financial + demand forecasts
+optimize BI
+
+*** DynamoDB (NoSQL)
+Managed service
+Components:
+- Tables: collection of data
+- Items: entry within a table
+- Attributes: key/value of an item
+ #+begin_src json
+[
+  {
+    "UserId": "user1",
+    "Email": "user1@example.com",
+    "Name": "John Doe",
+    "SignupDate": "2024-04-08",
+    "Interests": ["Reading", "Hiking", "Coding"]
+  },
+  {
+    "UserId": "user2",
+    "Email": "user2@example.com",
+    "LastLoginDate": "2024-04-09",
+    "PurchaseHistory": [
+      {
+        "Item": "Laptop",
+        "Date": "2024-03-15",
+        "Amount": 1200
+      },
+      {
+        "Item": "Headphones",
+        "Date": "2024-03-20",
+        "Amount": 150
+      }
+    ]
+  }
+]
+
+#+end_json
 ** Services Application Integrations
 
 ** Services Data and ML

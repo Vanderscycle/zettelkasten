@@ -32,3 +32,13 @@ Select files/folders using m, then press C to copy the files in the clipboard th
 - create new dir `+`
 - create new file `c-x c-f`
 - Change the perms of a file/dir `M`
+
+** Find
+*** within a page
+*** within a project
+Use =grep-find=
+** Find and replace
+*** Within a page
+Use =replace-string=
+*** Within a project
+Use =projectile-replace=
