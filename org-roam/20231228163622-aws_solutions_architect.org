@@ -597,6 +597,12 @@ Uses cases:
 financial + demand forecasts
 optimize BI
 
+*** Redshift Serverless
+Same as provisioned Redshift but serverless but in a hybrid method using (base capacity). Power calculated in Redshift Processing Units (RPUs) where 1 RPU = 16 GB RAM. You pay for the workloads you run in RPU/hrs on a per-second basis.
+
+Start a Base capacity + extra using RPU (8-512RPU). 8-24 RPU can support up to 128 TB of data greater than that you need to use 32 RPU min.
+
+
 *** DynamoDB (NoSQL)
 Managed service
 Components:
@@ -630,9 +636,52 @@ Components:
     ]
   }
 ]
+#+end_src
 
-#+end_json
+In the aboe example the UserID is the partition key must be unique.
+In a composite primary:
+- first attribute: partition key (with the possibility of multiple similar partition key)
+- second attribute: sort key (for similar partition key items, they must have different sort key value)
+
+#+begin_example
+Table one:
+partition key: artist
+Table two:
+partition key: artist
+sort key:song
+
+Secondary index (table 2):
+partition key: genre
+album title: sort key
+#+end_example
+
+You can query the table using a secondary index which allows you to query the data using a different key. Every index belong to a table. Max 20 global index, max 5 local index 
+
+**** DynamoDB streams
+Optional feature, 24 hours version control of the data. Whenever data is added/deleted dynamo will create a record called streams. Can be linked with AWS Lambda as a trigger.
+
+**** DynamoDB Table classes
+- Std access table class
+- std infrequent access table class
+Each table have a class
+
+*** OpenSearch (open source)
+Textual, log/event, geospatial, time-series, json data where the shear scale and diversity to search through that amount of data requires opensearch (old elastisearch)
+
+**** Components
+- serverless(removes the complexity of provisioning)
+- can be deplo
+- opensearch ingestion (opensearch service domains): uses ingestion pipelines configured at the producers to move data to opensearch.
+
+Can leverage machine learning for anomaly detection, application analytics. Uses SQL query syntax
+**** Integrations
+- cloudwatch
+- cloudtrail
+- s3/lambda/dynamodb/quicksight
+
+Excellent for monitor/debug, store Security event monitoring (SIEM)
 ** Services Application Integrations
+
 
 ** Services Data and ML
 

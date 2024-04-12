@@ -58,6 +58,8 @@ error:
        at «none»:0: (source not available)
 #+end_example
 
+commit the files in git
+
 ** Managing/Reverting nixos builds
 
 #+begin_src  bash
@@ -68,4 +70,12 @@ error:
   # delete a generation
   sudo nix-env --delete-generations 554 --profile /nix/var/nix/profiles/system
 
+#+end_src
+
+** Updating flake's inputs
+
+When running the flake file, it will not update the lock file. If you want to use the newest packages you must update the flake. Quite important if you use the unstable channel.
+
+#+begin_src bash
+nix flake update
 #+end_src
