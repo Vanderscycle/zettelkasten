@@ -680,8 +680,86 @@ Can leverage machine learning for anomaly detection, application analytics. Uses
 - s3/lambda/dynamodb/quicksight
 
 Excellent for monitor/debug, store Security event monitoring (SIEM)
+
 ** Services Application Integrations
 
+*** Autoscaling 
+Allow for dynamically scale ec2 instances based on the demand. 
+1. Based on a scaling (manual/dynamic/sceduled) policy with the following properties min x, desired y, max z
+   * manual: manually adjust the desired capacity; auto-recovery: in the event of unhealthy instances, it will replace them
+   * dynamic: scale up and down based
+     - target tracking scaling: avg cpu usage, network i/o, application lb. Create/destroy instances based on the metrics
+     - step scaling: uses tiers based on cloudwatch alarms to add/remove x instances (not fixed values) 
+     - simple scaling: uses cloudwatch alarms (set the alarms) to scale up fixed values
+     - schedule scaling: based on time of the day (more desired instances during the day and less at night) can use cron jobs
+   * need to use a launch template to specify the config of the ec2 (size, ami, sg)
+      
+*** Elastic Loadbalancing
+Allows for horizontal scaling, by forwarding incoming traffic to a specific target groups that can be across many AZ. The TG can be EC2, lambdas, Elastic Ips, or other load balancers. They always perform health checks on the target to know whether to forward to that node or not
+
+**** Cross-zhone load balancing
+has to be enabled at the route53
+
+*** Api gateway
+Allows for the following:
+- Integrate various backend services into a single integrated.
+- Allows for api versioning v1.1,v1.2 which have different behavior.
+- request and response transformation
+- security and access control
+- rate limiting/throttling prevents abuse of api
+- monitoring/analytics
+- onboarding/docmentation (swagger)
+
+Supported api types:
+- http
+- websocket
+- restapi (put/get/post/delete)
+-
+integrates with:
+- lambda
+- elastic beanstalk
+- ec2
+- s3
+- dyanmo
+- RDS
+- cognito
+
+*** App flow 
+fully managed integration service that enables the exchange of data between data silos and bi software.
+
+*** AWS (simple notification services) SNS
+managed aws services that delivers events (messages) from publisher to subscriber (like rabbitmq) if they are part of a topic. Max data size 256kb, if more is required use an s3 link.
+
+**** std topic
+subscirbers receives messages out of order and messages can be duplicated. can scale up
+**** FIFO 
+no duplications and strict ordering. 300 msg/s
+
+Messages can be encrypted
+
+*** AWS Simple Queue Service
+loose coupling producers push messages to a queue without having to know about the consumer.
+Queues: Buffer between producer/consumer
+message: 
+
+Dead letter queue: receive messages that couldn't be processed
+messages are locked when processed (message locking)
+**** std queues
+same as sqs
+**** fifo queues
+same as sns
+
+*** AWS message broker (MQ)
+same as like rabbitmq but aws runs it on an aws instance.
+just like aws rds but for mq
+
+*** Eventbridge
+EventBridge is a serverless service that uses events to connect application components together, making it easier for you to build scalable event-driven applications. Event-driven architecture is a style of building loosely-coupled software systems that work together by emitting and responding to events. 
+The basis of EventBridge is to create rules that route events to a target.
+**** event bus
+An event bus is a router that receives events and delivers them to zero or more destinations, or targets.
+**** pipe
+A pipe routes events from a single source to a single target. The pipe also includes the ability to filter for specific events, and to perform enrichments on the event data before it is sent to the target.
 
 ** Services Data and ML
 

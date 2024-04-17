@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       205000be-2427-4660-89ab-a1d0f0c9eebf
+:END:
+#+title: Programming - GO
+
+* Go
+
+The herald of C
+
+** Creating a new project
+
+#+begin_src bash
+go mod init master/module
+#+end_src
+
+Here's basic =main.go=
+#+begin_src go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+#+end_src
+
+Run the program
+#+begin_src bash
+go run .
+# import dependencies 
+go mod tidy
+#+end_src
+*** References
+[[https://go.dev/doc/tutorial/getting-started][Go get started]]
+[[https://pkg.go.dev/][Go package registry]]
+
+** Packages
+To read the content of a file
+#+begin_src go
+import (
+    "bufio"
+)
+#+end_src
+
+To interact with the filesystem and operating software
+#+begin_src go
+import (
+    "os"
+)
+#+end_src
+** Snippets
+*** Error handling
+
+The usage := for error can be annoying 
+#+begin_src go
+	err := parser.Parse(os.Args)
+	if err != nil {
+		fmt.Print(parser.Usage(err))
+	}
+#+end_src
+
+Write in this more concise way
+#+begin_src go
+	if err := parser.Parse(os.Args); err != nil {
+		// Print usage message if there's an error parsing arguments
+		fmt.Print(parser.Usage(err))
+	}
+#+end_src
+
+This doesn't work well for functions that have a return
+#+begin_src go
+  // f is only scoped in the if statement
+  if f, err := os.Open(*filePath); err != nil {
+    fmt.Println(err)
+  } 
+#+end_src
+
+I recommend the following pattern
+#+begin_src go
+var f, f2 *os.File
+var err error
+
+// Open the first file
+if f, err = os.Open(*filePath); err != nil {
+    fmt.Println(err)
+}
+
+// Open the second file
+if f2, err = os.Open(*filePath); err != nil {
+    fmt.Println(err)
+}
+#+end_src
