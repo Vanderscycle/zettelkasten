@@ -9,6 +9,7 @@
 - [[id:338d95c5-0d38-4089-8e16-ff853ced3834][Styling]]
 - [[id:6c7c13d8-f06b-4ff1-83b2-564ea572da83][Emacs Shell]]
 - [[id:421fda6d-346b-4c72-b88d-8080922da724][Windows]]
+- [[id:97649f9e-ee40-4226-ac4d-d51e1f7bbd3f][Macros]]
 
 ** Quick tips
 - describe value in emacs =SPC h d v=
@@ -33,6 +34,7 @@ Select files/folders using m, then press C to copy the files in the clipboard th
 - create new file `c-x c-f`
 - Change the perms of a file/dir `M`
 
+lsp if you are ever confused why the lsp isn't working check =lsp-describe-session= and if it shows nothing also check if you blocked the lsp =lsp-workspace-blocklist-remove=
 ** Find
 *** within a page
 *** within a project

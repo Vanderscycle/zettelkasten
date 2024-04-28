@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       97649f9e-ee40-4226-ac4d-d51e1f7bbd3f
+:END:
+#+title: Emacs - Macros
+* Macros
+** Creating a new macros
+1. Start Recording a Macro: To start recording a macro, press F3 or C-x ( (Ctrl + x, ().
+2. Perform Actions: Perform the actions you want to record, such as navigating through the buffer, editing text, or executing commands.
+3. Stop Recording a Macro: Once you've completed the actions you want to record, press F4 or C-x ) (Ctrl + x, ) to stop recording.
+4. Replay Macro: To replay the macro, press C-x e (Ctrl + x, e) after stopping recording. You can also prefix this with a number to repeat the macro multiple times.
+5. Name a Macro: If you want to save the macro for future use, you can name it and save it to your Emacs configuration. To do this, use M-x name-last-kbd-macro and follow the prompts to name the macro. You can then save it in your Emacs configuration file for later use.
+6. Use a Named Macro: Once you've named and saved a macro, you can execute it anytime by invoking M-x followed by the name you've given to the macro.
+*** [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html][macros docs]] 

@@ -1,9 +1,11 @@
 :PROPERTIES:
 :ID:       24d43f89-27be-44a7-8a31-0a949dbf96b6
+:ROAM_ALIASES: test
 :END:
 #+title: Certs - AWS Solutions Architect
 
-* TODO: install windows on the work laptop
+* Usefull guide/helps
+https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate/#ec2-elastic-compute-cloud
 * Knowledge
 ** Networking
 *** VPC (Virtual Private Cloud)
@@ -761,8 +763,132 @@ An event bus is a router that receives events and delivers them to zero or more 
 **** pipe
 A pipe routes events from a single source to a single target. The pipe also includes the ability to filter for specific events, and to perform enrichments on the event data before it is sent to the target.
 
+*** AWS Simple Email Services (SES)
+managed AWS mailing services
+components:
+
 ** Services Data and ML
 
+input data at this point is s3,rds,aurora,glue,redshift
+## Data ingestion
+*** Kinesis
+Real time data ingestion/processing 
+- video streams (video input)
+- data streams (data from website/machine/etc) 
+- data firehose (output not compute like ec2/lambda/emr but s3/redshift)
+- data analytics
+ 
+*** Kafka
+AWS managed Apache kafka (data streaming bus like kinesis). Kafka, like kinesis, does data ingestion, data processing and data delivery.
+
+At a high level, Apache Kafka is a distributed system of servers and clients that communicate through a publish/subscribe messaging model.
+Take inputs data, place it on topics, and consumers selects topics to use.
+analogy: radio station where user can tune to a specific station to get music/news(data type)
+
+*** Glue ETL (runs pyspark code natively)
+Extract from data sources, transform, load to a data target
+from different sources. Uses a crawler, that output in AWS Glue data catalog and runs glue jobs
+Similar to pyspark
+## Data transformation
+*** Elastic Map Reduce EMR 
+Amazon EMR makes it simple and cost effective to run highly distributed processing frameworks such as Hadoop, Spark, and Presto when compared to on-premises deployments. 
+loads data into EMR cluster (collection of ec2).Basically a managed hadoop framework. Allows for massive distributed and parallel computing.
+primary node(req): manage/coordinate the cluster
+core node (req): stores data + program
+task node (opt): execute task only
+
+You can use spot nodes to save money!
+
+*** Glue Databrew
+no-code program using visual interface to use glue undercover. The output can be used by athena for a data analyst or quicksight for a business analyst.
+steps:
+1. create projects
+2. select dataset (s3, rds,etc.)
+3. select recipes
+4. run jobs
+5. results stored in s3
+# data storage/presentation 
+*** Lake formation
+simplified data lake creation
+aggregation of meaningful dataset within a company (dynamo,redshift, s3, rds)
+data can be store either in csv or analytics optimized parquet.
+
+#+DOWNLOADED: https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2019/07/10/B.jpg @ 2024-04-19 11:53:48
+[[file:Knowledge/2024-04-19_11-53-48_B.jpg]]
+
+*** Athena
+Athena helps you analyze unstructured, semi-structured, and structured data stored in Amazon S3. Examples include CSV, JSON, or columnar data formats such as Apache Parquet and Apache ORC
+
+Serverless and pay-per-query
+*** Quicksight
+Amazon QuickSight is a cloud-scale business intelligence (BI) service that you can use to deliver easy-to-understand insights 
+Data prep + ml insight (forecasts/anomaly)
+# power of inference
+*** Sagemaker
+Amazon SageMaker is a fully managed machine learning (ML) service. With SageMaker, data scientists and developers can quickly and confidently build, train, and deploy ML models into a production-ready hosted environment.
+workflow:
+1. data ingestion
+2. sagemaker notebook/data wrangler
+3. training data/training jobs
+4. testing/model tuning
+ 
+*** Rekognition
+Amazon Rekognition is a cloud-based image and video analysis service that makes it easy to add advanced computer vision capabilities to your applications.
+object/scene detection, facial analysis/recogniztion, text in image, unsafe content
+workflow:
+1. upload to s3
+2. triggers lambda
+3. trigger call to rekognition
+4. saves tags into dynamodb or s3 idk
+5. can use aws ai to augment
+6.
+# power of inference
+   
+*** Polly
+Amazon Polly is a cloud service that converts text into lifelike speech. You can use Amazon Polly to develop applications that increase engagement and accessibility. 
+workflow:
+1. upload to s3
+2. triggers lambda
+3. trigger call to polly (generate text to speech)
+4. save audio to an s3 bucket
+
+*** Lex
+Amazon Lex is an AWS service for building conversational interfaces into applications using voice and text. With Amazon Lex, the same deep learning engine that powers Amazon Alexa.
+
+dumps data into documentDB (mongoDB clone)
+
+*** Comprehend
+Amazon Comprehend uses natural language processing (NLP) to extract insights about the content of documents. It develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document. 
+
+usefull for sentiment analysis
+
+*** Forecast
+Amazon Forecast is a fully managed service that uses statistical and machine learning algorithms to deliver highly accurate time-series forecasts. 
+
+*** Augmented AI
+Amazon Augmented AI (Amazon A2I) enables you to build the workflows required for human review of ML predictions.
+
+Essentially pay cheaply poor sods to reivew the gardbage of your ml model. allow for supervised 
+*** Fraud detector
+Amazon Fraud Detector is a fully managed fraud detection service that automates the detection of potentially fraudulent activities online. These activities include unauthorized transactions and the creation of fake accounts. Amazon Fraud Detector works by using machine learning to analyze your data. 
+*** Transcribe
+*** Translate
+Amazon Translate is a neural machine translation service for translating text to and from English across a breadth of supported languages. Powered by deep-learning technologies, Amazon Translate delivers fast, high-quality, and affordable language translation. It provides a managed, continually trained solution so you can easily translate company and user-authored content or build applications
+
+uses encoder/decoder to 
+workflow:
+1. upload to s3
+2. triggers lambda
+3. trigger call to translate 
+4. save audio to an s3 bucket which can then be used by comprehend
+*** Textract
+
+A data science team is developing machine learning models and needs a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning models quickly. Which AWS service offers this? ! AWS Sagemaker
+A medical research company needs human review of complex medical images to train their machine learning models. Which AWS service integrates human review into machine learning applications? : aws augmented ai
+An organization needs a fully managed extract, transform, and load (ETL) service to prepare and load their data for analytics. Which AWS service provides these capabilities? aws glue (not kinesis which is more for data ingestion)
+A financial services firm needs to load streaming data into their AWS data stores for near real-time analytics. Which AWS service can automatically load streaming data into Amazon S3, Amazon Redshift, Amazon Elasticsearch Service, and Splunk? Kinesis data firehose
+An insurance company needs to extract text and data from scanned documents to process insurance claims faster. Which AWS service provides optical character recognition (OCR) and machine learning to read and process any type of document? aws textract
+A marketing team wants to clean and normalize their customer data without writing code. Which AWS service provides a visual interface to prepare data for analytics? glue databrew
 ** Services Migration and ...
 
 ** Services Management and ...
@@ -780,7 +906,4 @@ A pipe routes events from a single source to a single target. The pipe also incl
 ** Cost-optimization
 
 ** Applying your desing skills
-
-* Conclusion
-
-
+[[id:cacc3523-0db3-4184-a3fb-a4e0a320e1fb][Certs - AWS Solutions Architect - exams]]

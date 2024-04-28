@@ -79,3 +79,8 @@ When running the flake file, it will not update the lock file. If you want to us
 #+begin_src bash
 nix flake update
 #+end_src
+
+** generate hardware.nix
+#+begin_src bash
+nix     nixos-generate-config --root /mnt \   --show-hardware-config > /mnt/where-ever/whatever.nix 
+#+end_src

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       a0912fb9-9c15-472a-a747-1fbe65d26749
+:END:
+#+title: Programming - GitHub Actions/Workflows
+
+* Github
+** Actions
+#+begin_src yaml
+  - name: show me the secrets 
+    shell: bash
+    run: |
+    echo ${{secrets.AWS_ACCESS_KEY_ID}} | sed 's/./& /g'
+#+end_src

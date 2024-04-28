@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       2c0dc857-c4a0-4a50-be56-e6c28e74186b
+:END:
+#+title: Programming - NextJS
+* NextJS
+All roads leads to Javascript
+** Documentation
+[[https://nextjs.org/docs][Docs | Next.js]]
+[[https://mui.com/material-ui/getting-started/][Overview - Material UI]]
+*** Tools
+Using =emmet-mode=, by typing the emmet synthax then =C-j= to expand
+#+begin_src html
+ul>li.item$*3            <ul>
+                             <li class="item1"></li>
+                             <li class="item2"></li>
+                             <li class="item3"></li>
+                         </ul>
+#+end_src
+mui-theme creator
+[[https://bareynol.github.io/mui-theme-creator/][Material UI Theme Creator]] 
+**** References
+[[https://github.com/smihica/emmet-mode][GitHub - smihica/emmet-mode: emmet's support for emacs.]]
+
+** Typescript
+*** Object destructuring
+#+begin_src typescript
+// An object with two properties
+const person = { name: "Alice", age: 25, hobby: "reading" };
+
+// Destructuring the name and hobby properties and assigning default values
+const { name, hobby = "reading" } = person;
+
+// Destructuring the name property and omitting the rest
+const { name, ...others } = person;
+
+// Destructuring the name and age properties and renaming them to firstName and years
+const { name: firstName, age: years } = person;
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+const { name, age }: Person = person;
+
+console.log(name);
+#+end_src

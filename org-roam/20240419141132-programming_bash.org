@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       d04ef69b-d3e3-452a-a2a4-ae06e238687d
+:END:
+#+title: Programming - Bash
+
+* Bourne Again Shell
+
+** Tricks
+*** Check if a certain value exists
+#+begin_src bash
+  if [ -n "$SOME_VAL" ]; then
+    echo -e "yo there's the action you wanted"
+  fi
+#+end_src
