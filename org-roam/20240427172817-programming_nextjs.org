@@ -21,7 +21,34 @@ mui-theme creator
 **** References
 [[https://github.com/smihica/emmet-mode][GitHub - smihica/emmet-mode: emmet's support for emacs.]]
 
-** Typescript
+** Features
+*** Folder route structure
+any folder within the =/app= folder will become a route. Any =.tsx/jsx= files within will be react server side component.
+
+unless specified ="use client"= at the top of the page which will make it a client component. If you need to use a react hook/or state you must use client side.
+#+begin_src ts
+"use client"
+import {useState} from 'react';
+#+end_src
+
+[[https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns][Rendering: Composition Patterns | Next.js]] 
+**** Special NextJS files
+- error.js
+- layout.js
+- loading.js
+- page.js
+*** Code splitting
+*** Api router
+Create the folder =api= within the =app= router to have the same express backend.
+You aren't required and can instead use =route.js= it isn't recommended as file path conflicts may arrise.
+#+begin_src ts
+export async function GET(request) {
+  return new Response("alive");
+}
+#+end_src
+Also supports HEAD, POST, PUT, DELETE, PATCH methods
+
+* Typescript
 *** Object destructuring
 #+begin_src typescript
 // An object with two properties
@@ -44,4 +71,64 @@ interface Person {
 const { name, age }: Person = person;
 
 console.log(name);
+#+end_src
+
+* Modern web
+** Frontend
+*** Search Engine Optimization
+How a search engine like Google/Bing ranks your website when a users searches a specific term. 
+**** Static Metadata
+add the following
+#+begin_src ts
+export const metadata = {
+  title: 'Home',
+}
+#+end_src
+**** Dynamic Metadata
+#+begin_src ts
+export async function generateMetadata({params, searchParams}){
+  const product = await getProduct(params.id);
+  return { title: product.title };
+}
+#+end_src
+*** Server Side Rendering (SSR)
+Renders the webpage on the server then sends to the client.
+*** Client Side Rendering (CSR)
+Sends the html/js/css to the client
+
+** Backend
+*** Data Fetching
+**** Server Side Rendering (SSR)
+#+begin_src ts
+async function getTool(toolId: string): ToolInterface {
+  const res = await fetch(
+    `http://${process.env.DB_HOST}:${process.env.DB_PORT}/api/collections/tools/records/${toolId}`,
+{ cache: 'no-store' }
+  );
+  const data = await res.json();
+  return data;
+}
+#+end_src
+**** Static Site Generation (SSG)
+Default behavior for NextJS, fetch the data and then caches it client side.
+#+begin_src ts
+async function getTool(toolId: string): ToolInterface {
+  const res = await fetch(
+    `http://${process.env.DB_HOST}:${process.env.DB_PORT}/api/collections/tools/records/${toolId}`,
+  );
+  const data = await res.json();
+  return data;
+}
+#+end_src
+**** Incremental Static Generation (ISR)
+A mix of SSR/SSG where data is cached but only for a certain period of time.
+#+begin_src ts
+async function getTool(toolId: string): ToolInterface {
+  const res = await fetch(
+    `http://${process.env.DB_HOST}:${process.env.DB_PORT}/api/collections/tools/records/${toolId}`,
+{ next: {revalidate: 10 } }
+  );
+  const data = await res.json();
+  return data;
+}
 #+end_src
