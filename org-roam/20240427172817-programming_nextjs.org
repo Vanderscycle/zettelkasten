@@ -72,6 +72,15 @@ const { name, age }: Person = person;
 
 console.log(name);
 #+end_src
+*** Object mapping 
+You can use either =forEach= or =map= but forEach will return unknow while map 
+#+begin_src typescript
+  {routes.map((route, index) => (
+    <Link key={index} href={route.href} className="mx-2">
+      <p className="logo_text">{route.name}</p>
+    </Link>
+  ))}
+#+end_src
 
 * Modern web
 ** Frontend

@@ -11,11 +11,15 @@
 [[https://www.youtube.com/watch?v=G2oPClnoJpg][6 Cultural Aspects You Must Consider When Doing Business In China - Intermedi...]]
 
 ** New
+想要得到 xiang3yao4de2dao4 want to get
+*** TODO: 得到 de2dao4 get/obtain if ... then                       :pattern:
 做生意 zuo4 sheng1yi4 do business
 文化 wen2hua4 culture
 商务礼节 shang1wu4 li3jie4 Business Etiquette
 礼节 li3jie4 eitquette
 *** A 或 B ...huo4... or                                            :pattern:
+或者 huo4zhe3 or 
+送双不送单 shuang1 even/dan1 odd
 差异 cha1yi4 difference
 所有 suo3you3 all (adjective) 
 所有文化方面 suo3you3 wen2hua4 fang1mian4a all cultur aspects
@@ -24,7 +28,13 @@
 认可 ren4ke4 recognition
 习惯性地 xi2guan4xing4di4 habitually
 内心 nei4xin1 heart
+年终 nian2zhong1 end of year
+年终奖 ... jiang3 end of year bonus
+受贿 shou4hui4 bribery
 ** Often forgotten
+过节 guo4jie2 holidays
+认为 ren4wei4 think
+想 xiang3 think
 内向 nei4xiang4 introvert
 外向 wai4xiang4 extroverted
 其实 qi2shi2 actually 
@@ -38,13 +48,43 @@
 发现 fa1xian4 found/discover?
 真是 zhen1shi real/really
 传统的 cuang2tong3de traditional
+关系 guan1xi4 relation
+关系网 relation web
+网络 wang3luo4 network
+不清楚的很微妙的 not clear, very sublte
+微妙 wei2miao4 subtle
+*** festivals
+端午节 duan1wu3jie2 dragon boat festival
+中秋节 zhong1qiu1jie2 mid-autumn festival 
+感恩节 gan3'en1 jie2 thanksgiving
+圣诞节 sheng4dan4jie2
+*** Food
+粽子 zong4zi sticky rice in bamboo leaves
+月饼 yue4bing3 mooncake
 ** Words to use in sentences
+甲方乙方 jia3fang1yi3fang1 person A/person B
+几乎 ji1hu1 almost
 商务礼节 shang1wu4 li3jie4 Business Etiquette
+严重 yan2zhong4 serious
+重大 zhong4da4 important
+礼节 li3jie4 etiquette
 当地 dang1di4 local
 刚才 gangcai2 just now
-就算 jiu4suan4 even if 
+就算 jiu4suan4 even if
+方式 dang1shi4 manner/method/way 
+建立 jian4li4 establish 
+就拿...来说 jiu4na2 ...lai2shuo1 take ... for example
+吉利的 ji2li4de lucky
+运气 yun4qi4 luck
+
 ** Full usefull sentences
 很高兴来到这里 glad to be here
 尤其的重要 especially important
 习惯性地会给别人泼冷水 pour cold water on others
 在我们 80 后就是 for those of us born in the 80s
+就是你把这个关系建立起来了 if you create this network
+通过怎么样的方式 through what method?
+送给你礼物 song4 geini3 li3wu4 give you a gift
+好事成双 hao3shi4 cheng2shuang1 good things comes in pair
+*** 不好意思 bu4hao3yi4si excuse me
+对不起 dui4bu4qi3 sorry

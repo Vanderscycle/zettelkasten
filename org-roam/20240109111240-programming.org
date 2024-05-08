@@ -19,7 +19,7 @@
 - [[id:c6d76fdd-2edb-4a07-ae6f-0b6a71d027bb][Lisp]]
 - [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][GO]]
 - [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Bash]] 
-
+- [[id:f238bd80-ab67-4420-834b-2510693136de][C]]
 ** Servers
 - rpi cluster
 - Rpi Blade
