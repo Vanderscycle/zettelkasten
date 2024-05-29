@@ -22,6 +22,7 @@
 - [[https://www.youtube.com/watch?v=AyhPmypHDEw][Org roam]]
 - [[https://www.youtube.com/watch?v=PNE-mgkZ6HM][Org mode tutorial]]
 - [[https://www.youtube.com/watch?v=INTu30BHZGk][projectile + maggit]]
+- [[id:341a7c39-5089-4d98-a390-2521fae514cc][Spacemacs abc]]
 
 
 *** TODO move the following to emacs packages

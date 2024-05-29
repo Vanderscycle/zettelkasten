@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       341a7c39-5089-4d98-a390-2521fae514cc
+:END:
+#+title: Spacemacs abc
+#+TAGS: emacs|programming
+
+* Spacemacs ABC
+** Misc navigation
+
+| Key binding | Description |
+|-------------+-------------|
+| ~SPC TAB~   | Last buffer (from the window) max 2 |
+
+#+caption: evil motion
+| Key binding | Description |
+| ~g s s~  |             |
+|             |             |
+|-------------+-------------|

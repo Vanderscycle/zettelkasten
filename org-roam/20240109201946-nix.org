@@ -4,6 +4,7 @@
 #+title: Programming - Nix
 
 * reproducible pain and misery
+
 ** Using node2nix
 Granted you have =node2nix= installed, create a package.json
 #+begin_src bash
@@ -24,6 +25,21 @@ sudo nixos-rebuild switch --upgrade
 
 ** Flakes
 Running nixos configurations flakes
+*** Allow unfres
+#+begin_src nix
+   description = "A very basic flake";
+
+   inputs = { nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; };
+
+   outputs = { self, nixpkgs }:
+  let pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; } in
+  {}
+#+end_src
+*** nix-shell 
+instead use
+#+begin_src bash
+nix shell nixpkgs#python3
+#+end_src
 *** Errors
 When getting this error:
 #+begin_example
@@ -84,3 +100,10 @@ nix flake update
 #+begin_src bash
 nix     nixos-generate-config --root /mnt \   --show-hardware-config > /mnt/where-ever/whatever.nix 
 #+end_src
+
+** Travelling back in time 
+
+use Nixhub.io for easy package
+[[https://www.nixhub.io/][Nixhub.io | A Nix Packages Registry]] 
+
+usefull video on the subject: [[https://www.youtube.com/watch?v=yQwW8dkuHqw][Nix Dev Environments | Declare Your Coding Projects - YouTube]] 
