@@ -1,0 +1,10 @@
+* Tasks
+** TODO
+  [2024-05-30 Thu]
+  [[file:~/.spacemacs::(setq org-default-notes-file (concat org-directory )) ;; "/notes.org"]]
+** TODO test
+  [2024-05-30 Thu]
+  [[file:~/.emacs.d/layers/+emacs/org/README.org::*Description][Description]]
+** TODO testsettse
+  [2024-05-30 Thu]
+  [[file:~/.spacemacs::setq org-directory "/home/henri/Documents/zettelkasten/org"]]

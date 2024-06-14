@@ -5,14 +5,109 @@
 #+TAGS: emacs|programming
 
 * Spacemacs ABC
-** Misc navigation
+** Org mode and its madness
+org-capture
+[[https://systemcrafters.net/build-a-second-brain-in-emacs/capturing-notes-efficiently/][Capturing Notes Efficiently with Org Roam - System Crafters]]
+** Keybindings/cords
 
-| Key binding | Description |
-|-------------+-------------|
+*** Files
+#+caption: files actions
+| favorite | key bindings   | Description                              |
+|----------+----------------+------------------------------------------|
+| yes      | ~SPC f e d~  | emacs config |
+
+*** buffers
+| favorite | key bindings   | Description                              |
+|----------+----------------+------------------------------------------|
+| yes      | ~SPC b .~      | buffer transient states (the most power) |
+|          | ~SPC b b~      | list all buffer                          |
+|          | ~SPC b d~      | delete current buffer                    |
+|          | ~SPC b n/p~    | next/previous buffer                     |
+|          | ~SPC b Y/P~    | copy/paste entire buffer                 |
+|          | ~SPC b s~      | create new scratch buffer             |
+|          | ~SPC b x~      | delete + close window current buffer     |
+|          | ~SPC b u~      | reopen last killed buffer                |
+|          | ~SPC b [1..9]~ | move buffer to window [1..9]             |
+|          | ~SPC b I~      | ibuffer (~SPC-?~ and search ibuffer)     |
+
+helm mini  ~M-SPC~ transient state
+helm help ~C-z~
+helm actions ~C-c~ list of actions
+fold transient state ~SPC z .~
+zoom transietn state controls ~SPC z x~
+copy and comment (make duplicate) ~SPC c y~
+
+*** Windows
+| Favorite | Key binding     | Description              |
+|----------+-----------------+--------------------------|
+|          | ~SPC w 1/2/3/4~ | split in 1/2/3/4 windows |
+| yes      | ~SPC w .~       | window transient states  |
+
+
+*** Projectile
+| Favorite | Key bindings | Description                 |
+|----------+--------------+-----------------------------|
+|          | ~SPC p l~    | open project in perspective |
+|          | ~SPC p b~    | list project buffer |
+
+*** Programs
+| Favorite | Key binding | Programs                                       |
+|----------+-------------+------------------------------------------------|
+|          | ~SPC a *~   | calculator                                     |
+| yes      | ~SPC a u~   | undo-tree visualize w/ branches (buffer aware) |
+|          | ~SPC a d~   | Dired                                          |
+|          |             |                                                |
+
+*** Misc navigation
+#+caption: general operator
+| Key binding | Description                         |
+|-------------+-------------------------------------|
 | ~SPC TAB~   | Last buffer (from the window) max 2 |
+| ~SPC / *~   | Search in project                   |
+| ~SPC ;~     | comment out lines                   |
 
-#+caption: evil motion
-| Key binding | Description |
-| ~g s s~  |             |
-|             |             |
-|-------------+-------------|
+*** Evil motion
+#+caption: evil motion operators
+| Favorite | Key binding | Description                            |
+|----------+-------------+----------------------------------------|
+|  yes     | ~g s s~     | match 2 characther                     |
+|  yes  | ~g s f~     | match 1 characther fwd                 |
+|  yes     | ~g s F~     | match 1 characther back                |
+|          | ~g s j/+~   | match line done (same level as cursor) |
+|          | ~g s k/-~   | match line up (same level as cursor)   |
+|          | ~g s b~     | match start word backward              |
+|          | ~g s w~     | match start word backward              |
+|          | ~g s e~     | match end word forward                 |
+
+
+#+caption: dired
+| Favorite | Key binding | Description |
+|----------+-------------+-------------|
+|          | ~SPC a d~   | Dired       |
+
+| Key binding | Description        |
+|-------------+--------------------|
+| ~C-o~       | Evil jump backward |
+|             |                    |
+
+*** Help
+| Key binding | Description                       |
+|-------------+-----------------------------------|
+| ~SPC h d v~ | Describe variable                 |
+| ~SPC h d k~ | Describe key chord (just type it) |
+| ~SPC h d f~ | Describe fuction e.g. =emmet-mode= |
+
+
+
+#+caption: vim verbs
+| verb  | description        |
+|-------+--------------------|
+| =e/E= | fwd end of word    |
+| =w/W= | fwd start of word  |
+| =b/B= | back start of word |
+| =j=   | move down 1 line   |
+| =k=   | move up one line   |
+
+** WTF section to investigate
+=kill-ring=
+~SPC r~ / register/ring/yank

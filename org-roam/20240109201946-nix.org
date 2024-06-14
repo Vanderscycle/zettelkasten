@@ -35,7 +35,7 @@ Running nixos configurations flakes
   let pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; } in
   {}
 #+end_src
-*** nix-shell 
+*** nix-shell
 instead use
 #+begin_src bash
 nix shell nixpkgs#python3
@@ -44,7 +44,7 @@ nix shell nixpkgs#python3
 When getting this error:
 #+begin_example
 ❯ sudo nixos-rebuild switch --flake .#laptop --impure
-[sudo] password for henri: 
+[sudo] password for henri:
 warning: Git tree '/home/henri/Documents/dotFiles' is dirty
 building the system configuration...
 warning: Git tree '/home/henri/Documents/dotFiles' is dirty
@@ -98,12 +98,16 @@ nix flake update
 
 ** generate hardware.nix
 #+begin_src bash
-nix     nixos-generate-config --root /mnt \   --show-hardware-config > /mnt/where-ever/whatever.nix 
+nix     nixos-generate-config --root /mnt \   --show-hardware-config > /mnt/where-ever/whatever.nix
 #+end_src
 
-** Travelling back in time 
+** Travelling back in time
 
 use Nixhub.io for easy package
-[[https://www.nixhub.io/][Nixhub.io | A Nix Packages Registry]] 
+[[https://www.nixhub.io/][Nixhub.io | A Nix Packages Registry]]
 
-usefull video on the subject: [[https://www.youtube.com/watch?v=yQwW8dkuHqw][Nix Dev Environments | Declare Your Coding Projects - YouTube]] 
+usefull video on the subject: [[https://www.youtube.com/watch?v=yQwW8dkuHqw][Nix Dev Environments | Declare Your Coding Projects - YouTube]]
+
+*** nativeBuildInputs vs buildInputs
+
+[[https://discourse.nixos.org/t/use-buildinputs-or-nativebuildinputs-for-nix-shell/8464/2][Use `buildInputs` or nativeBuildInputs` for `nix-shell`? - #2 by jonringer - ...]]
