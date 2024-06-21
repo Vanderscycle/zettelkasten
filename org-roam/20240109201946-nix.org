@@ -138,7 +138,13 @@ buildFHSUserEnv {
     stdenv.cc.cc.lib
   ]);
   runScript = "fish";
+  profile = ''
+    ${pkgs.neofetch}/bin/neofetch
+    echo -e "You are now in a dev shell in $(pwd)" | ${pkgs.lolcat}/bin/lolcat
+  '';
 }
+
+
 #+end_src
 
 if you are having issues with =unfree_software=, then when building run, 
@@ -154,3 +160,9 @@ nix-build android-env.nix --impure
 # to remove the result folder
 rm result 
 #+end_src
+
+Since we are on the subject of android app dev set the following prior
+#+begin_src bash
+set -x ANDROID_HOME $HOME/Android/Sdk
+    set -x PATH $PATH $ANDROID_HOME/emulator $ANDROID_HOME/platform-tools
+#+begin_src
