@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       f6df9f15-f712-4280-bee2-68cd3d732a42
+:END:
+#+title: Programming - SOPS
+
+* SOPS
+
+** Generating a key from SSH
+Produces reproduceable keyy which allows you to only track a single key
+
+#+begin_src bash
+nix run nixpkgs#ssh-to-age -- -private-key -i ~/.ssh/endeavourGit > ~/.config/sops/age/keys.txt
+nix shell nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt
+#+end_src
