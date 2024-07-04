@@ -6,8 +6,59 @@
 * Github
 ** Actions
 #+begin_src yaml
-  - name: show me the secrets 
+  - name: show me the secrets
     shell: bash
     run: |
     echo ${{secrets.AWS_ACCESS_KEY_ID}} | sed 's/./& /g'
+#+end_src
+
+** General
+
+*** Cache
+Sometimes you want to check if there's a cache and if not build accordingly, this action does just that.
+#+begin_src yaml
+  cache:
+    runs-on: ubuntu-latest
+    outputs:
+      output: ${{ steps.set-output.outputs.cache-hit }}
+    steps:
+      - name: Checkout Git Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Check cache
+        id: cache-check
+        uses: actions/cache@v3
+        with:
+          path: dist # change to the correct one
+          key: dist-build-${{ hashFiles('yarn.lock') }}
+
+      - name: Set cache-hit output
+        id: set-output
+        run: echo "cache-hit=true" >> $GITHUB_OUTPUT
+
+# [...]
+
+  build:
+    steps:
+      - name: Run Builds # build if no cache
+        if: needs.cache.outputs.output != 'true'
+        run: yarn build
+        shell: bash
+
+      - name: Cache build # save the cache
+        if: needs.cache.outputs.output != 'true'
+        uses: actions/cache/save@v3
+        with:
+          path: dist
+          key: dist-build-${{ hashFiles('yarn.lock') }}
+  #[...]
+  run
+    steps:
+      - name: Restored cached build #
+        uses: actions/cache/restore@v3
+        with:
+          path: dist
+          key: dist-build-${{ hashFiles('yarn.lock') }}
 #+end_src

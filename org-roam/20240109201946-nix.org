@@ -4,6 +4,17 @@
 #+title: Programming - Nix
 
 * reproducible pain and misery
+[[https://nixos-and-flakes.thiscute.world/nixos-with-flakes/nixos-flake-configuration-explained][flake.nix Configuration Explained | NixOS & Flakes Book]]
+** create file
+#+begin_src nix
+  home-manager.users.${username} = {
+    home = {
+      file = {
+        "/home/${username}/SpaceVim.d/init.toml".source = "${dotfiles_dir}/.config/SpaceVim.d/init.toml";
+      };
+    };
+  }
+#+end_src
 
 ** Using node2nix
 Granted you have =node2nix= installed, create a package.json
@@ -147,7 +158,7 @@ buildFHSUserEnv {
 
 #+end_src
 
-if you are having issues with =unfree_software=, then when building run, 
+if you are having issues with =unfree_software=, then when building run,
 
 #+begin_src bash
 set -x ANDROID_HOME $HOME/Android/Sdk
@@ -158,7 +169,7 @@ nix-build android-env.nix --impure
 ./result/bin/android-env
 # ---
 # to remove the result folder
-rm result 
+rm result
 #+end_src
 
 Since we are on the subject of android app dev set the following prior
