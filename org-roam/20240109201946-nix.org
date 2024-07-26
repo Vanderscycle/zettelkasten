@@ -16,6 +16,32 @@
   }
 #+end_src
 
+** HomeManager
+FetchGitHub file import using home-manager
+#+begin_src nix
+  home-manager.users.${username} = {
+    programs = {
+      emacs = {
+        enable = true;
+      };
+    };
+
+    home = {
+      file.".emacs.d" = {
+        # don't make the directory read only so that impure melpa can still happen
+        # for now
+        recursive = true;
+        source = pkgs.fetchFromGitHub {
+          owner = "syl20bnr";
+          repo = "spacemacs";
+          rev = "a58a7d79b3713bcf693bb61d9ba83d650a6aba86";
+          sha256 = "1h5q5ivy6vkl0199gkg2avrlrcbrq7gqykx6ncqygl0zfbv8i6qg";
+        };
+      };
+    };
+#+end_src
+
+
 ** Using node2nix
 Granted you have =node2nix= installed, create a package.json
 #+begin_src bash
@@ -36,7 +62,14 @@ sudo nixos-rebuild switch --upgrade
 
 ** Flakes
 Running nixos configurations flakes
-*** Allow unfres
+*** Generate + run
+#+begin_src bash
+  nix flake init
+  # commit the files otherwise it will not run
+  nix run # will run default
+  nux run ".#hello"
+#+end_src
+*** Allow unfree software
 #+begin_src nix
    description = "A very basic flake";
 
@@ -46,15 +79,15 @@ Running nixos configurations flakes
   let pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; } in
   {}
 #+end_src
-*** nix-shell
-instead use
+*** nix shell
+instead use one off program
 #+begin_src bash
 nix shell nixpkgs#python3
 #+end_src
-*** Errors
+*** Errors (missing files)
 When getting this error:
 #+begin_example
-❯ sudo nixos-rebuild switch --flake .#laptop --impure
+❯ sudo nixos-rebuild switch --flake .#laptop
 [sudo] password for henri:
 warning: Git tree '/home/henri/Documents/dotFiles' is dirty
 building the system configuration...
@@ -96,7 +129,8 @@ commit the files in git
   sudo nix-env --switch-generation 553 --profile /nix/var/nix/profiles/system
   # delete a generation
   sudo nix-env --delete-generations 554 --profile /nix/var/nix/profiles/system
-
+  # to delete a list of generation
+  echo $(seq 6 8) | tr ' ' '\n' | xargs -I {} sudo nix-env --delete-generations {} --profile /nix/var/nix/profiles/system
 #+end_src
 
 ** Updating flake's inputs
@@ -177,3 +211,46 @@ Since we are on the subject of android app dev set the following prior
 set -x ANDROID_HOME $HOME/Android/Sdk
     set -x PATH $PATH $ANDROID_HOME/emulator $ANDROID_HOME/platform-tools
 #+begin_src
+
+*** pkgs.mkShell
+reference:[[https://nixos.org/manual/nixpkgs/stable/#sec-pkgs-mkShell][Nixpkgs Reference Manual]]
+#+begin_src nix
+with import <nixpkgs> {};
+
+buildFHSUserEnv {
+  name = "android-env";
+  targetPkgs = pkgs: (with pkgs; [
+    android-tools
+    android-studio
+    zlib
+    glibc
+    stdenv.cc.cc.lib
+  ]);
+  runScript = "fish";
+  profile = ''
+    ${pkgs.neofetch}/bin/neofetch
+    echo -e "You are now in a dev shell in $(pwd)" | ${pkgs.lolcat}/bin/lolcat
+  '';
+}
+
+
+#+end_src
+
+** Nixos commands
+*** repl
+
+#+begin_src bash
+nix repl
+# :q (to quit)
+#+end_src
+
+*** Packaging applications
+
+**** Golang
+[[https://haseebmajid.dev/posts/2023-10-26-how-to-setup-a-go-development-shell-with-nix-flakes/][How to Setup a Go Development Shell With Nix Flakes | Haseeb Majid]]
+1. init the folder content
+#+begin_src bash
+  nix flake init -t github:nix-community/gomod2nix#app
+# then enter nix env
+nix develop
+#+end_src

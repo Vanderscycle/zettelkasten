@@ -27,7 +27,7 @@ func main() {
 Run the program
 #+begin_src bash
 go run .
-# import dependencies 
+# import dependencies
 go mod tidy
 #+end_src
 *** References
@@ -49,9 +49,21 @@ import (
 )
 #+end_src
 ** Snippets
+*** Execute unix cmd
+#+begin_src go
+  os.Chdir(fmt.Sprintf("./%s", v))
+  cmd := exec.Command("ls", "-al")
+  stdout, err := cmd.Output()
+
+  if err != nil {
+    fmt.Println(err.Error())
+    return
+  }
+  log.Print(string(stdout))
+#+end_src
 *** Error handling
 
-The usage := for error can be annoying 
+The usage := for error can be annoying
 #+begin_src go
 	err := parser.Parse(os.Args)
 	if err != nil {
@@ -72,7 +84,7 @@ This doesn't work well for functions that have a return
   // f is only scoped in the if statement
   if f, err := os.Open(*filePath); err != nil {
     fmt.Println(err)
-  } 
+  }
 #+end_src
 
 I recommend the following pattern
