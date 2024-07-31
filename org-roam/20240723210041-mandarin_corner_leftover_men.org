@@ -9,6 +9,8 @@
 [https://www.youtube.com/watch?v=IuvULixwQiE][What Do Chinese Think About Leftover MEN? - Chinese Street Interview - Interm...]]
 
 *** new ones
+宅男 zhai2nan2: otaku
+宅女 zhai2nv3: otaku (girl)
 欢迎来到 huan1ying2 lai2dao4:  welcome to
 欢迎 huan1ying2:  welcome (v)
 现象 xian4xiang4: phenomenon
@@ -22,8 +24,20 @@
 说明 shuo1ming2: illustrate
 繁琐 fan2suo3: complicated
 独立 bu2li4: independent
+普遍 pu3bian4: generaly
+首付 shou3fu4: down payment
+安全感 an1quan2gan3: sense of security (安全 an1quan2: security)
+工资 gongzi1: salary (薪水: xin1shui3 salary)
+收入 shou1ru4: income
+考虑 kao3lv4: consider
+主动 zhu3dong4: initiative
 
-*** Forggoten
+*** Forgotten
+自信 zi4xin4: confidence
+走出去 zou3 chu1qu4: go out
+走路 zou3lu4: walk
+压力 ya1li4 pressure
+确实 que4shi2: really
 一般 yiban1: generally
 一百万 yibai3 wan4: one million
 一千万 yiqian wan4: 10 million
@@ -31,7 +45,7 @@
 其他 qita: other
 解释 jie2shi4: explain (v)
 有魅力 you3mei4li4: charming
-或者 huo4zhe3
+或者 huo4zhe3: or
 像 xiang4: like
 结婚 jie2hun1: marry
 原因
@@ -39,8 +53,14 @@
 性格 xing4ge2: character
 耐心 nai4xin1: impatient
 传统 chuan2tong3: tradition(al)
+礼貌 li3mao4: polite (bu)
+负担 fu4dan1: burden (payment)
+放心 fang4xin: reassured (bu: worried)
+**** 标准 biao1zhun3: standard
 
 *** Usefull
+身边 shen1bian1: around
+加上 jia1xia4: add
 多多少少 duoduo1shao3shao3: more or less
 超出了预算 chao1chu1le yu4suan4: over budget
 超出了 chao1chu1le: exceed/over
@@ -54,7 +74,24 @@
 小鸟依人 xiao3niao3 yiren little birst (delicate)
 没什么兴趣: not interrested
 不管 bu4guan3: in spire of
-
+普遍来说 pu3bian4 lai2shuo1
+你图 ni3tu2: you picture
+就假设 jiu4 jia3she4: just assume
+造成 zao4cheng2: cause
+成为 cheng2wei: become
+我在网上看到 : I read this online
+合理吗 he2li3ma: is it reasonable?
+对于 dui4yu2: for
+保障 bao3zhang4: assure/guarantee (v)
+所以说我觉得... : so/therefore I feel  ...(
+生活质量提高了 (zhiliang4) ti gao: improved quality of life
+质量 zhi4liang4 quality
+没面子吗 mei2 mian4zi ma: lose face
+对于世界的看法  gui4yu2 ... kanfa: views on the world
+你们能接受学历比自己低 can you accept someone with lower education
+人口 renkou: population
+到时候 dao4 shi2hou4: by the time
+影响 yingxiang: influence/impact
 *** Extra
 名词 ming2ci2: noun
 第一个句子部分: the first part (部分)of the sentence
@@ -62,15 +99,25 @@
 副词 fu4ci2: adverb
 词叫 ci2jiao: word
 像比如说: like, for example
+当初 dang1chi1: at first
 
 *** Pattern
+不放心吃 do no worry about ...
 二十多岁到三十岁之间
 a .. b .. 之间
 四五十岁吧: 40 - 50 years old
 (v) .. 不到
 喝不到 can't drink
+百分之七八十把 70-80%
+北京秋天的话，最好看
+.(subject).. 的话... dehua (refers to the subejct/about that subject)
 
 *** replacement
 **** 挺 ting3/很 hen3 very
 **** 兴趣 xing4qu4 / 有意思 you3yisi interesting
 **** (不)肯定 / (不)一定 sure/not sure
+ken3ding
+**** 工资 gongzi1: salary (薪水: xin1shui3 salary)
+h
+*** Question
+吃饭 -> 吃个饭 (ge pattern)
