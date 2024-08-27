@@ -19,13 +19,18 @@ Once and for all become able to speak chinese
 [[id:88d70a83-ecb2-40ed-951d-f449eef46fc3][HSK 4 Part 1]]
 
 
-
 * Mandarin Corner
-** In progress
+** Done/to review/digest
+[[id:f62202ad-3c40-495f-99dd-cc026173a8eb][Mandarin corner - leftover men]]
 
+** In progress
+[[id:6fe431c9-25ba-458b-ae7d-41cac9852bdf][Mandarin corner - why girls mei you jie hun]]
 [[id:b9e9f768-0ffe-4cdb-a0af-8facee80d81d][Mandarin corner - drinking culture]]
 [[id:7f4ba978-8624-4cd4-b1f8-985dd0cae88e][Mandarin corner - white skin]]
 [[id:a877c652-6a37-4575-955d-b6ee8a578e01][mandarin corner - walk around a fishing village]]
 [[id:331065cd-0609-4369-a523-56200f2ad873][mandarin corner - lying flat]]
 [[id:41883002-a0a9-47d3-928a-68031189ab48][mandarin corner - work cultural aspects]]
 [[id:2e902f42-7737-41db-aaac-dd0ce71ebd1b][mandarin corner - chinese men so feminine]]
+
+# TODO: add a layout for my notes
+# TODO: how can I do daily notes?

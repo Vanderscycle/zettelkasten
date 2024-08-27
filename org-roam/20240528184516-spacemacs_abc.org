@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       591a8740-2fd5-4fe4-8689-d921585bfef0
-:END:
-#+title: Spacemacs abc

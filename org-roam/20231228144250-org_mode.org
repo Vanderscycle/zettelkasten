@@ -14,7 +14,7 @@ Once the menu is up use =S+<arrow-keys>= to move around the calendar
 There is also a monthly and yearly view (y)
 
 ** Links/Hyperlinks
-Follows this pattern: =[[LINK][DESCRIPTION]]= 
+Follows this pattern: =[[LINK][DESCRIPTION]]=
 *** Shortcuts
   Toggle links: =,Tl=
 *** References
@@ -53,7 +53,7 @@ return foo(5)
 ** TODOS
 To create a simpple TODO =C-c C-t=
 
-** Checkboxes 
+** Checkboxes
 
 *** References
 - https://orgmode.org/manual/Checkboxes.html
@@ -68,16 +68,17 @@ https://orgmode.org/manual/Tags.html
 To create a timestamp =C-c .=
 *** references
 - https://orgmode.org/manual/Creating-Timestamps.html
+
 ** Repeating tasks
 To create a repeating task
 Create a timestamp then you can add a repeating pattern using <date+n(d/w/m/y)>
 #+begin_example
-Learn more about emacs + programming <2024-01-19 Fri+2w> 
+Learn more about emacs + programming <2024-01-19 Fri+2w>
 #+end_example
 
 ** Org-deadline
 
-To create a deadline =C-c C-d= 
+To create a deadline =C-c C-d=
 #+begin_example
 *** write article about the Earth for the Guide
     DEADLINE: <2004-02-29 Sun>
@@ -88,5 +89,20 @@ To create a deadline =C-c C-d=
 - https://orgmode.org/manual/Deadlines-and-Scheduling.html
 
 ** Org-schedule
-Similar to deadline =C-c C-s= 
+Similar to deadline =C-c C-s=
 
+** lists
+to add a
+- M-[jk] moves the list item up/down (works with todos)
+- M-[hl] changes the list item identation
+- M-S-Enter insert new item with checkbox (you must have a 1. heading
+- C-S-Enter insert new todo (heading at the same level)
+*** Reminder
+- C-c C-c check/uncheck the bookmark
+-
+*** references
+[[https://orgmode.org/manual/Plain-Lists.html][Plain Lists (The Org Manual)]]
+
+** helm
+** template/export template
+=C-c C-e #= to open the export mode

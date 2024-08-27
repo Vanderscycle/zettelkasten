@@ -4,6 +4,85 @@
 #+title: HSK 4 Part 1
 
 * HSK Part 1
+** Module 1
+*** 课文第一
+聊 liao2: chat
+教 jiao4: teach
+他学的是新闻: he studied journalism
+新闻 xin1wen2: news
+法律 fa3lv4: law
+一个班 (ban1): one class
+俩 lia3: both (liang 两）
+俩是怎么认识的: how did you two meet?
+比赛 bi3sai4: competition/game
+足球 zu2qiu2: soccer
+篮球 lan2qiu2: basketball
+棒球 bang4qiu2: baseball
+班跟 ban1gen1: class
+踢进两个球: scored 2 goals
+踢 ti1: kick
+印象 yin4xiang4: impression
+印象很深: very impressive
+深 shen1: deep
+慢慢 man4man: slowly
+
+*** 课文第 2
+开玩笑 kai1wan2xiao4: joke
+才 cai2 : then (multiple meanings)
+长 zhang3: long
+认识的时间不长 haven't known each other for long
+快乐 kuai4le4: happy
+共同的兴 gongtongdexing: common happiness
+共同 gongtong: common
+爱好 ai4hao4: hobby
+兴趣 xing4qu4: interrested
+挺兴趣 ting2 xing4qu4: very interrested
+经常 jing1chang2: often
+经常打球 da3qiu2: play ball often/regularly
+唱歌 chang4ge1: sing
+做菜 zuo4cai4: cook
+找到 zhaodao: found
+适合你的人 the right person for you
+适合 shi4he2: suitable
+祝 zhu4: wish
+
+*** 课文第三
+挺 ting2: very
+幸福 xing4fu2: happy
+丈夫 zhangfu: husband
+先生 xian1sheng: husband
+妻子 qizi: wife
+刚 gang: just
+新鲜 xinxian1: fresh
+浪漫 lang4man4: romantic
+感 gan: feel
+感觉 ganjue: feel
+缺点 que1dian3: shortcoming
+长了 zhang3le: long
+接受 jieshou4: accept
+才 cai: only
+
+*** 课文第四
+女孩子 nv3hai2zi: girl
+羡慕 xian4mu4: envy
+浪漫 lang4man4: romantic
+爱情 ai4qing2: love
+想要 xiang3yao4: want
+星星 xingxing1: star
+早上加班 zao3shang4 jiaban: work overtime in the morning
+晚上加班 wan3shang4 jiaban1: work overtime at night
+晚上加班到零点 work overtime until midnight
+到家时 when you get home
+到家时亮看灯 turn on the light when you get home
+亮 liang4: light/bright
+灯 deng1: lamp/lantern
+其实 qi2shi2: actually
+唱 chang4: sing (v)
+歌 ge1: song (n)
+慢慢变老 manman bian4lao3: getting older
+感动 gandong4: move
+简单 jian3dan1: simplicity
+幸福 xing4fu2: happiness
 
 ** Module 3
 *** Conversation 1
@@ -31,7 +110,7 @@
 负责 fu4ze2 responsible
 本来 ben3lai2 originally
 突然 tu2ran suddenly
-生病bing4 sheng1 sick/ill
+生病 bing4 sheng1 sick/ill
 住院 zhu4yuan4 hospitalization
 住 zhu4 live
 医院 yi1yuan4 hospital

@@ -9,6 +9,8 @@
 - [[id:24d43f89-27be-44a7-8a31-0a949dbf96b6][Certs - AWS Solutions Architect]]
 - [[id:0f6a9f76-2e51-4084-aa44-4486023a4b61][Certs - Certified Kubernetes Application Developper (CKAD)]]
 
+- [[id:867654f4-3f6f-43d9-94ca-db34bfc3edc2][AWS Playbook]]
+
 ** Web Framework
 *** JS
 -[[id:2c0dc857-c4a0-4a50-be56-e6c28e74186b][Programming - NextJS]]

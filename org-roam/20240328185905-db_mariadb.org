@@ -11,7 +11,6 @@ MariaDB is an open-source relational database management system (RDBMS) that eme
 Enter the dbcli
 #+begin_src bash
   mysql -u username -p
-
 #+end_src
 
 #+begin_src sql
@@ -40,7 +39,7 @@ Enter the dbcli
   -- specific operation to table
   GRANT SELECT, INSERT, UPDATE ON database_name.* TO 'new_user'@'%';
 
-  -- list all dbs 
+  -- list all dbs
   SHOW DATABASES;
   -- enter dbcli
   USE database_name;
