@@ -8,7 +8,7 @@ Exam: 26th April 2024
 
 - [[https://www.youtube.com/watch?v=er7q-CJL1lc][Pressure advance + input shaping]]
 - [[https://ellis3dp.com/Print-Tuning-Guide/][Excellent tuning guide]]
- 
+
 *** First steps
 **** PID calibration (heaters)
 - PID_CALIBRATE HEATER=heater_bed TARGET=60
@@ -53,9 +53,10 @@ The goal of the printer is to be able to print PLA at .3 layer height, while bei
 *** Official docs
 - https://docs.ratrig.com/v-minion-1-0/v-minion-mechanical
 
+
 ** Future upgrades
 - [[https://www.printables.com/model/675495-v-minion-sfs-wobblex-cap][filament guide + wobblex support]]
- 
+
 **** Goal
 Create a box that goes under the 3060 extrusion frame of the rat minion with a open front door. Use 2020 for the frame and locally source the acrylic sheet.
 **** Information
@@ -75,9 +76,6 @@ https://docs.ratrig.com/product-details/v-hive
   shaper_freq_y: 61.09
   shaper_type: ei
   #+end_comment
-** Peopoly Magneto X
-The goal of the printer is to be able to print high quality ABS, Nylon, and ASA. These filament may be of the carbon fiber type so possibly quite abrasive
-Do not preorder, wait and see and fix the v-minion.
 
 ** Wanted upgrades
 - [Klipper/hardware] Auto z-offset
@@ -93,12 +91,3 @@ How to crimp JST-XH connector (the ones
 
 ** Dupont connectors
 - Learn more about when to use dupong connectors.
-
-* 3d modelling (onshape)
-** To create a model
-1. sktech an outline (select the face)
-2. adjust the dimensions d
-   - if you need to alter the dimensions you can select edit.
-   - if you need to specify inches (in) else cm
-3. extrude the sketch (shift-e)
-   - if you need to alter the dimensions you can select edit.

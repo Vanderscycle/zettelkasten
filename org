@@ -8,3 +8,6 @@
 ** TODO testsettse
   [2024-05-30 Thu]
   [[file:~/.spacemacs::setq org-directory "/home/henri/Documents/zettelkasten/org"]]
+** TODO testing this task
+  [2024-08-26 Mon]
+  [[file:~/Documents/zettelkasten/org-roam/20231228151805-knowlege_base.org::*Knowledge notes][Knowledge notes]]

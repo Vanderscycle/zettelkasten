@@ -8,7 +8,6 @@
 Optimize tools and processes to do things more effectively and quicker
 
 * Knowledge notes
-- [[id:88e5f689-bf23-46cf-bef4-2ff4d0c048b3][Emacs]]
 - [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
 - [[id:e599332d-c8fd-4a8a-96f2-cf6c770891e7][3D Printing]]
 - [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
@@ -27,7 +26,11 @@ keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overv
 <2024-06-30 Sun+1y>
 
 * Planning
-** [[id:fd4fd69d-9adb-4d30-9d80-e1af8ec6ba3e][Tasks]]
+** Printing
+*** TODO print 3d computer case (petg)
+*** TODO rebuild the confidence in the v-minion.
 
 * Essays
 - [[id:bea8a389-c934-4d5d-8478-6721780a4f95][How I would fix DND]]
+
+The /test/

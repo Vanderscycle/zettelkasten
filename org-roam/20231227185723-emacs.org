@@ -1,6 +1,5 @@
 :PROPERTIES:
-:ID:       88e5f689-bf23-46cf-bef4-2ff4d0c048b3
-:END:
+:ID:       88e5f689-bf23-46cf-bef4-2ff4d0c048b3 :END:
 #+title: Emacs
 
 * Topics
@@ -25,7 +24,8 @@
 - [[id:341a7c39-5089-4d98-a390-2521fae514cc][Spacemacs abc]]
 
 
-*** TODO move the following to emacs packages
+*** BACKLOG move the following to emacs packages
+DEADLINE: <2024-08-30 Fri>
 
 - project dired =c-x p D= (just like nnn)
 Select files/folders using m, then press C to copy the files in the clipboard then use dired to move them
@@ -45,3 +45,37 @@ Use =grep-find=
 Use =replace-string=
 *** Within a project
 Use =projectile-replace=
+
+
+
+* In search of new beginning to old problems
+** What is the first iteration of my new flow?
+
+** Org Mode Compact Guide
+[[https://orgmode.org/guide/index.html#SEC_Contents][Top (Org Mode Compact Guide)]]
+
+*** TODOS
+They can have schedules and deadlines
+=m d d= org-deadline
+=m d s= org-schedule
+Use =M-hjkl= to move cursor to the agenda
+
+*** Agenda
+=a o o= open the calendar menu including TODOS
+=m [|]= add/remove ord file to agenda (includind TODOS)
+=a o a= calendar-list, not sure what it does
+*** Diary
+**** TODO add keybindigns for diary entries and how they can be used.
+
+** Emacs
+
+*** Tramp
+**** Docker
+=C-x C-f= (the helm find files) then type /docker:sha-running-container:/workspaces/...
+
+*** Maggit
+Hands down the only git client comparable to =lazygit=.
+**** Forge
+
+Allows for the interface between Emacs and GitHub/GitLab code repositories. Must be setup according to the documenation [[https://magit.vc/manual/forge/][Top (Forge User and Developer Manual)]].
+To use =Forge= inside a repository through =maggit= you must run ~forge-add-repository~
