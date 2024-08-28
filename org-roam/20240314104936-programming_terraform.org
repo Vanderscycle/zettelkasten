@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       2dee5225-459e-4b46-a03f-a625aa098f3b
-:END:
-#+title: Programming - Terraform
-
-* Terraform

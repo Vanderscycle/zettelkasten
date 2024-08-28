@@ -13,8 +13,8 @@ Optimize tools and processes to do things more effectively and quicker
 - [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
 - [[id:020480e0-77cd-4e0b-9dc5-85e63ac43f9a][Certifications]]
 - [[id:b19092d6-d8e7-47e0-b2b3-0940dd54ddc9][OpenWRT]]
-- [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
+- [[id:b97b4990-719f-4543-adcc-ae644195f63b][emacs]]
 ** Linux
 *** Kitty
 keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overview - kitty]]

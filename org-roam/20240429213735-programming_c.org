@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       f238bd80-ab67-4420-834b-2510693136de
-:END:
-#+title: Programming - C
-
-* C
-[[https://venkivasamsetti.github.io/ebookworm.github.io/Books/cse/C%20Programming%20Language%20(2nd%20Edition).pdf]]

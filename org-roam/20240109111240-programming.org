@@ -18,28 +18,26 @@
 ** Languages
 - js/ts
 - [[id:ab427009-adbf-49e0-befe-8ed8439b161b][Nix]]
-- [[id:c6d76fdd-2edb-4a07-ae6f-0b6a71d027bb][Lisp]]
 - [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][GO]]
 - [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Bash]]
-- [[id:f238bd80-ab67-4420-834b-2510693136de][C]]
-
-** Servers
-- rpi cluster
-- Rpi Blade
 
 ** IaC
-- [[id:62ee5710-d887-4f83-8ffd-fffa418c5c79][kubernetes]]
-- [[id:2dee5225-459e-4b46-a03f-a625aa098f3b][Terraform]]
+- Terrafrom
+- Kubernetes
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
+
+** Home Server
+- Proxmox
+- [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** DBs
 - [[id:0ceb4ec1-9e99-4832-9eaa-98d33304d746][DB - mariadb]]
+- Postgrest
 
 ** Linux
 *** CLI
 *** Tiling hwindow Manager
-- [[id:0c4ca108-5518-4d39-a361-541288e0a65f][Hyprland]]
--
+
 ** Misc concepts
 - [[id:d12273c0-3a15-4d81-96b7-b16f73c791a7][ssh]]
 - [[id:f6df9f15-f712-4280-bee2-68cd3d732a42][Programming - SOPS]]

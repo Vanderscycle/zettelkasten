@@ -86,7 +86,6 @@ To create a deadline =C-c C-d=
 #+end_example
 
 *** References
-- https://orgmode.org/manual/Deadlines-and-Scheduling.html
 
 ** Org-schedule
 Similar to deadline =C-c C-s=

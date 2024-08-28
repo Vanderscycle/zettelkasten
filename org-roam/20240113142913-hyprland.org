@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       0c4ca108-5518-4d39-a361-541288e0a65f
-:END:
-#+title: Linux - Hyprland
-
-* Hyprland
-** References
-- [[https://wiki.hyprland.org/Getting-Started/Master-Tutorial/][Hyprland references]]
