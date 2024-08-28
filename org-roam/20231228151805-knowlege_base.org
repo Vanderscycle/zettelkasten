@@ -2,10 +2,13 @@
 :ID:       238b84ac-58d9-4e8c-b0d7-074f5e0dc02c
 :END:
 #+title: Knowlege base
+
 * Themes
 ** 2024
 *** Q1 Optimization
 Optimize tools and processes to do things more effectively and quicker
+*** Q2 Forgor 💀
+*** Q3 Wrap up preparations
 
 * Knowledge notes
 - [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
@@ -13,11 +16,8 @@ Optimize tools and processes to do things more effectively and quicker
 - [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
 - [[id:020480e0-77cd-4e0b-9dc5-85e63ac43f9a][Certifications]]
 - [[id:b19092d6-d8e7-47e0-b2b3-0940dd54ddc9][OpenWRT]]
-
 - [[id:b97b4990-719f-4543-adcc-ae644195f63b][emacs]]
-** Linux
-*** Kitty
-keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overview - kitty]]
+
 
 * Important days
 ** Wife's birthday
@@ -30,7 +30,26 @@ keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overv
 *** TODO print 3d computer case (petg)
 *** TODO rebuild the confidence in the v-minion.
 
+** Homelab
+*** TODO Troubleshoot why proxmox server randomly freezes and requires to be rebooted
+*** TODO Configure NextCloud to serve photos
+:PROPERTIES:
+:Effort:   2h
+:END:
+*** TODO Configure Transmission <2024-08-27 Tue> 
+:PROPERTIES:
+:Effort:   2h
+:END:
+
+
+** Programming
+*** Emacs
+**** TODO Use org agenda regularly
+DEADLINE: <2024-09-03 Tue>
+*** TODO AWS Solution architect
+**** TODO Book exam
+DEADLINE: <2024-08-30 Fri>
+**** TODO Complete
+
 * Essays
 - [[id:bea8a389-c934-4d5d-8478-6721780a4f95][How I would fix DND]]
-
-The /test/

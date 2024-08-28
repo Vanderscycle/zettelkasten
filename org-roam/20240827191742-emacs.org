@@ -54,16 +54,46 @@ Use =projectile-replace=
 
 ** Org Mode Compact Guide
 [[https://orgmode.org/guide/index.html#SEC_Contents][Top (Org Mode Compact Guide)]]
+[[https://orgmode.org/manual/index.html#SEC_Contents][Top (The Org Manual)]]
 
+*** CodeBlocks
+=m i b= to select a example/src/etc block
+#+NAME: recursion
+#+begin_src python
+def countdown(n):
+  print(n)
+  if n == 0:
+      return             # Terminate recursion
+  else:
+      countdown(n - 1)   # Recursive call
+
+countdown(5)
+#+end_src
+
+#+RESULTS: recursion
+: None
+*** headings                                                     :power_user:
+=m i s= super easy way to insert sub heading
+=m i h= super easy way to insert headings (same level as current one)
+
+*** Footnotes                                                 :documentation:
+=m i f= while in visual mode you can highlight a word or phrase and add a footnote the same way an historic paper would
+
+*** Properties and columns
+Properties are key–value pairs that are withing their own drawers.
+**** Efforts                                                       :planning:
+you can set how much effort each task would take using ~org-set-effort~ which is binded to =m i e=
+Columns are powerful but I will not be able to digest them just yet
 *** TODOS
-**** Scheduling/Deadlines
+
+**** Scheduling/Deadlines                                          :planning:
 They can have schedules and deadlines
 =m d d= org-deadline
 =m d s= org-schedule
 Use =M-hjkl= to move cursor to the agenda
 https://orgmode.org/manual/Deadlines-and-Scheduling.html
 
-*** Agenda
+*** Agenda                                                         :planning:
 =a o o= open the calendar menu including TODOS
 =m [|]= add/remove ord file to agenda (includind TODOS)
 =a o a= calendar-list, not sure what it does
@@ -71,6 +101,7 @@ https://orgmode.org/manual/Deadlines-and-Scheduling.html
 **** TODO add keybindigns for diary entries and how they can be used.
 
 ** Emacs Packages
+[[https://www.gnu.org/software/emacs/manual/][GNU Emacs Manuals Online - GNU Project - Free Software Foundation]]
 *** Tramp
 
 **** Docker
@@ -85,7 +116,6 @@ To use =Forge= inside a repository through =maggit= you must run ~forge-add-repo
 
 
 *** Evil surround
-
 **** Basic usage
 - Move the cursor to the word you want to surround.
 - Press ys (for "yank surround") followed by a motion command to select the word. For a single word, the motion command would be iw (inner word).
@@ -101,6 +131,8 @@ To use =Forge= inside a repository through =maggit= you must run ~forge-add-repo
 
 **** Text Objects
 
+- Note taken on [2024-08-27 Tue 20:51] \\
+  hahhahalloo
 Text objects refer to predefined or user-defined regions of text. They are particularly useful with commands like ys for surrounding operations.
 
     iw: Inner word. The word under the cursor, not including surrounding whitespace.
