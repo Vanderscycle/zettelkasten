@@ -72,6 +72,13 @@ countdown(5)
 
 #+RESULTS: recursion
 : None
+*** Priority
+There will come a time when there will be too many TODOS and you will need to prioritize them
+=m p= default A(highest) - C lowest
+*** Lists                                                       :power_user:
+=m -= the current line or selection becomes a list with -
+=m *= the current line or selection becomes headings
+
 *** headings                                                     :power_user:
 =m i s= super easy way to insert sub heading
 =m i h= super easy way to insert headings (same level as current one)
