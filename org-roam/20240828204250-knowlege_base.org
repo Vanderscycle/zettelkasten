@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9d5c388a-88cd-423c-951b-5e512eae298b
+:END:
+#+title: Knowlege base
+
+Base

@@ -30,10 +30,6 @@
 - Proxmox
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
-** DBs
-- [[id:0ceb4ec1-9e99-4832-9eaa-98d33304d746][DB - mariadb]]
-- Postgrest
-
 ** Linux
 *** CLI
 *** Tiling hwindow Manager
