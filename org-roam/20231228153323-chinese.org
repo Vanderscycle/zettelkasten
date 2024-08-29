@@ -3,12 +3,16 @@
 :END:
 #+title: Chinese
 
+* Chinese
 Once and for all become able to speak chinese
 
+** Root
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base
+]]
 [[id:160a412d-1318-4967-8eaf-134f2b119fd6][Chinese Radicals]]
 [[id:d2b75711-ccdf-46f8-b645-f82a43bf2a36][Chinese basic patterns]]
 
-* Chinese classes
+** Chinese classes
 
 [[id:6d4dddae-e062-4be1-a06c-251d7232b1cc][Chinese sentences]]
 [[id:57f6f7f9-dd12-4d99-b2dc-aeeb43908340][Chinese often forgotten words]]
@@ -24,6 +28,7 @@ Once and for all become able to speak chinese
 [[id:f62202ad-3c40-495f-99dd-cc026173a8eb][Mandarin corner - leftover men]]
 
 ** In progress
+
 [[id:6fe431c9-25ba-458b-ae7d-41cac9852bdf][Mandarin corner - why girls mei you jie hun]]
 [[id:b9e9f768-0ffe-4cdb-a0af-8facee80d81d][Mandarin corner - drinking culture]]
 [[id:7f4ba978-8624-4cd4-b1f8-985dd0cae88e][Mandarin corner - white skin]]
@@ -31,6 +36,3 @@ Once and for all become able to speak chinese
 [[id:331065cd-0609-4369-a523-56200f2ad873][mandarin corner - lying flat]]
 [[id:41883002-a0a9-47d3-928a-68031189ab48][mandarin corner - work cultural aspects]]
 [[id:2e902f42-7737-41db-aaac-dd0ce71ebd1b][mandarin corner - chinese men so feminine]]
-
-# TODO: add a layout for my notes
-# TODO: how can I do daily notes?

@@ -45,10 +45,21 @@ Use =projectile-replace=
 * In search of new beginning to old problems
 ** What is the first iteration of my new flow?
 
-** Org Mode Compact Guide
+** Org-Roam
+Base on the roam research which is way to expensive honestly
+*** Troubleshooting
+**** Reference
+[[https://github.com/org-roam/org-roam/issues/2361#issuecomment-2200774382][org-roam/org-roam#2361 Wrong type argument: integer-or-marker-p, nil]]
+**** Org-roam lost every link after an update
+- [ ] run ~package-recompile-all~
+- [ ] run ~org-roam-db-sync~
+
+** Org Mode learning
 [[https://orgmode.org/guide/index.html#SEC_Contents][Top (Org Mode Compact Guide)]]
 [[https://orgmode.org/manual/index.html#SEC_Contents][Top (The Org Manual)]]
 
+*** Toggles
+=m T l= toggle to see the hyprlinks
 *** CodeBlocks
 =m i b= to select a example/src/etc block
 #+NAME: recursion

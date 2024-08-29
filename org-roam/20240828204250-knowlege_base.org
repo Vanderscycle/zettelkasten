@@ -3,4 +3,57 @@
 :END:
 #+title: Knowlege base
 
-Base
+* Themes
+** 2024
+*** Q1 Optimization
+Optimize tools and processes to do things more effectively and quicker
+*** Q2 Forgor 💀
+*** Q3 Wrap up preparations
+
+* Knowledge notes
+- [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
+- [[id:e599332d-c8fd-4a8a-96f2-cf6c770891e7][3D Printing]]
+- [[id:020480e0-77cd-4e0b-9dc5-85e63ac43f9a][Certifications]]
+- [[id:b19092d6-d8e7-47e0-b2b3-0940dd54ddc9][OpenWRT]]
+- [[id:b97b4990-719f-4543-adcc-ae644195f63b][emacs]]
+-[[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][ Chinese]]
+
+
+* Important days
+** Wife's birthday
+<2024-12-04 Wed+1y>
+** Dad's birthday
+<2024-06-30 Sun+1y>
+
+* Planning
+** Printing
+*** TODO print 3d computer case (petg)
+*** TODO rebuild the confidence in the v-minion.
+
+** Homelab [0/3]
+*** TODO Troubleshoot why proxmox server randomly freezes and requires to be rebooted
+*** TODO Configure NextCloud to serve photos
+:PROPERTIES:
+:Effort:   2h
+:END:
+*** TODO Configure Transmission <2024-08-27 Tue>
+:PROPERTIES:
+:Effort:   2h
+:END:
+
+
+** Programming [0/2]
+*** TODO Emacs [0/1]
+**** TODO Use org agenda regularly
+DEADLINE: <2024-09-03 Tue>
+
+*** TODO AWS Solution architect  [0/2]
+**** TODO Book exam
+DEADLINE: <2024-08-30 Fri>
+**** TODO Complete the preparation
+:PROPERTIES:
+:Effort:   1m
+:END:
+
+* Essays
+- [[id:bea8a389-c934-4d5d-8478-6721780a4f95][How I would fix DND]]
