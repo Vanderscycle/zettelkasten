@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a74c4871-0967-4865-8920-ce84c9671812
+:END:
+#+title: zsa-moonlander
+* zsa-moonlander
+** Troubleshooting
+*** Keyboard is stuck on green light
+    If Wally is open, close it, and unplug your keyboard.
+    While the keyboard is still unplugged, using an un-bent paper clip, press your keyboard's reset button and keep it pressed while plugging the keyboard back in.
+    Keep the reset button pressed for another 3 to 4 seconds before releasing it. (The keyboard will not function at this point; this is expected.)
+    Open Wally and see if you can go through the flashing process.

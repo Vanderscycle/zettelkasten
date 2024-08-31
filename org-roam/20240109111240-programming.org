@@ -13,11 +13,10 @@
 
 ** Web Framework
 *** JS
--[[id:2c0dc857-c4a0-4a50-be56-e6c28e74186b][Programming - NextJS]]
+- [[id:2c0dc857-c4a0-4a50-be56-e6c28e74186b][Programming - NextJS]]
 
 ** Languages
 - js/ts
-- [[id:ab427009-adbf-49e0-befe-8ed8439b161b][Nix]]
 - [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][GO]]
 - [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Bash]]
 
@@ -28,6 +27,20 @@
 
 ** Home Server
 - Proxmox
+
+*** Troubleshooting
+**** Ran out of virtual disk space
+[] Resize guest disk [[https://pve.proxmox.com/wiki/Resize_disks][Resize disks - Proxmox VE]]
+[] Modify disk within VM
+#+begin_src bash
+  sudo parted <vm-disk> # e.g. /dev/sda
+  # while in parted
+  (parted) unit GB
+  (parted) resizepart 1 128GB
+  # now resize the sub partition
+  sudo resize2fs /dev/sda1
+#+end_src
+
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux

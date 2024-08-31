@@ -41,10 +41,11 @@ Use =replace-string=
 Use =projectile-replace=
 
 
-
 * In search of new beginning to old problems
 ** What is the first iteration of my new flow?
-
+** Motion/keybinding
+*** while in ~normal~ mode add a blank line b
+*** save on insert new line with =o= then =spc m i h= to insert a new heading you can just use =<c-enter>=
 ** Org-Roam
 Base on the roam research which is way to expensive honestly
 *** Troubleshooting
