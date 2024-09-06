@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       0b8da363-eaf4-4c96-a8b4-2975ff99ea65
+:END:
+#+title: Programming - Nix
+* Nix
+** Configuration
+*** Services
+**** Systemd Timer
+Cron job alternative using systemd timer
+
+#+begin_src nix
+{ config, lib, modulesPath, pkgs, specialArgs, options }: {
+  systemd.services = {
+    sync-images = {
+      environment = {
+        DARKTABLE_PATH = pkgs.darktable;
+      };
+      path = [
+        pkgs.procps
+        pkgs.rclone
+        pkgs.sqlite
+      ];
+      script = builtins.readFile ./sync-images.bash;
+      serviceConfig = { # empty is root
+        User = config.users.users.default.name;
+      };
+      startAt = "daily";
+    };
+  };
+  # Other stuff…
+}
+#+end_src
+path defines the packages available on the $PATH. As far as I know only Bash is available by default. This avoids any kind of dependency on the rest of your system, so you can trivially do things like running a different version of Python.
+
+#+begin_src bash
+  sysz # fzf + systemctl
+  journalcl -xeu <service-name>.<ype (e.g. service/timer)>
+#+end_src

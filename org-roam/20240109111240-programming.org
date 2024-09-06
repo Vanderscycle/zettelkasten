@@ -3,8 +3,10 @@
 :END:
 #+title: Programming
 
-* Programming
+* Root
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
 
+* Programming
 ** Certifications
 - [[id:24d43f89-27be-44a7-8a31-0a949dbf96b6][Certs - AWS Solutions Architect]]
 - [[id:0f6a9f76-2e51-4084-aa44-4486023a4b61][Certs - Certified Kubernetes Application Developper (CKAD)]]
@@ -19,7 +21,7 @@
 - js/ts
 - [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][GO]]
 - [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Bash]]
-
+- [[id:0b8da363-eaf4-4c96-a8b4-2975ff99ea65][Programming - Nix]]
 ** IaC
 - Terrafrom
 - Kubernetes
@@ -44,6 +46,13 @@
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux
+*** Fish shell
+**** Troubleshooting ssh agent
+#+begin_src fish
+eval (ssh-agent -c)
+ssh-add ~/.ssh/<ssh-key>
+#+end_src
+
 *** CLI
 *** Tiling hwindow Manager
 *** Kitty
