@@ -4,6 +4,7 @@
 #+title: Chinese class notes
 
 * Related
+
 [[id:a36e062b-16a6-4b54-9a05-4f97fff5d744][Chinese words group]]
 [[id:d2b75711-ccdf-46f8-b645-f82a43bf2a36][Chinese basic patterns]]
 [[id:57f6f7f9-dd12-4d99-b2dc-aeeb43908340][Chinese often forgotten words]]
@@ -15,9 +16,9 @@
 社交媒体 she4jiao1 mei2ti3 social media
 话题 hua4ti2 topic
 YouTube 频道 pin2dao4 channel
-* Class notes
-** Since 24 Jan 24
 
+* Class notes
+** since 24 日 01 月 2024 年
 我会有很多像他学习的地方
 随便 sui2bian4 at your convenience
 随手 sui2shou3 at your convenience
@@ -186,7 +187,7 @@ YouTube 频道 pin2dao4 channel
 ** bro
 
 收到 shou1dao4 receive
-A比B高百分之八 A is 8% higher than B
+A 比 B 高百分之八 A is 8% higher than B
 对你来说什么有趣
 只猫 zhi3mao1 cat
 脾气 pi2qi4 temper
@@ -234,10 +235,71 @@ A比B高百分之八 A is 8% higher than B
 最好不要丢你的妻子 ...wife
 存款 cun2kuan3 deposit
 存款钱 deposit money
-1百万 yi bai3wan4 1 million
+1 百万 yi bai3wan4 1 million
 员工 yuan2gong1 staff/worker
 最带原 zui
 最好特别原来的  best especially the original one
 原来 yuna2lai2 original
 日历 ri4li4 daily calendar
 月历 yueli4 monthly calendar
+
+
+** since 10 日 09 月 2024 年
+装修 zhuang1xiu1: renovations
+我唱歌的能力是坏的 my singing ability is bad
+坏 huai4: bad
+修车 xiu1che: car repair
+起初 qi3chu1: at first/originally
+床铺 chuang2pu4: bed
+睡觉上我的床铺 sleeping on my bed
+其实 qi2shi2: actually
+应征 ying4zheng: interview process
+员工 yuangong: employees
+工人 gong1ren1: labourers
+真空 zhen1kong: vacuum (act of vacuuming ) or like a power vacuum
+把真空你的间卧房 vacuum you bedroom
+学期 xue2qi2: semester
+改变 gai3bian4: change
+团体 tuanti: group
+多大你的团体 how big is your group
+活动 huo2dong4: activity
+哪一个编码的方面你不喜欢 what aspect of coding do yo not like?
+*** 慢 man slow
+*** 低 di1 low
+级 ji2 class
+程度 chengdu: level
+卡车 ka2che1: truck
+右边 youbian: right
+左边 左边：left
+*** 方便 fangbian: convenient
+很酷 hen3ku4: very cool
+呕吐 ou1tu4: vomit
+无聊 wu2liao2: bored/boring
+*** 厨房 chu2fang2 kitchen
+乱七八糟 luan4qi1ba1zao1: (expression) messy
+动物 dong4wu4: animal
+宠物 chong3wu4: pet
+
+** 18 日 09 月 2024 年
+闻的 wen2: smell
+味道 wei4dao4: taste
+问道鸡肉的味道 asked about the chicken
+嘈 cao2: noisy
+基层 ji1ceng2: basic level
+超速 chao1su4: speeding
+速 su4: speed
+高速 high speed
+故意 gu4yi4: on purpose
+聊天 liao2tian1: chat
+通知 tong1zhi1: notify
+陌生人 mo4shen1 ren2: stranger
+外国人 wai4guo1 ren2: foreigner
+本来 ben3lai2: originally
+文件 wen2jian4: document
+交出文件 jiao1chu1 wen2jian4: hand over documents
+*** 要求 yao1qiu2: require
+每一天我要求我的太太做早饭 Everyday, I require my wife to make breakfast
+副词 fu4ci2: adverb
+连词 lian2ci2: conjunction
+名词 ming2ci2: noun
+动词 dong4ci2: verb

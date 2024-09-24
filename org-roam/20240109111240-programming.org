@@ -16,16 +16,26 @@
 ** Web Framework
 *** JS
 - [[id:2c0dc857-c4a0-4a50-be56-e6c28e74186b][Programming - NextJS]]
+*** Sveltekit
+Dockerizing the app
+1. Ensure that you have the node adapter for sveltekit
+#+begin_src bash
+pnpm i -D @sveltejs/adapter-node
+#+end_src
 
 ** Languages
 - js/ts
 - [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][GO]]
 - [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Bash]]
 - [[id:0b8da363-eaf4-4c96-a8b4-2975ff99ea65][Programming - Nix]]
+
 ** IaC
 - Terrafrom
 - Kubernetes
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
+
+** Version control (git)
+When your code used to work a few commits ago and since then it has tremendously regressed and you don't know why use ~git bisect~ and run a binary search.
 
 ** Home Server
 - Proxmox
@@ -46,6 +56,15 @@
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux
+
+*** Drives
+see what drives are availables ~lsblk~
+ #+begin_src  nix
+        usb-mount = "sudo mount /dev/sda1 /mnt/usb";
+        usb-eject = "sudo umount /mnt/usb";
+        nas-mount = "sudo mount.nfs 192.168.1.245:/volume1/linuxBackup /mnt/nas"; # how to allow users acces to the file?
+ #+end_src
+
 *** Fish shell
 **** Troubleshooting ssh agent
 #+begin_src fish

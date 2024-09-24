@@ -7,7 +7,7 @@
 
 *** components of chinese language
 单词 dan1ci2 word
-语气 yu3qi4 tone 
+语气 yu3qi4 tone
 动词 don4ci2 verb
 
 ** 21 日 02 月 2024 年
@@ -20,3 +20,15 @@
 
 ** 27 日 02 月 2024 年
 安装 an1zhuang1 installed
+
+** 4 日 09 月 2024 年
+一定 yiding4: must/for sure
+不一定 bu4yuding4: not sure
+肯定 ken3ding4: for sure
+不肯定 bu4 ken3ding4: not sure
+已经 yi3jing1: already
+不已经 bu4 yi3jing1: not yet
+决定 jue2ding4: decide
+不决定 bu4 jue2ding4: not decided
+维修 wei2xiu1: repair
+卧室 wo4shi4: bedroom

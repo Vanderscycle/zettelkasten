@@ -54,9 +54,12 @@ Optimize tools and processes to do things more effectively and quicker
 **** TODO get bind9 + docker to work on cloud [[https://www.youtube.com/watch?v=syzwLwE3Xq4][You want a real DNS Server at home? (bind9 + docker) - YouTube]]
 **** TODO go over the nix pills [[https://nixos.org/guides/nix-pills/00-preface][Preface - Nix Pills]]
 
-*** TODO Workflow [1/7]
-**** TODO Refine natural flow of files navigation through nnn
-**** TODO write kitty conf (most used binding within the config)
+*** TODO Workflow [2/8]
+**** DONE Refine natural flow of files navigation through nnn
+CLOSED: [2024-09-23 Mon 10:39]
+- State "DONE"       from "TODO"       [2024-09-23 Mon 10:39]
+Now have live preview working correctly, replaced zoxide with autojump for integration within nnn (z plugins)
+**** BACKLOG write kitty conf (most used binding within the config)
 **** TODO Would it be possible to configure a ~.org~ document that would both document the code and have live command run
 **** TODO create a script that would fetch latest (keyboard) and move it to the correct folder, and
 **** TODO cron jobs to move files out of ~Downloads~ and move them to respecive folders. e.g. all images goes to ~/$home/images~ etc.
@@ -68,11 +71,16 @@ CLOSED: [2024-08-31 Sat 18:10]
 **** TODO have org agenda to get all ~TODO~ under zettelkasten
 use evil-motion g s s/S-j/k
 
-*** TODO Emacs [1/4]
+*** TODO Emacs [2/4]
+**** TODO go over the entire spacemacs documentation
+[[https://www.spacemacs.org/doc/DOCUMENTATION.html][Spacemacs documentation]]
 **** TODO Create a note template for org-roam new node
 **** TODO Use org agenda, and org todo regularly
 DEADLINE: <2024-09-03 Tue>
-**** TODO confirm emacs autosave config
+**** DONE confirm emacs autosave config
+CLOSED: [2024-09-23 Mon 10:38]
+- State "DONE"       from "TODO"       [2024-09-23 Mon 10:38]
+[[https://www.spacemacs.org/doc/DOCUMENTATION.html#auto-saving][Spacemacs documentation]] autosave default is 30 seconds of idle time or 300 chars
 **** DONE when insert mode type how to get leader-key if assinged to space so that I may create a new heading and such
 CLOSED: [2024-09-04 Wed 10:21]
 Solution: =<c-o> spc=
@@ -81,9 +89,10 @@ CLOSED: [2024-08-30 Fri 21:59]
 *** TODO correct the annoying forge issue
 [[https://github.com/magit/forge/issues/240][magit/forge#240 Can't do a pull]]
 
-*** TODO AWS Solution architect  [0/2]
-**** TODO Book exam
-DEADLINE: <2024-08-30 Fri>
+*** TODO AWS Solution architect  [1/2]
+**** DONE Book exam
+CLOSED: [2024-09-23 Mon 10:21] DEADLINE: <2024-08-30 Fri>
+- State "DONE"       from "TODO"       [2024-09-23 Mon 10:21]
 **** TODO Complete the preparation
 :PROPERTIES:
 :Effort:   1m

@@ -122,9 +122,13 @@ https://orgmode.org/manual/Deadlines-and-Scheduling.html
 *** Maggit
 Hands down the only git client comparable to =lazygit=.
 
+
 **** Forge
 Allows for the interface between Emacs and GitHub/GitLab code repositories. Must be setup according to the documenation [[https://magit.vc/manual/forge/][Top (Forge User and Developer Manual)]].
 To use =Forge= inside a repository through =maggit= you must run ~forge-add-repository~
+
+***** Create draft pr
+=C-c C-e d=
 
 
 *** Evil surround
