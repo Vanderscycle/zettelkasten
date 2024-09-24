@@ -94,6 +94,13 @@ CLOSED: [2024-08-30 Fri 21:59]
 CLOSED: [2024-09-23 Mon 10:21] DEADLINE: <2024-08-30 Fri>
 - State "DONE"       from "TODO"       [2024-09-23 Mon 10:21]
 **** TODO Complete the preparation
+DEADLINE: <2024-10-14 Mon>
 :PROPERTIES:
 :Effort:   1m
 :END:
+
+** misc
+
+*** TODO Improvements [0/1]
+**** TODO call the carpenter, for an install update
+DEADLINE: <2024-10-07 Mon>
