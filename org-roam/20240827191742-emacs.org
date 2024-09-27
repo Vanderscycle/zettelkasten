@@ -3,6 +3,9 @@
 :END:
 #+title: Emacs
 
+* Return
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
+
 * Emacs
 ** Quick tips
 - describe value in emacs =SPC h d v=
@@ -18,8 +21,7 @@
 - [[id:341a7c39-5089-4d98-a390-2521fae514cc][Spacemacs abc]]
 
 
-*** BACKLOG move the following to emacs packages
-DEADLINE: <2024-08-30 Fri>
+*** BACKLOG use the following to emacs packages
 
 - project dired =c-x p D= (just like nnn)
 Select files/folders using m, then press C to copy the files in the clipboard then use dired to move them
@@ -42,6 +44,9 @@ Use =projectile-replace=
 
 
 * In search of new beginning to old problems
+** change from camel/kebab/upcase
+use emacs inflection that is lodged within the the text which-key dir =spc x=
+=spc x i {}=
 ** What is the first iteration of my new flow?
 ** Motion/keybinding
 *** while in ~normal~ mode add a blank line b

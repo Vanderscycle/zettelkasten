@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4aac16ce-ce76-4f97-9328-0f8166186fce
+:END:
+#+title: cert - CKAD
+
+* CKAD
+TBD

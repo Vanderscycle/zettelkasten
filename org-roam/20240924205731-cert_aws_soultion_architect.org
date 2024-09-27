@@ -1,0 +1,279 @@
+:PROPERTIES:
+:ID:       cd0fcbf2-addf-48e6-8f15-44b95afd207d
+:END:
+#+title: cert - AWS Soultion Architect
+
+* Home
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
+* Main reference
+** Ackronym
+Secure File Transfer Protocol (SFTP)
+File Transfer Protocol Secure (FTPS)
+File Transfer Protocol (FTP)
+Set of rules governing how files are moved between server and client running in the application layer (lv7)
+Applicability Statement 2 (AS2)
+[[https://docs.aws.amazon.com/]]
+* Futher learning
+** OSI Model
+[[https://en.wikipedia.org/wiki/OSI_model][OSI model - Wikipedia]]
+** File Transfer Protocol
+[[https://en.wikipedia.org/wiki/File_Transfer_Protocol][File Transfer Protocol - Wikipedia]]
+* AWS Solution Architect
+
+** TODO Knowledge [0/9]
+*** TODO Networking
+DEADLINE: <2024-10-16 Wed>
+**** VPC
+
+*** TODO Storage
+DEADLINE: <2024-10-06 Sun>
+**** EBS
+**** EFS
+**** S3
+
+*** TODO Compute
+DEADLINE: <2024-10-06 Sun>
+**** EC2
+**** BeanStalk
+**** ECS
+**** EKS
+
+*** TODO Database
+DEADLINE: <2024-10-06 Sun>
+**** RDS
+**** Dynamo
+**** DocumentDB
+
+
+*** TODO Application integration
+DEADLINE: <2024-10-06 Sun>
+**** Autoscaling
+**** ELB
+**** API Gateway
+**** SQS
+**** SNS
+**** AWS MQ
+
+*** TODO Data ML
+DEADLINE: <2024-09-29 Sun>
+**** kinesis
+**** glue
+**** glue Databrew
+**** EMR
+**** lake formation
+**** Athena
+
+Very quick
+
+**** Quicksight
+Serverless data visuliaztion engine for interactive dashboarding pulling data from:
+- s3
+- athena
+- RDS
+- redshift
+- aurora
+- glue
+**** Sagemaker
+Build, train, and deploy machine learning models (image classification, object detection, regression, clustering/grouping, etc.) at scale.
+[[https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html][Algos - Amazon SageMaker]]
+Process:
+- Data ingestion (~s3~ bucket)
+- Data preparation and exploration
+- Model training
+- Model Evaluation + parameter tuning
+- Model deployment
+AWS process:
+Pull data stored in ~s3~ using ~AWS Glue~ for ETL into sagemaker for:
+- exploratory data analysis
+- data cleaning
+- building model
+- deploy model
+**** rekognition
+AWS ML service that analyze and intrepret images and videos. Can be used for content moderation. Comes with a probability score
+AWS process:
+- user upload image from website to s3
+- trigger's ~AWS lambda~
+- AWS rekognition dumps metadata into ~AWS dynamoDB~
+- low probability images can leverage ~AWS augmented AI~ for human to review machine learning predictions
+**** Polly
+Turn text into speech.
+AWS process:
+[[file:~/Documents/zettelkasten/data/image/cert/satty-20240925-14:02:00.png][polly]]
+**** Lex
+AWS chatbot (think alexa)
+
+**** Comprehend
+Natural language processing and text analysis.
+***** Personally identifiable information e.g. credit card numb
+**** forecast(NoCode)
+Delivers forecasts on time series data (sales, website traffic, etc.)
+**** Augmented AI
+Integrate human reviewers to review AI's prediction.
+Can be used for ~AWS Trasnlate~ for low confidence translation
+~AWS rekognition~ for low confidence image label/sentiment/etc.
+
+~AWS Mechnical Turk (MTurk)~ a virtual workforce that is paid per assignemtn to do this if you don't have the manpower to man A2I.
+**** Fraud detector (NoCode)
+Build, deploy, manage fraud detection model. Usefull for payment fraud detection.
+[[file:~/Documents/zettelkasten/data/image/cert/fraudDectection.png][Fraud detection]]
+**** transcribe
+Speech to text. The opposite of ~AWS polly~
+**** translate
+AWS Google translate. Usefull for a single chatbot using multiple languages.
+Can upload custom terminology to augment the translator.
+**** textract
+extract text from scanned forms.
+Can extract:
+- text
+- forms
+- tables
+- signatures
+
+*** TODO Migration/transfer
+DEADLINE: <2024-09-29 Sun>
+**** Intro
+To migrate from on prem to AWS
+- assess and create inventory
+- categorize the items
+- determine AWS cloud services
+- plan migration
+- execute the migration
+**** migration hub
+AWS Migration Hub (Migration Hub) provides a single place to discover your existing servers, plan migrations, and track the status of each application migration.
+Connect migration tools to migration hub, migrate using the tools, and group servers as applications
+***** Cost Optimization
+****** During the migration
+By using ~AWS Migration Hub~ to monitor the migration progress, the Solutions Architect can identify any delays or issues that might lead to extended migration timelines and, consequently, higher costs.
+****** Assess on-premise infrastructure
+Leverage ~AWS Apllication Discovery~ to identify over-provisioned resouces and recommend right-sizing before migration to AWS.
+***** Security
+****** Security of sensitive data
+Implement ~AWS IAM~ roles + policies to control access to ~AWS Migration Hub~ and resources being migrated.
+***** Reliability/Resilience
+****** Critical continuity
+By using ~AWS Migration Hub~ to plan and execute a sequential migration, starting with the most critical application tiers, the Solutions Architect can ensure that the most essential services remain available during the migration process.
+**** application discovery service
+~AWS Application Discovery Service~ helps you plan your migration to the AWS cloud by collecting usage and configuration data about your on-premises servers and databases
+The ~AWS Application Discovery Agent~ (Discovery Agent) is software that you install on on-premises servers and VMs targeted for discovery and migration. Has to be installed on every server
+~Application Discovery Service Agentless~ Collector(Agentless Collector) is a virtual appliance that you install in your on-premises VMware environment. Can only be used for =VMware environments=
+The data gathered will be stored in an ~AWS S3 bucket~ and can be access by ~AWS Athena~ ~AWS migration hub~ ~AWS database migration services~
+***** Performance Optimization
+****** on-premises infra bottleneck
+~AWS Application discovery~ can be used to identify underutilized resources and optimize for performance
+****** post migration
+implement ~AWS Global Accelerator~ to optimize network paths and improve game server performance post migration
+***** Security Optimization
+****** AWS Application services
+store ~AWS Application discovery~ service gathered data into ~AWS S3~ with encryption enabled by ~AWS KMS~
+**** application migration service
+AWS Application Migration Service ~AWS MGN~ is a highly automated lift-and-shift (rehost) solution that simplifies, expedites, and reduces the cost of migrating applications to AWS.
+Setup service, import inventory, replicates and syncs the data, test, and cutover
+***** Security Optimization
+****** Sensitive data
+Use ~AWS KMS~ to encrypt data before migrating it with ~AWS MGN~. Ensures data is protect both in transit and at rest
+**** database migration service
+AWS Database Migration Service (AWS DMS) is a cloud service that makes it possible to migrate relational databases, data warehouses, NoSQL databases, and other types of data stores.
+Allows for schema conversion e.g. mySql to postgresQL ~DMS schema conversion tool~
+replication task (on prem source endpoint -> target AWS cloud endpoint) using DMS EC2 replication instance
+- Full load (requires downtime)
+- Full load + CDC
+- CDC only
+Allows for continuous data
+***** Performance Optimization
+****** Want best
+Consider the use case ~AWS aurora~ for sql, ~AWS redshift~ for data warehousing, ~AWS DynamoDB~ for k/v + noSql
+***** Reliability/Resilience
+****** high resilience/fault tolerence during and after migration process
+~AWS DMS~ with multi-az deployment for target db
+***** Cost Optimization
+****** startup unsure about AWS db costs
+Use ~AWS Aurora serverless~ to automatically scale capacity and minimize costs > ~AWS RDS~ w/ reserved instance pricing model
+**** Elastic disaster recovery
+AWS Elastic Disaster Recovery (AWS DRS) minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications =GCP= =Azure= using affordable storage, minimal compute, and point-in-time recovery. Can also be used on AWS fro region to region
+Main issue without ~AWS EDR~ for on-prem services expensive (requires duplicate infra on stby), maintenance + skilled personel intensive.
+Data is replicated from on-prems to AWS, using an ~AWS EC2~ and stores it on ~AWS EBS Volumes~
+Allows for real time sync and point-in-time recovery, automated DR drills
+***** Cost Optimization
+****** network design strategy
+AWS Direct Connect establishes a dedicated network connection between the company's infrastructure and AWS, which can significantly reduce data transfer costs during disaster recovery operations.
+****** EBS
+~AWS EBS~ with snapshot lifecycle policies to automate creation/deleition + costs
+****** network design
+~AWS Direct Connect~ to establish a dedicated network connection, reducing data transfer costs during disaster recovery operations
+***** Performance Optimization
+****** Minimal downtime and quick recovery (data storage)
+Leverage ~AWS EDR~ and ~AWS FSx Lustre~
+**** AWS Mainframe modernization
+AWS Mainframe Modernization helps you modernize your mainframe applications to AWS managed runtime environments. It provides tools and resources to help you plan and implement migration and modernization.
+You can =refactor= using ~AWS blu age~ or =replatform= with ~AWS Micro focus~
+***** Cost Optimization
+****** reduce costs by modernizing their legacy mainframe systems
+Migrate the mainframe applications to a serverless architecture using ~AWS Lambda~
+***** Reliability/Resilience
+implement ~AWS mainframe modernization~ with multi-az deployment for migrated applications
+**** Datasync (Mass data migration)
+AWS DataSync is an online data transfer and discovery service that simplifies data migration and helps you quickly, easily, and securely transfer your file or object data to, from, and between AWS storage services.
+An agent must be deployed on prem then ~AWS DataSync discovery~ provides recommendations
+Can also be used to transfer large amount of data between AWS region
+***** Cost Optimization
+****** updates only
+Implement incremental data transfer with ~AWS Datasync~ to reduce volume of data transferred
+***** Performance Optimization
+****** During transfer
+~AWS DataSync~ ability to perform parallel transfers and multipart uploads to Amazon S3 is particularly beneficial for large files.
+**** AWS Transfer Family ()
+AWS Transfer Family is a secure transfer service that enables you to transfer files into and out of AWS storage services.
+Can be internal and also connect cloudwatch to check for what files get moved
+AWS Transfer Family functions somewhat like an external drive in the sense that it allows external clients, partners, or users to access files in Amazon S3 using familiar protocols like SFTP, FTPS, or FTP
+***** Security Optimization
+****** strict security protocol
+~AWS transfer family~ with MDA for secure access control during file transfer
+**** AWS Snow family
+The AWS Snow Family is a service that helps customers who need to run operations in austere, non-data center environments, and in locations where there's no consistent network connectivity. Can handle petabytes depending on the snow.
+Snowball edge
+snowcone
+snowball: CPU optimized 104vCPU, Storage optimized 210TB NVME/80TB HDD
+snowmobile: exabyte scale data migration
+***** Cost Optimization
+****** Large scale data transfer (several petabytes)
+Use ~AWS Snowmobile~ for one-time, large-scale data transfer
+
+*** TODO Management/Governance
+DEADLINE: <2024-09-29 Sun>
+**** cloudformation
+**** Cloudwatch
+**** x-ray
+**** Control tower
+**** System manager
+**** service catalog
+
+*** TODO Security
+DEADLINE: <2024-09-29 Sun>
+**** Macie
+**** Security hub
+**** KMS
+**** WAF
+**** shield
+
+certificate manager
+cert authority
+kms
+cloudformation and their milli params
+VPN
+autoscaling
+
+** TODO Design [0/4]
+DEADLINE: <2024-10-13 Sun>
+*** TODO Security
+*** TODO Reliability
+*** TODO Performance
+*** TODO Cost-optimization
+
+** TODO Exams [/]
+*** Old once a week
+*** New 2 of them
+DEADLINE: <2024-10-21 Mon>
+
+* Misc
+Ensures data is protect both in transit and at rest: use ~AWS KMS~
+A healthcare company is planning to migrate its patient data management system to AWS using AWS Application Migration Service (AWS MGN). Given the sensitive nature of patient data, what should the Solutions Architect recommend to ensure data security during the migration process?
