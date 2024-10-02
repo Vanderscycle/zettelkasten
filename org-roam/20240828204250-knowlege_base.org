@@ -9,6 +9,8 @@
 Optimize tools and processes to do things more effectively and quicker
 *** Q2 Forgor 💀
 *** Q3 Wrap up preparations
+* Work
+- [[id:09cc8c01-bb56-4c4c-944c-7f5db1371012][WORK - House Operto]]
 
 * Knowledge notes
 - [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
