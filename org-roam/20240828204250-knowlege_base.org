@@ -54,6 +54,16 @@ Optimize tools and processes to do things more effectively and quicker
 **** TODO get bind9 + docker to work on cloud [[https://www.youtube.com/watch?v=syzwLwE3Xq4][You want a real DNS Server at home? (bind9 + docker) - YouTube]]
 **** TODO go over the nix pills [[https://nixos.org/guides/nix-pills/00-preface][Preface - Nix Pills]]
 
+*** Certs
+**** AWS Solution architect exam
+
+*** Websites [0/3]
+**** TODO destroy rebuild linode k8s with only 2 linodes
+**** TODO deploy an example of my template
+**** TODO rebuild my professional website
+Here's an absolute chad of a website
+[[https://www.aidanscannell.com/][Aidan Scannell]]
+
 *** TODO Workflow [2/8]
 **** DONE Refine natural flow of files navigation through nnn
 CLOSED: [2024-09-23 Mon 10:39]
@@ -70,13 +80,15 @@ CLOSED: [2024-08-31 Sat 18:10]
 **** BACKLOG auto update the cloud system post git pull
 **** TODO have org agenda to get all ~TODO~ under zettelkasten
 use evil-motion g s s/S-j/k
+**** TODO investigate literate files ~.org~ to document my nixos config, dotfiles, and other repo.
 
-*** TODO Emacs [2/4]
+*** TODO Emacs [3/5]
 **** TODO go over the entire spacemacs documentation
 [[https://www.spacemacs.org/doc/DOCUMENTATION.html][Spacemacs documentation]]
 **** TODO Create a note template for org-roam new node
-**** TODO Use org agenda, and org todo regularly
-DEADLINE: <2024-09-03 Tue>
+**** DONE Use org agenda, and org todo regularly
+CLOSED: [2024-10-01 Tue 09:25] DEADLINE: <2024-09-03 Tue>
+- State "DONE"       from "TODO"       [2024-10-01 Tue 09:25]
 **** DONE confirm emacs autosave config
 CLOSED: [2024-09-23 Mon 10:38]
 - State "DONE"       from "TODO"       [2024-09-23 Mon 10:38]
@@ -100,7 +112,15 @@ DEADLINE: <2024-10-14 Mon>
 :END:
 
 ** misc
-
 *** TODO Improvements [0/1]
 **** TODO call the carpenter, for an install update
 DEADLINE: <2024-10-07 Mon>
+
+** Life
+*** TODO Rework the CV
+*** TODO Rewrite CV to org mode
+[[https://github.com/aidanscannell/my-org-resume][GitHub - aidanscannell/my-org-resume: Personal CV/Resume written in Org-mode ...]]
+*** TODO create a recuring framework for house maintenance using org-mode w/deadline and incorporate it in =org-agenda=
+
+** Home Tasks
+[[id:130635ef-5b04-4ac4-b1e1-63840f077d83][Maintenance - Home]]

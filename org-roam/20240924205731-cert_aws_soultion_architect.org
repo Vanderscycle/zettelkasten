@@ -1,10 +1,11 @@
 :PROPERTIES:
 :ID:       cd0fcbf2-addf-48e6-8f15-44b95afd207d
 :END:
-#+title: cert - AWS Soultion Architect
+#+title: cert - AWS Solution Architect
 
 * Home
 [[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
+
 * Main reference
 ** Ackronym
 Secure File Transfer Protocol (SFTP)
@@ -13,6 +14,7 @@ File Transfer Protocol (FTP)
 Set of rules governing how files are moved between server and client running in the application layer (lv7)
 Applicability Statement 2 (AS2)
 [[https://docs.aws.amazon.com/]]
+
 * Futher learning
 ** OSI Model
 [[https://en.wikipedia.org/wiki/OSI_model][OSI model - Wikipedia]]
@@ -20,7 +22,7 @@ Applicability Statement 2 (AS2)
 [[https://en.wikipedia.org/wiki/File_Transfer_Protocol][File Transfer Protocol - Wikipedia]]
 * AWS Solution Architect
 
-** TODO Knowledge [0/9]
+** TODO Knowledge [2/9]
 *** TODO Networking
 DEADLINE: <2024-10-16 Wed>
 **** VPC
@@ -54,17 +56,38 @@ DEADLINE: <2024-10-06 Sun>
 **** SNS
 **** AWS MQ
 
-*** TODO Data ML
-DEADLINE: <2024-09-29 Sun>
-**** kinesis
-**** glue
+*** DONE Data ML
+CLOSED: [2024-09-30 Mon 12:59] DEADLINE: <2024-09-29 Sun>
+- State "DONE"       from "TODO"       [2024-09-30 Mon 12:59]
+**** kinesis (Data ingestion)
+- video streams
+Inputs (video's feed)
+Output can be ~AWS Rekognition~, ~AWS S3~, ~AWS Sagemaker~
+- data streams
+Inputs any data stream
+You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time.
+Outputs can be ~AWS EC2~, ~AWS Lambda~, ~AWS EMR~, ~Kinesis Data Analytics~ (mostly other compute)
+- data firehose
+Inputs any data stream
+Outputs can be ~AWS S3~, ~AWS Redhshift~. The main difference between that and ~data streams~ is that the outputs are data repositories
+- data analytics (queries on the data before it hits storage)
+**** Kafka
+Amazon Managed Streaming for Apache Kafka (Amazon MSK) is a fully managed service that makes it easy for you to build and run applications that use Apache Kafka to process streaming data. High data ingestion, processing and delivery. Can be serverless.
+~Apache Kafka~ is a distributed queue system decoupling producer and consumers. Queues are split into partitions which can be consumed using the partition key. Partitions hosted on a machine are called brokers
+**** glue ETL
+~AWS Glue~ is a serverless data integration service that makes it easy for analytics users to discover, prepare, move, and integrate data from multiple sources. You can use it for analytics, machine learning, and application development.
+Defined datastore, create a crawler, populates glue data catalog
+**** Elastic Map Reduce (EMR)
+Amazon EMR is a managed cluster platform that simplifies running big data frameworks like Apache Hadoop and Apache Spark on AWS.  There is ~EMR Studio~ which allows for collaboration
+~Apache Hadoop~ stores data accross several nodes in a cluster, process data accross multiple nodes, and then stores the results
+~Apache Spark~ is a multi-language engine for executing data engineering, data science, and machine learning on single-node machines or clusters.
+Can be hosted on ~EC2~, ~EKS~ or ~serverless~
 **** glue Databrew
-**** EMR
+NoCode application of ~AWS Glue~
 **** lake formation
+AWS Lake Formation is a managed service that makes it easy to set up, secure, and manage your data lakes. Lake Formation helps you discover your data sources and then catalog, cleanse, and transform the data. Any source can be ~nosql~, ~s3~, ~redshift~, ~sql~
 **** Athena
-
-Very quick
-
+Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to setup or manage, and you pay only for the queries you run.
 **** Quicksight
 Serverless data visuliaztion engine for interactive dashboarding pulling data from:
 - s3
@@ -101,7 +124,7 @@ AWS process:
 [[file:~/Documents/zettelkasten/data/image/cert/satty-20240925-14:02:00.png][polly]]
 **** Lex
 AWS chatbot (think alexa)
-
+provides advanced deep learning functionalities of automatic speech recognition (ASR) for converting speech to text and natural language understanding (NLU) to recognize the intent of the text?
 **** Comprehend
 Natural language processing and text analysis.
 ***** Personally identifiable information e.g. credit card numb
@@ -129,8 +152,9 @@ Can extract:
 - tables
 - signatures
 
-*** TODO Migration/transfer
-DEADLINE: <2024-09-29 Sun>
+*** DONE Migration/transfer
+CLOSED: [2024-09-30 Mon 11:25] DEADLINE: <2024-09-29 Sun>
+- State "DONE"       from "TODO"       [2024-09-30 Mon 11:25]
 **** Intro
 To migrate from on prem to AWS
 - assess and create inventory
@@ -241,11 +265,159 @@ Use ~AWS Snowmobile~ for one-time, large-scale data transfer
 *** TODO Management/Governance
 DEADLINE: <2024-09-29 Sun>
 **** cloudformation
+***** drift detection
+AWS CloudFormation Drift Detection can be used to detect changes made to AWS resources outside the CloudFormation Templates. AWS CloudFormation Drift Detection only checks property values explicitly set by stack templates or by specifying template parameters.
+
+***** Parameters
+Allow users to input custom values when creating or updating a stack, making templates more flexible and reusable.
+#+BEGIN_SRC yaml
+Parameters:
+  InstanceTypeParameter:
+    Type: String
+    Default: t2.micro
+    AllowedValues: [t2.micro, m1.small, m1.large]
+    Description: Enter instance type (e.g., t2.micro)
+#+END_SRC
+
+***** Mappings
+Define sets of static values that are mapped to keys, which can be referenced within the template.
+#+BEGIN_SRC yaml
+Mappings:
+  RegionToAMI:
+    us-east-1:
+      AMI: "ami-0ff8a91507f77f867"
+    us-west-2:
+      AMI: "ami-0a8e758f5e873d1c1"
+#+END_SRC
+
+***** Conditions
+Define conditional logic based on input parameters or other conditions, controlling when certain resources are created or updated within the stack.
+#+BEGIN_SRC yaml
+Conditions:
+  CreateProdResources: !Equals [ !Ref EnvType, prod ]
+#+END_SRC
+
+***** Resources
+Define the AWS resources that make up your stack.
+#+BEGIN_SRC yaml
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !If [CreateProdResources, "m1.small", !Ref InstanceTypeParameter]
+      ImageId: !FindInMap [RegionToAMI, !Ref "AWS::Region", AMI]
+#+END_SRC
+
+***** Outputs
+Define values that are returned by the stack once it's created or updated.
+#+BEGIN_SRC yaml
+Outputs:
+  WebsiteURL:
+    Description: URL of the website
+    Value: !GetAtt WebsiteBucketWebsiteURL
+#+END_SRC
+
+***** cfn-init
+helper script is used to retrieve and interpret resource metadata from the =AWS::CloudFormation::Init= key.
+
+***** cfn-hup
+helper script checks for any updates to the metadata. If there are any changes, it executes custom hooks.
+
+***** cfn-signal
+helper script can be used to signal CloudFormation to indicate if software or application is successfully updated on an Amazon EC2 instance.
+
+***** cfn-get-metadata
+helper script helps to retrieve metadata
+
+**** Cloud Development Kit (CDK)
+Because writting cloudformation template by hand is a pain.
+
+The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation.
+
+=cdk synth= synthetise the cloudformation templates
+=cdk deploy= deploys the formations to AWS.
 **** Cloudwatch
+Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications.
+
+The CloudWatch home page automatically displays metrics about every AWS service you use. You can additionally create custom dashboards to display metrics about your custom applications, and display custom collections of metrics that you choose.
+
+***** Metric
+data such as latency, cpu load, etc. from your applications
+
+***** Alarms
+Alarms from metrics. Usefull for custom alarms which can be fed into ~AWS SNS~, then you can trigger a ~AWS Lambda~. Services like ~AWS autoscaling~ works out of the box.
+
+***** Logs
+All the logs generated from your application
+
+***** Events
+usefull for usage with ~AWS EventBridge~
+
 **** x-ray
+~AWS X-Ray~ is a service that collects data about requests that your application serves, and provides tools that you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization.
+
+**** AWS Health Dashboard
+General dashboard informing AWS customers about ongoing issues that AWS services/region are experiencing.
+
+**** Prometheus
+Amazon Managed Service for Prometheus is a serverless, Prometheus-compatible monitoring service for container metrics that makes it easier to securely monitor container environments at scale.
+
+Open source solution for ~AWS Cloudwatch~. Collects your metrics
+
+**** Grafana
+Amazon Managed Grafana is a fully managed and secure data visualization service that you can use to instantly query, correlate, and visualize operational metrics, logs, and traces from multiple sources.
+
+Open source solution for advanced analytics and visualization platform.
+
+**** Trusted advisor
+Trusted Advisor draws upon best practices learned from serving hundreds of thousands of AWS customers. Trusted Advisor inspects your AWS environment, and then makes recommendations when opportunities exist to save money, improve system availability and performance, or help close security gaps.
+
+Mostly recommendations (but you have to pay for them)
+
+**** Launch Wizard
+AWS Launch Wizard helps you reduce the time that it takes to deploy well knows application (~AWS EKS~, ~SAP~, ~MS Active Dir~)and domain-controller solutions to the cloud.
+
+**** Compute Optimizer
+AWS Compute Optimizer recommends optimal AWS compute resources for your workloads.
+
+~AWS EC2~, ~AWS EBS~, Fargate
+
+**** AWS Organization
+AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources. Using Organizations, you can create accounts and allocate resources, group accounts to organize your workflows, apply policies for governance, and simplify billing by using a single payment method for all of your accounts.
+
+You can only have one root and one management account. The later creates the policies, invites organizations, applying policies, etc.
+
+***** Organization Units
+An AWS Organization has the below hierarchy of Organizational Units (OUs): Root -> organization_OU (e.g. company a) -> Dev_OU
+Project_OU is attached to an SCP that prevents users from deleting VPC Flow Logs. Dev_OU has an SCP that allows the action of "ec2: DeleteFlowLogs".
+
+***** Service Control Policies (SCP)
+Service control policies (SCPs) are a type of organization policy that you can use to manage permissions in your organization. SCPs offer central control over the maximum available permissions for the IAM users and IAM roles in your organization. Can apply to a specific acct, org, etc.
+
+SCPs do not grant permissions to the IAM users and IAM roles in your organization. Only defines what you are allowed todo within that account. e.g. in the dev_OU you shouldn't be spinning large ec2.
+
 **** Control tower
+AWS Control Tower is a service that enables you to enforce and manage governance rules for security, operations, and compliance at scale across all your organizations and accounts in the AWS Cloud.
+
+best thought as an AWS acct orchestrator
+
+***** Landing Zone
+A landing zone is a well-architected, multi-account environment that's based on security and compliance best practices. Creates two AWS Organizations organizational units (OUs): Security, and Sandbox (optional), contained within the organizational root structure. Creates or adds two shared accounts in the Security OU: the Log Archive account and the Audit account.
+
+***** Controls/guardrails
+ is a high-level rule that provides ongoing governance for your overall AWS environment. It's expressed in plain language. Three kinds of controls exist: preventive, detective (reports but doesn't stop you), and proactive(does not provision). It uses ~AWS Org SCP~
+Detective controls detect specific events when they occur and log the action in CloudTrail.
+
+***** Account Factory
+An Account Factory is a configurable account template that helps to standardize the provisioning of new accounts with pre-approved account configurations.
 **** System manager
+
 **** service catalog
+**** License Manager
+**** Proton
+AWS Proton creates and manages standardized infrastructure and deployment tooling for developers and their serverless and container-based applications.
+
+I dare say that terraform modules does that
 
 *** TODO Security
 DEADLINE: <2024-09-29 Sun>

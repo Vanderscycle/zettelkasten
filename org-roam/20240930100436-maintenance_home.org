@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       130635ef-5b04-4ac4-b1e1-63840f077d83
+:END:
+#+title: Maintenance - Home
+
+* Routine Maintenance
+** Equipment maintenance
+*** TODO Drain water heater tank
+SCHEDULED: <2024-10-12 Sat +1y>
+
+** Cleaning
+*** TODO Clean balcony from leaves and debris
+SCHEDULED: <2024-10-12 Sat +1m>
+*** TODO clean the downstairs bathroom tub
+SCHEDULED: <2024-10-12 Sat +2m>
+
+* One off fixes
+** TODO Replace the bedroom door airtight seal

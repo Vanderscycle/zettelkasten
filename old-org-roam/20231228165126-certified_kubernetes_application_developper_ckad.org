@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       0f6a9f76-2e51-4084-aa44-4486023a4b61
-:END:
-#+title: Certs - Certified Kubernetes Application Developper (CKAD)
-
-* Pods
