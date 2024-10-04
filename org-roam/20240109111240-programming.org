@@ -9,8 +9,7 @@
 * Programming
 ** Certifications
 - [[id:4aac16ce-ce76-4f97-9328-0f8166186fce][cert - CKAD]]
-- [[id:cd0fcbf2-addf-48e6-8f15-44b95afd207d][cert - AWS Soultion Architect]]
-
+- [[id:cd0fcbf2-addf-48e6-8f15-44b95afd207d][cert - AWS Solution Architect]]
 
 - [[id:867654f4-3f6f-43d9-94ca-db34bfc3edc2][AWS Playbook]]
 

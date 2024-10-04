@@ -22,7 +22,7 @@ Applicability Statement 2 (AS2)
 [[https://en.wikipedia.org/wiki/File_Transfer_Protocol][File Transfer Protocol - Wikipedia]]
 * AWS Solution Architect
 
-** TODO Knowledge [2/9]
+** TODO Knowledge [3/9]
 *** TODO Networking
 DEADLINE: <2024-10-16 Wed>
 **** VPC
@@ -262,8 +262,9 @@ snowmobile: exabyte scale data migration
 ****** Large scale data transfer (several petabytes)
 Use ~AWS Snowmobile~ for one-time, large-scale data transfer
 
-*** TODO Management/Governance
-DEADLINE: <2024-09-29 Sun>
+*** DONE Management/Governance
+CLOSED: [2024-10-02 Wed 20:41] DEADLINE: <2024-09-29 Sun>
+- State "DONE"       from "TODO"       [2024-10-02 Wed 20:41]
 **** cloudformation
 ***** drift detection
 AWS CloudFormation Drift Detection can be used to detect changes made to AWS resources outside the CloudFormation Templates. AWS CloudFormation Drift Detection only checks property values explicitly set by stack templates or by specifying template parameters.
@@ -329,6 +330,17 @@ helper script can be used to signal CloudFormation to indicate if software or ap
 ***** cfn-get-metadata
 helper script helps to retrieve metadata
 
+***** StackSets
+AWS CloudFormation StackSets extends the capability of stacks by allowing you to create, update, or delete stacks across multiple accounts and AWS Regions with a single operation.
+
+***** Nested stacks
+As your infrastructure grows, common patterns can emerge in which you declare the same components in multiple templates.
+
+terraform modules
+
+***** Change sets
+Change sets allow you to preview how proposed changes to a stack might impact your running resources
+
 **** Cloud Development Kit (CDK)
 Because writting cloudformation template by hand is a pain.
 
@@ -340,6 +352,8 @@ The AWS Cloud Development Kit (AWS CDK) is an open-source software development f
 Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications.
 
 The CloudWatch home page automatically displays metrics about every AWS service you use. You can additionally create custom dashboards to display metrics about your custom applications, and display custom collections of metrics that you choose.
+
+You can collect system-level metrics from on-prems and view alongside AWS metrics. using ~AWS Cloudwatch agent~
 
 ***** Metric
 data such as latency, cpu load, etc. from your applications
@@ -373,6 +387,8 @@ Open source solution for advanced analytics and visualization platform.
 Trusted Advisor draws upon best practices learned from serving hundreds of thousands of AWS customers. Trusted Advisor inspects your AWS environment, and then makes recommendations when opportunities exist to save money, improve system availability and performance, or help close security gaps.
 
 Mostly recommendations (but you have to pay for them)
+
+The key words is that its across cost savings, performance, security and fault tolerance
 
 **** Launch Wizard
 AWS Launch Wizard helps you reduce the time that it takes to deploy well knows application (~AWS EKS~, ~SAP~, ~MS Active Dir~)and domain-controller solutions to the cloud.
@@ -410,19 +426,172 @@ Detective controls detect specific events when they occur and log the action in 
 
 ***** Account Factory
 An Account Factory is a configurable account template that helps to standardize the provisioning of new accounts with pre-approved account configurations.
-**** System manager
 
-**** service catalog
+**** System manager
+Use AWS Systems Manager to organize, monitor, and automate management tasks on your AWS resources.
+
+***** Operation manager
+Use Incident Manager, a capability of AWS Systems Manager, to manage incidents occurring in your AWS hosted applications.
+
+***** Application manager
+ Application Manager aggregates operations information from multiple AWS services and AWS Systems Manager capabilities to a single AWS Management Console.
+
+***** Parameter Store
+key/value pair for secret or
+b**** service catalog
+
+***** Change manager
+Simplify how your team requests, approves, implements, and reports on operational changes. Manage changes to your application configuration and infrastructure, both in AWS and on premises. Can specify blackout days (no changes)
+
+***** Node Management
+AWS Systems Manager provides the following capabilities for accessing, managing, and configuring your managed nodes. A managed node is any machine configured for use with Systems Manager in a hybrid and multicloud environment.
+
+Feels like terraform should control said changes. I do see it being usefull for DB changes.
+
+**** Service Catalog
+AWS Service Catalog enables IT administrators to create, manage, and distribute portfolios of approved products to end users, who can then access the products they need in a personalized portal. Typical products include servers, databases, websites, or applications that are deployed using AWS resources
+
 **** License Manager
+~AWS License Manager~ indeed enables organizations to track both ~AWS-provided licenses~ and custom licenses (3rd party) procured independently. It provides visibility into license usage, helps in controlling usage to ensure compliance with licensing terms, and offers features like License Manager rules to set up licensing rules.
+
+does not automatically purchase or allocate additional licenses when usage exceeds predefined thresholds.
+
 **** Proton
 AWS Proton creates and manages standardized infrastructure and deployment tooling for developers and their serverless and container-based applications.
 
 I dare say that terraform modules does that
 
+**** Resource group and tag manager
+AWS Resource Explorer is a resource search and discovery service. With Resource Explorer, you can explore your resources, such as Amazon Elastic Compute Cloud instances, Amazon Kinesis streams, or Amazon DynamoDB tables, using an internet search engine-like experience.
+
+**** Resilience hub
+AWS Resilience Hub helps you proactively prepare and protect your AWS applications from disruptions. AWS Resilience Hub provides resiliency assessment and validation to help you identify and resolve issues before releasing applications into production.
+
+Acts as an overseer
+
+***** Recovery point objective (RPO)
+The maximum acceptable amount of time since the last data recovery point. This determines what is considered an acceptable loss of data between the last recovery point and the interruption of service.
+
+***** Recovery time objective (RTO)
+The maximum acceptable delay between the interruption of service and restoration of service. This determines what is considered an acceptable time window when service is unavailable.
+
+**** Resource Explorer
+Simply search and discovery of AWS resources accross regions
+
+**** Resource Access Manager
+
 *** TODO Security
 DEADLINE: <2024-09-29 Sun>
-**** Macie
+**** IAM
+AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources users and applications can access.
+Least Privilege Principle
+
+***** User
+An IAM user is an entity that you create in your AWS account. The IAM user represents the human user or workload who uses the IAM user to interact with AWS resources. A IAM user consists of a name and credentials.
+
+***** Group
+An IAM user group is a collection of IAM users.
+
+***** Role
+An IAM role is an IAM identity that you can create in your account that has specific permissions.  a role is intended to be assumable by anyone who needs it.
+
+***** Policy
+Dictate permission a user has access to.
+
+**** IAM Identity Center (SSO)
+IAM Identity Center provides one place where you can create or connect workforce users and centrally manage their access to all of their AWS accounts and applications. Workforce users benefit from a single sign-on experience and can use the AWS access portal to find all their assigned AWS accounts and applications.
+
+**** Cognito
+Amazon Cognito handles user authentication and authorization for your web and mobile apps. With user pools, you can easily and securely add sign-up and sign-in functionality to your apps.
+
+***** User pool
+An Amazon Cognito user pool is a user directory for web and mobile app authentication and authorization. A user pool adds layers of additional features for security, identity federation, app integration, and customization of the user experience.
+
+The user are given a token.
+
+***** Identity pool
+An Amazon Cognito identity pool is a directory of federated identities that you can exchange for AWS credentials. Identity pools generate temporary AWS credentials for the users of your app
+
+Allows for the user to access AWS resources (upload to an S3)
+
+**** Directory Service
+MS Active Dir: Directory service created by microsoft which enable administrator to managed permissions + access to different services/applications.
+
+AWS Directory Service provides multiple ways to set up and run Microsoft Active Directory with other AWS services such as Amazon EC2, Amazon RDS for SQL Server, FSx for Windows File Server, and AWS IAM Identity Center.
+
+TL;DR AWS Managed Microsoft AD managed accross multiple availability zones.
+
+***** Simple AD
+Does not integrate with on-prems but easy integration
+***** Managed Ms AD
+actual implementation, on AWS, of MS AD
+***** AD Connnector
+if you have ms AD on prems you don't have to get a duplicate
+
+**** Verified permissions
+Amazon Verified Permissions is a scalable, fine-grained permissions management and authorization service for custom applications built by you.
+
+***** Differences between IAM
+IAM Permissions are for AWS resources (e.g., S3, EC2, Lambda).
+AWS Verified Permissions are for application-level access control, extending beyond AWS services to control actions within an application.
+
+**** CloudTrail
+With AWS CloudTrail, you can monitor your AWS deployments in the cloud by getting a history of AWS API calls for your account, including API calls made by using the AWS Management Console, the AWS SDKs, the command line tools, and higher-level AWS services. You can also identify which users and accounts called AWS APIs for services that support CloudTrail, the source IP address from which the calls were made, and when the calls occurred.
+
+TL;DR: audit trails, stores for 30days, longer needs to go in a s3 bucket and query through elastic search
+Cloudtrail can trigger ~AWS CloudWatch~ alarms which then generates a ~eventbrdige/sns~ which can lead to an ~lambda~
+
+**** AWS Config
+AWS Config provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time.
+
+Great for auditing the changes to one's resource/app. Analogy librarian keeping track of the state and status of books throughout their lifetime
+
+**** Artifacts
+~AWS Artifact~ is a web service that enables you to download AWS security and compliance documents such as ISO certifications and SOC reports. Works for GDPR.
+
+You can download the report and submit to the auditor directly
+
+**** AWS GuardDuty
+Amazon GuardDuty is a fully managed and advanced threat detection service providing broad protection to AWS Accounts and workloads. It helps to identify threats like attacker reconnaissance, instance compromise, account compromise, and bucket compromise.
+
+Uses machine learning and threat inteligence. Collects logs such as ~cloudtrail~, ~vpc flow logs~, ~dns logs~ which then can trigger a ~lambda~.
+If something happens, it generates a finding and gives it a severity score.
+You can give it a trusted IP list (safe IPs) and a threat IP list (generated from org or taken elsewhere)
+
+***** GuardDuty detection categories
+- reconnainssance
+- instance compromise
+- account compromise
+- bucket compromise
+
+**** Inspector
+Amazon Inspector is a security vulnerability assessment service that helps improve the security and compliance of your AWS resources. Amazon Inspector automatically assesses resources for vulnerabilities or deviations from best practices, and then produces a detailed list of security findings prioritized by level of severity.
+
+You must specify the resources to scan (assessment target) _Focused on the workloads_
+Check for the following:
+- package vulnerability
+- code vulnerability
+- network reachability
+
+**** AWS Macie
+_Focused on s3_
+Amazon Macie is a data security service that discovers sensitive data (Personnaly Identifiable Infromation ~PII~) by using machine learning and pattern matching, provides visibility into data security risks, and enables automated protection against those risks.
+
+To help you manage the security posture of your organization's Amazon Simple Storage Service (Amazon S3) data estate, Macie provides you with an inventory of your S3 buckets, and automatically evaluates and monitors the buckets for security and access control.
+
 **** Security hub
+AWS Security Hub provides a consolidated view of your security status in AWS. Automate security checks, manage security findings, and identify the highest priority security issues across your AWS environment.
+
+Central dashboard for the following:
+- GuardDuty
+- Inspector
+- Macie
+- External security tools
+- lambda
+
+Example flow:
+~AWS Inspector~ detect a vulnerability in a ~AWS EC2~ Generate + share findings in ~AWS security Hub~ and triggers an event on ~AWS EventBridge~ or ~AWS SNS~ which invokes a ~lambda~ or ~step function~ or ~system manager~
+
 **** KMS
 **** WAF
 **** shield

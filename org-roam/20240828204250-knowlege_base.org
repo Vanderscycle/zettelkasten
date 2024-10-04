@@ -15,7 +15,6 @@ Optimize tools and processes to do things more effectively and quicker
 * Knowledge notes
 - [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
 - [[id:e599332d-c8fd-4a8a-96f2-cf6c770891e7][3D Printing]]
-- [[id:020480e0-77cd-4e0b-9dc5-85e63ac43f9a][Certifications]]
 - [[id:b19092d6-d8e7-47e0-b2b3-0940dd54ddc9][OpenWRT]]
 - [[id:b97b4990-719f-4543-adcc-ae644195f63b][emacs]]
 - [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
@@ -88,6 +87,7 @@ use evil-motion g s s/S-j/k
 **** TODO go over the entire spacemacs documentation
 [[https://www.spacemacs.org/doc/DOCUMENTATION.html][Spacemacs documentation]]
 **** TODO Create a note template for org-roam new node
+Must reference the knowledge node
 **** DONE Use org agenda, and org todo regularly
 CLOSED: [2024-10-01 Tue 09:25] DEADLINE: <2024-09-03 Tue>
 - State "DONE"       from "TODO"       [2024-10-01 Tue 09:25]
