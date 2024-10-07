@@ -434,7 +434,7 @@ SQS does not use the publish/subscribe model
 **** ApproximateNumberOfMessagesVisible
 pproximateNumberOfMessagesVisible describes the number of messages available for retrieval. It can be used to decide the queue length.
 **** ApproximateNumberOfMessagesNotVisible
-ApproximateNumberOfMessagesNotVisible measures the number of messages in flight. It should not be used here.
+ApproximateNumberOfMessagesNotVisible measures the number of messages in flight.
 **** Access sqs queue by different accts
 Using SQS policies, you can grant permissions to different SQS actions to other AWS accounts.
 

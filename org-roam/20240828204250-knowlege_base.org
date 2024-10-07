@@ -114,15 +114,28 @@ DEADLINE: <2024-10-14 Mon>
 :END:
 
 ** misc
-*** TODO Improvements [0/1]
-**** TODO call the carpenter, for an install update
+*** TODO Improvements [1/2]
+**** DONE call the carpenter, for an install update
+CLOSED: [2024-10-06 Sun 16:47] DEADLINE: <2024-10-07 Mon>
+- State "DONE"       from "TODO"       [2024-10-06 Sun 16:47]
+***** TODO Meet between 1100 - 1500 at his shop, with the wife, to check color
+SCHEDULED: <2024-10-12 Sat>
+**** TODO Call the tilier about the grout disappearing
+DEADLINE: <2024-10-07 Mon>
+**** TODO Call the electrician about the 4th bed smoke alarm not receiving power.
 DEADLINE: <2024-10-07 Mon>
 
 ** Life
-*** TODO Rework the CV
+*** TODO Rework the CV structure
 *** TODO Rewrite CV to org mode
 [[https://github.com/aidanscannell/my-org-resume][GitHub - aidanscannell/my-org-resume: Personal CV/Resume written in Org-mode ...]]
 *** TODO create a recuring framework for house maintenance using org-mode w/deadline and incorporate it in =org-agenda=
-
+*** TODO Master Chinese
+**** Read one news article in chinese
+SCHEDULED: <2024-10-04 Fri +1j>
+**** Write 10 sentences
+SCHEDULED: <2024-10-07 Mon +1w>
+[[https://www.bbc.com/zhongwen/simp][主页 - BBC News 中文]]
+[[https://news.baidu.com/][百度新闻——海量中文资讯平台]]
 ** Home Tasks
 [[id:130635ef-5b04-4ac4-b1e1-63840f077d83][Maintenance - Home]]

@@ -22,7 +22,7 @@ Applicability Statement 2 (AS2)
 [[https://en.wikipedia.org/wiki/File_Transfer_Protocol][File Transfer Protocol - Wikipedia]]
 * AWS Solution Architect
 
-** TODO Knowledge [3/9]
+** TODO Knowledge [4/9]
 *** TODO Networking
 DEADLINE: <2024-10-16 Wed>
 **** VPC
@@ -50,12 +50,163 @@ DEADLINE: <2024-10-06 Sun>
 *** TODO Application integration
 DEADLINE: <2024-10-06 Sun>
 **** Autoscaling
-**** ELB
-**** API Gateway
-**** SQS
-**** SNS
-**** AWS MQ
+***** Scaling policy
+minimum, desired and max instances
+- manual: all operations are done manually
+- dynamic: 3 types:
+****** target tracking policy
+This policy adjusts the number of instances in a way that keeps a specific metric, such as CPU utilization or request count, close to a target value.
+=ASGAverageCPUUtilization= for an ~AWS EC2~, network =ASGAverageNetworkIn=
 
+****** simple scaling policy
+Must set and use ~AWS cloudwatch~ alarm (high usage/low usage). you can control the scaling process e.g. 50-70 add 2 ~EC2~, 85-100 add 5 ~EC2~
+****** step scaling policy
+caling adjusts the capacity based on step adjustments instead of a target
+
+- scheduled
+For predicatable and known loads
+
+***** EC2 specific
+you must specify a launch template for the new ~EC2~ to use. e.g. what ~AWS EC2 AMI/size/SG/IAM/EBS volume~ to use.
+
+***** Misc
+****** cooldown period
+The cooldown period is the amount of time to wait for a previous scaling activity to take effect is called the cooldown period.
+****** update EC2 isntance part of a scaling gruppen
+Put the instance in Standby mode. Post upgrade, move instance back to InService mode. It will be part of the same auto-scaling group
+****** autoscaling termination policy
+Termination policy is used to specify which instances to terminate first during scale-in
+****** warm pool
+ Auto Scaling Warm Pool is a collection of pre-initialized EC2 Instances sitting along with your Auto Scaling Group
+****** Hibernation
+Hibernation of the Amazon EC2 instance can be used in the =case of memory-intensive applications= or if =applications take a long time to bootstrap=. Hibernation pre-warms the instance, and after resuming it, it quickly brings all application processes to a running state. When an instance is hibernated, the Amazon EC2 instance saves all the content of the instance memory RAM to Amazon EBS volumes. Any root EBS volumes or attached EBS volumes are persisted during hibernation.
+****** autoscaling for dbs (data loss) post shutdown
+Adding Lifecycle Hooks to the Auto Scaling group puts the instance into a wait state before termination. During this wait state, you can perform custom activities to retrieve critical operational data from a stateful instance. The Default Wait period is 1 hour.
+
+**** ELB
+Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets and routes traffic only to the healthy targets.
+
+***** Listeners
+A listener is a process that checks for connection requests, using the protocol and port that you configure. Before you start using your Application Load Balancer, you must add at least one listener.
+
+***** Target group (which servers request are forwarded too)
+Target groups route requests to individual registered targets, such as EC2 instances, using the protocol and port number that you specify.
+
+***** Application load balancer
+Supports Http/https and allows for advanced rerouting. e.g. http -> https redirect,
+Can allow filtering on GET/POST request or host header rules e.g. blog.website.com -> redirect to ~Target group~ named blog containing dedicated ~AWS EC2~ or path e.g. blog.website.com/store
+mostly used for web apps (direct traffic to the right EC2)
+
+***** Network load balancer
+Supports TCP, UDP, and TLS
+
+The NLB creates and attaches ~ENIs~ (virtual network interfaces) to the subnets you specify during setup. These ENIs represent the entry points for traffic in each Availability Zone.
+
+***** Misc
+****** Cross-zone load balancing
+If not enabled it only goes to a specific zone
+
+**** API Gateway
+Amazon API Gateway enables you to create and deploy your own REST and WebSocket APIs at any scale. You can create robust, secure, and scalable APIs that access Amazon Web Services or other web services, as well as data that’s stored in the AWS Cloud.
+
+- Backend integration complexity
+- api management and deployment (versioning)
+- request and response transformation
+- security and access control ~AWS Cognito~
+- Rate limiting and throttling
+- Monitoring and analytics
+- onboarding and documentation e.g. ~swagger docs~
+
+Supports:
+- http api
+- REST
+- websocket
+
+**** Appflow
+Amazon AppFlow is a fully managed API integration service that you use to connect your software as a service (SaaS) applications to AWS services, and securely transfer data. Use Amazon AppFlow flows to manage and automate your data transfers without needing to write code.
+
+**** SNS
+Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and consumers). Publishers communicate asynchronously with subscribers by sending messages to a topic
+
+#+DOWNLOADED: screenshot @ 2024-10-06 18:58:27
+[[file:AWS_Solution_Architect/2024-10-06_18-58-27_screenshot.png]]
+
+***** First In First Out Topic
+You can use Amazon SNS FIFO (first in, first out) topics with Amazon SQS FIFO queues to provide strict message ordering and message deduplication. max 300 messages/seconds
+
+***** Standard Topic
+Main issue: messages may show up more than once and out of order. It has high throughput tho
+
+***** Misc
+you can batch 1-10 messages per request. max size 256kb but can send 2gb (~S3~ link)
+
+**** SQS
+Amazon Simple Queue Service (Amazon SQS) is a fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems, and serverless applications. Amazon SQS moves data between distributed application components and helps you decouple these components.
+
+
+#+DOWNLOADED: screenshot @ 2024-10-06 19:18:12
+[[file:AWS_Solution_Architect/2024-10-06_19-18-12_screenshot.png]]
+
+*****  Standard queues
+Standard queues ensure at-least-once message delivery, but due to the highly distributed architecture, more than one copy of a message might be delivered, and messages may occasionally arrive out of order.
+
+***** FIFO
+FIFO (First-In-First-Out) queues have all the capabilities of the standard queues, but are designed to enhance messaging between applications when the order of operations and events is critical, or where duplicates can't be tolerated.
+
+***** Dead letter queues
+Amazon SQS supports dead-letter queues (DLQs), which source queues can target for messages that are not processed successfully. DLQs are useful for debugging your application because you can isolate unconsumed messages to determine why processing did not succeed.
+
+***** Visibility timeout
+When a consumer receives a message from an Amazon SQS queue, the message remains in the queue but becomes temporarily invisible to other consumers. This temporary invisibility is controlled by the visibility timeout
+***** Misc
+****** ApproximateNumberOfMessagesVisible
+pproximateNumberOfMessagesVisible describes the number of messages available for retrieval. It can be used to decide the queue length.
+****** ApproximateNumberOfMessagesNotVisible
+ApproximateNumberOfMessagesNotVisible measures the number of messages in flight.
+
+**** AWS MQ
+Amazon MQ is a managed message broker service that makes it easy to set up and operate message brokers in the cloud. Amazon MQ provides interoperability with your existing applications and services.
+
+| Resource type              | Amazon SNS | Amazon SQS | Amazon MQ |
+|----------------------------+------------+------------+-----------|
+| Synchronous                | No         | No         | Yes       |
+| Asynchronous               | Yes        | Yes        | Yes       |
+| Queues                     | No         | Yes        | Yes       |
+| Publisher-subscriber messaging | Yes     | No         | Yes       |
+| Message brokers            | No         | No         | Yes       |
+
+**** AWS Eventbridge
+Amazon EventBridge is a serverless event bus service that makes it easy to connect your applications with data from a variety of sources. EventBridge delivers a stream of real-time data from your own applications, software-as-a-service (SaaS) applications, and AWS services and routes that data to targets such as AWS Lambda.
+
+
+#+DOWNLOADED: screenshot @ 2024-10-06 20:08:41
+[[file:AWS_Solution_Architect/2024-10-06_20-08-41_screenshot.png]]
+
+
+**** AWS SES (email)
+Amazon Simple Email Service (SES) is an email platform that provides an easy, cost-effective way for you to send and receive email using your own email addresses and domains.
+
+***** Verified identies
+Same thing as supabase + resend integration to reduce span
+
+**** AWS Step functions
+AWS Step Functions is a serverless orchestration service that lets you integrate with AWS Lambda functions and other AWS services to build business-critical applications.
+AWS Step Functions coordinate application components using visual workflows.
+
+#+DOWNLOADED: screenshot @ 2024-10-06 19:59:01
+[[file:AWS_Solution_Architect/2024-10-06_19-59-01_screenshot.png]]
+
+***** Misc
+****** step func vs SQS
+ Although Amazon SQS and Step Functions both help in some sort of orchestration. Amazon SQS doesn’t have the capability to let you track all the tasks and events of your application.
+
+**** Workflow services
+Use step function most of the time unless you require external signal to interact within the process, or start child processes.
+
+Need to use python, go, javascript, etc.
+
+**** Maanged Workflow for Apache Airflow (MWAA)
+Amazon Managed Workflows for Apache Airflow is a managed orchestration service for Apache Airflow that you can use to setup and operate data pipelines in the cloud at scale.
 *** DONE Data ML
 CLOSED: [2024-09-30 Mon 12:59] DEADLINE: <2024-09-29 Sun>
 - State "DONE"       from "TODO"       [2024-09-30 Mon 12:59]
@@ -480,8 +631,9 @@ Simply search and discovery of AWS resources accross regions
 
 **** Resource Access Manager
 
-*** TODO Security
-DEADLINE: <2024-09-29 Sun>
+*** DONE Security
+CLOSED: [2024-10-06 Sun 16:46] DEADLINE: <2024-09-29 Sun>
+- State "DONE"       from "TODO"       [2024-10-06 Sun 16:46]
 **** IAM
 AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources users and applications can access.
 Least Privilege Principle
@@ -530,6 +682,7 @@ if you have ms AD on prems you don't have to get a duplicate
 
 **** Verified permissions
 Amazon Verified Permissions is a scalable, fine-grained permissions management and authorization service for custom applications built by you.
+attribute-based access control (ABAC) to manage permission as opposed to Role-baed access control (RBAC) used in k8s
 
 ***** Differences between IAM
 IAM Permissions are for AWS resources (e.g., S3, EC2, Lambda).
@@ -593,15 +746,93 @@ Example flow:
 ~AWS Inspector~ detect a vulnerability in a ~AWS EC2~ Generate + share findings in ~AWS security Hub~ and triggers an event on ~AWS EventBridge~ or ~AWS SNS~ which invokes a ~lambda~ or ~step function~ or ~system manager~
 
 **** KMS
-**** WAF
-**** shield
+AWS Key Management Service (AWS KMS) is an encryption and key management service scaled for the cloud. AWS KMS keys and functionality are used by other AWS services, and you can use them to protect data in your own applications that use AWS.
 
-certificate manager
-cert authority
-kms
-cloudformation and their milli params
-VPN
-autoscaling
+Can apply policies to keys dictating which users can use said key and what operation
+keys can encrypt/decrypt/sign/verify files
+kms monitoring: ~AWS cloudtrail~ ~AWS cloudwatch~
+data key: encrypt large amount of data. Encrypted data key can be stored in the s3 bucket. We still need the kms key to decrypt the encrypted data key to paintext
+imported key:
+AWS managed keys: AWS manage them on behalf of us. little control used for services using encryption ~sqs~, ~s3~, ~ebs~
+
+***** Asymmtric KMS keys
+It is more secure as two keys are used here- one for encryption and the other for decryption.
+
+Asymmetric KMS Keys represent a mathematically related RSA or elliptic curve (ECC) public and private key pair. The private key never leaves AWS KMS unencrypted. Asymmetric keys are used for digital signature applications such as trusted source code, authentication/authorization tokens, document e-signing, e-commerce transactions, and secure messaging.
+
+Does not support encryption for services like s3, lambda, dynamoDB, etc.
+
+***** Customer managed keys
+ Customer managed keys are KMS keys in an AWS account that the customer creates, owns, and manages. The customer has full control over these KMS keys, including establishing and maintaining their key policies, IAM policies, grants, etc. Customer- managed keys do not support =digital signature verification=.
+
+***** Symmetric keys
+Security is less as only one key is used for both encryption and decryption purpose.
+
+S3, Lambda, DynamoDB, etc integrate with KMS, and only symmetric encryption KMS key can be used here to encrypt the data. Also, the requirement of having the same 256-bit encryption key to encrypt and decrypt the data indicates a Symmetric KMS Key.
+
+**** CloudHSM
+AWS CloudHSM combines the benefits of the AWS cloud with the security of hardware security modules (HSMs). A hardware security module (HSM) is a computing device that processes cryptographic operations and provides secure storage for cryptographic keys.
+
+Central location to encrypt/decrypt data. keys never leave the physical server. AWS manages it for you in the cloud as opposed as you having on prem.
+
+You have full control (not AWS) on the keys. Can use clusters for scalability
+
+**** Certificate manager
+AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys that protect your AWS websites and applications. You can provide certificates for your integrated AWS services either by issuing them directly with ACM or by importing third-party certificates into the ACM management system
+
+Careful you can blow the budget wiht them (form experience)
+
+Can't be used for ~EC2/s3/lambda~. You should use for ~cloudfront~, ~ELB~, ~API Gateway~
+region specific
+
+**** Private Certificate authority
+AWS Private CA enables creation of private certificate authority (CA) hierarchies, including root and subordinate CAs, without the investment and maintenance costs of operating an on-premises CA
+
+Think of a country waiting to issue their bank notes
+_Meant for internal communication only_ not on the internet
+
+**** Secret Manager
+AWS Secrets Manager helps you to securely encrypt, store, and retrieve credentials for your databases and other services. Instead of hardcoding credentials in your apps, you can make calls to Secrets Manager to retrieve your credentials whenever needed.
+***** Automatic Secret Rotation:
+Secrets Manager is ideal if you need automatic secret rotation. For example, rotating database credentials or API keys regularly without manual intervention.
+
+***** Comprehensive Secret Management:
+If you have complex secret management needs, like versioning, automatic rotation, or frequent updates to sensitive credentials, Secrets Manager provides a more advanced solution.
+
+***** Detailed Monitoring and Compliance:
+Secrets Manager offers detailed audit logging, which can help with compliance standards like GDPR, HIPAA, or SOC 2, and you need to tightly monitor who accesses your secrets.
+**** NACL/Security group
+Reminder NACL acts at the subnet level while Security group acts at the application level. SG are disable all by default. Each rule only add to the allow. SG rules are merged together e.g. if you have multiple SG for one EC2 they get merged into one.
+
+**** Security Lake
+Amazon Security Lake is a fully managed security data lake service. You can use Security Lake to automatically centralize security data from AWS environments, SaaS providers, on premises, cloud sources, and third-party sources into a purpose-built data lake that's stored in your AWS account.
+
+As any lake, it makes a copy of all the data.
+collect -> store logs into s3 bucket -> normalilize AWS logs -> query/access data
+
+**** WAF
+AWS WAF is a web application firewall that lets you monitor the HTTP(S) requests that are forwarded to your protected web application resources. You can protect the following resource types:
+
+sits behind ~cloudfront~, ~API gateway~, or ~ELB~
+
+**** shield
+AWS provides two levels of protection against DDoS attacks: AWS Shield Standard and AWS Shield Advanced. AWS Shield Standard is automatically included at no extra cost beyond what you already pay for AWS WAF and your other AWS services. For _added protection against DDoS attacks_, AWS offers AWS Shield Advanced.
+
+DDos consumes alot of your resources, AWS will not bill you for the resources taxed during the attack. You also get AWS shield response team (SRT)
+
+**** Network Firewall
+AWS Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for your virtual private cloud (VPC) that you create in Amazon Virtual Private Cloud (Amazon VPC).
+
+has to be in its own subnet and forward traffic to the subnet containing our resources. Must configure the ~route table~ proprely.
+
+traffic comes from the ~IGW~ to the firewal subnet, goes to the firewal endpoint for inspection.
+
+Can make use of a transit gateway so that you do not duplicate the firewall. otherwise its one per VPC.
+
+**** Firewall Manager
+AWS Firewall Manager simplifies your administration and maintenance tasks across multiple accounts and resources for a variety of protections, including AWS WAF, AWS Shield Advanced, Amazon VPC security groups and network ACLs, AWS Network Firewall, and Amazon Route 53 Resolver DNS Firewall
+
+kinda like ~control tower~
 
 ** TODO Design [0/4]
 DEADLINE: <2024-10-13 Sun>
