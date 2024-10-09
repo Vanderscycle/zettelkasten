@@ -114,7 +114,7 @@ DEADLINE: <2024-10-14 Mon>
 :END:
 
 ** misc
-*** TODO Improvements [1/2]
+*** TODO Improvements [2/3]
 **** DONE call the carpenter, for an install update
 CLOSED: [2024-10-06 Sun 16:47] DEADLINE: <2024-10-07 Mon>
 - State "DONE"       from "TODO"       [2024-10-06 Sun 16:47]
@@ -122,9 +122,11 @@ CLOSED: [2024-10-06 Sun 16:47] DEADLINE: <2024-10-07 Mon>
 SCHEDULED: <2024-10-12 Sat>
 **** TODO Call the tilier about the grout disappearing
 DEADLINE: <2024-10-07 Mon>
-**** TODO Call the electrician about the 4th bed smoke alarm not receiving power.
-DEADLINE: <2024-10-07 Mon>
-
+**** DONE Call the electrician about the 4th bed smoke alarm not receiving power.
+CLOSED: [2024-10-07 Mon 11:03] DEADLINE: <2024-10-07 Mon>
+- State "DONE"       from "TODO"       [2024-10-07 Mon 11:03]
+***** TODO The electrican visit
+SCHEDULED: <2024-10-16 Wed>
 ** Life
 *** TODO Rework the CV structure
 *** TODO Rewrite CV to org mode

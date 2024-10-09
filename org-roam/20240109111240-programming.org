@@ -73,6 +73,10 @@ ssh-add ~/.ssh/<ssh-key>
 #+end_src
 
 *** CLI
+**** Replace all instances
+#+begin_src bash
+find . -type f -exec sed -i 's/Foo/Bar/g' {} +
+#+end_src
 *** Tiling hwindow Manager
 *** Kitty
 keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overview - kitty]]

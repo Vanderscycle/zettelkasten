@@ -22,10 +22,24 @@ Applicability Statement 2 (AS2)
 [[https://en.wikipedia.org/wiki/File_Transfer_Protocol][File Transfer Protocol - Wikipedia]]
 * AWS Solution Architect
 
-** TODO Knowledge [4/9]
+** TODO Knowledge [5/9]
 *** TODO Networking
 DEADLINE: <2024-10-16 Wed>
 **** VPC
+**** VPC endpoints
+~VPC endpoints~ in AWS when you want to privately connect your Virtual Private Cloud (VPC) to supported AWS services or other resources without needing an internet gateway, NAT gateway, VPN connection, or ~AWS Direct Connect~. VPC endpoints allow traffic between your VPC and AWS services to stay within the AWS network, enhancing security and reducing the need for public internet access.
+
+**** VPN (on-prem)
+~AWS VPN~ establishes a secure and encrypted connection between your on-premises network and your AWS VPC over the public internet
+
+AWS VPN is generally more cost-effective for smaller, less frequent data transfers and is easy to set up without any dedicated physical infrastructure.
+
+**** Direct Connect (on-prem)
+AWS Direct Connect is a cloud service solution that allows you to establish a dedicated network connection from your on-premises data center or office to AWS BYPASSING THE INTERNET
+
+has a higher initial cost due to the dedicated line but can be more economical for large-scale data transfers and applications requiring consistent performance.
+
+Speeds up to 1 Gbps, 10 Gbps, and up to 100 Gbps
 
 *** TODO Storage
 DEADLINE: <2024-10-06 Sun>
@@ -36,6 +50,16 @@ DEADLINE: <2024-10-06 Sun>
 *** TODO Compute
 DEADLINE: <2024-10-06 Sun>
 **** EC2
+| Pricing Model         | Description                                            | Use Cases                                 | Discount             |
+|-----------------------+--------------------------------------------------------+-------------------------------------------+----------------------|
+| On-Demand             | Pay as you go, no upfront commitment                   | Short-term, spiky workloads               | No discount           |
+| Spot                  | Bid for unused capacity at up to 90% discount          | Batch jobs, fault-tolerant workloads      | Up to 90% off         |
+| Reserved Instances    | Commitment to 1 or 3 years with upfront payment options| Predictable, long-term workloads          | Up to 75% off         |
+| Savings Plans         | Flexible plan based on committed usage (dollars/hour)  | Predictable spend but variable workload   | Up to 72% off         |
+| Dedicated Hosts       | Physical server dedicated to your use                  | Compliance, licensing needs               | No discount           |
+| Dedicated Instances   | Isolated EC2 instances on dedicated hardware           | Single-tenant environments                | No discount           |
+| EC2 Fleet             | Mix of On-Demand, Spot, and Reserved Instances         | Large-scale workloads, cost optimization  | Varies                |
+
 **** BeanStalk
 **** ECS
 **** EKS
@@ -43,12 +67,153 @@ DEADLINE: <2024-10-06 Sun>
 *** TODO Database
 DEADLINE: <2024-10-06 Sun>
 **** RDS
-**** Dynamo
+Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud. It provides cost-efficient, resizeable capacity for an industry-standard relational database and manages common database administration tasks. Amazon Aurora is a fully managed relational database engine that's built for the cloud and compatible with MySQL and PostgreSQL.
+
+***** Deployment
+****** Single-AZ Database
+One region (single AZ), low costs, high latency and no redundancy if the AZ goes down. Can have multiple read replicas
+****** Multi-AZ
+Multiple AZ, can only have one writer but can have as many reader.
+****** Read replicas
+create read-only replicas of your db in one or more region (cross region).
+****** Aurora global db
+replicate data across multiple AWS regions allowing for low latency
+****** Serverless
+variable workloads + unpredictable traffic patterns
+***** Blue/Green
+A blue/green deployment copies a production database environment to a separate, synchronized staging environment. By using Amazon RDS Blue/Green Deployments, you can make changes to the database in the staging environment without affecting the production environment.
+***** Storage devices
+| Storage Type       | Description                                                       | Use Case                                  |
+|--------------------+-------------------------------------------------------------------+-------------------------------------------|
+| General Purpose SSD| Cost-effective storage that balances price and performance.        | Ideal for most workloads.                 |
+| Provisioned IOPS   | High-performance SSD with provisioned IOPS for intensive workloads.| Applications needing consistent IOPS.     |
+| Magnetic (Previous)| Older generation storage, slower and cheaper.                     | Not recommended for new deployments.      |
+| Aurora Storage     | Scalable, SSD-based storage automatically managed by Aurora.      | Specific to Amazon Aurora RDS.            |
+
+**** RDS Aurora
+Amazon Aurora (Aurora) is a fully managed relational database engine that's compatible with MySQL and PostgreSQL.
+
+#+DOWNLOADED: screenshot @ 2024-10-08 20:24:39
+[[file:AWS_Solution_Architect/2024-10-08_20-24-39_screenshot.png]]
+
+**** RDS Proxy
+AWS RDS Proxy is a fully managed, highly available database proxy service that sits between your application and your Amazon RDS or Amazon Aurora databases. It helps improve the scalability, performance, and security of database-intensive applications by managing database connections efficiently.
+
+***** connection pooling
+allows for multiple application request to share the same connection
+***** Automatic failover
+automatically routes connections to the standby database.
+
+**** redshift
+Amazon Redshift is a fast, fully managed, petabyte-scale data warehouse service that makes it simple and cost-effective to efficiently analyze all your data using your existing business intelligence tools. It is optimized for datasets ranging from a few hundred gigabytes to a petabyte or more and costs less than $1,000 per terabyte per year
+
+
+#+DOWNLOADED: screenshot @ 2024-10-08 21:09:12
+[[file:AWS_Solution_Architect/2024-10-08_21-09-12_screenshot.png]]
+
+_analytical operation not transactional_
+
+***** Serverless (cost saving)
+provisioned capacity is really expensive, serverless allows us to pay for compute used only. calculated in RPU(16 gb of ram) between 8 -> 512. min 32 rpu for 128 tb+
+**** DynamoDB
+Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. like rds but for nosql.
+***** Standard access table class
+***** Infrequent access table class
+
+**** DynamoDB accelerator (cache)
+DynamoDB Accelerator (DAX) is an in-memory caching service for Amazon DynamoDB that helps improve the performance of read-intensive applications. It acts as a fully managed cache that is tightly integrated with DynamoDB, delivering fast, low-latency data access.
+
+cluster that sits between the request and dynamodb. milli second response but expensive. Scalable up to 10 nodes and fully managed.
+
+**** Opensearch
+Amazon OpenSearch Service is a managed service that makes it easy to deploy, operate, and scale OpenSearch, a popular open-source search and analytics engine.
+
+OpenSearch Advantage: OpenSearch is designed for full-text search and handles unstructured data like logs, documents, and text-based data. It can efficiently index, search, and retrieve data using advanced search algorithms.
+
+Use OpenSearch for:
+
+    Full-text search and unstructured data.
+    Real-time data analytics and log analysis. (cloudwatch)
+    High query throughput with low-latency results.
+    Scalable search for large datasets.
+
+#+DOWNLOADED: screenshot @ 2024-10-08 21:31:06
+[[file:AWS_Solution_Architect/2024-10-08_21-31-06_screenshot.png]]
+
+***** Serverless
+
+Honestly reminds me of bugsnap
+
+**** ElastiCache
+Amazon ElastiCache is a web service that makes it easy to set up, manage, and scale a distributed in-memory data store or cache environment in the cloud.
+
+primarily to cache data between your server and your db (just like redis)
+
+#+DOWNLOADED: screenshot @ 2024-10-08 21:40:31
+[[file:AWS_Solution_Architect/2024-10-08_21-40-31_screenshot.png]]
+
+***** Serverless
+allows you to scale
+
+***** Redis pub/sub message system
+you send a message to a specific channel not knowing who, if anyone, receives it. The people who get the message are those who are subscribed to the channel.
+***** Encryption at rest
+***** Global datastore
+allows for cachin globally
+
+**** MemoryDB
+Essentially AWS redis db (cache + db). Can deploy in a cluster, same behavior as ~AWS RDS~
+
 **** DocumentDB
+AWS version of MongoDB
+
+#+DOWNLOADED: screenshot @ 2024-10-08 21:51:16
+[[file:AWS_Solution_Architect/2024-10-08_21-51-16_screenshot.png]]
+
+***** DocumentDB Global Cluster
+you can have secondary clusters in different region
+
+**** keyspaces (cassandra)
+AWS managed Apache cassandra
+
+Apache Cassandra is an open-source, distributed NoSQL database management system designed to handle large amounts of structured and unstructured data across many commodity servers, providing high availability with no single point of failure.
+
+use CQL (cassandra query language)
+
+#+DOWNLOADED: screenshot @ 2024-10-08 21:56:57
+[[file:AWS_Solution_Architect/2024-10-08_21-56-57_screenshot.png]]
+
+***** Serverless
+
+***** Multi-region replication
+can replicate data closest to your users
+
+**** Neptune (graphdb)
+Amazon Neptune is a fast, reliable, fully managed graph database service
 
 
-*** TODO Application integration
-DEADLINE: <2024-10-06 Sun>
+#+DOWNLOADED: screenshot @ 2024-10-08 22:00:10
+[[file:AWS_Solution_Architect/2024-10-08_22-00-10_screenshot.png]]
+
+***** serverless
+
+**** QLDD (bitcoin)
+Amazon Quantum Ledger Database (Amazon QLDB) is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log owned by a central trusted authority.
+
+**** Timestream
+Amazon Timestream for LiveAnalytics is a fast, scalable, fully managed, purpose-built time series database that makes it easy to store and analyze trillions of time series data points per day.
+
+#+DOWNLOADED: screenshot @ 2024-10-08 22:04:41
+[[file:AWS_Solution_Architect/2024-10-08_22-04-41_screenshot.png]]
+
+***** Dynamic schema
+***** Serverless
+***** Data lifecycle
+Old IOT data isn't as usefull as newer one
+
+*** DONE Application integration
+CLOSED: [2024-10-07 Mon 11:06] DEADLINE: <2024-10-06 Sun>
+- State "DONE"       from "TODO"       [2024-10-07 Mon 11:06]
 **** Autoscaling
 ***** Scaling policy
 minimum, desired and max instances
@@ -57,7 +222,6 @@ minimum, desired and max instances
 ****** target tracking policy
 This policy adjusts the number of instances in a way that keeps a specific metric, such as CPU utilization or request count, close to a target value.
 =ASGAverageCPUUtilization= for an ~AWS EC2~, network =ASGAverageNetworkIn=
-
 ****** simple scaling policy
 Must set and use ~AWS cloudwatch~ alarm (high usage/low usage). you can control the scaling process e.g. 50-70 add 2 ~EC2~, 85-100 add 5 ~EC2~
 ****** step scaling policy
@@ -83,6 +247,12 @@ Hibernation of the Amazon EC2 instance can be used in the =case of memory-intens
 ****** autoscaling for dbs (data loss) post shutdown
 Adding Lifecycle Hooks to the Auto Scaling group puts the instance into a wait state before termination. During this wait state, you can perform custom activities to retrieve critical operational data from a stateful instance. The Default Wait period is 1 hour.
 
+***** Secure architecture
+****** EC2 configuration
+use ~AWS AMI~ to ensure the same configuration access
+***** Cost optimized
+****** Burst of usage
+using Spot Instances with EC2 Auto Scaling is an effective cost-optimization strategy. Spot Instances allow users to take advantage of unused EC2 capacity at a significantly lower price compared to On-Demand pricing.
 **** ELB
 Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets and routes traffic only to the healthy targets.
 
@@ -106,6 +276,10 @@ The NLB creates and attaches ~ENIs~ (virtual network interfaces) to the subnets 
 ****** Cross-zone load balancing
 If not enabled it only goes to a specific zone
 
+***** Resilient architecture
+****** Handle AZ failures
+Configure the ALB to distribute traffic across multiple ~AWS EC2~ instances in different AZ =us-east-1a=, =us-east-1b=. Reminder the ~AWS Subnet~ can only be in one specific ~AZ~
+
 **** API Gateway
 Amazon API Gateway enables you to create and deploy your own REST and WebSocket APIs at any scale. You can create robust, secure, and scalable APIs that access Amazon Web Services or other web services, as well as data that’s stored in the AWS Cloud.
 
@@ -118,13 +292,40 @@ Amazon API Gateway enables you to create and deploy your own REST and WebSocket 
 - onboarding and documentation e.g. ~swagger docs~
 
 Supports:
-- http api
+- http api (cheapest)
+They are geared toward use cases where speed and cost efficiency are critical, and fewer features are needed.
+They provide basic authentication (JWT or OAuth) and routing functionality but lack the deeper feature set of REST APIs.
+HTTP APIs are better suited for lightweight, straightforward API designs and serverless functions.
 - REST
+Request/Response Validation: You can automatically validate API requests and responses, ensuring that the correct data structure is used.
+Transformation: You can transform data formats (e.g., from XML to JSON) directly within the API Gateway.
+Authentication/Authorization: More advanced security integrations (AWS IAM, Cognito, etc.) are available out of the box.
+Caching: Built-in caching mechanisms reduce backend load, but caching increases costs.
+Integration Flexibility: REST APIs allow for more complex integration with AWS services.
 - websocket
+
+***** Resilient architecture
+****** financial sector
+~AWS API Gateway~ in conjunction with ~AWS Lambda~ for backend processing is a highly resilient configuration. This allows for automatic scaling to handle varying loads and ensures fault tolerance, as Lambda functions can be automatically triggered from different Availability Zones.
+
+***** Cost optimized
+****** http vs rest
+choosing HTTP APIs in AWS API Gateway is a prudent decision. HTTP APIs are a more cost-effective option than REST APIs, especially for applications with a high number of API calls. They offer lower cost per million invocations
+
+***** Secure architecture
+****** encrypted traffic
+Implement SSL/TLD termination on the ELB to ensure encrypted data transmission between clients and the load balancer
 
 **** Appflow
 Amazon AppFlow is a fully managed API integration service that you use to connect your software as a service (SaaS) applications to AWS services, and securely transfer data. Use Amazon AppFlow flows to manage and automate your data transfers without needing to write code.
 
+***** Resilient architecture
+****** potential connection lost
+Use ~AWS S3~ storage as a buffer storage, ensuring data is not lost in case of intermittent connectivity issue.
+
+***** Performant architecture
+****** High-volume, real-time data transfer analytics
+Integrating ~AWS AppFlow~ with ~Amazon Redshift~ for direct data transfer is an effective strategy for a media company needing high-performance data transfer for real-time analytics.
 **** SNS
 Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and consumers). Publishers communicate asynchronously with subscribers by sending messages to a topic
 
@@ -138,11 +339,26 @@ You can use Amazon SNS FIFO (first in, first out) topics with Amazon SQS FIFO qu
 Main issue: messages may show up more than once and out of order. It has high throughput tho
 
 ***** Misc
+****** Batching
 you can batch 1-10 messages per request. max size 256kb but can send 2gb (~S3~ link)
+
+***** Resilient architecture
+****** high-volume order processing and notifications
+Integrating Amazon SNS with Amazon SQS is a robust strategy for building a resilient notification architecture. This combination allows for decoupling the order processing system from the notification system. When order volumes are high, Amazon SQS can buffer and manage the messages, ensuring that the notification system is not overwhelmed.
+
+***** High-Performing architecture
+****** maximize the performance and scalability for broadcasting
+Using a fan-out pattern with Amazon SNS topics and multiple Amazon SQS queues is an effective strategy for achieving high performance and scalability when broadcasting alerts to a large audience.
+
+#+DOWNLOADED: screenshot @ 2024-10-07 13:15:50
+[[file:AWS_Solution_Architect/2024-10-07_13-15-50_screenshot.png]]
 
 **** SQS
 Amazon Simple Queue Service (Amazon SQS) is a fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems, and serverless applications. Amazon SQS moves data between distributed application components and helps you decouple these components.
 
+***** High-Performing architecture
+****** max throughput
+Set up ~AWS SQS~ with batch message processing to increase the number of messages processed by actions.
 
 #+DOWNLOADED: screenshot @ 2024-10-06 19:18:12
 [[file:AWS_Solution_Architect/2024-10-06_19-18-12_screenshot.png]]
@@ -164,6 +380,10 @@ pproximateNumberOfMessagesVisible describes the number of messages available for
 ****** ApproximateNumberOfMessagesNotVisible
 ApproximateNumberOfMessagesNotVisible measures the number of messages in flight.
 
+***** Resilient architecture
+****** enhance resilience of order processing system
+Enable the Dead letter Queue to manage undeliverable events
+
 **** AWS MQ
 Amazon MQ is a managed message broker service that makes it easy to set up and operate message brokers in the cloud. Amazon MQ provides interoperability with your existing applications and services.
 
@@ -175,23 +395,48 @@ Amazon MQ is a managed message broker service that makes it easy to set up and o
 | Publisher-subscriber messaging | Yes     | No         | Yes       |
 | Message brokers            | No         | No         | Yes       |
 
+***** Performant architecture
+****** high-volume/real-time transaction data
+use ~AWS MQ~ with dedicated broker instances to provide dedicated resources for high traffic
+
 **** AWS Eventbridge
 Amazon EventBridge is a serverless event bus service that makes it easy to connect your applications with data from a variety of sources. EventBridge delivers a stream of real-time data from your own applications, software-as-a-service (SaaS) applications, and AWS services and routes that data to targets such as AWS Lambda.
-
 
 #+DOWNLOADED: screenshot @ 2024-10-06 20:08:41
 [[file:AWS_Solution_Architect/2024-10-06_20-08-41_screenshot.png]]
 
+***** High-Performing architecture
+****** processing high-volume, real-time events
+real-time analytics platform dealing with a large volume of events, using ~AWS EventBridge~ in conjunction with ~AWS Lambda~ allows for efficient and scalable event processing
+
+***** Resilient architecture
+****** enhance resilience of order processing system
+using the default event bus, Enable the Dead letter Queue to manage undeliverable events
 
 **** AWS SES (email)
 Amazon Simple Email Service (SES) is an email platform that provides an easy, cost-effective way for you to send and receive email using your own email addresses and domains.
 
 ***** Verified identies
 Same thing as supabase + resend integration to reduce span
+***** Misc
+****** Solution that ensures high deliverability rates and efficient handling of bounce and complaint notifications.
+A dedicated IP pool allows the firm to manage its own email sending reputation, which is crucial for ensuring that their emails are not marked as spam and that they reach their intended recipients
 
 **** AWS Step functions
 AWS Step Functions is a serverless orchestration service that lets you integrate with AWS Lambda functions and other AWS services to build business-critical applications.
 AWS Step Functions coordinate application components using visual workflows.
+
+***** Resilient architecture
+****** In a transaction system
+Use the built-in retry policies
+
+***** High-Performing architecture
+****** Parallel
+You can use parallel state to process multiple files/process concurently
+
+***** Cost optimized
+****** filter events
+sing AWS EventBridge with a default event bus and applying filtering rules, the application can ensure that only relevant events are processed
 
 #+DOWNLOADED: screenshot @ 2024-10-06 19:59:01
 [[file:AWS_Solution_Architect/2024-10-06_19-59-01_screenshot.png]]
@@ -205,8 +450,16 @@ Use step function most of the time unless you require external signal to interac
 
 Need to use python, go, javascript, etc.
 
+***** Resilient architecture
+****** Complex system
+By incorporating parallel processing of transactions in AWS Simple Workflow Service, the financial services company can ensure that the failure or delay of one task does not halt or significantly impact the entire process.
+
 **** Maanged Workflow for Apache Airflow (MWAA)
 Amazon Managed Workflows for Apache Airflow is a managed orchestration service for Apache Airflow that you can use to setup and operate data pipelines in the cloud at scale.
+
+***** Resilient architecture
+****** enhance resilience
+By configuring AWS MWAA to use ~Amazon RDS~ Multi-AZ deployments for its metadata database, the Solutions Architect can ensure that the database, which is central to the operation of Apache Airflow, remains highly available and resilient to failures.
 *** DONE Data ML
 CLOSED: [2024-09-30 Mon 12:59] DEADLINE: <2024-09-29 Sun>
 - State "DONE"       from "TODO"       [2024-09-30 Mon 12:59]
@@ -320,7 +573,7 @@ Connect migration tools to migration hub, migrate using the tools, and group ser
 ****** During the migration
 By using ~AWS Migration Hub~ to monitor the migration progress, the Solutions Architect can identify any delays or issues that might lead to extended migration timelines and, consequently, higher costs.
 ****** Assess on-premise infrastructure
-Leverage ~AWS Apllication Discovery~ to identify over-provisioned resouces and recommend right-sizing before migration to AWS.
+Leverage ~AWS Apllication Discovery~ to identify over-provisioned resouces and recommend rightsizing before migration to AWS.
 ***** Security
 ****** Security of sensitive data
 Implement ~AWS IAM~ roles + policies to control access to ~AWS Migration Hub~ and resources being migrated.
