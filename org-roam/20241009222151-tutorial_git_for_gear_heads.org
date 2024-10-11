@@ -8,14 +8,65 @@
 [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
 
 * Git
-**
+** Installing on your machine
+*** Windows
+First I really recommend that you install =Windows PowerShell=. Its a better commandline interface for Windows. [[https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#winget][Installing PowerShell on Windows - PowerShell | Microsoft Learn]]
 
+Download the Git installed for windows [[https://gitforwindows.org/][Git for Windows]], it contains ~Bourne Again Shell (BASH)~ which is used to communicate between the user and the OS.
+
+*** Mac
+Check the Linux section,
+
+*** Linux
+I believe in you, you made it this far. It should come by default on your distro, if not that means you have one of these lightweight distribution so you already know what to do.
+
+*** Generating an SSH key
+To ensure security and prove who you are, GitHub uses ~Secure Shell (SSH)~. The SSH Protocol is a cryptographic network protocol for operating network services securely over an unsecured network.
+
+To use ~SSH~ you must first generate a private key using the command bellow then follow the prompts
 #+begin_src bash
+  ssh-keygen -t ed25519 -C "your_email@example.com"
 #+end_src
 
-** Proposing a change
+For SSH to work you also need the ~SSH-Agent~ to be running
+#+begin_src bash
+  # start the ssh-agent in the background
+  Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+  Start-Service ssh-agent
+  # then tell ssh about your key. If not sure what is the name you gave it check the .ssh folder
+  ssh-add c:/Users/YOU/.ssh/id_ed25519 # or your choosen file.
+#+end_src
+
+INFO: Never ever share this key. If you accidentaly do so you must invalidate it soonest.
+
+*** Telling Github about your SSH key
+Copy your =Public= key, you can tell which one is public as it ends with a =.pub=.
+#+begin_src bash
+clip < ~/.ssh/id_ed25519.pub
+# Copies the contents of the id_ed25519.pub file to your clipboard
+#+end_src
+
+- Go to Github (ensure you have an account, its easy to create one)
+- Go to settings (upper right corner of the page by clicking on your profile picture)
+- Go to SSH and GPG keys
+ #+DOWNLOADED: screenshot @ 2024-10-11 12:02:38
+ [[file:Git/2024-10-11_12-02-38_screenshot.png]]
+- Click add the new key
+
+#+DOWNLOADED: screenshot @ 2024-10-11 12:04:28
+[[file:Git/2024-10-11_12-04-28_screenshot.png]]
+- Copy the =Public= key and add a title
+- Test your connection with ~Git Bash~
+#+begin_src bash
+ssh -T git@github.com
+#+end_src
+
+Video guide: [[https://www.youtube.com/watch?v=X40b9x9BFGo][🐱Generate a New SSH Key and Add it to your GitHub - YouTube]]
+GitHub Docs: [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent][Generating a new SSH key and adding it to the ssh-agent - GitHub Docs]]
+
+** Using Git
+Honestly, me explaining it won't help you very much. Its best to test it yourself. [[https://docs.github.com/en/get-started/start-your-journey/hello-world][Hello World - GitHub Docs]]
 
 ** References
 [[https://git-scm.com/book/en/v2][Git tutorial]]
 [[https://git-scm.com/docs][Git - Reference]]
-[[https://docs.github.com/en/get-started/start-your-journey/hello-world][Hello World - GitHub Docs]]
