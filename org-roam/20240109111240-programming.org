@@ -6,6 +6,9 @@
 * Root
 [[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
 
+* Tutorials
+[[id:2635f285-16cf-415b-85e2-ecc22bacf584][Tutorial - git for gear heads]]
+
 * Programming
 ** Certifications
 - [[id:4aac16ce-ce76-4f97-9328-0f8166186fce][cert - CKAD]]
