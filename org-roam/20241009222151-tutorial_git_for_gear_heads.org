@@ -3,10 +3,6 @@
 :END:
 #+title: Tutorial - git for gear heads
 
-* Root
-[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
-[[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
-
 * Git
 ** Installing on your machine
 *** Windows
@@ -46,6 +42,8 @@ clip < ~/.ssh/id_ed25519.pub
 # Copies the contents of the id_ed25519.pub file to your clipboard
 #+end_src
 
+For linux you can use ~xclip~ or simply open the file with any editor and copy the content manually
+
 - Go to Github (ensure you have an account, its easy to create one)
 - Go to settings (upper right corner of the page by clicking on your profile picture)
 - Go to SSH and GPG keys
@@ -66,6 +64,7 @@ GitHub Docs: [[https://docs.github.com/en/authentication/connecting-to-github-wi
 
 ** Using Git
 Honestly, me explaining it won't help you very much. Its best to test it yourself. [[https://docs.github.com/en/get-started/start-your-journey/hello-world][Hello World - GitHub Docs]]
+And for practiced try these katas [[https://github.com/eficode-academy/git-katas?tab=readme-ov-file][GitHub - eficode-academy/git-katas: A set of exercises for deliberate Git Pra...]]
 
 ** References
 [[https://git-scm.com/book/en/v2][Git tutorial]]

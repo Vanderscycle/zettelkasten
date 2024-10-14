@@ -596,6 +596,7 @@ If you use CloudFront signed URLs or signed cookies to restrict access to files 
 *** Allows access to s3 bucket
 **** signed urls
 CloudFront signed URLs allow you to restrict access to individual files. Signed URLs require you to change your content URLs for each customer access.
+
 **** signed cookies
 CloudFront Signed Cookies allow you to control access to multiple content files and you don’t have to change your URL for each customer access.
 ** AWS Shield

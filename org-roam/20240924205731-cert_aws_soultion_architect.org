@@ -21,17 +21,38 @@ Applicability Statement 2 (AS2)
 [[https://en.wikipedia.org/wiki/OSI_model][OSI model - Wikipedia]]
 ** File Transfer Protocol
 [[https://en.wikipedia.org/wiki/File_Transfer_Protocol][File Transfer Protocol - Wikipedia]]
+** VPC analogy
+[[https://start.jcolemorrison.com/aws-vpc-core-concepts-analogy-guide/][AWS VPC Core Concepts in an Analogy and Guide]]
 * AWS Solution Architect
 
-** TODO Knowledge [6/9]
-*** TODO Networking
-DEADLINE: <2024-10-16 Wed>
+
+** TODO Knowledge [9/9]
+*** DONE Networking
+CLOSED: [2024-10-14 Mon 16:34] DEADLINE: <2024-10-16 Wed>
+- State "DONE"       from "TODO"       [2024-10-14 Mon 16:34]
 **** VPC
+With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically isolated virtual network that you've defined. This virtual network closely resembles a traditional network that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.
+
+#+DOWNLOADED: screenshot @ 2024-10-14 15:55:23
+[[file:AWS_Solution_Architect/2024-10-14_15-55-23_screenshot.png]]
+
 **** VPC endpoints
-~VPC endpoints~ in AWS when you want to privately connect your Virtual Private Cloud (VPC) to supported AWS services or other resources without needing an internet gateway, NAT gateway, VPN connection, or ~AWS Direct Connect~. VPC endpoints allow traffic between your VPC and AWS services to stay within the AWS network, enhancing security and reducing the need for public internet access.
+~VPC endpoints~ in AWS when you want to privately connect your Virtual Private Cloud (VPC) to supported AWS services or other resources WITHOUT NEEDING AN INTERNET gateway, NAT gateway, VPN connection, or ~AWS Direct Connect~. VPC endpoints allow traffic between your VPC and AWS services to stay within the AWS network, enhancing security and reducing the need for public internet access.
+
+
+#+DOWNLOADED: screenshot @ 2024-10-14 16:23:04
+[[file:AWS_Solution_Architect/2024-10-14_16-23-04_screenshot.png]]
+
+**** AWS Privatelink (everything else)
+AWS PrivateLink is a highly available, scalable technology that you can use to privately connect your VPC to services as if they were in your VPC. You do not need to use an internet gateway, NAT device, public IP address, AWS Direct Connect connection, or AWS Site-to-Site VPN connection to allow communication with the service from your private subnets.
+
+WITHOUT USING INTERNET
+
+#+DOWNLOADED: screenshot @ 2024-10-14 16:21:47
+[[file:AWS_Solution_Architect/2024-10-14_16-21-47_screenshot.png]]
 
 **** VPN (on-prem)
-~AWS VPN~ establishes a secure and encrypted connection between your on-premises network and your AWS VPC over the public internet
+~AWS VPN~ establishes a secure and encrypted connection between your on-premises network and your AWS VPC OVER THE PUBLIC INTERNET
 
 AWS VPN is generally more cost-effective for smaller, less frequent data transfers and is easy to set up without any dedicated physical infrastructure.
 
@@ -42,14 +63,359 @@ has a higher initial cost due to the dedicated line but can be more economical f
 
 Speeds up to 1 Gbps, 10 Gbps, and up to 100 Gbps
 
-*** TODO Storage
-DEADLINE: <2024-10-06 Sun>
-**** EBS ft
-**** EFS
-**** S3
+**** Transit gateway
+You can connect your virtual private clouds (VPC) and on-premises networks using a transit gateway, which acts as a central hub, routing traffic between VPCs, VPN connections, and AWS Direct Connect connections.
 
-*** TODO Compute
-DEADLINE: <2024-10-06 Sun>
+One of the key benefits of using a transit gateway is the ability to centralize and simplify the management of connectivity between your VPCs and on-premises networks.
+
+#+DOWNLOADED: screenshot @ 2024-10-14 16:11:25
+[[file:AWS_Solution_Architect/2024-10-14_16-11-25_screenshot.png]]
+
+**** Route53
+Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. You can use Route 53 to perform three main functions in any combination: domain registration, DNS routing, and health checking. =Register Domain Name=, =Route internet traffic to the resources to your doman=, =check health of resources=
+***** Amazon Route 53 Routing Policies
+| **Routing Policy** | **Description**                                           | **Use Case**                                             |
+|---------------------|---------------------------------------------------------|---------------------------------------------------------|
+| **Geoproximity**    | Routes traffic based on the geographic location of users and resources, with customizable bias. | Multi-region applications; optimizing traffic based on user location. |
+| **Geolocation**     | Routes traffic based on the geographic location of users. | Serving different content based on user location; compliance with regional regulations. |
+| **Weighted**        | Distributes traffic across multiple resources based on assigned weights. | A/B testing; gradual migration of traffic to new resources. |
+| **Latency**         | Routes traffic to the resource that provides the lowest latency to the user. | Performance-sensitive applications requiring low response times. |
+
+**** Lambda@edge (cloudfront only)
+Lambda@Edge is a feature of Amazon CloudFront that allows you to run your Lambda functions in response to CloudFront events. It enables you to customize the content delivered by CloudFront without managing your own infrastructure.
+
+***** When to Use Lambda@Edge
+  *Content Customization**
+   Modify content returned by CloudFront based on viewer requests.
+
+  *Dynamic Content Generation**
+   Generate dynamic content (e.g., user-specific data) at the edge.
+
+  *Request and Response Manipulation**
+   Change headers, rewrite URLs, or manipulate requests and responses.
+
+  *Security Features**
+   Implement authentication or token validation before requests reach the origin.
+
+  *Real-Time Image and Video Processing**
+   Perform transformations on media files (e.g., resizing images) before serving them.
+
+  *Geolocation-Based Content Delivery**
+   Deliver different content based on the geographical location of the user.
+
+  *A/B Testing and Personalization**
+   Serve different versions of content to different users for testing and personalization.
+
+  *Custom Error Handling**
+   Create customized error responses for different HTTP status codes.
+
+  *Redirects and Rewrites**
+   Set up URL redirects based on request parameters or paths.
+
+  **Bot Protection**
+  - Analyze requests to filter out bot traffic and prevent abuse.
+
+  **Caching Strategy**
+  - Implement custom caching rules based on request attributes.
+
+  **Custom Logging and Analytics**
+  - Log requests and responses for analytics or monitoring purposes.
+
+***** Event Types
+You can associate Lambda functions with various CloudFront events:
+
+    - Viewer Request: Execute code when a viewer request is received by CloudFront.
+    - Origin Request: Execute code when CloudFront forwards a request to the origin.
+    - Origin Response: Execute code when CloudFront receives a response from the origin.
+    - Viewer Response: Execute code just before CloudFront sends a response to the viewer.
+
+**** Global accelerator
+AWS Global Accelerator is a service in which you create accelerators to improve the performance of your applications for local and global users. Depending on the type of accelerator you choose. It provides a set of static IP addresses that act as a fixed entry point to your applications, allowing for more consistent and reliable access, regardless of where the users are located.
+
+Users accessing the application will connect through the static IP addresses provided by Global Accelerator.
+If one of the regional endpoints goes down, Global Accelerator automatically reroutes traffic to a healthy endpoint in another region, ensuring minimal disruption.
+Latency is reduced as Global Accelerator uses the AWS global network to optimize the path to the nearest regional endpoint.
+
+*** DONE Storage
+CLOSED: [2024-10-14 Mon 12:36] DEADLINE: <2024-10-06 Sun>
+- State "DONE"       from "TODO"       [2024-10-14 Mon 12:36]
+**** EBS
+An Amazon EBS volume is a durable, block-level storage device that you can attach to your instances. After you attach a volume to an instance, you can use it as you would use a physical hard drive. EBS volumes are flexible. For current-generation volumes attached to current-generation instance types, you can dynamically increase size, modify the provisioned IOPS capacity, and change volume type on live production volumes.
+
+both mountable and bootable. Allows for the decoupling of storage and compute just like ~ENI~ decouples networking from compute.
+
+***** Snapshot
+~EBS~ are AZ senstive so if you want to attach the ~EBS~ to and ~EC2~ in a different instance you must make a snapshot and create a volume from the snapshot. Snapshots (stored in an ~S3~) are available within an region. You can also copy the snapshot to different region.
+
+***** Volume types
+| EBS Volume Type            | Storage Type | Key Features                                         | Cost (USD/GB/month) | IOPS Cost (if applicable)          |
+|----------------------------+--------------+------------------------------------------------------+--------------------+-----------------------------------|
+| gp3 (General Purpose SSD)   | SSD          | Customizable IOPS, scalable performance, lower cost   | $0.08               | $0.005/IOPS (beyond 3,000 IOPS)   |
+| gp2 (General Purpose SSD)   | SSD          | Balanced performance, scales with volume size         | $0.10               | Included up to 3 IOPS/GB          |
+| io1 (Provisioned IOPS SSD)  | SSD          | High-performance, customizable IOPS                   | $0.125              | $0.065 per provisioned IOPS       |
+| io2 (Provisioned IOPS SSD)  | SSD          | Higher durability, enterprise workloads, customizable | $0.125              | $0.065 per provisioned IOPS       |
+| st1 (Throughput Optimized)  | HDD          | High throughput for streaming workloads               | $0.045              | N/A                               |
+| sc1 (Cold HDD)              | HDD          | Low-cost archival storage for infrequent access       | $0.015              | N/A                               |
+| Magnetic (Deprecated)       | HDD          | Legacy option, slower, lower-cost storage             | $0.05               | N/A                               |
+
+**** Instance store
+Instance storage (also known as ephemeral storage) refers to directly attached, temporary disk storage that is physically located on the underlying hardware hosting an Amazon EC2 instance. Unlike Amazon EBS volumes, which persist independently of the instance lifecycle
+
+**** EFS
+Amazon Elastic File System (Amazon EFS) provides serverless, fully elastic file storage so that you can share file data without provisioning or managing storage capacity and performance.
+
+EFS only works with Linux
+
+***** Storage class
+| Storage Class                | Description                                         | Cost                          | Use Case                                   |
+|------------------------------+-----------------------------------------------------|-------------------------------|--------------------------------------------|
+| EFS Standard                 | High availability and durability, frequent access   | Higher cost per GB            | Frequently accessed data, active workloads  |
+| EFS Infrequent Access (IA)   | Lower storage cost, access fees per operation       | Lower cost per GB, plus access cost | Infrequently accessed data, archival, backups |
+
+
+***** Types
+| **Type**                  | **Category**           | **Description**                                                | **Use Case**                                   |
+|---------------------------+-----------------------+----------------------------------------------------------------|------------------------------------------------|
+| General Purpose            | Performance Mode       | Optimized for low-latency applications                          | Web servers, content management systems         |
+| Max I/O                   | Performance Mode       | Scalable for high-throughput workloads, higher latency         | Big data, media processing                      |
+| Bursting Throughput        | Throughput Mode        | Scales with file system size, suitable for variable demand     | Most applications with variable demand         |
+| Provisioned Throughput     | Throughput Mode        | Configurable fixed throughput independent of storage size      | Consistent performance-critical applications     |
+| Elastic Throughput         | Throughput Mode        | Automatically scales throughput with changes in workload      | Applications with fluctuating performance needs |
+***** Performance optimized
+****** Must be accessible by multiple ~AWS EC2~
+use ~EFS~
+
+**** FSx
+Amazon FSx makes it easy and cost effective to launch, run, and scale feature-rich, high-performance file systems in the cloud. It supports a wide range of workloads with its reliability, security, scalability, and broad set of capabilities. With Amazon FSx, you can choose between four widely-used file systems: Lustre, NetApp ONTAP, OpenZFS, and Windows File Server
+
+***** types of FSx
+| **FSx Type**                | **Description**                                                  | **Use Case**                                             |
+|-----------------------------|------------------------------------------------------------------|---------------------------------------------------------|
+| FSx for Windows File Server  | Fully managed Windows file system with SMB protocol support      | Ideal for Windows-based applications, file sharing, and workloads needing Active Directory integration. |
+| FSx for Lustre              | High-performance file system optimized for workloads requiring fast processing | Suitable for high-performance computing (HPC), machine learning, and big data analytics.           |
+| FSx for NetApp ONTAP        | Fully managed NetApp ONTAP file system with support for NFS and SMB protocols | Best for enterprise applications needing advanced data management features, data protection, and scalability. |
+| FSx for OpenZFS             | Fully managed OpenZFS file system providing snapshot and replication capabilities | Ideal for applications that require efficient data protection, versioning, and quick recovery.       |
+
+| **FSx Type**                | **Latency**               | **Max Throughput**            | **Description**                                                  |
+|-----------------------------|--------------------------|-------------------------------|------------------------------------------------------------------|
+| FSx for Windows File Server  | Milliseconds              | Up to 2,000 MB/s             | Fully managed Windows file system with SMB protocol support.      |
+| FSx for Lustre              | Sub-millisecond           | Up to 6,000 MB/s             | High-performance file system optimized for HPC and data analytics.|
+| FSx for NetApp ONTAP        | Milliseconds              | Up to 2,000 MB/s             | Managed NetApp ONTAP file system with NFS and SMB support.       |
+| FSx for OpenZFS             | Milliseconds              | Up to 2,000 MB/s             | Managed OpenZFS file system with snapshots and replication.       |
+
+***** Performance optimized
+****** High performance compute
+Use ~AWS FSx Lustre~
+
+**** S3
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance.
+
+~AWS EFS~ is a nfs type storage, unlike ~AWS EBS~ an ~AWS S3~ bucket cannot be mounted to an ~AWS EC2~
+
+***** Storage classes
+| **S3 Storage Class**        | **Description**                                                     | **Use Case**                                      | **Cost**                                  | **Retrieval Time**                          |
+|-----------------------------+---------------------------------------------------------------------+---------------------------------------------------+-------------------------------------------+---------------------------------------------|
+| S3 Standard                 | General-purpose storage for frequently accessed data                | Web applications, big data analytics              | Highest cost per GB                       | Milliseconds                                |
+| S3 Intelligent-Tiering      | Automatically moves data between two access tiers                   | Unknown access patterns                           | Cost-effective for variable access        | Milliseconds to minutes (depending on tier) |
+| S3 Standard-IA              | Infrequent access storage for data that is less frequently accessed | Backups, disaster recovery                        | Lower cost, retrieval fees apply          | Milliseconds                                |
+| S3 One Zone-IA              | Lower-cost option for infrequently accessed data                    | Secondary backups, easily reproducible data       | Lower cost than Standard-IA               | Milliseconds                                |
+| S3 Glacier                  | Archival storage for data that is rarely accessed                   | Long-term data archiving                          | Lowest storage cost, retrieval fees apply | Minutes to hours                            |
+| S3 Glacier Deep Archive     | Lowest-cost archival storage for long-term data retention           | Regulatory archives, compliance data              | Lowest cost, long retrieval times         | 12 to 48 hours                              |
+| S3 Outposts                 | S3 storage on-premises using AWS Outposts                           | Local data processing, hybrid cloud architectures | Pricing varies by deployment              | Milliseconds                                |
+| S3 Glacier instant retrival | longterm storage but requires immedate access                       |                                                   |                                           | Milliseconds                                |
+
+****** glacier select
+because the application needs to retrieve data from Glacier. With Glacier Select, you can perform filtering directly against a Glacier object using standard SQL statements.
+****** Glacier deep archive retrieval/move
+Objects in Glacier Deep Archive cannot be directly moved to another storage class. To move objects from Glacier Deep Archive to different storage classes, first, need to restore them to original locations using the Amazon S3 console & then use the lifecycle policy to move objects to the required S3 Intelligent-Tiering storage class.
+****** Glacier retrival expiration
+after a set amount of time 1 day -> 30 days the object will expire and be removed (the original is still frozen)
+****** Glacier deletion prevention
+An Amazon S3 Glacier vault can be attached with one vault access policy and a vault lock policy. The Vault Access policy can be used to manage access permission to the vault. With Vault Lock Policy, no changes can be done to the policy once it's locked.
+S3 Object Lock can be set in one of the two ways: =Retention Period= in which objects are locked for a specific time period and =Legal Hold= in which objects can be locked with no expiration date.
+****** Glacier retrieval costs
+1. No retrieval limit (default): high costs no limit
+2. Free tier: retrival within the daily free tier allowance all else is rejected
+3. Max retrieval rate: retrieve more data thawhat is in free tier allowance
+****** glacier retrival tasks
+1. std retrieval: takes up t 12 hrs to get the data (deep glacier)/ 3-5 glacier flexible
+2. bulk: 5-48 hrs depending on the type of storage
+3. expedited: 1-5 mins except 250mb+ objets
+
+***** Lifecycle policy
+S3 Lifecycle helps you store objects cost effectively throughout their lifecycle by transitioning them to lower-cost storage classes, or, deleting expired objects on your behalf. To manage the lifecycle of your objects, create an S3 Lifecycle configuration for your bucket. An S3 Lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects.
+
+****** Transition action
+Automatically move objects to different storage classes based on their age.
+****** Expiration action
+Delete objects after they are no longer needed, reducing storage costs.
+
+***** Versioning
+You can use S3 Versioning to keep multiple versions of an object in one bucket so that you can restore objects that are accidentally deleted or overwritten.
+
+***** Replicating object within/accross region
+You can use replication to enable automatic, asynchronous copying of objects across Amazon S3 buckets
+
+****** Cross-Region Replication (CRR)
+You can use CRR to replicate objects across Amazon S3 buckets in different AWS Regions
+
+****** Same-Region Replication (SRR)
+You can use SRR to copy objects across Amazon S3 buckets in the same AWS Region.
+
+
+***** Multipart Upload (reliability)
+Ideal for high-latency, unreliable networks where you are uploading very large files (hundreds of MBs to GBs) and want to optimize for upload reliability and speed.
+
+ A file is broken into multiple parts (up to 10,000 parts, each between 5 MB and 5 GB), which can be uploaded independently. Once all parts are uploaded, they are combined into a single object. This reduces the risk of failure on large uploads, as a failure will only affect a single part, which can be retried without restarting the whole upload.
+
+***** Transfer acceleration (speed focus)
+Useful when latency is the primary concern
+
+Optimizes the speed of uploads by leveraging the AWS global network of edge locations (Amazon CloudFront) to accelerate the transfer of data to S3.
+Instead of sending data directly to an S3 bucket, the data is routed through the nearest Amazon CloudFront edge location, which then transfers it over AWS's high-speed backbone network to the S3 bucket.
+
+***** Event notification
+Amazon S3 Event Notifications enable you to automatically trigger specific actions when certain events occur in an S3 bucket.
+
+****** Object Created
+When a new object is uploaded (e.g., =s3:ObjectCreated:Put=, s3:ObjectCreated:Post, etc.).
+****** Object Deleted
+When an object is deleted (e.g., =s3:ObjectRemoved:Delete=).
+****** Object Restore Completed
+When an archived object is restored from S3 Glacier or S3 Glacier Deep Archive.
+****** Object Tagging
+When tags are added or updated on an object.
+
+****** Destination target
+~Lambda~, ~SQS~, ~SNS~
+
+***** Access point
+AWS S3 Access Points are a feature that simplifies managing access to shared datasets in Amazon S3. They provide a more flexible and controlled way to access S3 buckets, especially for applications with complex access patterns
+
+Example S3 data lake where you'd want an access point for reads, upload and external access.
+***** Object lock
+feature that helps you enforce retention policies on objects stored in S3, preventing them from being deleted or overwritten for a specified period.
+****** Governance Mode
+Allows users with specific permissions to overwrite or delete the objects but prevents all others from doing so.
+****** Compliance Mode
+Objects cannot be deleted or overwritten by any user, including the root user in your AWS account, for the duration of the retention period.
+****** Retention period
+You can specify a retention period for each object when it is uploaded or by applying a policy. The retention period can range from a minimum of 1 day to several years.
+****** Legal hold
+In addition to retention periods, you can place a legal hold on an object, preventing it from being deleted or overwritten indefinitely, regardless of the retention mode or period.
+***** ACL + Bucket policy
+****** ACL
+Use ACLs for simple access control scenarios where you want to manage access at the object level and don't need complex conditions.
+****** Bucket policy
+Use Resource Policies for more sophisticated access control requirements, especially when you need to implement fine-grained permissions or allow access from other AWS accounts. Similar to ~AWS IAM~ policies.
+
+#+begin_src json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::123456789012:root"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::my-bucket/*"
+    }
+  ]
+}
+#+end_src
+
+***** Encryption
+| **Encryption Method**                       | **Description**                                                   | **Key Management**                          | **Access Control**                             | **Use Case**                             |
+|---------------------------------------------|-------------------------------------------------------------------|---------------------------------------------|------------------------------------------------|------------------------------------------|
+| **SSE-S3**                                  | Amazon S3 manages encryption and decryption using its own keys.  | Managed by Amazon S3                        | Basic IAM permissions for S3                   | General-purpose use, no key control needed  |
+| **SSE-KMS**                                 | Uses AWS KMS for managing encryption keys, offering more control. | Customer Master Keys (CMKs) in AWS KMS     | Fine-grained control via IAM and KMS policies   | Sensitive data requiring access control   |
+| **SSE-C**                                   | Users provide their own encryption keys for S3 to use.           | Managed by the user                         | User-defined policies for key access            | Complete control over encryption keys     |
+
+
+***** Security Optimized
+****** Grant temporary access to a user with no AWS credentials
+Use ~S3~ presigned URLs
+****** read and write permissions to a single user on specific S3 object
+Use ~S3 ACLs~
+****** Enforce all objects uploaded to an s3 bucket are encrypted at rest
+S3 Bucket Policies can be used to enforce that all objects uploaded to an S3 bucket are encrypted at rest by
+
+***** Performance optimized
+****** upload large files over a high-latency network to S3
+Use ~S3 Transfer Acceleration~
+
+***** Cost optimized
+****** determine which object aren't accessed regularly
+~S3 Analytics~  Storage Class Analysis helps analyze S3 object access patterns to determine when to transition objects to less expensive storage classes.
+
+**** AWS Cloudfront
+Amazon CloudFront speeds up distribution of your static and dynamic web content, such as .html, .css, .php, image, and media files. When users request your content, CloudFront delivers it through a worldwide network of edge locations that provide low latency and high performance.
+
+***** custom error page
+Put the static error pages in an S3 bucket. Create custom error responses for the HTTP 5xx status code in the CloudFront distribution.
+
+***** cloudfront functions
+CloudFront Functions is a lightweight serverless compute service that allows you to run JavaScript code at the edge to manipulate requests and responses. It is designed for simple, fast processing.
+
+****** lambda@edge vs cloudfront function
+| Feature                   | Lambda@Edge                             | CloudFront Functions                   |
+|---------------------------|-----------------------------------------|----------------------------------------|
+| **Execution Points**      | Viewer Request, Viewer Response,        | Viewer Request, Viewer Response        |
+|                           | Origin Request, Origin Response         |                                        |
+| **Use Cases**             | Dynamic content, A/B testing, auth,    | URL rewriting, header manipulation,    |
+|                           | personalization                         | caching                                |
+| **Language Support**      | Multiple (Node.js, Python, Java, Ruby) | JavaScript (ECMAScript 2020)          |
+| **Execution Duration**    | Up to 30 seconds                       | Up to 1 millisecond                    |
+| **Cost**                  | Based on requests and execution time    | Based on number of invocations         |
+
+****** CORS
+Only with json
+CORS can be enabled with the following settings,
+1. Access-Control-Allow-Origin
+2. Access-Control-Allow-Methods GET/POST
+3. Access-Control-Allow-Headers
+***** no access to s3 bucket
+****** origin access identity(legacy)/conrol (OAI/OAC)
+When you first set up an Amazon S3 bucket as the origin for a CloudFront distribution, you grant everyone permission to read the files in your bucket which allows anyone to access your files either through CloudFront or using the Amazon S3 URL.
+If you use CloudFront signed URLs or signed cookies to restrict access to files in your Amazon S3 bucket, you probably also want to prevent users from accessing your Amazon S3 files by using Amazon S3 URLs. If users access your files directly in Amazon S3, they bypass the controls provided by CloudFront signed URLs or signed cookies.
+***** Allows access to s3 bucket
+****** signed urls
+CloudFront signed URLs allow you to restrict access to individual files. Signed URLs require you to change your content URLs for each customer access.
+
+****** signed cookies
+CloudFront Signed Cookies allow you to control access to multiple content files and you don’t have to change your URL for each customer access.
+**** EBS vs EFS vs FSx
+| **Service**        | **Use Case**                                       | **Access Type**                     | **Key Characteristics**                             |
+|--------------------|----------------------------------------------------|-------------------------------------|----------------------------------------------------|
+| Amazon EBS         | Block storage for EC2 instances                     | Attached to a single instance       | Low-latency access, persistent storage for databases |
+| Amazon EFS         | Shared file storage                                 | Concurrent access by multiple instances | High availability, scales automatically with demand  |
+| Amazon FSx         | Fully managed file systems with specific features   | Shared access with advanced capabilities | Windows compatibility, high-performance workloads   |
+
+**** Storage Gateway
+AWS Storage Gateway is a service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between your on-premises IT environment and the AWS storage infrastructure in the AWS Cloud.
+
+#+DOWNLOADED: screenshot @ 2024-10-14 11:50:18
+[[file:AWS_Solution_Architect/2024-10-14_11-50-18_screenshot.png]]
+
+***** Direct Connect
+AWS Direct Connect links your internal network to the Amazon Web Services Cloud. By using AWS Direct Connect with Storage Gateway, you can create a connection for high-throughput workload needs, providing a dedicated network connection between your on-premises gateway and AWS.
+
+SKIPS THE INTERNET
+
+***** VPN
+secure connection over the internet
+
+**** AWS Backup
+AWS Backup is a fully-managed service that makes it easy to centralize and automate data protection across AWS services, in the cloud, and on premises. Using this service, you can configure backup policies and monitor activity for your AWS resources in one place. It allows you to automate and consolidate backup tasks that were previously performed service-by-service, and removes the need to create custom scripts and manual processes.
+
+#+DOWNLOADED: screenshot @ 2024-10-14 11:58:59
+[[file:AWS_Solution_Architect/2024-10-14_11-58-59_screenshot.png]]
+
+
+*** DONE Compute
+CLOSED: [2024-10-14 Mon 13:30] DEADLINE: <2024-10-06 Sun>
+- State "DONE"       from "TODO"       [2024-10-14 Mon 13:30]
 **** EC2
 Amazon Elastic Compute Cloud (Amazon EC2) provides on-demand, scalable computing capacity in the Amazon Web Services (AWS) Cloud.
 
@@ -143,10 +509,10 @@ An elastic network interface is a logical networking component in a ~VPC~ that r
 
 decouple the compute from the networking. Each ec2 starts with an ~ENI~ called the primary which cannot be detached. Additional are called secondary eni, can be used for a low budget high availability solution. secondary can be detached.
 
-**** BeanStalk (vercel)
+**** BeanStalk (fullstack)
+AWS Elastic Beanstalk is a Platform as a Service (PaaS) that simplifies deploying, managing, and scaling web applications and services.
 With AWS Elastic Beanstalk, you can quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications.
 
-AWS version of vercel, trades speed and convenience for costs.
 
 ***** Target Audience
 Developers and teams looking to deploy web applications quickly without managing underlying infrastructure but still want flexibility and control over the resources.
@@ -194,6 +560,37 @@ AWS Batch helps you to run batch computing workloads on the AWS Cloud. Batch com
 
 **** Lambda
 With AWS Lambda, you can run code without provisioning or managing servers. You pay only for the compute time that you consume—there's no charge when your code isn't running.
+
+**** AWS Serverless Application Model (SAM)
+~AWS Serverless Application Model~ (AWS SAM) is an open-source framework for building serverless applications using infrastructure as code (IaC).
+
+SAM template -> s3 bucket -> cloudFormation -> stack/chage set
+
+Here's an example: build and deploy serverless applications using AWS Lambda, Amazon API Gateway, and Amazon DynamoDB
+***** Serverless Application repository
+create SAM -> publish to AWS Serverless application repo (kinda like ~AWS ECR~)
+
+**** Amplify (frontend)
+AWS Amplify is best suited for developers looking to build serverless web and mobile applications quickly, leveraging managed services for hosting, APIs, authentication, and storage.
+
+Use AWS Amplify to develop and deploy cloud-powered mobile and web applications. Amplify provides frontend libraries, UI components, and backend building for fullstack applications on AWS.
+
+**** Outpost
+AWS Outposts brings native AWS services, infrastructure, and operating models to virtually any data center, co-location space, or on-premises facility. You can use the same services, tools, and partner solutions to develop for the cloud and on premises.
+
+TL;DR: bring AWS hardware to your local on prem
+
+**** ECS/EKS anywhere
+AWS ECS Anywhere and AWS EKS Anywhere are extensions of the respective container orchestration services that allow you to run your containerized applications on your own hardware, including on-premises servers or edge locations.
+
+Both ECS Anywhere and EKS Anywhere allow you to run containerized applications on your own physical hardware,
+
+**** vmware
+So many company uses vmware for their virtualization needs that AWS want to help them move to AWS.
+
+#+DOWNLOADED: screenshot @ 2024-10-14 12:58:51
+[[file:AWS_Solution_Architect/2024-10-14_12-58-51_screenshot.png]]
+
 
 *** DONE Database
 CLOSED: [2024-10-10 Thu 19:53] DEADLINE: <2024-10-06 Sun>
@@ -805,6 +1202,7 @@ Consider the use case ~AWS aurora~ for sql, ~AWS redshift~ for data warehousing,
 ***** Cost Optimization
 ****** startup unsure about AWS db costs
 Use ~AWS Aurora serverless~ to automatically scale capacity and minimize costs > ~AWS RDS~ w/ reserved instance pricing model
+
 **** Elastic disaster recovery
 AWS Elastic Disaster Recovery (AWS DRS) minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications =GCP= =Azure= using affordable storage, minimal compute, and point-in-time recovery. Can also be used on AWS fro region to region
 Main issue without ~AWS EDR~ for on-prem services expensive (requires duplicate infra on stby), maintenance + skilled personel intensive.
