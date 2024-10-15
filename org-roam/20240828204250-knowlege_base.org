@@ -28,7 +28,9 @@ Optimize tools and processes to do things more effectively and quicker
 
 * Planning
 ** Printing
-*** TODO print 3d computer case (petg)
+*** DONE print 3d computer case (petg)
+CLOSED: [2024-10-14 Mon 19:20]
+- State "DONE"       from "TODO"       [2024-10-14 Mon 19:20]
 *** TODO rebuild the confidence in the v-minion.
 
 ** Homelab [0/3]
@@ -50,13 +52,15 @@ Optimize tools and processes to do things more effectively and quicker
 **** TODO rebuild the server files so that user (home-manager) and modules stay separate
 [[https://github.com/Vanderscycle/nix-homelab][GitHub - Vanderscycle/nix-homelab: Homelab and dotfiles made with NixOS]]
 **** TODO host own git server (gitlab) with woker [[https://www.youtube.com/watch?v=qoqtSihN1kU][Self-host your own Git platform! // GitLab - YouTube]]
-**** TODO add a notification sytem whenever the server goes down
-**** TODO whenever dotFiles, houseVandersleyen, houseVanCyclesIndustries, zettelkasten
-**** TODO get bind9 + docker to work on cloud [[https://www.youtube.com/watch?v=syzwLwE3Xq4][You want a real DNS Server at home? (bind9 + docker) - YouTube]]
+**** TODO add a notification sytem whenever the proxmox server goes down
+**** TODO get bind9 + docker to work on cloud (or something idk)
+[[https://www.youtube.com/watch?v=syzwLwE3Xq4][You want a real DNS Server at home? (bind9 + docker) - YouTube]]
+[[https://www.youtube.com/watch?v=79e6KBYcVmQ][SSL Certificates on EVERYTHING! (DDNS, Local Domains, Cloudflare) - Full Walk...]]
 **** TODO go over the nix pills [[https://nixos.org/guides/nix-pills/00-preface][Preface - Nix Pills]]
 
-*** Certs
-**** AWS Solution architect exam
+*** Certs [0/1]
+**** TODO AWS Solution architect exam (1300)
+SCHEDULED: <2024-10-24 Thu>
 
 *** Websites [0/3]
 **** TODO destroy rebuild linode k8s with only 2 linodes
@@ -103,33 +107,48 @@ CLOSED: [2024-08-30 Fri 21:59]
 *** TODO correct the annoying forge issue
 [[https://github.com/magit/forge/issues/240][magit/forge#240 Can't do a pull]]
 
-*** TODO AWS Solution architect  [1/2]
+*** TODO AWS Solution architect  [2/3]
 **** DONE Book exam
 CLOSED: [2024-09-23 Mon 10:21] DEADLINE: <2024-08-30 Fri>
 - State "DONE"       from "TODO"       [2024-09-23 Mon 10:21]
-**** TODO Complete the preparation
-DEADLINE: <2024-10-14 Mon>
+**** DONE Complete the preparation
+CLOSED: [2024-10-14 Mon 19:12] DEADLINE: <2024-10-14 Mon>
 :PROPERTIES:
 :Effort:   1m
 :END:
+**** TODO Test my knowlege against all 6 paid practice exams
+DEADLINE: <2024-10-22 Tue>
+- State "DONE"       from "TODO"       [2024-10-14 Mon 19:12]
 
 ** misc
 *** TODO Improvements [2/3]
 **** DONE call the carpenter, for an install update
 CLOSED: [2024-10-06 Sun 16:47] DEADLINE: <2024-10-07 Mon>
 - State "DONE"       from "TODO"       [2024-10-06 Sun 16:47]
-***** TODO Meet between 1100 - 1500 at his shop, with the wife, to check color
-SCHEDULED: <2024-10-12 Sat>
+***** DONE Meet between 1100 - 1500 at his shop, with the wife, to check color
+CLOSED: [2024-10-14 Mon 16:56] SCHEDULED: <2024-10-12 Sat>
+- State "DONE"       from "TODO"       [2024-10-14 Mon 16:56]
 **** TODO Call the tilier about the grout disappearing
 DEADLINE: <2024-10-07 Mon>
 **** DONE Call the electrician about the 4th bed smoke alarm not receiving power.
 CLOSED: [2024-10-07 Mon 11:03] DEADLINE: <2024-10-07 Mon>
 - State "DONE"       from "TODO"       [2024-10-07 Mon 11:03]
-***** TODO The electrican visit
-SCHEDULED: <2024-10-16 Wed>
+***** DONE The electrican visit
+CLOSED: [2024-10-14 Mon 16:56] SCHEDULED: <2024-10-16 Wed>
+- State "DONE"       from "TODO"       [2024-10-14 Mon 16:56]
+
 ** Life
-*** TODO Rework the CV structure
-*** TODO Rewrite CV to org mode
+*** ACTIVE Dad's visit
+SCHEDULED: <2024-10-25 Fri>
+Arrival 2029 A319-100
+[[file:~/Downloads/Air_Canada_Confirmation_de_reservation_4HIUU5.pdf][Travel details]]
+*** DONE Rework the CV structure
+CLOSED: [2024-10-14 Mon 16:56]
+- State "DONE"       from "TODO"       [2024-10-14 Mon 16:56]
+*** DONE Rewrite CV to org mode
+CLOSED: [2024-10-14 Mon 16:57]
+- State "DONE"       from "TODO"       [2024-10-14 Mon 16:57]
+Rewrote it using latex
 [[https://github.com/aidanscannell/my-org-resume][GitHub - aidanscannell/my-org-resume: Personal CV/Resume written in Org-mode ...]]
 *** TODO create a recuring framework for house maintenance using org-mode w/deadline and incorporate it in =org-agenda=
 *** TODO Master Chinese
@@ -139,5 +158,6 @@ SCHEDULED: <2024-10-04 Fri +1j>
 SCHEDULED: <2024-10-07 Mon +1w>
 [[https://www.bbc.com/zhongwen/simp][主页 - BBC News 中文]]
 [[https://news.baidu.com/][百度新闻——海量中文资讯平台]]
+
 ** Home Tasks
 [[id:130635ef-5b04-4ac4-b1e1-63840f077d83][Maintenance - Home]]
