@@ -48,7 +48,7 @@ CLOSED: [2024-10-14 Mon 19:20]
 
 ** Programming [0/5]
 
-*** TODO tinkerings [0/6]
+*** TODO tinkerings [1/8]
 **** TODO rebuild the server files so that user (home-manager) and modules stay separate
 [[https://github.com/Vanderscycle/nix-homelab][GitHub - Vanderscycle/nix-homelab: Homelab and dotfiles made with NixOS]]
 **** TODO host own git server (gitlab) with woker [[https://www.youtube.com/watch?v=qoqtSihN1kU][Self-host your own Git platform! // GitLab - YouTube]]
@@ -57,14 +57,22 @@ CLOSED: [2024-10-14 Mon 19:20]
 [[https://www.youtube.com/watch?v=syzwLwE3Xq4][You want a real DNS Server at home? (bind9 + docker) - YouTube]]
 [[https://www.youtube.com/watch?v=79e6KBYcVmQ][SSL Certificates on EVERYTHING! (DDNS, Local Domains, Cloudflare) - Full Walk...]]
 **** TODO go over the nix pills [[https://nixos.org/guides/nix-pills/00-preface][Preface - Nix Pills]]
+**** TODO learn and get better at lisp/elisp
+https://github.com/CodyReichert/awesome-cl
+Also check what is slime
+[[https://www.youtube.com/watch?v=TAtwcBh1QLg][Lisp tutorial: how to call a REST API in Common Lisp: HTTP requests, JSON par...]]
+**** NEXT explore nim (not serious)
+**** DONE incorporate secrets inside my config
+CLOSED: [2024-10-16 Wed 15:08]
 
+- State "DONE"       from "TODO"       [2024-10-16 Wed 15:08]
 *** Certs [0/1]
 **** TODO AWS Solution architect exam (1300)
 SCHEDULED: <2024-10-24 Thu>
 
 *** Websites [0/3]
-**** TODO destroy rebuild linode k8s with only 2 linodes
-**** TODO deploy an example of my template
+**** TODO destroy rebuild linode k8s with only 2 linodes but do so in industries.
+**** TODO deploy an example of my fullstack template
 **** TODO rebuild my professional website
 Here's an absolute chad of a website
 [[https://www.aidanscannell.com/][Aidan Scannell]]
@@ -77,6 +85,7 @@ Now have live preview working correctly, replaced zoxide with autojump for integ
 **** BACKLOG write kitty conf (most used binding within the config)
 **** TODO Would it be possible to configure a ~.org~ document that would both document the code and have live command run
 **** TODO create a script that would fetch latest (keyboard) and move it to the correct folder, and
+Shouldn't be difficult, just find the language
 **** TODO cron jobs to move files out of ~Downloads~ and move them to respecive folders. e.g. all images goes to ~/$home/images~ etc.
 **** DONE create a script that pulls the latest of dotFiles (cloud)
 used ~systemd-timer~ and nixos
@@ -87,10 +96,11 @@ CLOSED: [2024-08-31 Sat 18:10]
 use evil-motion g s s/S-j/k
 **** TODO investigate literate files ~.org~ to document my nixos config, dotfiles, and other repo.
 
-*** TODO Emacs [3/5]
+*** TODO Emacs [3/6]
 **** TODO go over the entire spacemacs documentation
 [[https://www.spacemacs.org/doc/DOCUMENTATION.html][Spacemacs documentation]]
 **** TODO Create a note template for org-roam new node
+**** TODO Use Elisp more often (isntead of bash scripts)
 Must reference the knowledge node
 **** DONE Use org agenda, and org todo regularly
 CLOSED: [2024-10-01 Tue 09:25] DEADLINE: <2024-09-03 Tue>

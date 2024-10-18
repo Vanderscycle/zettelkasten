@@ -10,15 +10,20 @@
 [[id:2635f285-16cf-415b-85e2-ecc22bacf584][Tutorial - git for gear heads]]
 
 * Programming
+** General
+- [[id:2eebfdfb-e401-4d9c-a7f0-7d6ca47585ad][Programming - Computer Science]]
+
 ** Certifications
 - [[id:4aac16ce-ce76-4f97-9328-0f8166186fce][cert - CKAD]]
 - [[id:cd0fcbf2-addf-48e6-8f15-44b95afd207d][cert - AWS Solution Architect]]
 
+** Cloud
 - [[id:867654f4-3f6f-43d9-94ca-db34bfc3edc2][AWS Playbook]]
 
 ** Web Framework
-*** JS
+*** NextJS
 - [[id:2c0dc857-c4a0-4a50-be56-e6c28e74186b][Programming - NextJS]]
+
 *** Sveltekit
 Dockerizing the app
 1. Ensure that you have the node adapter for sveltekit
@@ -27,15 +32,16 @@ pnpm i -D @sveltejs/adapter-node
 #+end_src
 
 ** Languages
-- js/ts
-- [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][GO]]
-- [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Bash]]
+- [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][Programming - GO]]
+- [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Programming - Bash]]
 - [[id:0b8da363-eaf4-4c96-a8b4-2975ff99ea65][Programming - Nix]]
-
+- [[id:bdd3bf17-ccce-488a-96e9-031694daa04e][Programming - TypeScript]]
+- [[id:c7548fda-997a-4221-8aaf-6052867bf5eb][Programming - SQL]]
 ** IaC
 - Terrafrom
 - Kubernetes
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
+- [[id:48ec7d8d-799f-4a7f-a6c6-633f1ac42e7e][Programming - CICD Github Actions]]
 
 ** Version control (git)
 When your code used to work a few commits ago and since then it has tremendously regressed and you don't know why use ~git bisect~ and run a binary search.
@@ -59,7 +65,6 @@ When your code used to work a few commits ago and since then it has tremendously
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux
-
 *** Drives
 see what drives are availables ~lsblk~
  #+begin_src  nix
@@ -80,10 +85,9 @@ ssh-add ~/.ssh/<ssh-key>
 #+begin_src bash
 find . -type f -exec sed -i 's/Foo/Bar/g' {} +
 #+end_src
-*** Tiling hwindow Manager
+*** Tiling Window Manager
 *** Kitty
 keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overview - kitty]]
 
 ** Misc concepts
-- [[id:d12273c0-3a15-4d81-96b7-b16f73c791a7][ssh]]
 - [[id:f6df9f15-f712-4280-bee2-68cd3d732a42][Programming - SOPS]]

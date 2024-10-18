@@ -46,6 +46,7 @@ With Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in 
 **** AWS Privatelink (everything else)
 AWS PrivateLink is a highly available, scalable technology that you can use to privately connect your VPC to services as if they were in your VPC. You do not need to use an internet gateway, NAT device, public IP address, AWS Direct Connect connection, or AWS Site-to-Site VPN connection to allow communication with the service from your private subnets.
 
+An example is ~AWS ECS~
 WITHOUT USING INTERNET
 
 #+DOWNLOADED: screenshot @ 2024-10-14 16:21:47
@@ -80,6 +81,18 @@ Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web 
 | **Geolocation**     | Routes traffic based on the geographic location of users. | Serving different content based on user location; compliance with regional regulations. |
 | **Weighted**        | Distributes traffic across multiple resources based on assigned weights. | A/B testing; gradual migration of traffic to new resources. |
 | **Latency**         | Routes traffic to the resource that provides the lowest latency to the user. | Performance-sensitive applications requiring low response times. |
+
+***** Record type
+[[https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html][Supported DNS record types - Amazon Route 53]]
+****** A ipv4
+point to a web server e.g. 192.0.1.2
+****** AAAA ipv6
+point ot a web server e.g. 2001:0db8:85a3:0:0:8a2e:0370:7334
+****** CAA
+****** CNAME
+A CNAME record maps DNS queries for the name of the current record, such as acme.example.com, to another domain (example.com or example.net) or subdomain (acme.example.com or zenith.example.org).
+e.g. hostname.example.com
+
 
 **** Lambda@edge (cloudfront only)
 Lambda@Edge is a feature of Amazon CloudFront that allows you to run your Lambda functions in response to CloudFront events. It enables you to customize the content delivered by CloudFront without managing your own infrastructure.
@@ -139,10 +152,16 @@ Latency is reduced as Global Accelerator uses the AWS global network to optimize
 *** DONE Storage
 CLOSED: [2024-10-14 Mon 12:36] DEADLINE: <2024-10-06 Sun>
 - State "DONE"       from "TODO"       [2024-10-14 Mon 12:36]
+
 **** EBS
 An Amazon EBS volume is a durable, block-level storage device that you can attach to your instances. After you attach a volume to an instance, you can use it as you would use a physical hard drive. EBS volumes are flexible. For current-generation volumes attached to current-generation instance types, you can dynamically increase size, modify the provisioned IOPS capacity, and change volume type on live production volumes.
 
 both mountable and bootable. Allows for the decoupling of storage and compute just like ~ENI~ decouples networking from compute.
+
+***** Encryption
+Encrypted ~EBS~ volumes encrypts data at rest, when moving data between volume and instances. Supported accross all current generation instances types.
+
+To encrypt an unencrypted ~EBS~ volume you restore an ~EBS~ volume from a snapshot and select the encrypted parameter and =KmsKeyId=
 
 ***** Snapshot
 ~EBS~ are AZ senstive so if you want to attach the ~EBS~ to and ~EC2~ in a different instance you must make a snapshot and create a volume from the snapshot. Snapshots (stored in an ~S3~) are available within an region. You can also copy the snapshot to different region.
@@ -160,6 +179,8 @@ both mountable and bootable. Allows for the decoupling of storage and compute ju
 
 **** Instance store
 Instance storage (also known as ephemeral storage) refers to directly attached, temporary disk storage that is physically located on the underlying hardware hosting an Amazon EC2 instance. Unlike Amazon EBS volumes, which persist independently of the instance lifecycle
+
+instance stores do not persist during the stop/start of the instance only reboot
 
 **** EFS
 Amazon Elastic File System (Amazon EFS) provides serverless, fully elastic file storage so that you can share file data without provisioning or managing storage capacity and performance.
@@ -254,7 +275,7 @@ Delete objects after they are no longer needed, reducing storage costs.
 You can use S3 Versioning to keep multiple versions of an object in one bucket so that you can restore objects that are accidentally deleted or overwritten.
 
 ***** Replicating object within/accross region
-You can use replication to enable automatic, asynchronous copying of objects across Amazon S3 buckets
+You can use replication to enable automatic, asynchronous copying of objects across Amazon S3 buckets. Similar to an ~AWS RDS~ =snapshot= effectively provides a copy of the data.
 
 ****** Cross-Region Replication (CRR)
 You can use CRR to replicate objects across Amazon S3 buckets in different AWS Regions
@@ -351,6 +372,8 @@ Use ~S3 Transfer Acceleration~
 
 **** AWS Cloudfront
 Amazon CloudFront speeds up distribution of your static and dynamic web content, such as .html, .css, .php, image, and media files. When users request your content, CloudFront delivers it through a worldwide network of edge locations that provide low latency and high performance.
+
+***** Cache
 
 ***** custom error page
 Put the static error pages in an S3 bucket. Create custom error responses for the HTTP 5xx status code in the CloudFront distribution.
@@ -526,10 +549,17 @@ Developers, small businesses, or non-technical users who want a simple, low-cost
 **** ECS
 Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service that helps you to more efficiently deploy, manage, and scale containerized applications.
 
+***** Services
+A service definition defines which task definition to use with your service, how many, which cluster,
+
 ***** Launch types
 - ec2: still need to manage the ec2 infra
 - fargate: aws manages the infra
 
+***** Security optimized
+****** ECS is not getting any status information back from the container agent
+- IAM role used to run EC2 instanced does not have =ecs:poll= action in its policy
+- Interface VPC endpoint in not configured for ECS servcie ~AWS PrivateLink~
 **** EKS
 Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that eliminates the need to install, operate, and maintain your own Kubernetes control plane on Amazon Web Services (AWS).
 
@@ -619,6 +649,8 @@ A blue/green deployment copies a production database environment to a separate, 
 | Magnetic (Previous)| Older generation storage, slower and cheaper.                     | Not recommended for new deployments.      |
 | Aurora Storage     | Scalable, SSD-based storage automatically managed by Aurora.      | Specific to Amazon Aurora RDS.            |
 
+***** Primary database is failing
+What would happen to the db if the primary DB instance fails? the canonical name record will be changed from the primary to the standby
 ***** Security Optimization
 ****** sensitive healthcare data
 use ~AWS KMS~ to encrypt data at rest to meet secure and compliance regulations
@@ -839,6 +871,9 @@ use ~AWS AMI~ to ensure the same configuration access
 ***** Cost optimized
 ****** Burst of usage
 using Spot Instances with EC2 Auto Scaling is an effective cost-optimization strategy. Spot Instances allow users to take advantage of unused EC2 capacity at a significantly lower price compared to On-Demand pricing.
+****** Spot instance in non-prod
+use parameter to set the =OnDemandPercentageAboveBaseCapacity= to 0 (so about 0 use all spot instances)
+
 **** ELB
 Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets and routes traffic only to the healthy targets.
 
@@ -912,6 +947,7 @@ Use ~AWS S3~ storage as a buffer storage, ensuring data is not lost in case of i
 ***** Performant architecture
 ****** High-volume, real-time data transfer analytics
 Integrating ~AWS AppFlow~ with ~Amazon Redshift~ for direct data transfer is an effective strategy for a media company needing high-performance data transfer for real-time analytics.
+
 **** SNS
 Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and consumers). Publishers communicate asynchronously with subscribers by sending messages to a topic
 
@@ -928,6 +964,14 @@ Main issue: messages may show up more than once and out of order. It has high th
 ****** Batching
 you can batch 1-10 messages per request. max size 256kb but can send 2gb (~S3~ link)
 
+***** Calid delivery protocols (for receiving notifications)
+- lambda
+- http(s)
+- email
+- sms
+- sqs
+- Email/email-json (not xml)
+
 ***** Resilient architecture
 ****** high-volume order processing and notifications
 Integrating Amazon SNS with Amazon SQS is a robust strategy for building a resilient notification architecture. This combination allows for decoupling the order processing system from the notification system. When order volumes are high, Amazon SQS can buffer and manage the messages, ensuring that the notification system is not overwhelmed.
@@ -938,6 +982,13 @@ Using a fan-out pattern with Amazon SNS topics and multiple Amazon SQS queues is
 
 #+DOWNLOADED: screenshot @ 2024-10-07 13:15:50
 [[file:AWS_Solution_Architect/2024-10-07_13-15-50_screenshot.png]]
+
+**** STS
+AWS STS (Security Token Service) is a service that enables the creation of temporary, limited-privilege credentials for securely accessing AWS resources.
+
+- STS enables you to request temporary, limited-privilege credentials
+- enables users to assume role
+- by default, ~AWS STS~ is available as a global service
 
 **** SQS
 Amazon Simple Queue Service (Amazon SQS) is a fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems, and serverless applications. Amazon SQS moves data between distributed application components and helps you decouple these components.
@@ -960,6 +1011,15 @@ Amazon SQS supports dead-letter queues (DLQs), which source queues can target fo
 
 ***** Visibility timeout
 When a consumer receives a message from an Amazon SQS queue, the message remains in the queue but becomes temporarily invisible to other consumers. This temporary invisibility is controlled by the visibility timeout
+
+***** Polling
+****** Short(latency optimized)
+ Short polling immediately returns a response to the consumer, regardless of whether there are messages available in the queue. low latency (usefull for real-time and frequent)
+
+ Short polling is good when you want low-latency message retrieval and can tolerate frequent requests even when the queue might be empty.
+
+****** Long (cost optimized)
+ Long polling waits until a message is available in the queue before returning a response, or until a specified timeout is reached. Reduces the number of API request
 ***** Misc
 ****** ApproximateNumberOfMessagesVisible
 pproximateNumberOfMessagesVisible describes the number of messages available for retrieval. It can be used to decide the queue length.
@@ -1270,6 +1330,9 @@ Parameters:
     AllowedValues: [t2.micro, m1.small, m1.large]
     Description: Enter instance type (e.g., t2.micro)
 #+END_SRC
+
+***** Deletion
+To delete an RDS and S3 bucket but to still keep the data set the =DeletionPolicy= on the RDS to snapshot and S3 to retain.
 
 ***** Mappings
 Define sets of static values that are mapped to keys, which can be referenced within the template.

@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       48ec7d8d-799f-4a7f-a6c6-633f1ac42e7e
+:END:
+#+title: Programming - CICD Github Actions
+
+* GitHub CICD
+** GitHub action
+Where its called
+#+begin_src yaml
+
+jobs:
+  publish-env:
+    if: inputs.deploy_worker == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/prefect_login
+        with:
+          PREFECT_API_KEY: ${{ env.PREFECT_API_KEY }}
+          PREFECT_WORKSPACE: ${{ env.PREFECT_WORKSPACE }}
+#+end_src
+
+The action
+#+begin_src yaml
+name: Auth into Prefect Cloud
+description: Authenticate with Prefect Cloud to run commands.
+inputs:
+  PREFECT_API_KEY:
+    description:
+      API Key to authenticate with Prefect.
+    required: true
+
+  PREFECT_WORKSPACE:
+    description:
+      Full handle of workspace, in format
+      `<account_handle>/<workspace_handle>`.
+    required: true
+
+runs:
+  using: composite
+  steps:
+
+    - id: prefect-cloud-login
+      run: |
+        prefect cloud login \
+        --key ${{ inputs.PREFECT_API_KEY }} \
+        --workspace ${{ inputs.PREFECT_WORKSPACE }}
+      shell: bash
+#+end_src

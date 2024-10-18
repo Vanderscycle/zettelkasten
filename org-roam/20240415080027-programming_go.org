@@ -3,6 +3,11 @@
 :END:
 #+title: Programming - GO
 
+
+* root
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
+[[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
+
 * Go
 
 The herald of C
