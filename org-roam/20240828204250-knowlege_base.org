@@ -66,10 +66,11 @@ Also check what is slime
 CLOSED: [2024-10-16 Wed 15:08]
 
 - State "DONE"       from "TODO"       [2024-10-16 Wed 15:08]
-*** Certs [0/1]
-**** TODO AWS Solution architect exam (1300)
-SCHEDULED: <2024-10-24 Thu>
+*** Certs [1/1]
+**** DONE AWS Solution architect exam (1300)
+CLOSED: [2024-11-06 Wed 14:35] SCHEDULED: <2024-10-24 Thu>
 
+- State "DONE"       from "TODO"       [2024-11-06 Wed 14:35]
 *** Websites [0/3]
 **** TODO destroy rebuild linode k8s with only 2 linodes but do so in industries.
 **** TODO deploy an example of my fullstack template
@@ -117,7 +118,7 @@ CLOSED: [2024-08-30 Fri 21:59]
 *** TODO correct the annoying forge issue
 [[https://github.com/magit/forge/issues/240][magit/forge#240 Can't do a pull]]
 
-*** TODO AWS Solution architect  [2/3]
+*** TODO AWS Solution architect  [3/3]
 **** DONE Book exam
 CLOSED: [2024-09-23 Mon 10:21] DEADLINE: <2024-08-30 Fri>
 - State "DONE"       from "TODO"       [2024-09-23 Mon 10:21]
@@ -126,20 +127,23 @@ CLOSED: [2024-10-14 Mon 19:12] DEADLINE: <2024-10-14 Mon>
 :PROPERTIES:
 :Effort:   1m
 :END:
-**** TODO Test my knowlege against all 6 paid practice exams
-DEADLINE: <2024-10-22 Tue>
+**** DONE Test my knowlege against all 6 paid practice exams
+CLOSED: [2024-11-06 Wed 14:36] DEADLINE: <2024-10-22 Tue>
+- State "DONE"       from "TODO"       [2024-11-06 Wed 14:36]
 - State "DONE"       from "TODO"       [2024-10-14 Mon 19:12]
 
 ** misc
-*** TODO Improvements [2/3]
+*** TODO Improvements [3/3]
 **** DONE call the carpenter, for an install update
 CLOSED: [2024-10-06 Sun 16:47] DEADLINE: <2024-10-07 Mon>
 - State "DONE"       from "TODO"       [2024-10-06 Sun 16:47]
 ***** DONE Meet between 1100 - 1500 at his shop, with the wife, to check color
 CLOSED: [2024-10-14 Mon 16:56] SCHEDULED: <2024-10-12 Sat>
 - State "DONE"       from "TODO"       [2024-10-14 Mon 16:56]
-**** TODO Call the tilier about the grout disappearing
-DEADLINE: <2024-10-07 Mon>
+**** DONE Call the tilier about the grout disappearing
+fixed, needed some caulk
+CLOSED: [2024-11-06 Wed 14:36] DEADLINE: <2024-10-07 Mon>
+- State "DONE"       from "TODO"       [2024-11-06 Wed 14:36]
 **** DONE Call the electrician about the 4th bed smoke alarm not receiving power.
 CLOSED: [2024-10-07 Mon 11:03] DEADLINE: <2024-10-07 Mon>
 - State "DONE"       from "TODO"       [2024-10-07 Mon 11:03]

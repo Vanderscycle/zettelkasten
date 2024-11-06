@@ -10,9 +10,15 @@ SCHEDULED: <2024-10-12 Sat +1y>
 
 ** Cleaning
 *** TODO Clean balcony from leaves and debris
-SCHEDULED: <2024-10-12 Sat +1m>
+SCHEDULED: <2024-11-12 Tue +1m>
+:PROPERTIES:
+:LAST_REPEAT: [2024-11-06 Wed 14:36]
+:END:
+- State "DONE"       from "TODO"       [2024-11-06 Wed 14:36]
 *** TODO clean the downstairs bathroom tub
 SCHEDULED: <2024-10-12 Sat +2m>
 
 * One off fixes
-** TODO Replace the bedroom door airtight seal
+** DONE Replace the bedroom door airtight seal
+CLOSED: [2024-11-06 Wed 14:36]
+- State "DONE"       from "TODO"       [2024-11-06 Wed 14:36]

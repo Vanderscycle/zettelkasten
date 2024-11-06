@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4376ef2d-5578-4603-9bc6-2597e79ef9bd
+:END:
+#+title: Programming - Terraform
+
+* Terraform
+** Debug application
+#+begin_src bash
+TF_LOG=DEBUG terragrunt apply
+#+end_src
