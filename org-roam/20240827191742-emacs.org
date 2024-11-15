@@ -44,15 +44,17 @@ Use =projectile-replace=
 
 
 * In search of new beginning to old problems
-** change from camel/kebab/upcase
+** General emacs
+*** change from camel/kebab/upcase
 use emacs inflection that is lodged within the the text which-key dir =spc x=
 =spc x i {}=
-** What is the first iteration of my new flow?
-** Motion/keybinding
-*** while in ~normal~ mode add a blank line b
-*** save on insert new line with =o= then =spc m i h= to insert a new heading you can just use =<c-enter>=
+
+*** Motion/keybinding
+**** while in ~normal~ mode add a blank line b
+**** save on insert new line with =o= then =spc m i h= to insert a new heading you can just use =<c-enter>=
+
 ** Org-Roam
-Base on the roam research which is way to expensive honestly
+Based on the ~roam research~ which offers an expensive services, this is a free implementation.
 *** Troubleshooting
 **** Reference
 [[https://github.com/org-roam/org-roam/issues/2361#issuecomment-2200774382][org-roam/org-roam#2361 Wrong type argument: integer-or-marker-p, nil]]
@@ -64,10 +66,17 @@ Base on the roam research which is way to expensive honestly
 [[https://orgmode.org/guide/index.html#SEC_Contents][Top (Org Mode Compact Guide)]]
 [[https://orgmode.org/manual/index.html#SEC_Contents][Top (The Org Manual)]]
 
+*** Tags                                                          :important:
+while over a work enter =C-c C-c=
+if you have many you can press =tab= to autocomplete
+
+**** TODO how do I manage tags
+*** Links                                                         :important:
+=SPC m i l {}= to add a link to any visually selected words. Usefull for linking files.
 *** Toggles
-=m T l= toggle to see the hyprlinks
+=SPC m T l= toggle to see the hyprlinks
 *** CodeBlocks
-=m i b= to select a example/src/etc block
+=SPC m i b= to select a example/src/etc block
 #+NAME: recursion
 #+begin_src python
 def countdown(n):
@@ -121,14 +130,14 @@ https://orgmode.org/manual/Deadlines-and-Scheduling.html
 [[https://www.gnu.org/software/emacs/manual/][GNU Emacs Manuals Online - GNU Project - Free Software Foundation]]
 *** Tramp
 
-**** Docker
+*** Docker
 =C-x C-f= (the helm find files) then type /docker:sha-running-container:/workspaces/...
 
 *** Maggit
 Hands down the only git client comparable to =lazygit=.
 
 
-**** Forge
+*** Forge
 Allows for the interface between Emacs and GitHub/GitLab code repositories. Must be setup according to the documenation [[https://magit.vc/manual/forge/][Top (Forge User and Developer Manual)]].
 To use =Forge= inside a repository through =maggit= you must run ~forge-add-repository~
 
@@ -151,9 +160,6 @@ To use =Forge= inside a repository through =maggit= you must run ~forge-add-repo
     0: Very start of the line (including whitespace).
 
 **** Text Objects
-
-- Note taken on [2024-08-27 Tue 20:51] \\
-  hahhahalloo
 Text objects refer to predefined or user-defined regions of text. They are particularly useful with commands like ys for surrounding operations.
 
     iw: Inner word. The word under the cursor, not including surrounding whitespace.

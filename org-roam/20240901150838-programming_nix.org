@@ -4,6 +4,11 @@
 #+title: Programming - Nix
 * Nix
 ** Flakes
+*** Install os
+#+begin_src bash
+  nh os switch
+  sudo nixos-rebuild switch --flake ".#desktop" --impure
+#+end_src
 *** Packages
 **** sops-nix
 Generate a key first

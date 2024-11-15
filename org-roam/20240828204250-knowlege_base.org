@@ -46,14 +46,25 @@ CLOSED: [2024-10-14 Mon 19:20]
 :END:
 
 
-** Programming [0/5]
+** Programming [1/6]
 
-*** TODO tinkerings [1/8]
-**** TODO rebuild the server files so that user (home-manager) and modules stay separate
-[[https://github.com/Vanderscycle/nix-homelab][GitHub - Vanderscycle/nix-homelab: Homelab and dotfiles made with NixOS]]
+*** TODO HomeLab  [0/3]                                            :hardware:
 **** TODO host own git server (gitlab) with woker [[https://www.youtube.com/watch?v=qoqtSihN1kU][Self-host your own Git platform! // GitLab - YouTube]]
-**** TODO add a notification sytem whenever the proxmox server goes down
-**** TODO get bind9 + docker to work on cloud (or something idk)
+**** TODO get dns to work
+**** TODO create a 2 cpu/4gb or memory each nixos vm
+***** TODO Recreate the [[file:~/Documents/dotFiles/homelab-flakes/][~homelab-flakes~]]
+based on my own dotfiles (what I want added) and this one[[https://www.youtube.com/watch?v=2yplBzPCghA][This homelab setup is my favorite one yet. - YouTube]]
+***** TODO add the cloud username password to sops
+***** TODO
+*** TODO tinkerings [2/8]
+**** TODO is there a way fora new emacsclient to start at the following file?
+/home/henri/Documents/zettelkasten/org-roam/20240828204250-knowlege_base.org
+**** DONE rebuild the server files so that user (home-manager) and modules stay separate
+SCHEDULED: <2025-11-18 Mon>
+- Note taken on [2024-11-14 Thu 10:47] \\
+  revisit in a year's time
+- State "DONE"       from "BACKLOG"    [2024-11-14 Thu 10:47]
+[[https://github.com/Vanderscycle/nix-homelab][GitHub - Vanderscycle/nix-homelab: Homelab and dotfiles made with NixOS]]
 [[https://www.youtube.com/watch?v=syzwLwE3Xq4][You want a real DNS Server at home? (bind9 + docker) - YouTube]]
 [[https://www.youtube.com/watch?v=79e6KBYcVmQ][SSL Certificates on EVERYTHING! (DDNS, Local Domains, Cloudflare) - Full Walk...]]
 **** TODO go over the nix pills [[https://nixos.org/guides/nix-pills/00-preface][Preface - Nix Pills]]
@@ -66,16 +77,19 @@ Also check what is slime
 CLOSED: [2024-10-16 Wed 15:08]
 
 - State "DONE"       from "TODO"       [2024-10-16 Wed 15:08]
+
 *** Certs [1/1]
 **** DONE AWS Solution architect exam (1300)
 CLOSED: [2024-11-06 Wed 14:35] SCHEDULED: <2024-10-24 Thu>
 
 - State "DONE"       from "TODO"       [2024-11-06 Wed 14:35]
-*** Websites [0/3]
+**** CKAD do the coursework
+*** TODO Websites [0/3]
 **** TODO destroy rebuild linode k8s with only 2 linodes but do so in industries.
 **** TODO deploy an example of my fullstack template
 **** TODO rebuild my professional website
-Here's an absolute chad of a website
+Here's an absolute chad of a website. Its using Hugo for static site hosting.
+[[https://github.com/aidanscannell/aidanscannell-hugo-academic/blob/ba64b177bb1e3d27c6e7524de89eed5e6a3a10f9/content/notes/configs/doom-emacs-config.md][aidanscannell-hugo-academic/content/notes/configs/doom-emacs-config.md at ba6...]]
 [[https://www.aidanscannell.com/][Aidan Scannell]]
 
 *** TODO Workflow [2/8]
@@ -83,11 +97,10 @@ Here's an absolute chad of a website
 CLOSED: [2024-09-23 Mon 10:39]
 - State "DONE"       from "TODO"       [2024-09-23 Mon 10:39]
 Now have live preview working correctly, replaced zoxide with autojump for integration within nnn (z plugins)
-**** BACKLOG write kitty conf (most used binding within the config)
-**** TODO Would it be possible to configure a ~.org~ document that would both document the code and have live command run
-**** TODO create a script that would fetch latest (keyboard) and move it to the correct folder, and
+**** BACKLOG Would it be possible to configure a ~.org~ document that would both document the code and have live command run
+**** BACKLOG create a script that would fetch latest (keyboard) and move it to the correct folder, and
 Shouldn't be difficult, just find the language
-**** TODO cron jobs to move files out of ~Downloads~ and move them to respecive folders. e.g. all images goes to ~/$home/images~ etc.
+**** BACKLOG cron jobs to move files out of ~Downloads~ and move them to respecive folders. e.g. all images goes to ~/$home/images~ etc.
 **** DONE create a script that pulls the latest of dotFiles (cloud)
 used ~systemd-timer~ and nixos
 CLOSED: [2024-08-31 Sat 18:10]
@@ -118,7 +131,9 @@ CLOSED: [2024-08-30 Fri 21:59]
 *** TODO correct the annoying forge issue
 [[https://github.com/magit/forge/issues/240][magit/forge#240 Can't do a pull]]
 
-*** TODO AWS Solution architect  [3/3]
+*** DONE AWS Solution architect  [3/3]
+CLOSED: [2024-11-10 Sun 21:45]
+- State "DONE"       from "TODO"       [2024-11-10 Sun 21:45]
 **** DONE Book exam
 CLOSED: [2024-09-23 Mon 10:21] DEADLINE: <2024-08-30 Fri>
 - State "DONE"       from "TODO"       [2024-09-23 Mon 10:21]
@@ -152,8 +167,9 @@ CLOSED: [2024-10-14 Mon 16:56] SCHEDULED: <2024-10-16 Wed>
 - State "DONE"       from "TODO"       [2024-10-14 Mon 16:56]
 
 ** Life
-*** ACTIVE Dad's visit
-SCHEDULED: <2024-10-25 Fri>
+*** DONE Dad's visit
+CLOSED: [2024-11-10 Sun 22:12] SCHEDULED: <2024-10-25 Fri>
+- State "DONE"       from "ACTIVE"     [2024-11-10 Sun 22:12]
 Arrival 2029 A319-100
 [[file:~/Downloads/Air_Canada_Confirmation_de_reservation_4HIUU5.pdf][Travel details]]
 *** DONE Rework the CV structure
@@ -164,7 +180,9 @@ CLOSED: [2024-10-14 Mon 16:57]
 - State "DONE"       from "TODO"       [2024-10-14 Mon 16:57]
 Rewrote it using latex
 [[https://github.com/aidanscannell/my-org-resume][GitHub - aidanscannell/my-org-resume: Personal CV/Resume written in Org-mode ...]]
-*** TODO create a recuring framework for house maintenance using org-mode w/deadline and incorporate it in =org-agenda=
+*** DONE create a recuring framework for house maintenance using org-mode w/deadline and incorporate it in =org-agenda=
+CLOSED: [2024-11-10 Sun 22:12]
+- State "DONE"       from "TODO"       [2024-11-10 Sun 22:12]
 *** TODO Master Chinese
 **** Read one news article in chinese
 SCHEDULED: <2024-10-04 Fri +1j>
@@ -175,3 +193,23 @@ SCHEDULED: <2024-10-07 Mon +1w>
 
 ** Home Tasks
 [[id:130635ef-5b04-4ac4-b1e1-63840f077d83][Maintenance - Home]]
+
+*** Car
+**** DONE Winter tire change (call)
+CLOSED: [2024-11-12 Tue 15:29] SCHEDULED: <2024-11-12 Tue>
+- State "DONE"       from "TODO"       [2024-11-12 Tue 15:29]
+**** Costco winter tire change
+Friday, Nov 29 at 6:45
+**** DONE Car maintenance (call)
+CLOSED: [2024-11-12 Tue 15:29] SCHEDULED: <2024-11-12 Tue>
+- State "DONE"       from "TODO"       [2024-11-12 Tue 15:29]
+**** Car maintenance appointment
+jan 24th 0730
+** Cooking
+*** [[https://www.bonappetit.com/recipe/red-wine-braised-short-ribs][Red Wine-Braised Short Ribs Recipe | Bon Appétit]]
+Beef ribs are expensive, but the base of the recipe: onions, carrots, celery, wine and stock makes it really easy to use pork/sausage.
+*** [[https://mykoreankitchen.com/tteokbokki-spicy-rice-cakes/][Tteokbokki (Spicy Rice Cakes) - My Korean Kitchen]]
+You can prepare the anchovy broth ahead of time.
+
+** Printing
+*** TODO print the electronic enclosure for the v-minion

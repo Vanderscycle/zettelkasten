@@ -49,9 +49,11 @@ pnpm i -D @sveltejs/adapter-node
 When your code used to work a few commits ago and since then it has tremendously regressed and you don't know why use ~git bisect~ and run a binary search.
 
 ** Home Server
+- TrueNas
+*** Troubelshooting
 - Proxmox
-
 *** Troubleshooting
+**** Unable to connect
 **** Ran out of virtual disk space
 [] Resize guest disk [[https://pve.proxmox.com/wiki/Resize_disks][Resize disks - Proxmox VE]]
 [] Modify disk within VM
@@ -67,13 +69,16 @@ When your code used to work a few commits ago and since then it has tremendously
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux
+*** nnn
+you can copy the list of files using =>=
+nnn can extract ~.zip~ files to folders. Just press =enter= a few times
+**** you can easily manage the movement of files using the bookmarks :pro:tip:
 *** Drives
 see what drives are availables ~lsblk~
  #+begin_src  nix
    # ensure that you also have /mnt/usb created
    usb-mount = "sudo mount /dev/sda1 /mnt/usb";
    usb-eject = "sudo umount /mnt/usb";
-   nas-mount = "sudo mount.nfs 192.168.1.245:/volume1/linuxBackup /mnt/nas"; # how to allow users acces to the file?
  #+end_src
 
 *** create a bootable usb
@@ -86,6 +91,7 @@ Faster than parted but more destructive
 #+begin_src bash
 sudo wipefs -a /dev/sdX
 #+end_src
+
 *** Fish shell
 **** Troubleshooting ssh agent
 #+begin_src fish
