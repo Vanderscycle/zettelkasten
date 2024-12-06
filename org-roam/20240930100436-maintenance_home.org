@@ -22,3 +22,21 @@ SCHEDULED: <2024-10-12 Sat +2m>
 ** DONE Replace the bedroom door airtight seal
 CLOSED: [2024-11-06 Wed 14:36]
 - State "DONE"       from "TODO"       [2024-11-06 Wed 14:36]
+
+** Insurance
+*** TODO Home insurance
+SCHEDULED: <2025-10-01 Fri +1y>
+*** TODO ar insurance
+SCHEDULED: <2025-10-01 Fri +1y>
+
+** Car
+*** DONE Winter tire change (call)
+CLOSED: [2024-11-12 Tue 15:29] SCHEDULED: <2024-11-12 Tue>
+- State "DONE"       from "TODO"       [2024-11-12 Tue 15:29]
+*** TODO Costco winter tire change
+SCHEDULED: <2024-11-29 Fri>
+*** DONE Car maintenance (call)
+CLOSED: [2024-11-12 Tue 15:29] SCHEDULED: <2024-11-12 Tue>
+- State "DONE"       from "TODO"       [2024-11-12 Tue 15:29]
+*** TODO Car maintenance appointment
+SCHEDULED: <2025-01-24 Fri>

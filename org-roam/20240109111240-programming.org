@@ -110,3 +110,4 @@ keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overv
 
 ** Misc concepts
 - [[id:f6df9f15-f712-4280-bee2-68cd3d732a42][Programming - SOPS]]
+-

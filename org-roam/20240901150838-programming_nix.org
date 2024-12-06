@@ -3,10 +3,26 @@
 :END:
 #+title: Programming - Nix
 * Nix
+** Nixos-anywhere
+To copy nixos config anywhere
+
+ensure that, if its a base config mixos machine that you enable root login
+#+begin_src nix
+services.openssh = {
+  enable = true;
+  permitRootLogin = "yes";
+};
+#+end_src
+
+If using flakes you can install using
+#+begin_src nix
+nixos-anywhere --copy-host-keys --flake ".#homelab-0" root@<ip>
+#+end_src
 ** Flakes
 *** Install os
 #+begin_src bash
   nh os switch
+# if nh isn't working
   sudo nixos-rebuild switch --flake ".#desktop" --impure
 #+end_src
 *** Packages
