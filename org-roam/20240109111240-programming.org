@@ -49,16 +49,78 @@ pnpm i -D @sveltejs/adapter-node
   # if creating resoures
 #+end_src
 
+*** Local K3s
+**** Getting the config
+The config is located on the server(s) =/etc/rancher/k3s/k3s.yaml=. You can symlink it locally as follow
+#+begin_src bash
+    # creates a copy
+    mkdir -p ~/.kube
+    sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+    sudo chown $(id -u):$(id -g) ~/.kube/config
+    # symlink it
+  mkdir -p ~/.kube
+  ln -s /etc/rancher/k3s/k3s.yaml ~/.kube/config
+
+#+end_src
+
+
+A better approach is to copy the config to your machine and use =k9s= to access it from your computer
+#+begin_src yaml
+clusters:
+- cluster:
+    server: https://<server-ip>:6443
+#+end_src
+
+Then set it as your variable so that =k9s= can access it.
+#+begin_src fish
+  set -xg KUBECONFIG $HOME/.kube/homelab-kubeconfig.yaml
+#+end_src
+- [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]]
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
 - [[id:48ec7d8d-799f-4a7f-a6c6-633f1ac42e7e][Programming - CICD Github Actions]]
 
 ** Version control (git)
 When your code used to work a few commits ago and since then it has tremendously regressed and you don't know why use ~git bisect~ and run a binary search.
 
+** Security
+*** Yubico keys
+reset pin
+#+begin_src bash
+ykman piv access change-pin --pin 123456 --new-pin 654321
+#+end_src
 ** Home Server
 - TrueNas
 *** Troubelshooting
 - Proxmox
+
+*** cluster node
+#+begin_src bash
+  systemctl stop pve-cluster corosync
+  pmxcfs -l
+  rm /etc/corosync/*
+  rm -rf /etc/pve/corosync.conf
+  killall pmxcfs
+  systemctl start pve-cluster
+
+# left over
+cd /etc/pve/nodes && rm pve<node>
+#+end_src
+
+*** unprivileged lxc samba acces
+#+begin_src bash
+  # do not forget about the creds file/this command is ran in pve host
+  mount -t cifs -o credentials=/root/smbcreds_fam //<ip>/<shared-folder> /mnt/<shared-folder>
+  # mount
+pct set <container-#> -mp0 /mnt/<shared-folder-pve>,mp=/mnt/<shared-folder-lxc>
+#+end_src
+how I solved the issue
+[[https://www.youtube.com/watch?v=CFhlg6qbi5M][Read AND WRITE from unprivileged LXC container to Proxmox SMB / NFS / CIFS / ...]]
+*** get ip of container
+If you want to see the info (e.g. IP address) of a specific vm/ct on proxmox
+#+begin_src bash
+lxc-info -n <vmID/ctID>
+#+end_src
+B0:4E:26:20:11:34 christmas tree
 *** Troubleshooting
 **** Unable to connect
 **** Ran out of virtual disk space
@@ -117,4 +179,8 @@ keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overv
 
 ** Misc concepts
 - [[id:f6df9f15-f712-4280-bee2-68cd3d732a42][Programming - SOPS]]
--
+*** Mount
+#+begin_src bash
+mount -l # list all mounted drives
+
+#+end_src

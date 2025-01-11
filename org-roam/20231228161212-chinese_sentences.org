@@ -152,8 +152,33 @@ pattern of the sentence is quite interresting
 赚钱 zhuanqian make money
 微交易 weijiaoyi: microtransaction
 
-** 27 日 11 月 2024 年
+** 4 日 12 月 2024 年
 今天我笑了对我的电脑的问题
+
+** 11 日 12 月 2024 年
+有些星期以前我们带我们只猫咪兽医
+兽医 shou4yi1 veterinary
+兽医测量了我们只猫的体重然后告诉你只猫是五公斤
+测量 ce4land2: measure
+体重 ti3zhong4: body weight
+只猫是一公斤超重所以他得减肥
+超重  chao1zhong4: overweight
+减肥 jian3fei2: lose weight
+自从只猫开始饮食减肥如果我开门冰箱只猫他叫喊
+饮食 ying3shi2: diet
+冰箱 bing1xiang1: fridge
+叫喊 jiao4shan3: yell
+我们尝试了走路只猫但是只猫拒绝
+尝试: chang2shi4: try # shishikan
+走路 zou3lu4: walk
+拒绝 ju4jue2
+我们买了一个皮带所以我们可以走路只猫
+皮带 pi2dai4: leash/belt
+每一次我们只猫戴皮带只猫停止走路和躺在地板上 make it a b sentence
+戴 dai4: wear (accessory)
+停止 ting2zhi3: stops
+躺 tang3: lie (somewhere)
+地板 di4ban3: floor
 
 * Q1 2024
 ** 03 日 01 月 2024 年
@@ -396,3 +421,26 @@ write about how it sounds like the e-solution
 我做的垃圾桶盖很简单的
 第二垃圾桶盖我做比较难的因为垃圾桶盖比我的打印机大的
 所以我切(qie)一半和加一个铰链(jiao4lian)对垃圾桶盖
+
+---
+
+** 08 日 01 月 2025 年
+期间圣诞节的时候我做对我自己的云
+期间 qi2jian1: during
+在这个当地的云有一个房子自动化的程序。
+自动化 zi4dong4hua4 automation
+程序 cheng4xu4: program
+比如我们的圣诞树的圣诞灯开机早膳八点然后关机晚上十点
+圣诞灯 sheng4dan4 deng1: christmas lights
+开机 power on
+我买了一些便宜亚马逊的智能插头然后连接到当地云
+智能插头 zhi4neng2 cha1tou2: smart plugs
+连接到 lian2jia1 dao: connect(ed)
+我有比较大打算对我的当地云的
+例如到两年前我们取消 Netflix 的服务但是我还喜欢看电影陪我的太太
+取消 qu3xiao1: cancel
+所以我买到两个硬盘上网下载电影
+硬盘 ying1pan2: hard drive
+
+城市 chengshi city
+计算机 jisuan4ji1 computer = 电脑 (electric brain)

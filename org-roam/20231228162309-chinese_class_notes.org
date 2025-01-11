@@ -616,6 +616,7 @@ A 比 B 高百分之八 A is 8% higher than B
 充电的电池: rechargeable battery
 
 *** time
+结婚年日 jie2hun1 nian2ri4: wedding date (anniversary)
 假期 jia4qi: vacation
 李斯 lisi history
 重复 chong2fu4: repeat
@@ -630,7 +631,6 @@ A 比 B 高百分之八 A is 8% higher than B
 一直右欠 always right
 
 一直 yizhi2: always
-
 申请 shen1qing3: apply
 地址 dizhi: address
 房贷 fang2dai4: mortgage
@@ -646,12 +646,19 @@ A 比 B 高百分之八 A is 8% higher than B
 社会 she4hui4: society
 社工 she4gong1: social worker
 如果你超过六十五岁 if you are over 65
+健身房 jian4shen1fang2: gym
+医药 yi1yao4: medicine
 
 *** crime
 被偷了 bei4tou1le: stolen
 麻烦 ma2fan: trouble
 
+*** body
+肚子 du4zi3: belly
+
 *** PATTERNS
+有道理 you3dao4li3: make sense
+健身房的旁边 next tot the gym
 以为不出去 I thought I woudln't go out
 以为不吃 I tought that I wouldn't eat
 我以为你在睡觉 I thought you were sleeping
@@ -660,6 +667,9 @@ A 比 B 高百分之八 A is 8% higher than B
 全部人挺笨 everyone is dumb
 对...来说...
 对我来说 dui4wo3 ali2shuo1 for me
+有日按时下班 come home from work on time (someday)
+有天中午我按时吃到 one dat at noon I ate on time
+有时候中午我按照吃到 sometimes I eat at noon
 
 高级 fao1ji2: advanced
 少级 shao3ji: junior
@@ -678,3 +688,38 @@ A 比 B 高百分之八 A is 8% higher than B
 *** food
 试吃 shi3chi1: tasting
 菜单 cai4dan1: menu
+
+靠近 kao4jin4: near/close
+按照 an4zhao4: according to
+按时 an4shi: on time
+注意 zhu4yi4: notice
+主意 zhu3yi4: ideao
+太辛苦 tai4 xin1ku3: too hard
+努力 nu3li4: effort
+修理 xiu1li3: repair
+休息 xiu1xi2: rest
+解决 jie3jue2: solve
+发现 faxian4: discover
+另外 ling4wai4: in addition
+我的爸爸飞机顺利的回到了 father's plane had no incident
+二万多元 more than 20k yuan
+成绩 chen2ji4: score
+
+外科医生 waia4ke1 yisheng1: surgeon
+
+*** Crime
+被偷 bei4tou1 stolen
+小偷 xiao3tou1 thief
+车牌 che1pai2 license palte
+警察 jing3cha2 police
+
+
+打电话这个号码 call this number
+号码 hao4ma3 number
+经常 jing1chang2: often
+被抓 bei4 zhua1: caught
+逃走 tao2zou3: escape
+一辆车 yi1liang4 che1: a car
+不清楚 bu4qing1 chu3: not clear
+喝醉了 he1zui4le: drunk
+幸运的 xing4yun4de: lucky

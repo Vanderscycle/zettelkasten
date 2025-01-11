@@ -51,14 +51,21 @@ CLOSED: [2024-11-15 Fri 11:41]
 
 ** Programming [1/6]
 
-*** TODO HomeLab  [0/3]                                            :hardware:
+*** TODO HomeLab  [0/8]                                            :hardware:
 **** TODO host own git server (gitlab) with woker [[https://www.youtube.com/watch?v=qoqtSihN1kU][Self-host your own Git platform! // GitLab - YouTube]]
 **** TODO get dns to work
 **** TODO create a 2 cpu/4gb or memory each nixos vm
 ***** TODO Recreate the [[file:~/Documents/dotFiles/homelab-flakes/][~homelab-flakes~]]
 based on my own dotfiles (what I want added) and this one[[https://www.youtube.com/watch?v=2yplBzPCghA][This homelab setup is my favorite one yet. - YouTube]]
 ***** TODO add the cloud username password to sops
-***** TODO
+**** TODO Move from lxc containers to kubernetes
+**** TODO create a triple k3s node on pve2
+**** TODO create a backup of my code to gitea
+When pushing to github I also push a copy to a local homelab gitea org.
+**** TODO Figure out subnets w/ openwrt
+I want my iot in 192.168.2.xxx, nas in 192.168.3.xxx, etc.
+**** TODO Figure out unbound local dns
+map a domain name to an ip/port e.g. nas.homelab = 192.168.3.xxx:port
 
 *** TODO Configuration
 **** TODO create work laptop nix profile.
