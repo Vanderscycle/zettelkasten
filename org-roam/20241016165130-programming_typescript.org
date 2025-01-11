@@ -2,6 +2,7 @@
 :ID:       bdd3bf17-ccce-488a-96e9-031694daa04e
 :END:
 #+title: Programming - TypeScript
+
 * Root
 [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
 

@@ -41,7 +41,14 @@ pnpm i -D @sveltejs/adapter-node
 ** IaC
 - [[id:4376ef2d-5578-4603-9bc6-2597e79ef9bd][Programming - Terraform]]
 - Kubernetes
-- [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]]
+- [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]] TODO: create the file again
+
+*** Custom resources
+=Custom::CrossRegionExportWriter= These are lambdas that sync ssm stores.
+#+begin_src bash
+  # if creating resoures
+#+end_src
+
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
 - [[id:48ec7d8d-799f-4a7f-a6c6-633f1ac42e7e][Programming - CICD Github Actions]]
 

@@ -2,6 +2,10 @@
 :ID:       0b8da363-eaf4-4c96-a8b4-2975ff99ea65
 :END:
 #+title: Programming - Nix
+
+* Root
+[[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
+
 * Nix
 ** Nixos-anywhere
 To copy nixos config anywhere
