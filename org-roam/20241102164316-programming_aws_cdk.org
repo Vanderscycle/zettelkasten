@@ -3,4 +3,35 @@
 :END:
 #+title: Programming - AWS CDK
 
+* Root
+[[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
+
 * AWS CDK
+
+Level 1: Cfn
+Level 2: Aws CDK code
+Level 3: packages?
+** Troubleshooting
+*** Rollback
+If it fails you can go to AWS GUI and click on stack-actions/continue-update-rollback
+
+** Imports
+#+begin_src bash
+yarn run cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/<env>' import <the stack> --profile <the profile>
+#+end_src
+
+You have to orphan resources prior importing.
+
+** Cfn
+*** Iterating through
+
+In this case we are going through every single VPC resources to
+#+begin_src ts
+
+    vpc.node.findAll().forEach((x) => {
+      if (x instanceof CfnResource) {
+        console.log(`--- ${x} ---`);
+        x.applyRemovalPolicy(RemovalPolicy.RETAIN);
+      }
+    });
+#+end_src

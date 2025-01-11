@@ -2,6 +2,10 @@
 :ID:       2c0dc857-c4a0-4a50-be56-e6c28e74186b
 :END:
 #+title: Programming - NextJS
+
+* Root
+[[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
+
 * NextJS
 All roads leads to Javascript
 ** Documentation
@@ -17,7 +21,7 @@ ul>li.item$*3            <ul>
                          </ul>
 #+end_src
 mui-theme creator
-[[https://bareynol.github.io/mui-theme-creator/][Material UI Theme Creator]] 
+[[https://bareynol.github.io/mui-theme-creator/][Material UI Theme Creator]]
 **** References
 [[https://github.com/smihica/emmet-mode][GitHub - smihica/emmet-mode: emmet's support for emacs.]]
 
@@ -31,7 +35,7 @@ unless specified ="use client"= at the top of the page which will make it a clie
 import {useState} from 'react';
 #+end_src
 
-[[https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns][Rendering: Composition Patterns | Next.js]] 
+[[https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns][Rendering: Composition Patterns | Next.js]]
 **** Special NextJS files
 - error.js
 - layout.js
@@ -72,8 +76,8 @@ const { name, age }: Person = person;
 
 console.log(name);
 #+end_src
-*** Object mapping 
-You can use either =forEach= or =map= but forEach will return unknow while map 
+*** Object mapping
+You can use either =forEach= or =map= but forEach will return unknow while map
 #+begin_src typescript
   {routes.map((route, index) => (
     <Link key={index} href={route.href} className="mx-2">
@@ -85,7 +89,7 @@ You can use either =forEach= or =map= but forEach will return unknow while map
 * Modern web
 ** Frontend
 *** Search Engine Optimization
-How a search engine like Google/Bing ranks your website when a users searches a specific term. 
+How a search engine like Google/Bing ranks your website when a users searches a specific term.
 **** Static Metadata
 add the following
 #+begin_src ts
