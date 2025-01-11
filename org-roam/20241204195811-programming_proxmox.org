@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       cdac68bb-38c2-4602-a6d9-efc50134e63a
+:END:
+#+title: Programming - Proxmox
+
+* return
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
+[[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
+
+* Proxmox
+** Cluster
+*** Troubleshooting
+**** Can't delete vm in a cluster
+Check if there's a quorum.
