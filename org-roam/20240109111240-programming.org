@@ -40,7 +40,31 @@ pnpm i -D @sveltejs/adapter-node
 
 ** IaC
 - [[id:4376ef2d-5578-4603-9bc6-2597e79ef9bd][Programming - Terraform]]
+
 - Kubernetes
+*** Troubleshooting
+unable to delete pv (homelab situation)
+#+begin_src bash
+kubectl patch pv <pv> -p '{"metadata": {"finalizers": null}}'
+kubectl delete pv <pv> -A  --grace-period=0 --force
+#+end_src
+
+*** one off pod
+#+begin_src bash
+kubectl run -i --tty --rm debug --image=curlimages/curl --restart=Never -- sh
+#+end_src
+
+** Homelab
+*** PVC
+Persistent Volumes are not automatically created by default. Certain cloud operator like Akamai/Linode do it for you, however in a homelab you have to read the docs.
+[[https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/][Dynamic Volume Provisioning | Kubernetes]]
+
+What is required to be added
+#+begin_src yaml
+# [...]
+  storageClassName: local-path
+# [...]
+#+end_src
 - [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]] TODO: create the file again
 
 *** Custom resources
@@ -75,6 +99,24 @@ Then set it as your variable so that =k9s= can access it.
 #+begin_src fish
   set -xg KUBECONFIG $HOME/.kube/homelab-kubeconfig.yaml
 #+end_src
+
+**** Changed the ip
+Before you change the ip, backup the data you are about to lose.
+
+let's say you changed the node ip for whatever reason and you can't connect to the cluser any longer. You must rest
+***** control plane
+#+begin_src bash
+sudo systemctl stop k3s
+
+# if mv doesn't work just cp then rm -rf the etcd folder
+sudo mv /var/lib/rancher/k3s/server/db/etcd /var/lib/rancher/k3s/server/db/etcd.backup
+#+end_src
+***** worker
+#+begin_src bash
+  sudo systemctl stop k3s-agent # if running
+
+  sudo rm -rf /var/lib/rancher/k3s/
+#+end_src
 - [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]]
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
 - [[id:48ec7d8d-799f-4a7f-a6c6-633f1ac42e7e][Programming - CICD Github Actions]]
@@ -89,52 +131,7 @@ reset pin
 ykman piv access change-pin --pin 123456 --new-pin 654321
 #+end_src
 ** Home Server
-- TrueNas
-*** Troubelshooting
-- Proxmox
-
-*** cluster node
-#+begin_src bash
-  systemctl stop pve-cluster corosync
-  pmxcfs -l
-  rm /etc/corosync/*
-  rm -rf /etc/pve/corosync.conf
-  killall pmxcfs
-  systemctl start pve-cluster
-
-# left over
-cd /etc/pve/nodes && rm pve<node>
-#+end_src
-
-*** unprivileged lxc samba acces
-#+begin_src bash
-  # do not forget about the creds file/this command is ran in pve host
-  mount -t cifs -o credentials=/root/smbcreds_fam //<ip>/<shared-folder> /mnt/<shared-folder>
-  # mount
-pct set <container-#> -mp0 /mnt/<shared-folder-pve>,mp=/mnt/<shared-folder-lxc>
-#+end_src
-how I solved the issue
-[[https://www.youtube.com/watch?v=CFhlg6qbi5M][Read AND WRITE from unprivileged LXC container to Proxmox SMB / NFS / CIFS / ...]]
-*** get ip of container
-If you want to see the info (e.g. IP address) of a specific vm/ct on proxmox
-#+begin_src bash
-lxc-info -n <vmID/ctID>
-#+end_src
-B0:4E:26:20:11:34 christmas tree
-*** Troubleshooting
-**** Unable to connect
-**** Ran out of virtual disk space
-[] Resize guest disk [[https://pve.proxmox.com/wiki/Resize_disks][Resize disks - Proxmox VE]]
-[] Modify disk within VM
-#+begin_src bash
-  sudo parted <vm-disk> # e.g. /dev/sda
-  # while in parted
-  (parted) unit GB
-  (parted) resizepart 1 128GB
-  # now resize the sub partition
-  sudo resize2fs /dev/sda1
-#+end_src
-
+- [[id:cdac68bb-38c2-4602-a6d9-efc50134e63a][Programming - Proxmox]]
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux

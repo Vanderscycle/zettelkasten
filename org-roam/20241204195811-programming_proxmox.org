@@ -12,3 +12,47 @@
 *** Troubleshooting
 **** Can't delete vm in a cluster
 Check if there's a quorum.
+
+*** cluster node
+#+begin_src bash
+  systemctl stop pve-cluster corosync
+  pmxcfs -l
+  rm /etc/corosync/*
+  rm -rf /etc/pve/corosync.conf
+  killall pmxcfs
+  systemctl start pve-cluster
+
+# left over
+cd /etc/pve/nodes && rm pve<node>
+#+end_src
+
+*** unprivileged lxc samba acces
+#+begin_src bash
+  # do not forget about the creds file/this command is ran in pve host
+  mount -t cifs -o credentials=/root/smbcreds_fam //<ip>/<shared-folder> /mnt/<shared-folder>
+  # mount
+pct set <container-#> -mp0 /mnt/<shared-folder-pve>,mp=/mnt/<shared-folder-lxc>
+#+end_src
+
+how I solved the issue
+[[https://www.youtube.com/watch?v=CFhlg6qbi5M][Read AND WRITE from unprivileged LXC container to Proxmox SMB / NFS / CIFS / ...]]
+
+*** get ip of container
+If you want to see the info (e.g. IP address) of a specific vm/ct on proxmox
+#+begin_src bash
+lxc-info -n <vmID/ctID>
+#+end_src
+B0:4E:26:20:11:34 christmas tree
+*** Troubleshooting
+**** Unable to connect
+**** Ran out of virtual disk space
+[] Resize guest disk [[https://pve.proxmox.com/wiki/Resize_disks][Resize disks - Proxmox VE]]
+[] Modify disk within VM
+#+begin_src bash
+  sudo parted <vm-disk> # e.g. /dev/sda
+  # while in parted
+  (parted) unit GB
+  (parted) resizepart 1 128GB
+  # now resize the sub partition
+  sudo resize2fs /dev/sda1
+#+end_src

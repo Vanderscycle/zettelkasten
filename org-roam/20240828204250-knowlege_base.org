@@ -51,15 +51,20 @@ CLOSED: [2024-11-15 Fri 11:41]
 
 ** Programming [1/6]
 
-*** TODO HomeLab  [0/8]                                            :hardware:
+*** TODO HomeLab  [2/8]                                            :hardware:
 **** TODO host own git server (gitlab) with woker [[https://www.youtube.com/watch?v=qoqtSihN1kU][Self-host your own Git platform! // GitLab - YouTube]]
 **** TODO get dns to work
-**** TODO create a 2 cpu/4gb or memory each nixos vm
+[[https://www.theobjectivedad.com/pub/20230410-homelab-4/index.html][The Objective Dad - How I Built Robust Local DNS Services for My Homelab Cluster]]
+**** DONE create a 2 cpu/4gb or memory each nixos vm
+CLOSED: [2025-01-12 Sun 15:13]
+- State "DONE"       from "TODO"       [2025-01-12 Sun 15:13]
 ***** TODO Recreate the [[file:~/Documents/dotFiles/homelab-flakes/][~homelab-flakes~]]
 based on my own dotfiles (what I want added) and this one[[https://www.youtube.com/watch?v=2yplBzPCghA][This homelab setup is my favorite one yet. - YouTube]]
 ***** TODO add the cloud username password to sops
 **** TODO Move from lxc containers to kubernetes
-**** TODO create a triple k3s node on pve2
+**** DONE create a triple k3s node on pve2
+CLOSED: [2025-01-12 Sun 15:12]
+- State "DONE"       from "TODO"       [2025-01-12 Sun 15:12]
 **** TODO create a backup of my code to gitea
 When pushing to github I also push a copy to a local homelab gitea org.
 **** TODO Figure out subnets w/ openwrt
@@ -68,7 +73,9 @@ I want my iot in 192.168.2.xxx, nas in 192.168.3.xxx, etc.
 map a domain name to an ip/port e.g. nas.homelab = 192.168.3.xxx:port
 
 *** TODO Configuration
-**** TODO create work laptop nix profile.
+**** DONE create work laptop nix profile.
+CLOSED: [2025-01-12 Sun 15:12]
+- State "DONE"       from "TODO"       [2025-01-12 Sun 15:12]
 https://www.youtube.com/watch?v=Z8BL8mdzWHI
 **** DONE rebuild the server files so that user (home-manager) and modules stay separate
 SCHEDULED: <2025-11-18 Mon>
@@ -83,6 +90,7 @@ CLOSED: [2024-10-16 Wed 15:08]
 
 - State "DONE"       from "TODO"       [2024-10-16 Wed 15:08]
 *** TODO tinkerings [2/8]
+**** TODO Create website faster with org mode
 **** TODO is there a way for the master todo heading [0/0] updates automatically?
 **** TODO is there a way for a new emacsclient to start at the following file?
 /home/henri/Documents/zettelkasten/org-roam/20240828204250-knowlege_base.org
@@ -216,6 +224,9 @@ SCHEDULED: <2024-10-07 Mon +1w>
 Beef ribs are expensive, but the base of the recipe: onions, carrots, celery, wine and stock makes it really easy to use pork/sausage.
 *** [[https://mykoreankitchen.com/tteokbokki-spicy-rice-cakes/][Tteokbokki (Spicy Rice Cakes) - My Korean Kitchen]]
 You can prepare the anchovy broth ahead of time.
-
+*** [[https://www.koreanbapsang.com/gungjung-tteokbokki-and-lunar-new-year/][Gungjung Tteokbokki (Korean Royal Rice Cake) - Korean Bapsang]]
+tteokbokki but with soy, wide range of meat can be used and fish cakes.
+*** [[https://www.thekitchenmaus.com/homemade-currywurst/][Homemade Currywurst • The Kitchen Maus]]
+sausage, fries, warmed ketchup with spices (curry, paprika, worchestershire sauce, etc.)
 ** Printing
 *** TODO print the electronic enclosure for the v-minion
