@@ -11,9 +11,31 @@
 Level 1: Cfn
 Level 2: Aws CDK code
 Level 3: packages?
+
 ** Troubleshooting
 *** Rollback
 If it fails you can go to AWS GUI and click on stack-actions/continue-update-rollback
+
+
+** Bootstraping
+to init a new stack/env in =aws-infrastructure-as-code=
+
+#+begin_src bash
+yarn run cdk bootstrap aws://<account_id>/<aws region> --profile <profile> --template bootstrap.json
+#+end_src
+
+** Delete
+Once you run a deletion process you cannot stop it nor revert it back. If it get suck in =DELETE_FAILED= then you have to complete the deletion.
+
+** Orphaning
+*** with aws cli
+Fetch the template.json mapping the stack's resources
+#+begin_src bash
+  aws cloudformation get-template --stack-name <STACK_NAME> --query 'TemplateBody' --output json > template.json
+
+#+end_src
+
+update the content then
 
 ** Imports
 #+begin_src bash
@@ -21,17 +43,73 @@ yarn run cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/
 #+end_src
 
 You have to orphan resources prior importing.
+Since it can get tedious entering all of this manually you can use:
+#+begin_src bash
+  --resource-mapping=cdk-import-resource-mapping.json
+#+end_src
+
+*** Stubbing
+#+begin_src ts
+const enterprisePhpRepo = {
+  "primaryRegionRepository": ecr.Repository.fromRepositoryName(
+    props.stackProps.primaryRegionalStack,
+    'EnterprisePhpRepository-stub',
+    'enterprise-php'
+  )
+} as EnterprisePhpRepo;
+#+end_src
 
 ** Cfn
-*** Iterating through
-
+*** Iterating through object's L1 resources
 In this case we are going through every single VPC resources to
 #+begin_src ts
 
-    vpc.node.findAll().forEach((x) => {
-      if (x instanceof CfnResource) {
-        console.log(`--- ${x} ---`);
-        x.applyRemovalPolicy(RemovalPolicy.RETAIN);
-      }
-    });
+  vpc.node.findAll().forEach((x) => {
+    if (x instanceof CfnResource) {
+      console.log(`--- ${x} ---`);
+      x.applyRemovalPolicy(RemovalPolicy.RETAIN);
+    }
+  });
+
+// renamign aws cdk
+  (kbudouLambda.node.defaultChild as CfnResource).overrideLogicalId('BudouLambdaFunction');
+#+end_src
+
+*** Custom resources
+=Custom::CrossRegionExportWriter= These are lambdas that sync ssm stores.
+#+begin_src bash
+  # if creating resoures
+#+end_src
+
+** AWS CLI
+*** Query parameter
+The query parameter is extremely powerful parameter, here are a few example:
+#+begin_src bash
+aws ecs list-services \
+  --cluster $cluster \
+  --query "serviceArns[?contains(@, 'Migration') && contains(@, 'ksend')]" \
+  --output text
+
+aws rds describe-db-instances \
+  --query 'DBInstances[?contains(DBInstanceIdentifier, `ksend`)].VpcSecurityGroups[*].VpcSecurityGroupId' \
+  --output text
+#+end_src
+
+The easiest way to get what you want it to start broad using the =--output json= and refine the query
+**** References
+[[https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-filter.html][Filtering output in the AWS CLI - AWS Command Line Interface]]
+
+
+#+begin_src ts
+
+    // const loadBalancer = elbv2.ApplicationLoadBalancer.fromApplicationLoadBalancerAttributes(
+    //     props.stackProps.globalStack,
+    //     'enterprise-core-alb',
+    //     {
+    //         loadBalancerArn:
+    //             'arn:aws:elasticloadbalancing:us-east-2:353132507445:loadbalancer/app/enterp-Appli-86VrvntkBFJr/01ac60af62470c08',
+    //         securityGroupId: 'sg-02b4668921bbf0f76',
+    //     }
+    // );
+
 #+end_src
