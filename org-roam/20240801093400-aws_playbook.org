@@ -13,3 +13,6 @@
 5. [ ] Change the name of the original rds instance
 6. [ ] Change the restored db name to the original
 7. [ ] delete old
+
+*** ECS
+All of ECS variables are stored in =/proc/1/environ=
