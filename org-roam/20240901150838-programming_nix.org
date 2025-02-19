@@ -8,7 +8,7 @@
 
 * Nix
 ** Nixos-anywhere
-To copy nixos config anywhere
+Hasn't worked for me honestly
 
 ensure that, if its a base config mixos machine that you enable root login
 #+begin_src nix
@@ -98,7 +98,20 @@ path defines the packages available on the $PATH. As far as I know only Bash is 
   journalcl -xeu <service-name>.<ype (e.g. service/timer)>
 #+end_src
 
+
 ** Nix-darwin
 *** References
 [[https://daiderd.com/nix-darwin/manual/index.html][nix-darwin Configuration Options]]
 [[https://nix-community.github.io/home-manager/options.xhtml][Appendix A. Home Manager Configuration Options]]
+
+** phatom package
+sometimes when updating, you may get a `rogue` package in the nix-store that doesn't exists and blocks you. Purging is required.
+#+begin_src bash
+  sudo nix-collect-garbage --delete-older-than 30d
+  sudo nix-store --optimise
+# ---
+sudo nix-store --verify --check-contents --repair
+sudo nix-store --verify
+
+#+end_src
+

@@ -48,34 +48,94 @@ Drop all tables and rebuild
 
 ** IaC
 - [[id:4376ef2d-5578-4603-9bc6-2597e79ef9bd][Programming - Terraform]]
-- Kubernetes
+
 - [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]]
+*** Troubleshooting
+unable to delete pv (homelab situation)
+#+begin_src bash
+kubectl patch pv <pv> -p '{"metadata": {"finalizers": null}}'
+kubectl delete pv <pv> -A  --grace-period=0 --force
+#+end_src
+
+*** one off pod
+#+begin_src bash
+kubectl run -i --tty --rm debug --image=curlimages/curl --restart=Never -- sh
+#+end_src
+
+** Homelab
+*** PVC
+Persistent Volumes are not automatically created by default. Certain cloud operator like Akamai/Linode do it for you, however in a homelab you have to read the docs.
+[[https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/][Dynamic Volume Provisioning | Kubernetes]]
+
+What is required to be added
+#+begin_src yaml
+# [...]
+  storageClassName: local-path
+# [...]
+#+end_src
+- [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]] TODO: create the file again
 
 
+
+*** Local K3s
+**** Getting the config
+The config is located on the server(s) =/etc/rancher/k3s/k3s.yaml=. You can symlink it locally as follow
+#+begin_src bash
+    # creates a copy
+    mkdir -p ~/.kube
+    sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+    sudo chown $(id -u):$(id -g) ~/.kube/config
+    # symlink it
+  mkdir -p ~/.kube
+  ln -s /etc/rancher/k3s/k3s.yaml ~/.kube/config
+
+#+end_src
+
+
+A better approach is to copy the config to your machine and use =k9s= to access it from your computer
+#+begin_src yaml
+clusters:
+- cluster:
+    server: https://<server-ip>:6443
+#+end_src
+
+Then set it as your variable so that =k9s= can access it.
+#+begin_src fish
+  set -xg KUBECONFIG $HOME/.kube/homelab-kubeconfig.yaml
+#+end_src
+
+**** Changed the ip
+Before you change the ip, backup the data you are about to lose.
+
+let's say you changed the node ip for whatever reason and you can't connect to the cluser any longer. You must rest
+***** control plane
+#+begin_src bash
+sudo systemctl stop k3s
+
+# if mv doesn't work just cp then rm -rf the etcd folder
+sudo mv /var/lib/rancher/k3s/server/db/etcd /var/lib/rancher/k3s/server/db/etcd.backup
+#+end_src
+***** worker
+#+begin_src bash
+  sudo systemctl stop k3s-agent # if running
+
+  sudo rm -rf /var/lib/rancher/k3s/
+#+end_src
+- [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]]
 - [[id:dc451d87-892c-4265-bc16-00e8794fdf4c][Docker]]
 - [[id:48ec7d8d-799f-4a7f-a6c6-633f1ac42e7e][Programming - CICD Github Actions]]
 
 ** Version control (git)
 When your code used to work a few commits ago and since then it has tremendously regressed and you don't know why use ~git bisect~ and run a binary search.
 
-** Home Server
-- TrueNas
-*** Troubelshooting
-- Proxmox
-*** Troubleshooting
-**** Unable to connect
-**** Ran out of virtual disk space
-[] Resize guest disk [[https://pve.proxmox.com/wiki/Resize_disks][Resize disks - Proxmox VE]]
-[] Modify disk within VM
+** Security
+*** Yubico keys
+reset pin
 #+begin_src bash
-  sudo parted <vm-disk> # e.g. /dev/sda
-  # while in parted
-  (parted) unit GB
-  (parted) resizepart 1 128GB
-  # now resize the sub partition
-  sudo resize2fs /dev/sda1
+ykman piv access change-pin --pin 123456 --new-pin 654321
 #+end_src
-
+** Home Server
+- [[id:cdac68bb-38c2-4602-a6d9-efc50134e63a][Programming - Proxmox]]
 - [[id:9f5774f3-ed8e-4f59-ba4a-31a202e25128][RPI k3s cluster]]
 
 ** Linux
@@ -120,4 +180,8 @@ keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overv
 
 ** Misc concepts
 - [[id:f6df9f15-f712-4280-bee2-68cd3d732a42][Programming - SOPS]]
--
+*** Mount
+#+begin_src bash
+mount -l # list all mounted drives
+
+#+end_src
