@@ -16,6 +16,12 @@ Level 3: packages?
 *** Rollback
 If it fails you can go to AWS GUI and click on stack-actions/continue-update-rollback
 
+** SAM
+You can run your infrastructure locally in the very same way as serverless using =SAM= if installed on your machine.
+#+begin_src bash
+  npx cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/<env-file>.ts' synth --no-staging
+  npx cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/<name-of-stack>.ts' synth --no-staging
+#+end_src
 
 ** Bootstraping
 to init a new stack/env in =aws-infrastructure-as-code=
