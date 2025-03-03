@@ -48,8 +48,13 @@ Drop all tables and rebuild
 
 ** IaC
 - [[id:4376ef2d-5578-4603-9bc6-2597e79ef9bd][Programming - Terraform]]
-
 - [[id:111c87db-cb78-4ddc-822f-fa062f7020e3][Programming - AWS CDK]]
+- Kubernetes
+*** Get latest kubeconfig
+#+begin_src bash
+kubectl config view --raw
+#+end_src
+
 *** Troubleshooting
 unable to delete pv (homelab situation)
 #+begin_src bash

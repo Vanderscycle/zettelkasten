@@ -12,8 +12,9 @@
 Produces reproduceable keyy which allows you to only track a single key
 
 #+begin_src bash
-nix run nixpkgs#ssh-to-age -- -private-key -i ~/.ssh/endeavourGit > ~/.config/sops/age/keys.txt
-nix shell nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt # to get the public key
+  mkdir -p ~/.config/sops/age
+  nix run nixpkgs#ssh-to-age -- -private-key -i ~/.ssh/endeavourGit > ~/.config/sops/age/keys.txt
+  nix shell nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt # to get the public key
 #+end_src
 
 ** Basic configuration
