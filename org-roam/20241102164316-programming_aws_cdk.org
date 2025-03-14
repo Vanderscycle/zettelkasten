@@ -38,7 +38,6 @@ Once you run a deletion process you cannot stop it nor revert it back. If it get
 Fetch the template.json mapping the stack's resources
 #+begin_src bash
   aws cloudformation get-template --stack-name <STACK_NAME> --query 'TemplateBody' --output json > template.json
-
 #+end_src
 
 update the content then
@@ -51,7 +50,22 @@ yarn run cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/
 You have to orphan resources prior importing.
 Since it can get tedious entering all of this manually you can use:
 #+begin_src bash
+  --record-resource-mapping=cdk-import-resource-mapping.json
+#+end_src
+and add 1 whenever we are prompted
+
+when its time to deploy you simply run
+ #+begin_src bash
   --resource-mapping=cdk-import-resource-mapping.json
+ #+end_src
+
+*** Route table associations
+Route table associations aren't broadcasted on AWS Gui so you must run the following command
+#+begin_src bash
+❯ aws ec2 describe-route-tables \
+  --profile <profile> \
+  --region <region> \
+  --filters "Name=vpc-id,Values=<vpc-id>"
 #+end_src
 
 *** Stubbing
