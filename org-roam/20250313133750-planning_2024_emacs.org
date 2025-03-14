@@ -25,7 +25,18 @@ Given a list that we want to append an element to it calling =add-to-list= will 
 (add-to-list 'hl-todo-keyword-faces '("WARN" . "#FFA500"))
 #+end_src
 
+
 ** Productivity
+*** searching
+grep ~SPC s g <scope>~
+ripgrep ~SPC s g <scope>~
+ag ~SPC s a <scope>~
+web ~SPC s w g~ (google only)
+
+*** Quickfix-ish
+using ~occur~ for single buffer ~multi-occur~ for all opened buffers, ~multi-occur-in-matching-buffers~ for matching ones and ~projectile-multi-occur~ for all within a project
+
+
 *** evil-motion
 Using ~g s [sS]~ to jump directly to a word either forward ~s~ or backward ~S~ depneding on the position of your cursor. You can use ~g s <evil-motion-verb>~ to jump to line
 

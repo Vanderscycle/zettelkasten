@@ -45,6 +45,8 @@ Use =projectile-replace=
 
 * In search of new beginning to old problems
 ** General emacs
+*** Soft reset
+delete =~/.emacs.d/.cache= folder, pull latest and then reinstall
 *** change from camel/kebab/upcase
 use emacs inflection that is lodged within the the text which-key dir =spc x=
 =spc x i {}=
