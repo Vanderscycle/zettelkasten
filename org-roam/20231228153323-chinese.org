@@ -6,9 +6,9 @@
 * Chinese
 Once and for all become able to speak chinese
 
+[[id:9c1d5a32-190c-462c-abab-bf7eeec20255][Chinese backtrack]]
 ** Root
-[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base
-]]
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
 [[id:160a412d-1318-4967-8eaf-134f2b119fd6][Chinese Radicals]]
 [[id:d2b75711-ccdf-46f8-b645-f82a43bf2a36][Chinese basic patterns]]
 

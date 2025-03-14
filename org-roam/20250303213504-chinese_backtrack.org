@@ -1,0 +1,99 @@
+:PROPERTIES:
+:ID:       9c1d5a32-190c-462c-abab-bf7eeec20255
+:END:
+#+title: Chinese backtrack
+
+*** home/city
+社区 she4qu1: community/neighborhood
+邻居 ling2ju1: neighbor
+搬家 ban1jia1: move place
+小镇 xiao3zhen4: small town
+城市 cheng2shi4: city
+装饰 zhuang1shi4: decoreate
+围墙 wei2qiang2: wall
+
+农业 nong2ye4: agriculture
+开矿 kai1kuang4: mining
+
+*** fruits/veggies/product
+草莓 cao3mei2: strawberry
+蓝莓 lan2mei2: blueberry
+西瓜 xi1gua1: watermelon
+食品 shi2pin3 food
+产品 chan3pin3: product
+
+树 shu4: tree
+森林 sen1lin2: forest
+木头 mu4tou: wood
+
+亚洲 ya4zhou1: asia
+欧洲 ou1zhou1: europe
+葡萄牙 pu2tao2ya2: portugal
+西班牙 xi1ban1ya2: spain
+
+*** Action verb
+放松 fang4song1: relax (v)
+修理 xiu1li3: repair (v)
+担心 dan1xin1: worry (v)
+毕业 bi4ye4: graduate (v)
+愿意 yuan4yi4: willing (v)
+瞧不起 qiao2bu4qi3: look down (v)
+
+*** Places
+博物馆 bo2wu4guan3: museum
+图书馆 tu2shu1 guan3: library
+美术馆 mei3shu4guan3: art gallery
+
+安全 an1quan2: safety
+怎么可能 how is that possible?
+看起来不完全人 looks incompletes
+退休的人 tui4xiu1deren2: retired
+
+约定 yue1ding4: o
+决定 jie2ding4: decide
+不确定: bu4queding4: not sure
+已经 yi3jing1: already
+破坏确定 pohuai4 que4ding4: destruction confirmed (for sure)
+破坏 po4huai4: damage/destroy (v)
+
+友善 you3shan4: friendly
+朋友 peng2you3: friend
+彼此 bi3ci3: each other
+
+目标 mu4biao1: target
+打算 da3suan4: intend/plan (v)
+计划 ji4hua4: plan
+
+工厂 gong1chang3: factory
+完全 wan2quan2: complete
+
+混血儿 mixed race (lit. mixed blood)
+
+*** body/maladies/medecine
+血 xie3: blood
+癌症 ai2zheng4: cancer
+头疼 touteng: headache
+肚子 du4zi3: abdomen/belly
+医疗系统 yi1liao2 xi4tong3: medical system (n)
+
+*** money
+自费 zi4fei4: at your own expenses
+免费 mianfei4: free
+运费yun4fei4: freight fees/fare
+
+机会 ji1hui4: change/opportunity
+类似 lei4si4: similar
+
+*** marriage/family
+嫁给 gia4gei3: marry (woman) (v)
+结婚 jie2hun1: marry/get married (v)
+婚姻 hun1yin1: marriage (n)
+哥哥 gege1: older brother
+弟弟 didi: younder brother
+姐姐 jiejie: older sister
+妹妹 meimei: younger sister
+
+表征 biao3zheng1: characterization
+继续 ji4xu4: continue
+军队系统 jun1dui4 xi4tong3: military system
+模式 mo2shi4: pattern
