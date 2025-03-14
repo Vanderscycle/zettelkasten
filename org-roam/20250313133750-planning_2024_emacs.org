@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       E56FBF4A-27B5-417A-960B-BD0D5C8E16A6
+:END:
+#+title: Learning - 2024 - Emacs
+
+* return
+
+
+* Emacs
+
+** .Spacemacs
+To configure one off packages that aren't part of a layer use the =dotspacemacs-additional-packages= list. While in the list you can futher customize it by accessing the package's config with the =:config= option.
+
+I am sure there are more possibilities that I am not awayre
+#+begin_src elisp
+    (fic-mode ;; use <spc g g> to jump into the definition of the package for easier configuration
+      :config
+      (setq fic-author-name-regexp '("WARN")))
+#+end_src
+
+*** emacs api
+**** add to list
+Given a list that we want to append an element to it calling =add-to-list= will do just that
+#+begin_src elisp
+(add-to-list 'hl-todo-keyword-faces '("WARN" . "#FFA500"))
+#+end_src
+
+** Productivity
+*** evil-motion
+Using ~g s [sS]~ to jump directly to a word either forward ~s~ or backward ~S~ depneding on the position of your cursor. You can use ~g s <evil-motion-verb>~ to jump to line
+
+*** evil-surround
+Tool that enables the addition, change and removal or parentheses, brackets, quotes, XML tags?, etc.
+
+Changes/deletion
+#+begin_src ts
+  const test: any = "hello world!" // cd"' changes to " -> ' also works with <q>
+  const test2: any = "hello world!" // ds" removes "
+
+  const testHtml: any = <bs>hello world!</bs> // cs"<l> changes " -> <l>
+      // to change from that use cst<your-desired-surround>
+#+end_src
+Additions
+#+begin_src ts
+  const testBraces: any = { hello } world // ysiw surround hello with []
+  // wrap the entire line yss) or yssb
+  (wrap the entire line hello world)
+#+end_src
+**** Reference
+[[https://github.com/tpope/vim-surround][GitHub - tpope/vim-surround: surround.vim: Delete/change/add parentheses/quot...]]
+
+*** Folds management

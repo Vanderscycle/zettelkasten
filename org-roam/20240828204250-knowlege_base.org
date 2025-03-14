@@ -41,5 +41,3 @@ You can prepare the anchovy broth ahead of time.
 tteokbokki but with soy, wide range of meat can be used and fish cakes.
 *** [[https://www.thekitchenmaus.com/homemade-currywurst/][Homemade Currywurst • The Kitchen Maus]]
 sausage, fries, warmed ketchup with spices (curry, paprika, worchestershire sauce, etc.)
-** Printing
-*** TODO print the electronic enclosure for the v-minion
