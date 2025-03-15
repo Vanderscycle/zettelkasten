@@ -18,7 +18,7 @@
 # *****
 
 **** Emacs [0/4]
-[[id:E56FBF4A-27B5-417A-960B-BD0D5C8E16A6][Planning - 2024 - Emacs]]
+[[id:E56FBF4A-27B5-417A-960B-BD0D5C8E16A6][Learning - 2025 - Emacs]]
 ***** TODO learn the basics of elisp and emacs's api to augment my editor
 ***** TODO use evil motion to navigate buffer
 Get better with =vim= verbs

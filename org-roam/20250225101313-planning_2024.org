@@ -4,8 +4,9 @@
 #+title: Planning - 2024
 
 ** Printing
-*** DONE print 3d computer case (petg)
+*** CANC print 3d computer case (petg)
 CLOSED: [2024-10-14 Mon 19:20]
+- State "CANC"       from "COMPLETED"  [2025-03-14 Fri 14:43]
 - State "DONE"       from "TODO"       [2024-10-14 Mon 19:20]
 *** TODO rebuild the confidence in the v-minion.
 
