@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       E56FBF4A-27B5-417A-960B-BD0D5C8E16A6
 :END:
-#+title: Learning - 2024 - Emacs
+#+title: Learning - 2025 - Emacs
 
 * return
 
@@ -27,11 +27,22 @@ Given a list that we want to append an element to it calling =add-to-list= will 
 
 
 ** Productivity
+*** Helm-map (keybindings)
+~SPC h d K <keymap>~
+You can view general ones like =helm-map= or specific ones like =helm-ag-map=
+**** usefull ones:
+mark ~c-SPC~
+
 *** searching
-grep ~SPC s g <scope>~
-ripgrep ~SPC s g <scope>~
-ag ~SPC s a <scope>~
-web ~SPC s w g~ (google only)
+=<scope>=
+d: current dir
+b: opened buffers
+
+49:  const test2: any = "hello world!" // ds" removes "
+- grep ~SPC s g <scope>~
+- ripgrep ~SPC s g <scope>~
+- ag ~SPC s a <scope>~
+- web ~SPC s w g~ (google only)
 
 *** Quickfix-ish
 using ~occur~ for single buffer ~multi-occur~ for all opened buffers, ~multi-occur-in-matching-buffers~ for matching ones and ~projectile-multi-occur~ for all within a project

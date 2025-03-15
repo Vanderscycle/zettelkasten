@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       1C2AEF29-3F04-4DB1-B632-40B663E89D40
+:END:
+#+title: Planning - 2024 - Emacs
