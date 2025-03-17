@@ -27,7 +27,42 @@ Given a list that we want to append an element to it calling =add-to-list= will 
 
 
 ** Productivity
-*** Helm-map (keybindings)
+*** help ~spc h~
+~spc h d <command>~ describe
+~spc h d m~ describe current mode (super usefull)
+
+*** dired ~spc f j~
+a better way to navigate the filetree and create/modify
+~s~ toggle sorting options
+~C~ copy file(s)
+~d~ mark file(s) for deletion ~x~ to execute the deletion
+~D~ to delete immediately
+~M~ chmod
+~O~ chwon (change the owner)
+~X~ execute bash command
+~c-x c-f~ create file
+
+~t~ mark-all
+~m~ mark
+~u~ unmark
+
+
+*** bookmarks ~c-x r~
+Bookmarks are somewhat like registers in that they record positions you can jump to. Unlike registers, they have long names, and they persist automatically from one Emacs session to the next.
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Bookmarks.html][Bookmarks (GNU Emacs Manual)]]
+
+*** registers ~spc r~
+Emacs registers are compartments where you can save text, rectangles, positions, and other things for later use.
+~spc r l~ reopen last helm window
+~spc r s~ reopn last search window e.g. ~spc s a a~
+~spc r w~ reopen last closed window
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Registers.html][Registers (GNU Emacs Manual)]]
+
+*** helm
+often using a service helm closes the window after usage e.g. =lazy-helm/spacemacs/helm-find-files= which correspond to ~spc f f~
+
+We can use registers ~spc r~ to jump back into our search quickly.
+*** keybindings (the shear number of them)
 ~SPC h d K <keymap>~
 You can view general ones like =helm-map= or specific ones like =helm-ag-map=
 **** usefull ones:
