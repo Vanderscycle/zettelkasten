@@ -133,3 +133,10 @@ The easiest way to get what you want it to start broad using the =--output json=
     // );
 
 #+end_src
+
+** Misc
+
+When performing stack surgery do not use the =yarn run= defined command instead you must use the cdk command directly. This goes for everything
+#+begin_src bash
+  yarn run cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/<env>.ts' deploy/diff -e <your stack> --profile <your profile>
+#+end_src

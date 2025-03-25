@@ -27,11 +27,40 @@ Given a list that we want to append an element to it calling =add-to-list= will 
 
 
 ** Productivity
+*** ~spc g~
+~spc g s~ maggit status
+
+~r i~ rebase interactively. You want to rebase your changes onto master so that they come first
+
+use =smerge= to handle changes
+**** TODO: change smerge bindings to ~spc o g s ~
+
+*** shells
+honestly, I want the same as I get from kitty
+~vterm~
+~eshell~ not really a shell but a great elisp testing env and to learn about elisp
+#+begin_src elisp
+(defun greet-person (name)
+  "Echo a greeting message with the given NAME."
+  (message "Hello, %s!" name))
+#+end_src
+
+*** buffer ~spc c~
+~spc b .~ buffer transient mode ( allow for buffer movement)
+
+*** text ~spc x~
+~spc x K~ move line up
+~spc x J~ move line down
+
+*** lsp/error ~spc e~
+~] q/l~  ~spc e n~ next error
+~[ q/l~ ~spc e p~ previous error
+
 *** help ~spc h~
 ~spc h d <command>~ describe
 ~spc h d m~ describe current mode (super usefull)
 
-*** dired ~spc f j~
+*** dired ~spc f j/spc a d~
 a better way to navigate the filetree and create/modify
 ~s~ toggle sorting options
 ~C~ copy file(s)
@@ -41,6 +70,8 @@ a better way to navigate the filetree and create/modify
 ~O~ chwon (change the owner)
 ~X~ execute bash command
 ~c-x c-f~ create file
+~+~ create dir
+~^/-~ move up the folder
 
 ~t~ mark-all
 ~m~ mark
