@@ -1,7 +1,9 @@
 :PROPERTIES:
 :ID:       130635ef-5b04-4ac4-b1e1-63840f077d83
 :END:
-#+title: Maintenance - Home
+#+title: Home - Maintenance
+
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
 
 * Routine Maintenance
 ** Equipment maintenance

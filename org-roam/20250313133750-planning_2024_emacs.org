@@ -44,6 +44,7 @@ honestly, I want the same as I get from kitty
   "Echo a greeting message with the given NAME."
   (message "Hello, %s!" name))
 #+end_src
+[[https://www.youtube.com/watch?v=2LzDgaen1cQ][The Different Shells Available In Emacs - YouTube]]
 
 *** buffer ~spc c~
 ~spc b .~ buffer transient mode ( allow for buffer movement)
@@ -73,6 +74,7 @@ a better way to navigate the filetree and create/modify
 ~+~ create dir
 ~^/-~ move up the folder
 
+~m -> R~ move dir/files
 ~t~ mark-all
 ~m~ mark
 ~u~ unmark
@@ -138,3 +140,12 @@ Additions
 [[https://github.com/tpope/vim-surround][GitHub - tpope/vim-surround: surround.vim: Delete/change/add parentheses/quot...]]
 
 *** Folds management
+
+** Spacemacs/layers
+*** Emmet
+Part of html by
+#+begin_src html
+  ul>li*5
+#+end_src
+[[https://docs.emmet.io/cheat-sheet/][Cheat Sheet]]
+=C-j= ~emmet-expand-line~

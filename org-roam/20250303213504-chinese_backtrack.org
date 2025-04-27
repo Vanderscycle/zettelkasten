@@ -15,34 +15,92 @@
 农业 nong2ye4: agriculture
 开矿 kai1kuang4: mining
 
-*** fruits/veggies/product
+*** history
+大战 da4zhan4: war
+海军行动 hai3jun1 xing2dong4: naval operations
+
+*** fruits/veggies/products
 草莓 cao3mei2: strawberry
 蓝莓 lan2mei2: blueberry
 西瓜 xi1gua1: watermelon
 食品 shi2pin3 food
 产品 chan3pin3: product
+西红柿 xihong2shi4 tomato
+番茄 fan1qie2: tomator
 
+*** nature
 树 shu4: tree
+棵树 ke1shu4: (m.w.) tree
 森林 sen1lin2: forest
 木头 mu4tou: wood
 
+*** animals (chinese calendar)
+鼠 shu3: rat
+牛 niu2: ox
+虎 hu3: tiger
+兔 tu4: rabbit
+龙 long: dragon
+蛇 she2: snake
+马 ma3: horse
+羊 yang2: sheep
+猴 hou2: monkey
+鸡 ji1: chicken/rooster
+狗 gou3: dog
+猪 zhu1: pig
+
+*** clothings
+
+*** food
+粽子 zong4zi3: zongzi ( dragon boat festival food )
+
+*** countries/continents/nature locations
 亚洲 ya4zhou1: asia
 欧洲 ou1zhou1: europe
 葡萄牙 pu2tao2ya2: portugal
 西班牙 xi1ban1ya2: spain
+土耳其 tu3er3qi: turkiye
+泰国 tai2guo: thailand
+黑海 hei1hai3: black sea
+太平洋 tai4ping2yang2: pacific ocean
+洋 yang2: ocean
+多伦多 duo1lun2duo1: toronto
+巴黎 ba1li2: paris
+
+*** car/engineering
+车 che1: car
+车辆 che1liang: vehicle
+工程车 gongcheng2che: engineering vehicle
+引擎 yin3qing2: engine
+高速公路 gao1su4 gong1lu4: highway
+
+*** jobs
+海军的官员 hai3jun1de guan1yuan2: navy officers
 
 *** Action verb
+接到 jie1dao4: receive (v)
+收到 shou1dao4: receive (v)
+活下来 huo2 xia4lai2: survive (v)
+协调 xie2tiao2: coordinate (v)
+读 du2: read (v)
+本来 ben3lai2: would (v)
+控制 kong4zhi4: control (v)
 放松 fang4song1: relax (v)
 修理 xiu1li3: repair (v)
 担心 dan1xin1: worry (v)
 毕业 bi4ye4: graduate (v)
 愿意 yuan4yi4: willing (v)
 瞧不起 qiao2bu4qi3: look down (v)
+受到 shou4dao4: receive (v)
 
-*** Places
+
+*** buildings/places
+警察站 jing3cha2 zhan4: police station
 博物馆 bo2wu4guan3: museum
 图书馆 tu2shu1 guan3: library
 美术馆 mei3shu4guan3: art gallery
+飞机跑道 feiji1 pao3dao4: airstrip
+飞机场 fei1ji1 chang3: airport
+邮局 you2ju2: post office
 
 安全 an1quan2: safety
 怎么可能 how is that possible?
@@ -70,6 +128,10 @@
 混血儿 mixed race (lit. mixed blood)
 
 *** body/maladies/medecine
+考试 kao3shi4: exam
+验血 yan4xie3: blood test
+受到医疗 shou4dao4 yi1liao2: receive treatment
+医疗 yi1liao2: treatment
 血 xie3: blood
 癌症 ai2zheng4: cancer
 头疼 touteng: headache
@@ -93,7 +155,58 @@
 姐姐 jiejie: older sister
 妹妹 meimei: younger sister
 
+*** measurement
+米 mi3: rice/meter (n)
+公里 gong1li3: kilometer (n)
+公斤 gong1jin1: kilogram (n)
+克 ke4: gram (n)
+马力 ma3li4 horsepower (n)
+
+*** numbers
+百 bai3: 100
+千 qian1: 1k
+万 wan4: 10k
+百万 bai3wan4: 100k
+千万 qian1wan4: 1 million
+亿 yi4: 100 millions
+*** misc (time marker)
+之前 zhi1qian: before
+之后 zhi1hou4: after
+大概也 dagai ye: probably
+就目前 jiu4mu4qian2: for now
+
+退休 tui4xiu1: retired (adj)
+泰国医系统 tai4guo2 yi1liao2 xi4tong3: thai medical system
+包要 bao1yao4: mail
+过程 guocheng: process
+不过 bu4guo: but
+大概也 dagai: about
+目标时 mu4biao1shi1: target time
+目标 mu4biao: target/goal(n)
 表征 biao3zheng1: characterization
 继续 ji4xu4: continue
 军队系统 jun1dui4 xi4tong3: military system
 模式 mo2shi4: pattern
+正常 zhengchang: normal
+正常的工作 zhengchang de gongzuo: normal work/operation
+观光 guan1guang1: tourism
+太平 tai4ping2: peace and tranquility
+几乎 ji1hu1: almost
+方法 fang1ga3: method
+发现 fa1xian4: discover
+足够 zu2gou4: enough
+官员 guan1yuan2: officers/officials
+秘密 mi4mi4: secret
+行动 xing2dong4: operation/action
+电子邮件 dian4zi3 you2jian4: email
+类似 lei4si4: similar
+其中一个人 qi2zhong1 yi1ge4 ren4: one of them
+
+*** Patterns
+他从哪里得到去这里: how did he get here? 得到 de2dao4 got
+最近公司产品一样旧的产品:  (不)一样 yiyang4: same/sim
+接到一个打电话: received a call
+打电话给他: give him a call
+---
+如果我做了一样的东西在海军的工作老板本来给警察电话
+我最近读美国新闻关于高政府官员用一个app叫“signal”协调秘密行动
