@@ -1981,14 +1981,21 @@ AWS Firewall Manager simplifies your administration and maintenance tasks across
 
 kinda like ~control tower~
 
-** TODO Design [0/4]
-DEADLINE: <2024-10-13 Sun>
-*** TODO Security
-*** TODO Reliability
-*** TODO Performance
-*** TODO Cost-optimization
+** DONE Design [0/4]
+CLOSED: [2025-05-05 Mon 15:35] DEADLINE: <2024-10-13 Sun>
+- State "DONE"       from "TODO"       [2025-05-05 Mon 15:35]
+*** DONE Security
+    CLOSED: [2025-05-05 Mon 15:35]
+*** DONE Reliability
+    CLOSED: [2025-05-05 Mon 15:35]
+*** DONE Performance
+    CLOSED: [2025-05-05 Mon 15:35]
+*** DONE Cost-optimization
+    CLOSED: [2025-05-05 Mon 15:35]
 
-** TODO Exams [/]
+** DONE Exams [/]
+   CLOSED: [2025-05-05 Mon 15:35]
+   - State "DONE"       from "TODO"       [2025-05-05 Mon 15:35]
 *** Old once a week
 *** New 2 of them
 DEADLINE: <2024-10-21 Mon>
