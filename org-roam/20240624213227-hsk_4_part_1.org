@@ -6,100 +6,144 @@
 * HSK Part 1
 ** Module 1
 *** 课文第一
-图片 tu2pian4: photograph
-照片 zhao4pian4: photograph
-选择 xuan3ze2: select/choose
-新闻 xin1wen2: news
-（门）men door radical
-假日 jia4re4： holiday
-（亻） ren man 人 - left of char
-班 ban1 class
-（玉王） wang2/yu4 king/jade usually its
-身高 shen1gao1: height
-(身) shen1 body
-体重 ti3zhong4: body weight
-（亻） ren man 人
-（里）li3: village/unit of distance
-头发 tou2fa: hair
-眼睛 yan3jing: eye
-（目）mu4: eye
-学校 xue2xiao4: school
-（子）zi3: child
-法律 fa3lv4: law
-比赛 bi3dai4: competition/match
-足球 zu2qiu2: soccer
-球 qiu2: ball
-（足）zu2: foot
-深 shen1: deep (as in deep feelings)
-印象 yin1xiang1: impression
-熟悉 shu2xi1: become familiar
-（火 灬） huo3: fire
-仅 jin3: only
-性格 xing4ge2: personality
-后来 hou4lai2: later
+    图片 tu2pian4: photograph
+    照片 zhao4pian4: photograph
+    选择 xuan3ze2: select/choose
+    新闻 xin1wen2: news
+    （门）men door radical
+    假日 jia4re4： holiday
+    （亻） ren man 人 - left of char
+    班 ban1 class
+    （玉王） wang2/yu4 king/jade usually its
+    身高 shen1gao1: height
+    (身) shen1 body
+    体重 ti3zhong4: body weight
+    （亻） ren man 人
+    （里）li3: village/unit of distance
+    头发 tou2fa: hair
+    眼睛 yan3jing: eye
+    （目）mu4: eye
+    学校 xue2xiao4: school
+    （子）zi3: child
+    法律 fa3lv4: law
+    比赛 bi3dai4: competition/match
+    足球 zu2qiu2: soccer
+    球 qiu2: ball
+    （足）zu2: foot
+    深 shen1: deep (as in deep feelings)
+    印象 yin1xiang1: impression
+    熟悉 shu2xi1: become familiar
+    （火 灬） huo3: fire
+    仅 jin3: only
+    性格 xing4ge2: personality
+    后来 hou4lai2: later
 **** Radicals
-（亻） ren man 人
-（身） shen1 body
-（里）li3: village/unit of distance
-（目）mu4: eye
-（子）zi3: child
-（刂 刁 刀） dao1: knife
-（心 忄）xin1: heart
-（宀）mian2: roof
-（女）nv3: woman
-（足）zu2: foot
-（火 灬） huo3: fire
+     （亻） ren man 人
+     （身） shen1 body
+     （里）li3: village/unit of distance
+     （目）mu4: eye
+     （子）zi3: child
+     （刂 刁 刀） dao1: knife
+     （心 忄）xin1: heart
+     （宀）mian2: roof
+     （女）nv3: woman
+     （足）zu2: foot
+     （火 灬） huo3: fire
 **** forgotten words
-害怕 haipa: afraid
-安全 an1quan2: safe
-担心 dan1xin1: worry
-小心 xiao3xin1: careful
-班跟 bangen1: class
-慢慢 man4man4: slow(ly)
+     害怕 haipa: afraid
+     安全 an1quan2: safe
+     担心 dan1xin1: worry
+     小心 xiao3xin1: careful
+     班跟 bangen1: class
+     慢慢 man4man4: slow(ly)
 **** Sentences
-今天有班跟们吗 You have classes today?
-者才敢开始 this is only the beginning/
+     今天有班跟们吗 You have classes today?
+     者才敢开始 this is only the beginning/
 
 *** 课文第二
-结婚 jie2hun1: marry
-（女/纟） women/silk radical
-开玩笑 kai1wan2xiao4: to be kidding ( you have to be ...)
-长 zhang3: long distance/interval/time (v) -> strong wish or desire
-才 cai2: just now/only/really (adv)
-爱好 ai4hao3: hobby
-兴趣 xing4qu4: interest/hobby
-（走）zou: walk
-走路 zou3lu4: to walk
-公共 gong1gong4: public
-火车站 huo3che1zhan4: train station
-共同 gong4tong2: common
-经常 jing1chang2: frequently
-（糸 纟）si1: silk
-（巾） jin clothe
+    结婚 jie2hun1: marry
+    （女/纟） women/silk radical
+    开玩笑 kai1wan2xiao4: to be kidding ( you have to be ...)
+    长 zhang3: long distance/interval/time (v) -> strong wish or desire
+    才 cai2: just now/only/really (adv)
+    爱好 ai4hao3: hobby
+    兴趣 xing4qu4: interest/hobby
+    （走）zou: walk
+    走路 zou3lu4: to walk
+    公共 gong1gong4: public
+    火车站 huo3che1zhan4: train station
+    共同 gong4tong2: common
+    经常 jing1chang2: frequently
+    （糸 纟）si1: silk
+    （巾） jin clothe
 **** Radicals
-（走）zou: walk
-（心 忄/ 丿 乀 乁）xin1: heart pie3: slash
-（示 礻） shi4 spirit
+     （走）zou: walk
+     （心 忄/ 丿 乀 乁）xin1: heart pie3: slash
+     （示 礻） shi4 spirit
 **** forgotten words
-快乐 kuai4le4: happy
-（心 忄/ 丿 乀 乁）xin1: heart pie3: slash
-幸福 xing4fu2
-（干/示 礻） gan: dry /shi4: spirit
-我笑了 I laugh
-习惯 xi2guan4: habit
-高速公路 gaosu gong1lu4: highway
-马路 ma3lu4: road/street
-唱歌 changge: sing
-找到 zhaodao: find
-（示 礻） shi4 spirit
-祝 zhu4:wish
+     快乐 kuai4le4: happy
+     （心 忄/ 丿 乀 乁）xin1: heart pie3: slash
+     幸福 xing4fu2
+     （干/示 礻） gan: dry /shi4: spirit
+     我笑了 I laugh
+     习惯 xi2guan4: habit
+     高速公路 gaosu gong1lu4: highway
+     马路 ma3lu4: road/street
+     唱歌 changge: sing
+     找到 zhaodao: find
+     （示 礻） shi4 spirit
+     祝 zhu4:wish
 **** Sentences
-你有特别坏的习惯 you have bad habits
+     你有特别坏的习惯 you have bad habits
 
 *** 课文第三
+    妻子 qi1zi3 wife
+    （女/子） nv3: women/zi3: child radical
+    生活 sheng1huo2: life
+    （水/氵） shui3: water
+    丈夫 zhang4fu1: husband
+    （一/大）yi1: one/da1: big
+    新鲜 xin1xian1: fresh
+    （鱼） yu2: fish
+    完 wan2: finish
+    （宀）mian2:roof
+    玩 wan2: play
+    （玉） wang2/yu4
+    浪漫 lang4man4: romantic
+    （水/氵） shui3: water
+    不够 bu4gou: not enough
 **** Radicals
+     （水/氵） shui3: water
+     （一/大）yi1: one/da1: big
+     （鱼） yu2: fish
+     （玉） wang2/yu4
+     缺点 que1dian3: shortcomings
+     能更 neng1geng4: can be more
 **** forgotten words
+     真的 zhen1de: really
+     （目） mu4: eye
+     挺 ting3: very
+     （扌） shou3: hand
+***** REVIEW 快乐 kuai4le4: happy
+      （心 忄/ 丿 乀 乁）xin1: heart pie3: slash
+***** REVIEW 幸福 xing4fu2: happy
+      （干/示 礻） gan: dry /shi4: spirit
+***** REVIEW 问题 wenti: problems
+**** pattern/sentences
+     你说的对 you said it!
+     你有更多钱 you have more money
 
+*** Exercises
+    不仅/也/还/而且
+    主语 zhu3yu3: subject (grammar)
+    句分 ju4fen1: sentence
+**** forgotten words
+     例如 li4ru2: for example
+     比如 bi3ru2: for example
+     想 xiang3: want
+     思 si1: think
+     主 zhu3 owner/master
+（丶） zhu3: dot
 *** 课文第四
 **** Radicals
 **** forgotten words

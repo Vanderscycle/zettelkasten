@@ -1,0 +1,6 @@
+* ACTIVE [#C] sdjsdjsdjsd
+  :LOGBOOK:
+  CLOCK: [2025-05-08 Thu 21:56]--[2025-05-08 Thu 21:56] =>  0:00
+  :END:
+[[https://github.com/james-stoup/emacs-org-mode-tutorial][GitHub - james-stoup/emacs-org-mode-tutorial: A primer for users trying to ma...]]
+:Created: <2025-05-08 Thu 21:40>
