@@ -2,13 +2,24 @@
 :ID:       E56FBF4A-27B5-417A-960B-BD0D5C8E16A6
 :END:
 #+title: Learning - 2025 - Emacs
-
-* return
-
+#+BEGIN: clocktable :scope file :maxlevel 4
+#+CAPTION: Clock summary at [2025-05-18 Sun 16:54]
+| Headline                 | Time |      |      |
+|--------------------------+------+------+------|
+| *Total time*               | *0:07* |      |      |
+|--------------------------+------+------+------|
+| Emacs                    | 0:07 |      |      |
+| \_  .Spacemacs           |      | 0:02 |      |
+| \_  Productivity         |      | 0:05 |      |
+| \_    learn about macros |      |      | 0:04 |
+| \_    spelling ~spc S~     |      |      | 0:01 |
+#+END:
 
 * Emacs
-
 ** .Spacemacs
+   :LOGBOOK:
+   CLOCK: [2025-05-18 Sun 16:52]--[2025-05-18 Sun 16:54] =>  0:02
+   :END:
 To configure one off packages that aren't part of a layer use the =dotspacemacs-additional-packages= list. While in the list you can futher customize it by accessing the package's config with the =:config= option.
 
 I am sure there are more possibilities that I am not awayre
@@ -27,12 +38,33 @@ Given a list that we want to append an element to it calling =add-to-list= will 
 
 
 ** Productivity
+*** TODO [#E] learn about macros
+    :LOGBOOK:
+    CLOCK: [2025-05-18 Sun 16:42]--[2025-05-18 Sun 16:46] =>  0:04
+    :END:
+*** spelling ~spc S~
+    :LOGBOOK:
+    CLOCK: [2025-05-18 Sun 16:50]--[2025-05-18 Sun 16:51] =>  0:01
+    :END:
+~spc S b~ check the buffer
+~spc S .~ spellcheck transient state
+If you leave the transient state while checking you may still be in spellcheck mode, at which you can simply ~spc S . Q~ to disable and quit. Otherwise it takes over
 *** ~spc a~ application
 **** ~spc a o~ org
 ~spc a o o~ org agenda (hydra)
 ~spc a o r~ org roam
 ~spc a o r c~ org-roam capture (needs a template)
-
+while in org mode ~spc m p~ can set the priority from A =hightest= to F =lowest=
+***** tables
+~spc m t n~ new org table
+~spc m t i c/r~ org table new col/row
+~spc m t d c/r~ org table delete col/row
+[[https://orgmode.org/worg/org-tutorials/org-spreadsheet-intro.html][Org as a spreadsheet system: a short introduction]]
+[[https://orgmode.org/worg/org-tutorials/org-spreadsheet-lisp-formulas.html][Org as a spreadsheet system: using Emacs lisp as formulas]]
+***** Clock
+~spc a o C i/o~ org clock in/out
+=org-clock-report=
+[[https://www.youtube.com/watch?v=o6rE18Mxu9U][Analyze Your Time with Org Mode — Org Mode Clocktables — Straightforward Emac...]]
 *** ~spc g~ git
 ~spc g s~ maggit status
 
@@ -51,6 +83,11 @@ honestly, I want the same as I get from kitty
   (message "Hello, %s!" name))
 #+end_src
 [[https://www.youtube.com/watch?v=2LzDgaen1cQ][The Different Shells Available In Emacs - YouTube]]
+
+*** folds/zoom ~spc z~
+    ~spc z .~ fold transient
+    ~spc z x~ font transient zoom
+    ~spc z f~ buffer transient zoom
 
 *** buffer ~spc c~
 ~spc b .~ buffer transient mode ( allow for buffer movement)
@@ -107,7 +144,7 @@ You can view general ones like =helm-map= or specific ones like =helm-ag-map=
 **** usefull ones:
 mark ~c-SPC~
 
-*** searching
+*** searching ~spc s~
 =<scope>=
 d: current dir
 b: opened buffers
@@ -122,7 +159,12 @@ b: opened buffers
 using ~occur~ for single buffer ~multi-occur~ for all opened buffers, ~multi-occur-in-matching-buffers~ for matching ones and ~projectile-multi-occur~ for all within a project
 
 *** evil-motion
-Using ~g s [sS]~ to jump directly to a word either forward ~s~ or backward ~S~ depneding on the position of your cursor. You can use ~g s <evil-motion-verb>~ to jump to line
+Using ~g s [sS]~ to jump directly to a word either forward ~s~ or backward ~S~ depending on the position of your cursor. You can use ~g s <evil-motion-verb>~ to jump to line
+~g s j/k~ to jump to a specific line
+~g s w/b/e~ to jump to a specific word on the current line
+
+*** quick page navigation
+~page up/down~ to easily go up/down pags. Combined with folds it can be very powerful
 
 *** evil-surround
 Tool that enables the addition, change and removal or parentheses, brackets, quotes, XML tags?, etc.
@@ -141,11 +183,11 @@ Additions
   // wrap the entire line yss) or yssb
   (wrap the entire line hello world)
 #+end_src
+
 **** Reference
 [[https://github.com/tpope/vim-surround][GitHub - tpope/vim-surround: surround.vim: Delete/change/add parentheses/quot...]]
-
 *** Folds management
-
+use ~spc z .~ for transient state. While in this state you can still use =evil-motion= and add entries trhought the insert mode
 ** Spacemacs/layers
 *** Emmet
 Part of html by

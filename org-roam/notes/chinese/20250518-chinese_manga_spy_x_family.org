@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       994de6d1-e178-4843-9f1a-b5c4552c40c1
+:END:
+#+title: chinese - manga - spy x family
+#+filetags: :chinese:
+* chinese - manga - spy x family
+Root Parent: [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][chinese]]

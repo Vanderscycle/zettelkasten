@@ -19,7 +19,8 @@ Optimize tools and processes to do things more effectively and quicker
 - [[id:b97b4990-719f-4543-adcc-ae644195f63b][emacs]]
 - [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][Chinese]]
 - [[id:a74c4871-0967-4865-8920-ce84c9671812][zsa-moonlander]]
-
+- [[id:eb639da8-b533-46df-a0ab-3a7135e4349b][books]]
+- [[id:51da34a8-7794-48ef-89c1-c152a4ecd30a][Sports - kettlebells]]
 * Important days
 ** Wife's birthday
 <2024-12-04 Wed+1y>

@@ -32,6 +32,24 @@ pnpm i -D @sveltejs/adapter-node
 #+end_src
 
 ** Languages
+- Latex
+the required spacemacs vars to run on =spacemacs=
+#+begin_src elisp
+     (latex :variables
+            latex-enable-auto-fill t
+            latex-enable-folding t
+            latex-view-pdf-in-split-window t
+            latex-backend 'lsp
+            latex-refresh-preview t
+            lsp-latex-build-on-save t
+            latex-build-command "LaTeX") ;; oh baby its time to go even beyond
+(add-hook 'LaTeX-mode-hook
+          (defun fn/latex-compile-on-save ()
+            (add-hook 'after-save-hook (lambda () (TeX-command-run-all nil)) nil t)))
+#+end_src
+
+Essentially when editing have 2 windows one with the pdf and one with the ~.tex~ file. It will recompile on save.
+
 - [[id:205000be-2427-4660-89ab-a1d0f0c9eebf][Programming - GO]]
 - [[id:d04ef69b-d3e3-452a-a2a4-ae06e238687d][Programming - Bash]]
 - [[id:0b8da363-eaf4-4c96-a8b4-2975ff99ea65][Programming - Nix]]
