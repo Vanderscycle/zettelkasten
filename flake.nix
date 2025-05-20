@@ -13,7 +13,7 @@
       nixpkgs,
       sops-nix,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
       src = pkgs.lib.cleanSource ./org-roam;
@@ -24,6 +24,16 @@
       sopsKey = /home/henri/.config/sops/age/keys.txt;
     in
     {
+
+      devShells.${system} = {
+        # nix develop .#encrypt
+        sops_shell = (
+          import ./encrypt.nix {
+            inherit pkgs;
+            inherit inputs;
+          }
+        );
+      };
       org_protected_b_encrypt = pkgs.stdenv.mkDerivation {
         name = "encrypt org/work files";
         src = ./.;
