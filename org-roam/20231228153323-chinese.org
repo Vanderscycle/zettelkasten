@@ -38,3 +38,176 @@ Once and for all become able to speak chinese
 [[id:41883002-a0a9-47d3-928a-68031189ab48][mandarin corner - work cultural aspects]]
 [[id:2e902f42-7737-41db-aaac-dd0ce71ebd1b][mandarin corner - chinese men so feminine]]
 [[id:8028f567-979e-4d51-9cd9-1be35b676429][chinese firepower]]
+
+* Review
+* Chinese Vocabulary and Phrases
+
+** 📄 Daily Life & Work
+| Word/Phrase               | Chinese               | Pinyin         | Meaning                             |
+|--------------------------+-----------------------+----------------+-------------------------------------|
+| 护照                     | 护照                  | hùzhào         | passport                            |
+| 照顾                     | 照顾                  | zhàogù         | look after (v)                      |
+| 两月大                   | 两月大                | —              | (newborn) 2 months old              |
+| 回去工作                 | 回去工作              | —              | back to work                        |
+| 请给我多两个星期价格无薪休假 | —                     | —              | please give me 2 more weeks unpaid |
+| 无                       | 无                    | wú             | no/not (adv)                        |
+| 无聊                     | 无聊                  | wúliáo         | boring                              |
+| 薪水                     | 薪水                  | xīnshuǐ        | salary                              |
+| 休假                     | 休假                  | xiūjià         | be on leave/vacation                |
+| 健身房                   | 健身房                | jiànshēnfáng   | gym                                 |
+| 做运动                   | 做运动                | —              | to exercise                         |
+| 堂课                     | 堂课                  | tángkè         | class                               |
+
+** 🏠 Home & Family
+| Phrase                   | Chinese               | Pinyin         | Meaning                             |
+|-------------------------+-----------------------+----------------+-------------------------------------|
+| 装修房子                 | 装修房子              | zhuāngxiū fángzi | house renovations                  |
+| 房子装修给我们了一个卧房多 | —                     | —              | house renos gave us another bedroom |
+| 孙子                     | 孙子                  | sūnzi          | grandson                             |
+| 尿布                     | 尿布                  | niàobù         | diaper                               |
+
+** 🔄 Certainty & Feelings
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 不确定                 | 不确定                | bù quèdìng     | uncertain                            |
+| 确定                   | 确定                  | quèdìng        | certain                              |
+| 痛苦                   | 痛苦                  | tòngkǔ         | painful                              |
+| 疼痛                   | 疼痛                  | téngtòng       | pain                                 |
+| 完美                   | 完美                  | wánměi         | perfect                              |
+
+** 🛁 Hygiene & Bathroom
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 洗澡                   | 洗澡                  | xǐzǎo          | bath                                 |
+| 洗手间                 | 洗手间                | xǐshǒujiān     | toilet                               |
+
+** 🧠 Behavior & Psychology
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 习惯                   | 习惯                  | xíguàn         | habit / be used to                  |
+| 总是                   | 总是                  | zǒngshì        | always                              |
+| 拖拖拉拉               | 拖拖拉拉              | tuōtuōlālā     | procrastination                     |
+| 健忘                   | 健忘                  | jiànwàng       | forgetful                           |
+| 好习惯                 | 好习惯                | —              | good habit                          |
+| 坏习惯                 | 坏习惯                | —              | bad habit                           |
+
+** 🧒 Parenting
+| Phrase                 | Chinese               | Pinyin         | Meaning                             |
+|-----------------------+-----------------------+----------------+-------------------------------------|
+| 我陪我的宝宝小睡觉     | —                     | —              | I take my baby to nap               |
+| 小睡                   | 小睡                  | xiǎoshuì        | nap                                 |
+| 睡觉                   | 睡觉                  | shuìjiào        | sleep                               |
+| 起床                   | 起床                  | qǐchuáng        | wake up                             |
+| 当父母是               | 当父母是              | —              | to be parents                       |
+| 发彼此脾气             | 发彼此脾气            | fā bǐcǐ píqì   | get angry at each other            |
+
+** 🗣️ Communication
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 语言                   | 语言                  | yǔyán          | language                             |
+| 你问了什么             | —                     | —              | what did you ask                     |
+| 叫我                   | 叫我                  | jiào wǒ        | talk to me                           |
+| 大叫我                 | 大叫我                | dà jiào wǒ     | shout at me                          |
+| 笑了的时候             | 笑了的时候            | xiàole de shíhòu| when I laugh                         |
+
+** 🧠 Mind & Focus
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 注意                   | 注意                  | zhùyì          | notice                               |
+| 注意力                 | 注意力                | zhùyìlì        | attention                            |
+| 主意                   | 主意                  | zhǔyì          | idea                                 |
+
+** 🧪 Food & Products
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 奶粉                   | 奶粉                  | nǎifěn         | milk powder                          |
+| 品质                   | 品质                  | pǐnzhì         | quality                              |
+| 食品                   | 食品                  | shípǐn         | food                                 |
+| 品产                   | 品产                  | pǐnchǎn        | products                             |
+| 高品质的食品           | 高品质的食品          | —              | high quality food                    |
+| 高品质的品产           | 高品质的品产          | —              | high quality products                |
+| 味道                   | 味道                  | wèidào         | taste                                |
+| 品尝                   | 品尝                  | pǐncháng        | taste/sample (v)                     |
+| 闻到                   | 闻到                  | wéndào         | smell                                |
+
+** 🚗 Travel & Distance
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 他们发现需要开车快     | —                     | —              | they found the need to drive fast   |
+| 爱好                   | 爱好                  | àihào          | hobby                                |
+| 公里                   | 公里                  | gōnglǐ         | kilometers                           |
+| 米                     | 米                    | mǐ             | meters                               |
+| 公斤                   | 公斤                  | gōngjīn        | kilograms                            |
+| 克                     | 克                    | kè             | grams                                |
+| 特别重                 | 特别重                | tèbié zhòng    | especially heavy                     |
+| 20磅                   | 20磅                  | 20 bàng        | 20 pounds                            |
+
+** 💡 Patterns & Grammar
+| Pattern Example                                     | Chinese                            | Pinyin              | Translation                          |
+|-----------------------------------------------------+------------------------------------+---------------------+--------------------------------------|
+| 我两个年前习惯早起床                                | —                                  | —                   | I used to get up early 2 years ago   |
+| 我需要(总是)早上六点起床                             | —                                  | —                   | I need to always wake at 6am         |
+| 吃完饭以后你最好贴运动                              | —                                  | —                   | You’d better work out after eating   |
+| 我需要闹着                                         | —                                  | —                   | I need some noise/activity           |
+
+** 🔊 Sound & Noise
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 热热闹闹               | 热热闹闹              | rèrè nàonào    | lively/bustling                     |
+| 闹                     | 闹                    | nào            | noisy                               |
+| 热                     | 热                    | rè             | hot                                 |
+
+** 🗑️ Garbage & Chores
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 丢垃圾                 | 丢垃圾                | diū lājī       | throw garbage                        |
+| 我要去丢垃圾           | —                     | diūlājī        | I'm going to throw out garbage      |
+
+** 🚪 Opportunity & Time
+| Word/Phrase             | Chinese               | Pinyin         | Meaning                             |
+|------------------------+-----------------------+----------------+-------------------------------------|
+| 机会                   | 机会                  | jīhuì          | opportunity                         |
+| 需要                   | 需要                  | xūyào          | need                                 |
+| 应该                   | 应该                  | yīnggāi        | should                               |
+| 必须                   | 必须                  | bìxū           | must                                 |
+---
+
+高级 gao1ji2: advanced
+中级 zhong1ji2: intermediate
+入门级 ru4men2 ji2: entry level
+
+人工智能 ren2gong1zhi4neng2: ai
+留在 liu2zai4: stay
+离开 li2kai1: leave
+加薪(水) jia1xin1shui3: salary increase
+
+挺久以前 ting3ji3yi3qian2: a long time ago
+接受 jie1shou4: accept
+谢绝 xie4jue2: decline
+我能谢绝 I can decliene
+以来1700年 yi3lai2: since (1700)
+下年
+
+** Days (日)
+| English               | Chinese | Pinyin     |
+|-----------------------+---------+------------|
+| Yesterday             | 昨天    | zuó tiān   |
+| Today                 | 今天    | jīn tiān   |
+| Tomorrow              | 明天    | míng tiān  |
+| Day before yesterday  | 前天    | qián tiān  |
+| Day after tomorrow    | 后天    | hòu tiān   |
+
+** Years (年)
+| English          | Chinese | Pinyin    |
+|------------------+---------+-----------|
+| Year before last | 前年    | qián nián |
+| Last year        | 去年    | qù nián   |
+| This year        | 今年    | jīn nián  |
+| Next year        | 明年    | míng nián |
+| Year after next  | 后年    | hòu nián  |
+|                  |         |           |
+
+我的老板比我跟年轻的 my boss is younger than me
+每一到三年 every on to three years
+职业 zhi2ye4: profession
+毕业 bi4ye4: graduation (n) graduate (v)

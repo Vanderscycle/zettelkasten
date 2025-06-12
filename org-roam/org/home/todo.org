@@ -30,3 +30,7 @@
 ** TODO [#C] Check if modules can be applied in the config and if so use the example bellow
  [[https://github.com/heisfer/nixdot/blob/main/modules/userspace/default.nix][nixdot/modules/userspace/default.nix at main · heisfer/nixdot · GitHub]]
  :Created: <2025-05-15 Thu 18:42>
+** TODO [#E] Instead of multiple micro services running in separate containers on proxmox let's have one vm with many containers
+[[https://oblivion.keyruu.de/Homelab/Quadlet][Goodbye Docker, hello Quadlet]]
+[[file:~/Documents/dotFiles/nix-darwin/flakes/home-lab/configuration.nix][homelab example]]
+ :Created: <2025-05-19 Mon 22:19>

@@ -33,5 +33,7 @@ creation_rules:
 ** Generating a secret
 #+begin_src bash
 sops  secrets/<name>.yaml
+# or if emacs is your default
+EDITOR=nvim sops secrets/secrets.yaml
 #+end_src
 If using ~emacs~ or (~emacsclient~) save the file using =c-x #=
