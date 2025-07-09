@@ -140,3 +140,5 @@ When performing stack surgery do not use the =yarn run= defined command instead 
 #+begin_src bash
   yarn run cdk --app 'npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/<env>.ts' deploy/diff -e <your stack> --profile <your profile>
 #+end_src
+
+** Conflicting aws cdk

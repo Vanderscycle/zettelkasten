@@ -27,3 +27,7 @@ console.log(CardinalDirection[1])
 #+RESULTS:
 : 1
 : North
+
+** overloads
+
+Because ts compiles down to js; ts will let you declare multiple function signatures, but it will not let you implement multiple versions of the same function.

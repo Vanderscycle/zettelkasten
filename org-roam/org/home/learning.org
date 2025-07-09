@@ -1,0 +1,87 @@
+* Learning Notes
+** Wizer - XSS
+   :PROPERTIES:
+   :END:
+*** SSRF Server-side request forgery
+    check the returned data e.g. expect a .png and you get a json
+disable redirection for the webclient
+enable auth on internal services + keep them up to date.
+*** SQL injection
+  Use a secure ORM like drizzle
+  Stored procedures
+  #+begin_src sql
+  CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+  AS
+  SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+  GO;
+
+  EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
+  #+end_src
+
+  Avoid raw sql queries
+  #+begin_src sql
+  -- userInput comes from the ui
+  SELEC * FROM cats WHERE name == ${userInput}
+  #+end_src
+
+  If you must use raw sql queires
+#+begin_src sql
+INSERT INTO products (name, price) VALUES (?, ?);
+INSERT INTO products (name, price) VALUES ('bike', '10900');
+#+end_src
+*** What is SSTI (Server-Side Template Injection)
+    Essentially injecting templating language inside input like {{python.__Init__.__import__.}} or {{
+*7*}
+*** Password Hashing
+    careful about rainbow tables
+    salt hashing (rand) + pepper (non-rand) and not stored in db
+*** Prototype Pollution
+    usage of =__proto__=
+*** IDOR (Insecure Direct Object Reference)
+    Essentially routes like =/invoices/${id}= should have an authentication (supabase user)
+*** tips
+- Implement a strong CSP (content-security-policy) extra layer of security by telling the website what content can be loaded and from where.
+check csp-evaluator
+- DOMPurify library
+- set http only on the cookies
+- For nuxtjs, you can use [[https://nuxt-security.vercel.app/getting-started/installation][Installation - Nuxt Security]]
+*** Content-Security-Policy (CRITICAL)
+    prevents XSS dom/script injection
+    header is always processed first
+*** Race Conditions
+*** CSRF Mitigation
+    csrf-token or custom header or cors
+[[https://cheatsheetseries.owasp.org/index.html][Introduction - OWASP Cheat Sheet Series]]
+** org-mode properties
+   :PROPERTIES:
+   :END:
+  You can use ~SPC s s p~ to search the org file per properties
+*** Effort: time required to complete a task (it will show up in org-clock)
+*** references
+[[https://orgmode.org/manual/Properties-and-Columns.html][Properties and Columns (The Org Manual)]]
+** .spacemacs crash
+   :PROPERTIES:
+   :END:
+*** unable to use emacs due to circular conflict.
+Make the changes to =~/.spacemacs= using a different editor then run the following cmd in the cli ~emacs --eval "(dotspacemacs/sync-configuration-layers)"~
+** aws cdk
+   :PROPERTIES:
+   :END:
+***
+#+begin_src
+                node -e "
+                  const esbuild = require('esbuild');
+                  const plugins = require('./plugins.js');
+                  esbuild.build({
+                    entryPoints: ['${props.lambdaService.path}'],
+                    bundle: true,
+                    platform: 'node',
+                    target: 'node18',
+                    sourcemap: true,
+                    external: ['canvas'],
+                    outdir: '/asset-output/',
+                    tsconfig: './tsconfig.json',
+                    plugins: plugins
+                  }).catch(() => process.exit(1));
+                ",
+#+end_src

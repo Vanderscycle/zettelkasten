@@ -1998,7 +1998,6 @@ CLOSED: [2025-05-05 Mon 15:35] DEADLINE: <2024-10-13 Sun>
    - State "DONE"       from "TODO"       [2025-05-05 Mon 15:35]
 *** Old once a week
 *** New 2 of them
-DEADLINE: <2024-10-21 Mon>
 
 * Misc
 Ensures data is protect both in transit and at rest: use ~AWS KMS~
