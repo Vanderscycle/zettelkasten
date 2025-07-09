@@ -206,5 +206,34 @@ keybindings:[[https://sw.kovidgoyal.net/kitty/overview/#tabs-and-windows][ Overv
 *** Mount
 #+begin_src bash
 mount -l # list all mounted drives
+#+end_src
 
+** openssl
+   generate new certificates by hand
+  [[https://www.youtube.com/watch?v=VH4gXcvkmOY][How to create a valid self signed SSL Certificate? - YouTube]]
+#+begin_src bash
+
+openssl genrsa -aes256 -out ca-key.pem 4096 #you'll need a passphrase
+openssl req -new -x509 -sha256 -days 3650 -key ca-key.pem -out ca.pem
+openssl x509 -in ca.pem -text # human readable
+# ---
+openssl genrsa -out cert-key.pem 4096
+openssl req -new -sha256 -subj "/CN=homecloud" -key cert-key.pem -out cert.csr
+# had to be the correct ip/dns
+echo "subjectAltName=DNS:*.homecloud.lan,IP:192.168.4.129" >> extfile.cnf
+# generate the cert
+openssl x509 -req -sha256 -days 3650 -in cert.csr -CA ca.pem -CAkey ca-key.pem -out cert.pem -extfile extfile.cnf  -CAcreateserial
+cat cert.pem > fullchain.pem && cat ca.pem >> fullchain.pem
+#+end_src
+
+** Linux users
+check
+sudo -u paperless bash -c 'touch /mnt/paperless/data/test-write && echo OK'
+
+#+begin_src bash
+id <username like paperless>
+# uid=315(paperless) gid=315(paperless) groups=315(paperless),986(smbaccess)
+
+# act as the user
+sudo -u <user> touch ./somerandomfile.txt
 #+end_src
