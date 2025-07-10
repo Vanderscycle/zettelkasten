@@ -21,6 +21,7 @@ Optimize tools and processes to do things more effectively and quicker
 - [[id:a74c4871-0967-4865-8920-ce84c9671812][zsa-moonlander]]
 - [[id:eb639da8-b533-46df-a0ab-3a7135e4349b][books]]
 - [[id:51da34a8-7794-48ef-89c1-c152a4ecd30a][Sports - kettlebells]]
+
 * Important days
 ** Wife's birthday
 <2024-12-04 Wed+1y>
@@ -32,6 +33,6 @@ Optimize tools and processes to do things more effectively and quicker
 ** Planning
 [[id:199F1748-453D-4B48-ABAC-3600362BCAE0][Planning]]
 
-** Home Tasks
+** Home
 [[id:130635ef-5b04-4ac4-b1e1-63840f077d83][Home - Maintenance]]
 [[id:d49c10c9-1478-4429-993b-c43e88f7a73a][Home - Cooking]]

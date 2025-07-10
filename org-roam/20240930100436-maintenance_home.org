@@ -12,24 +12,30 @@ SCHEDULED: <2024-10-12 Sat +1y>
 
 ** Cleaning
 *** TODO Clean balcony from leaves and debris
-SCHEDULED: <2024-11-12 Tue +1m>
+SCHEDULED: <2025-08-12 Sun +1m>
 :PROPERTIES:
-:LAST_REPEAT: [2024-11-06 Wed 14:36]
+:LAST_REPEAT: [2025-07-09 Wed 14:14]
 :END:
+- State "DONE"       from "TODO"       [2025-07-09 Wed 14:14]
 - State "DONE"       from "TODO"       [2024-11-06 Wed 14:36]
 *** TODO clean the downstairs bathroom tub
-SCHEDULED: <2024-10-12 Sat +2m>
+SCHEDULED: <2025-07-12 Thu +2m>
+:PROPERTIES:
+:LAST_REPEAT: [2025-07-09 Wed 13:58]
+:END:
+- State "DONE"       from "TODO"       [2025-07-09 Wed 13:58]
 *** TODO clean the fridge
 SCHEDULED: <2026-03-13 Fri +12m>
 :PROPERTIES:
 :LAST_REPEAT: [2025-03-13 Thu 13:29]
 :END:
 *** TODO clean the garbage drawer
-SCHEDULED: <2025-09-13 Sat +6m>
+SCHEDULED: <2026-03-13 Fri +6m>
 :PROPERTIES:
-:LAST_REPEAT: [2025-03-13 Thu 13:29]
+:LAST_REPEAT: [2025-07-09 Wed 14:15]
 :END:
 
+- State "DONE"       from "TODO"       [2025-07-09 Wed 14:15]
 - State "DONE"       from "TODO"       [2025-03-13 Thu 13:29]
 * One off fixes
 ** DONE Replace the bedroom door airtight seal
@@ -43,8 +49,8 @@ SCHEDULED: <2025-10-01 Fri +1y>
 SCHEDULED: <2025-10-01 Fri +1y>
 
 ** Car
-*** DONE Winter tire change (call)
-CLOSED: [2024-11-12 Tue 15:29] SCHEDULED: <2024-11-12 Tue>
+*** DONE Winter tire change (call)                                     :misc:
+CLOSED: [2024-11-12 Tue 15:29] SCHEDULED: <2024-11-12 Tue +12m>
 - State "DONE"       from "TODO"       [2024-11-12 Tue 15:29]
 *** DONE Costco winter tire change
 CLOSED: [2025-03-13 Thu 13:30] SCHEDULED: <2024-11-29 Fri>

@@ -6,107 +6,108 @@
 [[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
 
 * Recipes
-Sauces
-** [[https://www.themediterraneandish.com/tzatziki-sauce-recipe/][Authentic Tzatziki Sauce Recipe (Yiayia Approved) | The Mediterranean Dish]]
-3/4 English cucumber, partially peeled (striped)
-1 tsp kosher salt, divided
-4 to 5 garlic cloves, peeled, finely grated or minced (you start with 1 to 2 garlic cloves if you don't want it to be too strong)
-1 tsp white vinegar
-1 tbsp Early Harvest Greek Extra Virgin Olive Oil
-2 cups plain Greek yogurt
-Handful of chopped fresh dill or mint (optional)
-1/4 tsp ground white pepper
+** Sauces
+*** [[https://www.themediterraneandish.com/tzatziki-sauce-recipe/][Authentic Tzatziki Sauce Recipe (Yiayia Approved) | The Mediterranean Dish]]
+ 3/4 English cucumber, partially peeled (striped)
+ 1 tsp kosher salt, divided
+ 4 to 5 garlic cloves, peeled, finely grated or minced (you start with 1 to 2 garlic cloves if you don't want it to be too strong)
+ 1 tsp white vinegar
+ 1 tbsp Early Harvest Greek Extra Virgin Olive Oil
+ 2 cups plain Greek yogurt
+ Handful of chopped fresh dill or mint (optional)
+ 1/4 tsp ground white pepper
 
-** Pasta sauce
-[[https://www.youtube.com/watch?v=6OEDjDKV038][How To Make Quarantine Sauce - YouTube]]
-Tomatoes
-onions
-garlic
-honey
-spices (whatever you want)
-soy sauce
+*** Pasta sauce
+ [[https://www.youtube.com/watch?v=6OEDjDKV038][How To Make Quarantine Sauce - YouTube]]
+ Tomatoes
+ onions
+ garlic
+ honey
+ spices (whatever you want)
+ soy sauce
 
-Rub/spices
-** Babbish rub
-1 measure of garlic powder
-1 measure of salt powder
-1 measure of onion powder
-1 measure of cumin powder
-1 measure of white pepper powder
-1 measure of dried oregano powder
-1 measure of pepper powder
-1 measure of paprika (smoked) powder
-2 measure of ground mustard powder
+**  Rub/spices
 
-Breakfast
-** Oatmeal
-5 cups oats milk
-2 cups oats
-1/2 cup chia seeds
-a bit of cinamon
+*** Babbish rub
+ 1 measure of garlic powder
+ 1 measure of salt powder
+ 1 measure of onion powder
+ 1 measure of cumin powder
+ 1 measure of white pepper powder
+ 1 measure of dried oregano powder
+ 1 measure of pepper powder
+ 1 measure of paprika (smoked) powder
+ 2 measure of ground mustard powder
 
-Sides
-** Grilled cheese
-Good bread/cheese and meat if desired
-Ensure that you butter both sides of the toast, add the cheese (marbled/gouda) and some salami/cold meat. Fry in a pan both sides a few times and voila.
+**  Breakfast
+*** Oatmeal
+ 5 cups oats milk
+ 2 cups oats
+ 1/2 cup chia seeds
+ a bit of cinamon
 
-Alcohol
-** Sake (cooking wine)
-[[https://www.youtube.com/watch?v=Ffsb3R-JSro][Why Sake Brewing Is My New Obsession… - YouTube]]
-** Mead (Honey wine)
-[[https://www.youtube.com/watch?v=1MAB-VVqjOE][Making Medieval Mead like a Viking - YouTube]]
+** Sides
+*** Grilled cheese
+ Good bread/cheese and meat if desired
+ Ensure that you butter both sides of the toast, add the cheese (marbled/gouda) and some salami/cold meat. Fry in a pan both sides a few times and voila.
 
-Main dish
-** [[https://www.bonappetit.com/recipe/red-wine-braised-short-ribs][Red Wine-Braised Short Ribs Recipe | Bon Appétit]]
-Beef ribs are expensive, but the base of the recipe: onions, carrots, celery, wine and stock makes it really easy to use pork/sausage.
+** Alcohol
+*** Sake (cooking wine)
+ [[https://www.youtube.com/watch?v=Ffsb3R-JSro][Why Sake Brewing Is My New Obsession… - YouTube]]
+*** Mead (Honey wine)
+ [[https://www.youtube.com/watch?v=1MAB-VVqjOE][Making Medieval Mead like a Viking - YouTube]]
 
-** [[https://thesaltymarshmallow.com/crispy-baked-chicken-thighs/][Crispy Baked Chicken Thighs - The Salty Marshmallow]]
-Pat the chicken dry, heat oven for 400F and cook for 35-40 mins
-2 Tablespoons Olive Oil
-2 Teaspoons Salt
-2 Teaspoons Garlic Powder
-2 Teaspoon Onion Powder
-2 Teaspoons Italian Seasoning
-1 Teaspoon Black Pepper
-1 Teaspoon Paprika
+** Main dish
+*** [[https://www.bonappetit.com/recipe/red-wine-braised-short-ribs][Red Wine-Braised Short Ribs Recipe | Bon Appétit]]
+ Beef ribs are expensive, but the base of the recipe: onions, carrots, celery, wine and stock makes it really easy to use pork/sausage.
 
-** [[https://mykoreankitchen.com/tteokbokki-spicy-rice-cakes/][Tteokbokki (Spicy Rice Cakes) - My Korean Kitchen]]
-You can prepare the anchovy broth ahead of time.
+*** [[https://thesaltymarshmallow.com/crispy-baked-chicken-thighs/][Crispy Baked Chicken Thighs - The Salty Marshmallow]]
+ Pat the chicken dry, heat oven for 400F and cook for 35-40 mins
+ 2 Tablespoons Olive Oil
+ 2 Teaspoons Salt
+ 2 Teaspoons Garlic Powder
+ 2 Teaspoon Onion Powder
+ 2 Teaspoons Italian Seasoning
+ 1 Teaspoon Black Pepper
+ 1 Teaspoon Paprika
 
-** [[https://www.koreanbapsang.com/gungjung-tteokbokki-and-lunar-new-year/][Gungjung Tteokbokki (Korean Royal Rice Cake) - Korean Bapsang]]
-tteokbokki but with soy, wide range of meat can be used and fish cakes.
+*** [[https://mykoreankitchen.com/tteokbokki-spicy-rice-cakes/][Tteokbokki (Spicy Rice Cakes) - My Korean Kitchen]]
+ You can prepare the anchovy broth ahead of time.
 
-** [[https://www.thekitchenmaus.com/homemade-currywurst/][Homemade Currywurst • The Kitchen Maus]]
-sausage, fries, warmed ketchup with spices (curry, paprika, worchestershire sauce, etc.)
+*** [[https://www.koreanbapsang.com/gungjung-tteokbokki-and-lunar-new-year/][Gungjung Tteokbokki (Korean Royal Rice Cake) - Korean Bapsang]]
+ tteokbokki but with soy, wide range of meat can be used and fish cakes.
 
-** Improved Jar Sauce butter chicken
-add onions, garlic and ginger
-spice the chicken with salt, pepper and smoked paprika
+*** [[https://www.thekitchenmaus.com/homemade-currywurst/][Homemade Currywurst • The Kitchen Maus]]
+ sausage, fries, warmed ketchup with spices (curry, paprika, worchestershire sauce, etc.)
 
-** Shallot pasta
-A ton of shallot
-a can of anchovies
-1 bulb of garlic
-1 small can of tomato sauce
-soy sauce to taste
-honey to taste
-salt/pepper of course
+*** Improved Jar Sauce butter chicken
+ add onions, garlic and ginger
+ spice the chicken with salt, pepper and smoked paprika
 
-Cook the shallot until they are golden, add the anchovies until they disolve, mix the tomato paste, reduce the heat. Serve when ready.
+*** Shallot pasta
+ A ton of shallot
+ a can of anchovies
+ 1 bulb of garlic
+ 1 small can of tomato sauce
+ soy sauce to taste
+ honey to taste
+ salt/pepper of course
 
-** Carborona (carborana)
-[[https://www.youtube.com/watch?v=9KthvXIFhcc][Carbo-Rona Sauce - YouTube]]
-smoked bacon (base)
-1 bag of spaghetti
-3 eggs yolks/1 full
-shreded parm
+ Cook the shallot until they are golden, add the anchovies until they disolve, mix the tomato paste, reduce the heat. Serve when ready.
 
-mix eggs and parms together, cook bacon/pasta. Add pasta + 1 cup of pasta sauce to bacon pan, cut heat, add mixture, serve when cooked. Do not make an omelette.
+*** Carborona (carborana)
+ [[https://www.youtube.com/watch?v=9KthvXIFhcc][Carbo-Rona Sauce - YouTube]]
+ smoked bacon (base)
+ 1 bag of spaghetti
+ 3 eggs yolks/1 full
+ shreded parm
 
-** Pasta skillet
-500g ground pork (spiced accordingly)
-500g/1 bag of rigatoni pasta or substitute
-a whole bag of spinach
-lots of cheese (melting one)
-onions
-mushorooms
+ mix eggs and parms together, cook bacon/pasta. Add pasta + 1 cup of pasta sauce to bacon pan, cut heat, add mixture, serve when cooked. Do not make an omelette.
+
+*** Pasta skillet
+ 500g ground pork (spiced accordingly)
+ 500g/1 bag of rigatoni pasta or substitute
+ a whole bag of spinach
+ lots of cheese (melting one)
+ onions
+ mushorooms

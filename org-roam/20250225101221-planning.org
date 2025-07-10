@@ -12,10 +12,35 @@
 *** TODO triage 2024 TODOs whether the task is still relevant in 2025
 
 ** Current year's tasks
-*** Programming
-**** Homelab
-***** Configure DNS + TLS (https)
+*** General
+**** TODO untangle notes [0/4]
+     SCHEDULED: <2025-07-10 Thu>
+***** TODO chinese
+***** TODO emacs
+***** TODO programming
+***** TODO kettlebell programming
+***** TODO work sprint planning + timekeeping
 
+**** TODO reminder scheduling
+***** TODO create calendar event reminder
+***** TODO create workout reminders + programming. check (never give up book)
+
+
+
+*** Programming
+**** PLAN Homelab [1/3]
+***** TODO look for wireguard integration
+***** TODO build 3rd computer with case for hard drives (not 3d printed)
+      SCHEDULED: <2025-11-21 Fri>
+***** TODO create proxmox cluster
+***** TODO nuke the kubernetes machine
+***** TODO Configure paperless smb access
+***** TODO Troubleshoot nextcloud smb write timeout
+***** DONE Configure DNS + TLS (https)
+      CLOSED: [2025-07-09 Wed 14:19]
+
+      - State "DONE"       from "TODO"       [2025-07-09 Wed 14:19]
+      -
 **** Emacs [0/4]
 [[id:E56FBF4A-27B5-417A-960B-BD0D5C8E16A6][Learning - 2025 - Emacs]]
 ***** TODO learn the basics of elisp and emacs's api to augment my editor
@@ -26,14 +51,15 @@ I need at least the following:
 - project wide quickfix lists
 - local buffer
 
-**** TODO Misc programming [/]
+**** TODO Misc programming [0/1]
+***** TODO use nix-writers (js) for small scripts
 ***** TODO Redo my professional website using =VueJS=
 confirm that autosync cron for my k8s servers are working
 
-*** TODO Printing [/]
+*** TODO Printing [0/2]
 **** TODO Physical printers
-***** TODO print the electronic enclosure for the v-minion
+***** BACKLOG print the electronic enclosure for the v-minion
 ***** TODO revive the v-minion
 **** TODO Design
-***** TODO follow an onshape course
+***** BACKLOG follow an onshape course
 Goal is to get as good as I was back in my second year of cad university
