@@ -21,10 +21,9 @@
         system = system;
         config.allowUnfree = true;
       };
-      sopsKey = /home/henri/.config/sops/age/keys.txt;
+      sopsKey = /home/henri-vandersleyen/.config/sops/age/keys.txt;
     in
     {
-
       devShells.${system} = {
         # nix develop .#encrypt
         sops_shell = (
@@ -34,6 +33,7 @@
           }
         );
       };
+
       org_protected_b_encrypt = pkgs.stdenv.mkDerivation {
         name = "encrypt org/work files";
         src = ./.;

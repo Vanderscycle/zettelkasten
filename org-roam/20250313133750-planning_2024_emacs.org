@@ -67,6 +67,7 @@ while in org mode ~spc m p~ can set the priority from A =hightest= to F =lowest=
 [[https://www.youtube.com/watch?v=o6rE18Mxu9U][Analyze Your Time with Org Mode — Org Mode Clocktables — Straightforward Emac...]]
 *** ~spc g~ git
 ~spc g s~ maggit status
+sometimes you just want to stage a selection of changes and use s will stage more than you want. you can use =visual= mode to select what you want.
 
 ~r i~ rebase interactively. You want to rebase your changes onto master so that they come first
 
@@ -201,6 +202,7 @@ Part of html by
 *** link
 ~SPC M i L~ to insert an internet link
 ~SPC M i l~ to insert an a link (file/w3m/treemacs/etc.)
+~SPC a o l~ org-store-link to copy a buffer's file location and then in the org file you can ~SPC m i l~ to paste it in your org file
 You can target a file specific line too.
 #+begin_src org
 file:~/code/main.c::255

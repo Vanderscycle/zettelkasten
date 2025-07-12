@@ -9,3 +9,5 @@
     While the keyboard is still unplugged, using an un-bent paper clip, press your keyboard's reset button and keep it pressed while plugging the keyboard back in.
     Keep the reset button pressed for another 3 to 4 seconds before releasing it. (The keyboard will not function at this point; this is expected.)
     Open Wally and see if you can go through the flashing process.
+*** Unable to update firmware
+    If you have a =kvm= switch its possible that the interferance comes from there. plug the keybaord to a dedicated computer.

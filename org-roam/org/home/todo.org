@@ -34,3 +34,5 @@
 [[https://oblivion.keyruu.de/Homelab/Quadlet][Goodbye Docker, hello Quadlet]]
 [[file:~/Documents/dotFiles/nix-darwin/flakes/home-lab/configuration.nix][homelab example]]
  :Created: <2025-05-19 Mon 22:19>
+** TODO [#E] test
+ :Created: <2025-07-09 Wed 13:57>
