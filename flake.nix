@@ -6,76 +6,73 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
       self,
       nixpkgs,
       sops-nix,
+      flake-utils,
       ...
     }@inputs:
-    let
-      system = "x86_64-linux";
-      src = pkgs.lib.cleanSource ./org-roam;
-      pkgs = import nixpkgs {
-        system = system;
-        config.allowUnfree = true;
-      };
-      sopsKey = /home/henri-vandersleyen/.config/sops/age/keys.txt;
-    in
-    {
-      devShells.${system} = {
-        # nix develop .#encrypt
-        sops_shell = (
-          import ./encrypt.nix {
-            inherit pkgs;
-            inherit inputs;
-          }
-        );
-      };
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
 
-      org_protected_b_encrypt = pkgs.stdenv.mkDerivation {
-        name = "encrypt org/work files";
-        src = ./.;
-        buildPhase = ''
-          export SOPS_AGE_KEY_FILE=${sopsKey}
-          mkdir -p $out
+        home = builtins.getEnv "HOME";
+        sopsKey = "${home}/.config/sops/age/keys.txt";
 
-          sops -e ${src}/org/work/work-log.org > $out/work-log.enc.org
-          sops -e ${src}/org/work/todo.org > $out/todo.enc.org
-          echo "encrypted"
-        '';
-        nativeBuildInputs = [
-          pkgs.sops
-        ];
-        installPhase = ''
-          mkdir -p $out
-        '';
-        configurePhase = "true";
-      };
+        # nix build ".#org_protected_b_encrypt" --impure
+        org_protected_b_encrypt = pkgs.stdenv.mkDerivation {
+          name = "encrypt-org-work";
+          src = ./.;
+          buildPhase = ''
+            export SOPS_AGE_KEY_FILE=${sopsKey}
+            mkdir -p $out
 
-      org_protected_b_decrypt = pkgs.stdenv.mkDerivation {
-        name = "decrypt org/work files";
-        src = ./.;
-        buildPhase = ''
-          export SOPS_AGE_KEY_FILE=${sopsKey}
-          mkdir -p $out
-          sops -d ./org-roam/org/work/work-log.enc.org > $out/work-log.org
-          sops -d ./org-roam/org/work/todo.enc.org > $out/todo.org
+            for FILE in ./org/work/*.org; do
+              FILENAME=$(basename -- "$FILE" .org)
+              ENCRYPTED_NAME="$FILENAME.enc.yaml"
+              sops --output-type yaml -e "$FILE" > "./org/work/$ENCRYPTED_NAME"
+            done
+          '';
+          nativeBuildInputs = [ pkgs.sops ];
+          installPhase = "mkdir -p $out";
+          configurePhase = "true";
+        };
 
-          if [ -d ./result ]; then
-            cp result/todo.org ./org-roam/org/work/todo.org
-            cp result/work-log.org ./org-roam/org/work/work-log.org
-            echo "decrypted"
-          fi
-        '';
-        nativeBuildInputs = [
-          pkgs.sops
-        ];
+        # nix build ".#org_protected_b_decrypt" --impure
+        org_protected_b_decrypt = pkgs.stdenv.mkDerivation {
+          name = "decrypt-org-work";
+          src = ./.;
+          buildPhase = ''
+            export SOPS_AGE_KEY_FILE=${sopsKey}
+            mkdir -p $out
+            sops -d ./org/work/work-log.enc.org > $out/work-log.org
+            sops -d ./org/work/todo.enc.org > $out/todo.org
 
-        installPhase = ''
-          mkdir -p $out
-        '';
-      };
-    };
+            if [ -d ./result ]; then
+              cp result/todo.org ./org-roam/org/work/todo.org
+              cp result/work-log.org ./org-roam/org/work/work-log.org
+            fi
+          '';
+          nativeBuildInputs = [ pkgs.sops ];
+          installPhase = "mkdir -p $out";
+        };
+      in
+      {
+        packages = {
+          inherit org_protected_b_encrypt org_protected_b_decrypt;
+          default = org_protected_b_encrypt;
+        };
+      }
+    );
 }
