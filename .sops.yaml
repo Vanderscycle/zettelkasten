@@ -1,7 +1,9 @@
 keys:
   - &primary age17jgvjp9u4wa6799e3utfqxfrq9mgkfhxxed02cpp642tm6cna9gqg4yafw
+  - &secondary age1df2u7xvze6rq5utz74ckx059wr3z97j484wc04063437h6hn4v6s9auec3
 creation_rules:
-  - path_regex: org-roam/org/work/.*\.org$
+  - path_regex: org/work/.*\.org$
     key_groups:
     - age:
       - *primary
+      - *secondary

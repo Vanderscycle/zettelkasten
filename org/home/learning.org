@@ -1,0 +1,38 @@
+* Learning Notes
+** silver searcher
+   :PROPERTIES:
+   :END:
+*** search, find and replace                                          :linux:
+#+begin_src bash
+ag -l <search-word> | xargs sed -i '' 's/<search-word>/<replace-word>/g'
+#+end_src
+explanation
+~ag -l~ list all the files where the word is found
+~xargs~ linux for loop
+~sed -i~ replace the word in place
+** nixos
+   :PROPERTIES:
+   :END:
+*** generations                                                       :linux:
+    list all generations
+#+begin_src bash
+sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+#+end_src
+    switch to an old one and delete a specific one (using 123 - 124)
+#+begin_src
+sudo nix-env --switch-generation 123 --profile /nix/var/nix/profiles/system
+sudo nix-env --delete-generation 124 --profile /nix/var/nix/profiles/system
+#+end_src
+    delete all generations except the current one
+#+begin_src bash
+sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system
+#+end_src
+
+** git
+   :PROPERTIES:
+   :END:
+*** remote branch
+Sometimes a branch have a complex pull/push will not allow for a ~git reset --hard <branch-name>~. Deleting the branch and refetching may work better.
+#+begin_src bash
+git fetch <branch-name>
+#+end_src

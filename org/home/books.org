@@ -1,0 +1,10 @@
+* Book Notes
+** Legacy cod
+   :PROPERTIES:
+   :Title:    Working effectively with legacy code
+   :Author:   Michael C. Feathers
+   :END:
+*** Notes
+ #+begin_quote
+Legacy code is code without tests
+ #+end_quote
