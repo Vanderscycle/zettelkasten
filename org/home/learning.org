@@ -36,3 +36,96 @@ Sometimes a branch have a complex pull/push will not allow for a ~git reset --ha
 #+begin_src bash
 git fetch <branch-name>
 #+end_src
+
+** format brand new ssd
+   :PROPERTIES:
+   :END:
+*** format                                                            :linux:
+    Verify status
+#+begin_src bash
+# identify the drive
+lsblk
+sudo blkid <e.g. /dev/sda>
+# if empty means that it isn't formatted
+#+end_src
+    Create a partition (for unformatted drives/usbs)
+#+begin_src bash
+# Create a new GPT partition table
+sudo parted /dev/sda -- mklabel gpt
+
+# Create a new partition that uses the whole disk
+sudo parted /dev/sda -- mkpart primary ext4 0% 100%
+
+# Format the new partition
+sudo mkfs.ext4 /dev/sda1
+#+end_src
+*** mount new drive
+#+begin_src bash
+sudo mount /dev/sda /mnt/usb/
+# /mnt/usb is a folder I created
+#+end_src
+
+** create bootable drive for sd card/usb/harddrive
+   :PROPERTIES:
+   :END:
+*** format                                                            :linux:
+    Please confirm that you have the right drive
+#+begin_src bash
+sudo dd if=<img> of=/dev/sda bs=4M status=progress conv=fsync
+#+end_src
+
+** nnn
+   :PROPERTIES:
+   :END:
+*** nnn                                                               :linux:
+    sort by time/date/size etc: hit the ~t~ when in nnn
+
+** nix
+   :PROPERTIES:
+   :END:
+*** nix self reference parameters                                     :linux:
+
+    We reference the ~sum-config~ not shown here is the default port of that config. Check prometheus. Regardless, you can reference config values
+    #+begin_src nix
+    exporters = {
+      node = {
+        enable = true;
+      };
+      sum-config = {
+        enable = true;
+        user = "admin";
+        apiKeyFile = config.sops.secrets."path/to/sops/api_key".path;
+      };
+    };
+    scrapeConfigs = [
+    {
+      job_name = "x-exporter";
+      static_configs = [{
+        # Target the exporter on localhost (if on same machine)
+        targets = [ "127.0.0.1:${toString config.services.prometheus.exporters.sum-config.port}" ];
+      }];
+    }
+    ];
+
+    #+end_src
+
+** self hosted git repo
+   :PROPERTIES:
+   :END:
+*** adjusting the origin url                                          :linux:
+    Let's say I have a gitea server running at ~gitea.homecloud.lan~
+
+    gitea will give you a remote ssh address like so: =git remote add origin gitea@localhost:vanderscycle/dotFiles.git= you need to adjust it to:  =git remote add origin gitea@gitea.homecloud.lan:vanderscycle/dotFiles.git= or the ip address if no reverse proxy.
+
+*** multiple remote
+#+begin_src bash
+git remote add <name> <address>
+#+end_src
+
+** emacs
+   :PROPERTIES:
+   :END:
+*** bookmarks                                                         :emacs:
+=C-x r m= set bookmarks
+=C-x r b= jump to bookmarks
+=C-x r l= bookmark handy menu
