@@ -240,3 +240,52 @@ Because nixos doesn't respect ~FHS~ we can make a fake default path to ~/etc~ in
 environment.etc."bin/bash".source = "${pkgs.bashInteractive}/bin/bash";
 # /etc/bin/bash will have the bash bin that would normally sit at /bin
 #+end_src
+
+** openssl
+   :PROPERTIES:
+   :END:
+*** manually generate certificates                                    :linux:
+#+begin_src bash
+# Create directory
+sudo mkdir -p /etc/ssl/traefik
+cd /etc/ssl/traefik
+
+# Generate Root CA
+sudo openssl genrsa -out rootCA.key 2048
+sudo openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt \
+  -subj "/CN=HomeCloud Local Root CA"
+
+# Generate server key and CSR
+sudo openssl genrsa -out docker.homecloud.lan.key 2048
+sudo openssl req -new -key docker.homecloud.lan.key -out docker.homecloud.lan.csr \
+  -subj "/CN=docker.homecloud.lan"
+
+# Create SAN config
+cat <<EOF | sudo tee extensions.conf
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = docker.homecloud.lan
+IP.1 = 192.168.4.129
+EOF
+
+# Sign certificate
+sudo openssl x509 -req -in docker.homecloud.lan.csr -CA rootCA.crt -CAkey rootCA.key \
+  -CAcreateserial -out docker.homecloud.lan.crt -days 3650 -sha256 \
+  -extfile extensions.conf
+
+# Set permissions
+sudo chmod 440 /etc/ssl/traefik/*.key
+sudo chown traefik:traefik /etc/ssl/traefik/*.key
+#+end_src
+
+** latex
+   :PROPERTIES:
+   :END:
+*** build file                                                        :linux:
+#+begin_src bash
+pdflatex <file>.tex
+#+end_src
