@@ -289,3 +289,12 @@ sudo chown traefik:traefik /etc/ssl/traefik/*.key
 #+begin_src bash
 pdflatex <file>.tex
 #+end_src
+
+** nixos
+   :PROPERTIES:
+   :END:
+*** Dependencies :linux:
+    ~nix why-depends~ - show why a package has another package in its closure
+    #+begin_src bash
+nix why-depends -a nixpkgs#orca-slicer nixpkgs#libsoup
+    #+end_src
