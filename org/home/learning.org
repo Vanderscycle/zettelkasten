@@ -129,3 +129,43 @@ git remote add <name> <address>
 =C-x r m= set bookmarks
 =C-x r b= jump to bookmarks
 =C-x r l= bookmark handy menu
+** deterministic-zip
+   :PROPERTIES:
+   :END:
+*** hash
+    the std zip package does not generate the same hash even when no modification to the file has been made. Because it takes in account the latest modification date + today's data. To ensure we have the same zip we must use ~deterministic-zip~ package.
+
+** dockerfile not working
+   :PROPERTIES:
+   :END:
+*** base image
+Check for changes to the base image especially if the current tag is ~latest~
+** serverless packaging
+   :PROPERTIES:
+   :END:
+*** packaging
+Cross check the ~package.json~ file to confirm what serverless uses to packages the application prior deploying. If you noticed a =esbuild= or the serverless plugin for it then the lambda packaging must conver the same principle.
+** git (stash)
+   :PROPERTIES:
+   :END:
+*** stash untrackted files
+#+begin_src bash
+git stash --include-untracked
+#+end_src
+** git (gha)
+   :PROPERTIES:
+   :END:
+*** uses (branch specific)
+#+begin_src yaml
+
+deploy-fargate-enterprise-primary:
+  uses: <org>/<repo>/.github/workflows/<name>.yml@testing
+  with:
+    key: values
+#+end_src
+** AWS ECR
+   :PROPERTIES:
+   :END:
+*** fetching the env vars
+login into the `AWS ECR`
+pull the image
