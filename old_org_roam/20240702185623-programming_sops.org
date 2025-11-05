@@ -23,11 +23,13 @@ In the current folder run =touch .sops.yaml= and =mkdir secrets=
 #+begin_src bash
   keys:
   - &primary <key>
+  - &secondary <key>
 creation_rules:
   - path_regex: secrets/.*\.yaml$
     key_groups:
     - age:
       - *primary
+      - *secondary
 #+end_src
 
 ** Generating a secret
@@ -37,3 +39,11 @@ sops  secrets/<name>.yaml
 EDITOR=nvim sops secrets/secrets.yaml
 #+end_src
 If using ~emacs~ or (~emacsclient~) save the file using =c-x #=
+
+** updating secret
+especially important after updating .sops.yaml keys
+#+begin_src bash
+sops updatekeys secrets/secrets.yaml
+# to confirm that it works
+sops -d secrets/secrets.yaml
+#+end_src

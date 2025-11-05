@@ -19,29 +19,40 @@
 ***** TODO emacs
 ***** TODO programming
 ***** TODO kettlebell programming
+****** TODO use `never let go` dan john (single body part)
+****** TODO create peridization + planning (month cycle/tracking) in emacs
 ***** TODO work sprint planning + timekeeping
 
 **** TODO reminder scheduling
 ***** TODO create calendar event reminder
 ***** TODO create workout reminders + programming. check (never give up book)
 
-
-
 *** Programming
-**** PLAN Homelab [1/3]
+**** PLAN Homelab [4/7]
 ***** TODO look for wireguard integration
 ***** TODO build 3rd computer with case for hard drives (not 3d printed)
       SCHEDULED: <2025-11-21 Fri>
-***** TODO create proxmox cluster
-***** TODO nuke the kubernetes machine
+***** DONE create proxmox cluster
+      CLOSED: [2025-09-30 Tue 20:43]
+      - State "DONE"       from "TODO"       [2025-09-30 Tue 20:43]
+***** DONE nuke the kubernetes machine
+      CLOSED: [2025-09-30 Tue 20:43]
+      - State "DONE"       from "TODO"       [2025-09-30 Tue 20:43]
 ***** TODO Configure paperless smb access
-***** TODO Troubleshoot nextcloud smb write timeout
+***** DONE Troubleshoot nextcloud smb write timeout
+      CLOSED: [2025-09-30 Tue 20:44]
+      - State "DONE"       from "TODO"       [2025-09-30 Tue 20:44]
 ***** DONE Configure DNS + TLS (https)
       CLOSED: [2025-07-09 Wed 14:19]
 
       - State "DONE"       from "TODO"       [2025-07-09 Wed 14:19]
       -
 **** Emacs [0/4]
+     ~SPC h SPC~ for all the help documentaion
+     check phone
+     tldr: clean up org-roam/integrate org-mode in my life more/
+     get protonmail
+     n8n for task automation
 [[id:E56FBF4A-27B5-417A-960B-BD0D5C8E16A6][Learning - 2025 - Emacs]]
 ***** TODO learn the basics of elisp and emacs's api to augment my editor
 ***** TODO use evil motion to navigate buffer
@@ -50,12 +61,11 @@ Get better with =vim= verbs
 I need at least the following:
 - project wide quickfix lists
 - local buffer
-
 **** TODO Misc programming [0/1]
-***** TODO use nix-writers (js) for small scripts
+***** TODO use nix-writers for small scripts
+***** TODO host a website w/ my notes using org mode
 ***** TODO Redo my professional website using =VueJS=
 confirm that autosync cron for my k8s servers are working
-
 *** TODO Printing [0/2]
 **** TODO Physical printers
 ***** BACKLOG print the electronic enclosure for the v-minion

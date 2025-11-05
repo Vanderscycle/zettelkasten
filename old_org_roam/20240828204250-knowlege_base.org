@@ -3,16 +3,12 @@
 :END:
 #+title: Knowlege base
 
-* Themes
-** 2024
-*** Q1 Optimization
-Optimize tools and processes to do things more effectively and quicker
-*** Q2 Forgor 💀
-*** Q3 Wrap up preparations
+* Theme
+* Immediate Single thread work
+  [[id:d47c2ff4-5865-4d52-b259-26eeb9bbcaa6][spacemacs - once and for all - a reference]]
 * Work
-- [[id:09cc8c01-bb56-4c4c-944c-7f5db1371012][WORK - House Operto]]
 
-* Knowledge notes
+* TODO Knowledge notes (refactor)
 - [[id:660c7092-9b98-4fa2-b271-2bbeabe1c249][Programming]]
 - [[id:e599332d-c8fd-4a8a-96f2-cf6c770891e7][3D Printing]]
 - [[id:b19092d6-d8e7-47e0-b2b3-0940dd54ddc9][OpenWRT]]

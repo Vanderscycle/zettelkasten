@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       a6a66ab6-3af7-4544-95c6-1d2c76b2c6a1
+:END:
+#+title: Chinese 2025 fall
+#+filetags: :chinese:
+* Chinese 2025 fall
+** Words
+   训练 xun4lian4 training
+   自护 zi4hu4 self care
+   程度 cheng4du4 level (
+   班 ban1 class
+第三等级班 third level class
+中文 chinese class
+教堂 jiao4tang2 church
+包 bao bag
+一大包的本书 a big bag of book
+孙子 sun1zi3 grandson
+孙女 sun1nv3 grand daughter
+关系 guan1xi4 relation
+唯一 wei2yi1 only
+我送她去每个地方 I drop him off everywhere
+台北 taibei Taipei (cities)
+台中 taizhong Taizhong
+台南 tainan Tainan
+快速火车 kuai4su4huoche high speed train
+高速公路 gaosu4gong1lu highway
+总公司 headquarters
+报公司 office
+** Patterns
+   来来去去 come and go
+从9日到十四日在Ottawa
+** Radicals
+** Forgotten Words
+   图书馆 tu2shuguan3 library
+幼儿园 youeryuan daycare
+   部首 bu4shou3 radical
+名词 ming2ci2 noun
+动词 dong4ci2 verb
+形容词 xing2rong2ci2 adj
+方便 fangbian4 convenient
+方法 fang1fa3 pattern/method
+地方 di4fang1 place
+* Chinese 2025 fall
+Root Parent: [[id:31c43342-c4dd-4fff-bef5-a4ee1cd04f42][chinese]]

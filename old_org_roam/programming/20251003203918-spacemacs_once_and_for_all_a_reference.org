@@ -1,0 +1,184 @@
+:PROPERTIES:
+:ID:       d47c2ff4-5865-4d52-b259-26eeb9bbcaa6
+:END:
+#+title: spacemacs - once and for all - a reference
+[[id:9d5c388a-88cd-423c-951b-5e512eae298b][Knowlege base]]
+
+* Characteristics
+- Family: Elisp
+- Inspired by:
+* Reference:
+~SPC h SPC~ All of spacemacs documentation
+* .spacemacs
+I recommend splitting =.spacemacs= file into a folder =.spacemacs.d= ensure that you do not have the one file.
+
+** =dotspacemacs/init=
+   General options for look/feel/search of spacemacs. Start there.
+** =dotspacemacs/layers=
+   Spacemacs defined layers help =SPC h l=
+** =dotspacemacs/user-config=
+   Current split
+   1. ~ssh.el~ contains local ssh hydra tables
+   2. ~org.el~ contains all the org mode/roam templates + settings
+
+
+* Org mode
+  You can't talk about emacs without talking about org-mode.
+
+** Basic
+   ~org-toggle-heading~ converts the line in org mode to a heading ~SPC m i h~
+
+** Org Roam
+  [[https://www.youtube.com/watch?v=AyhPmypHDEw][Getting Started with Org Roam - Build a Second Brain in Emacs - YouTube]]
+
+* Emacs
+
+** Plugins
+*** Evil motion
+   [[https://github.com/PythonNut/evil-easymotion][GitHub - PythonNut/evil-easymotion: :fast_forward: A port of vim easymotion t...]]
+| Cmd   | Example                 |
+|-------+-------------------------|
+| gss   | jump to any 2 chars     |
+| gsk   | jump to any line above  |
+| gsj   | jump to any line bellow |
+| gswW/eE | jump word beginning/end |
+| gsb   |                         |
+
+*** Evil surround
+    [[https://github.com/emacs-evil/evil-surround][GitHub - emacs-evil/evil-surround: you will be surrounded (surround.vim for e...]]
+| Command            | Meaning          | Example                    |
+|--------------------+------------------+----------------------------|
+| `ys<motion><char>` | Add surround     | `ysiw)` → (word)           |
+| `cs<old><new>`     | Replace surround | `cs"'` → change " to '     |
+| `ds<char>`         | Delete surround  | `ds)` → remove parentheses |
+
+**** 🧩 Basic Text Object Motions
+These are the most common and work beautifully with `ys`.
+
+| Text Object | Description                              | Example                  |
+|-------------+------------------------------------------+--------------------------|
+| `iw`        | inner word (no space)                    | `ysiw)` → (word)         |
+| `aw`        | *a* word (includes space)                  | `ysaw"` → `"word "`      |
+| `is`        | inner sentence                           | `ysis)` → (Hello world.) |
+| `as`        | a sentence (includes space after period) | `ysas)`                  |
+| `ip`        | inner paragraph                          | `ysip}`                  |
+| `ap`        | a paragraph (includes trailing newline)  | `ysap}`                  |
+| `i)` / `a)` | inner / outer parentheses                | `ysi)` or `ysa)`         |
+| `i"` / `a"` | inner / outer quotes                     | `ysi"` or `ysa"`         |
+
+**** 🧩 More advanced motions
+| Command    | Meaning                          |
+|------------+----------------------------------|
+| `ys$)`     | Surround *to end of line*          |
+| `ys}}`     | Surround *to next paragraph*       |
+| `ys0"`     | Surround *to beginning of line*    |
+| `ysf<x>)`  | Surround *from cursor to next `x`* |
+| `ys/word)` | Surround *until next “word” match* |
+| `ysgss<combo>)` | Surround *until next match* |
+
+**👉 Play Area**
+#+BEGIN_EXAMPLE
+This is the first sentence.
+"This is the secondx sentence."
+This is the third sentence.
+#+END_EXAMPLE
+
+*** Dired
+*** Maggit
+
+** General keys
+   ~C-g~ close open menu
+   ~M-m~ open command palete while in insert mode
+** layers
+*** narrow/numbers ~SPC n~
+    Most usefull for presentations to focus on a selected text
+    ~SPC n w~ widden aka reset
+    ~SPV n r~ focus on the selected region
+
+*** insertion ~SPC i~
+    ~SPC i l <>~ lorem ipsum filler text
+    ~SPC i p <>~ password
+    ~SPC i U U~ UUid
+    ~SPC i K~ insert blank line above
+    ~SPC i J~ insert blank line bellow
+    ~SPC i s~ snippets (yas)
+    ~SPC i u~ unicode
+
+*** macro ~SPC K~
+   [[file:~/.emacs.d/doc/DOCUMENTATION.org::*Keyboard macros][Keyboard macros]]
+
+*** files ~SPC f~
+    ~SPC f e d~ open spacemacs config
+    ~SPC f e R~ Reload config
+
+    ~SPC f d~ delete file
+    ~SPC f D~ delete file NOW!
+    ~SPC f R~ rename file
+    ~SPC f c~ save buffer/selection in another file
+    ~SPC f b~ bookmarks (alternative ~C-x r b~)
+    ~SPC f f~ find files (alternative ~SPC ~a d~) note if you select . you will launch dired
+    ~SPC f j~ dired jump (jump opens dired quicker)
+    ~SPC f l~ open file literaly (fundemental mode)
+      You have asked to visit it literally,
+      meaning no coding system decoding, format conversion, or local variables.
+
+    ~SPC f y <>~ yank/copy
+      b buffer name
+      n file name (usually same as buffer)
+      N file name without extention
+      d directory path the file is nested in (absolute)
+      y file path (absolute)
+      Y file path (relative)
+    ~SPC f t~ filetree (not recommended)
+
+*** text ~SPC x~
+    ~SPC x .~ line movement transient state
+    ~SPC x U~ Uppercase everything
+    ~SPC x u~ downcase everything
+    ~SPC x x~ execute the selection in your language of choice
+
+#+begin_src bash
+git status
+ls -al
+#+end_src
+**** ~SPC x d w~ delete trailing whitespace                               :new:
+     Most formatters/linters will take care of it on save but you can target lines/blocks to get rid of it
+     ~SPC x i <>~ alternate between camel/kebab/snake cases
+#+begin_comment
+camelCase
+snake_case
+kebab-case
+#+end_comment
+****   ~SPC x g~ google translate                                         :new:
+     ~SPC x j <>~ justification (text alignement left/center/right)
+     ~SPC x l <>~ lines sorting
+     ~SPC x TAB~ changes the indent
+     While I prefer using `<</>>` for on the fly change for lines/blocks; it does offer more control
+*** buffer ~SPC b~
+    ~SPC b h~ dashboard
+*** search ~SPC s~
+    ~SPC b h~ dashboard
+**** using tools like: ag/grep/ack/rg
+    [[file:~/.emacs.d/doc/DOCUMENTATION.org::*With an external tool][With an external tool]]
+    ~SPC s a p~  =ag= search in project
+    ~SPC s a d~  =ag= search in current dir
+    ~SPC s a f~  =ag= search in files
+    ~SPC s a a~  =ag= search in current file
+notes: ~M-SPC~ opens helm transient window allowing you to mark many files
+*** help ~SPC h~
+    ~SPC h SPC~ documentation
+    ~SPC h d v~ describe variable
+*** expand ~SPC v~                                                        :new:
+    gradually expand and contract the selection smartl
+*** frames ~SPC F~
+    Emacs calls its "window" entity a frame. Overall not so usefull for me.
+   [[file:~/.emacs.d/doc/DOCUMENTATION.org::*Window manipulation][Window manipulation]]
+    ~SPC F n~ new frame
+    ~SPC F d~ delete frame
+*** applications ~SPC A~
+     ~SPC a d~ dired
+**** Org mode =SPC a o=
+     ~SPC a o l~ store link (important)
+     ~SPC a o o~ agenda
+** Evil
+*** Macros

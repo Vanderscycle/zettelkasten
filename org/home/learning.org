@@ -298,3 +298,19 @@ pdflatex <file>.tex
     #+begin_src bash
 nix why-depends -a nixpkgs#orca-slicer nixpkgs#libsoup
     #+end_src
+** nixos
+   :PROPERTIES:
+   :END:
+*** env vars
+    For one off runs, also ensure you use the ~--impure~ options to source env vars.
+#+begin_src bash
+NIXPKGS_ALLOW_INSECURE=1 nix shell nixpkgs#orca-slicer --impure
+#+end_src
+** nix shell
+   :PROPERTIES:
+   :END:
+*** global typescript packages
+    Using pnpm to run an init
+#+begin_src bash
+nix shell nixpkgs#nodejs nixpkgs#pnpm nixpkgs#nodePackages.aws-cdk --command pnpm dlx aws-cdk@latest init app --language typescript
+#+end_src
