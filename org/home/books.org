@@ -1,5 +1,5 @@
 * Book Notes
-** Legacy cod
+** Legacy code
    :PROPERTIES:
    :Title:    Working effectively with legacy code
    :Author:   Michael C. Feathers
@@ -8,3 +8,21 @@
  #+begin_quote
 Legacy code is code without tests
  #+end_quote
+
+** Dr Dolittle
+   :PROPERTIES:
+   :Title:    Working effectively with legacy code
+   :Author:   Michael C. Feathers
+   :END:
+*** New
+杜利特
+
+有不有一个人是电脑工程师和用Emacs的编辑?
+编辑 bian1ji2: editor
+编码 bian1ma3: pinyin
+改变 gai3bian4: change
+怎么你可以写普通话用编辑的Modes？
+每一次我用fcitx5编码的拼音我必须改变对英文所以我可以用Emacs编辑的Modes。
+比如Emacs编辑有Insert／Select／等等的modes所以你不需要用鼠标
+操作系统 cao1zuo4 xi4tong3
+*** Notes

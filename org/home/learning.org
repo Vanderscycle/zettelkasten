@@ -169,3 +169,74 @@ deploy-fargate-enterprise-primary:
 *** fetching the env vars
 login into the `AWS ECR`
 pull the image
+
+** protonmail
+   :PROPERTIES:
+   :END:
+*** protonmail bridge                                                 :linux:
+    Proton's own ~protonmail~ bridge doesn't work well and so I recommend using the open source equivalent ~hydroxide~.
+    you need to auth first
+#+begin_src bash
+hydroxide auth <username>
+#+end_src
+d7rF0ARWV27VxyCxZGw3hsqxZlKp4VFFgVTwuoXFvWQ=
+Then for IMAP(experimental) or SMTP services
+
+#+begin_src bash
+hydroxide smtp
+#+end_src
+
+Credentials would look something like this:
+#+begin_center
+Hostname: localhost
+Port: 1025
+Security: none
+Username: your ProtonMail username
+Password: the bridge password (not your ProtonMail password)
+#+end_center
+
+** user management
+   :PROPERTIES:
+   :END:
+*** list all users                                                    :linux:
+#+begin_src bash
+cut -d: -f1 /etc/passwd
+#+end_src
+
+*** list all groups                                                   :linux:
+#+begin_src bash
+cat /etc/group
+#+end_src
+
+*** list all groups a user belong to                                  :linux:
+#+begin_src bash
+groups <user>
+#+end_src
+
+** systemd
+   :PROPERTIES:
+   :END:
+*** service file                                                      :linux:
+    To list all current services files on systemd you can use interactive systems like ~sysz~ or go to the file themselves.
+#+begin_src bash
+ls /etc/systemd/system/
+# since we were looking for n8n
+cat /etc/systemd/system/n8n.service
+#+end_src
+
+** nixos (FHS)
+   :PROPERTIES:
+   :END:
+*** Filesystem Hierarchy Standard                                                                :linux:
+    To list all current services files on systemd you can use interactive systems like ~sysz~ or go to the file themselves.
+#+begin_src bash
+ls /etc/systemd/system/
+# since we were looking for n8n
+cat /etc/systemd/system/n8n.service
+#+end_src
+FHS is a convention of files/folder location for linux for interoperability of software of various kind and source.
+Because nixos doesn't respect ~FHS~ we can make a fake default path to ~/etc~ in something like this:
+#+begin_src nix
+environment.etc."bin/bash".source = "${pkgs.bashInteractive}/bin/bash";
+# /etc/bin/bash will have the bash bin that would normally sit at /bin
+#+end_src
