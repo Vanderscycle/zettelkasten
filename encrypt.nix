@@ -1,29 +1,29 @@
 {
-  inputs,
   pkgs ? import <nixpkgs> { },
   ...
 }:
 pkgs.mkShell {
-  name = "local dev shell";
+  name = "local dev shell to encrypt ";
   nativeBuildInputs = with pkgs; [
     sops
   ];
 
+  # nix-shell encrypt.nix
   shellHook = ''
     ${pkgs.neofetch}/bin/neofetch
     echo -e "You are now in a dev shell in $(pwd)" | ${pkgs.lolcat}/bin/lolcat
 
     echo "Available commands:"
-    echo "  encrypt - Create local Kubernetes cluster"
-    echo "  decrypt - Generate Kubernetes secrets"
+    echo "  encrypt - encrypt files"
+    echo "  decrypt - decrypt files"
+
+    export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
     encrypt(){
-      sops -e ./org-roam/org/work/work-log.org > ./org-roam/org/work/work-log.enc.org
-      sops -e ./org-roam/org/work/todo.org > ./org-roam/org/work/todo.enc.org
+      sops encrypt ./org/work/work-log.org > ./org/work/enc/work-log.enc.org
     }
 
     decrypt(){
-      sops -d ./org-roam/org/work/work-log.enc.org > ./org-roam/org/work/work-log.org
-      sops -d ./org-roam/org/work/todo.enc.org >     ./org-roam/org/work/todo.org
+      sops decrypt ./org/work/enc/work-log.enc.org > ./org/work/work-log.org
     }
   '';
 }
