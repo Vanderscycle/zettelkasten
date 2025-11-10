@@ -1,0 +1,6 @@
+* Task list
+** TODO [#B] testing tasks for the day
+   DEADLINE: <2025-11-14 Fri>
+* Links to buffer/files
+** TODO [#C] spacemacs
+ [[file:~/.spacemacs.d/user/org.el::file+headline ,(concat org-directory "/home/tasks.org") "Links to buffer/files"]]
