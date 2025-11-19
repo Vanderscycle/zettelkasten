@@ -7,3 +7,8 @@ creation_rules:
     - age:
       - *primary
       - *secondary
+  - path_regex: org/home/.*\.org$
+    key_groups:
+    - age:
+      - *primary
+      - *secondary
