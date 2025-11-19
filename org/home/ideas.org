@@ -1,0 +1,81 @@
+
+* COMMENT Learn lua by coding a small Napoleon game
+     :PROPERTIES:
+     :CAPTURE:  [2025-11-10 Mon 22:06]
+     :END:
+
+Taking inspiration from =Cogmind= the goal is to learn lua through classes from soldier -> battalions
+* Emacs
+** Deeper WM/Emacs integration
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-11 Tue 20:40]
+   :END:
+
+*** Goal
+    Deeper integration w/ hyprland window manager, Emacs calls from the WM
+
+*** Requirements/learning goals
+- Nix
+- Elisp
+- Golang (maybe)
+
+*** References
+[[https://www.youtube.com/watch?v=n5VMWuxLi10][Emacs is my COMPUTER now... - YouTube]]
+** Emacs - file/dired understanding
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-11 Tue 21:29]
+   :END:
+
+*** Goal
+Gradually replace nnn w/ dired
+*** Requirements
+- Elisp
+*** References
+   [[https://www.youtube.com/watch?v=L_4pLN0gXGI][Emacs: file and Dired basics - YouTube]]
+* Usefull skills
+** Speed square
+  :PROPERTIES:
+  :SKILL:Construction
+  :CAPTURE: [2025-11-15 Sat 22:21]
+  :END:
+
+Speed squares has tons of usage that aren't evident until sought for.
+The diamond marking in a speed square is for a seat cut.
+[[https://www.youtube.com/watch?v=F21irDPi5LQ][Most people don't know this, how to use a speed square, the ultimate guide. -...]]
+** Drone piloting/making/maintaining
+  :PROPERTIES:
+  :SKILL:Electronics
+  :CAPTURE: [2025-11-15 Sat 22:33]
+  :END:
+
+Creating a sub 1k (everything) beginner drone would be lit.
+[[https://www.youtube.com/watch?v=SfFl_-tof4Y][How to Build Ultimate Budget FPV Drone Build 2021 // Beginner Guide - YouTube]]
+** Bike maintenance/cleaning
+  :PROPERTIES:
+  :SKILL:Biking
+  :CAPTURE: [2025-11-16 Sun 14:18]
+  :END:
+
+Definitely would help me in the long run w/ biking on a regular basis
+[[https://www.youtube.com/watch?v=D-P0fOWkCoE][The EASY WAY to TUNEUP your BICYCLE yourself AT HOME! Trek FX gets CLEANED, L...]]
+* Patterns
+** Zettelkasten - note taking
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-16 Sun 15:41]
+   :END:
+
+
+1. Capture fleeting/litterature/concept notes
+2. Review and convert, at a later date, to permananent if they meet 2 criterias
+   - Produce a similar level of excitment as when first captured?
+     - Does this note add value to other permanent notes?
+3. when rewritting a note to a permanent note, aim to improve it through connections to other notes.
+4. Permanent notes should have keywords, links, location code - title
+*** Emergent thinking
+1. Follow a bottom-up approach allow one's to follow its interest through curiousity instead of a top down where one write an outline then follows it.
+2. Follow your interest, and let your notes create the topics.
+
+REMEMBER, Writting is thinking; not copying. Use your own words; distill the meaning.
+
+[[https://www.youtube.com/watch?v=BG1tfC7tSYw][How To Take Smart Notes - YouTube]]
+[[https://www.youtube.com/watch?v=JnS3g68zCXw][HOW TO TAKE SMART NOTES by Sönke Ahrens | Core Message - YouTube]]

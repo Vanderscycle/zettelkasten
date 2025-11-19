@@ -314,3 +314,25 @@ NIXPKGS_ALLOW_INSECURE=1 nix shell nixpkgs#orca-slicer --impure
 #+begin_src bash
 nix shell nixpkgs#nodejs nixpkgs#pnpm nixpkgs#nodePackages.aws-cdk --command pnpm dlx aws-cdk@latest init app --language typescript
 #+end_src
+* Patterns
+** Zettelkasten - note taking
+  :PROPERTIES:
+  :CAPTURE: [2025-11-16 Sun 15:27]
+  :SUBJECT: Zetterlkasten
+  :END:
+
+Steps
+1. Fleeting notes (in-the-moment ideas/learning)
+   - concise and unpolished.
+   - capture thoughts in the moment (define the context of the moment too)
+   - Use org-capture/org-roam-dailies
+2. Take litterature notes (learn from reading)
+   - Keep it short and selective of the idea <3 sentences
+   - write in your own words
+   - Literature notes can be brief annotations on a particular source (e.g. book, website or paper), that you’d like to access later on.
+3. Concept notes
+   - Concept notes require much more care in authoring: they need to be self-explanatory and detailed
+4. Take permanent notes
+*** References
+[[https://www.orgroam.com/manual.html][Org-roam User Manual]]
+[[https://www.youtube.com/watch?v=BG1tfC7tSYw][How To Take Smart Notes - YouTube]]

@@ -1,6 +1,14 @@
 * Task list
-** TODO [#B] testing tasks for the day
-   DEADLINE: <2025-11-14 Fri>
+** DONE [#B] testing tasks for the day
+   CLOSED: [2025-11-11 Tue 21:13] DEADLINE: <2025-11-14 Fri>
+   - State "DONE"       from "TODO"       [2025-11-11 Tue 21:13]
+** TODO [#A] Call for car insurances
+   DEADLINE: <2025-11-12 Wed>
+** TODO [#B] Buy gift for wife's birthday + christmas
+    DEADLINE: <2025-11-21 Fri>
+*** Ideas:
+- Guitar
+- Books/stickers
 * Links to buffer/files
 ** TODO [#C] spacemacs
  [[file:~/.spacemacs.d/user/org.el::file+headline ,(concat org-directory "/home/tasks.org") "Links to buffer/files"]]

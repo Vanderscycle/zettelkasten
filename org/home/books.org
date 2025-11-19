@@ -1,52 +1,49 @@
-* Book Notes
-** Legacy code
-   :PROPERTIES:
-   :Title:    Working effectively with legacy code
-   :Author:   Michael C. Feathers
-   :END:
-*** Notes
+* Books
+** Working effectively with legacy code
+  :PROPERTIES:
+  :CAPTURE: [2025-11-11 Tue 21:19]
+  :SUBJECT: Programming
+  :PAGE: Preface xvi :END:
+
  #+begin_quote
 Legacy code is code without tests
  #+end_quote
-
 ** Dr Dolittle
-   :PROPERTIES:
-   :Title:    Working effectively with legacy code
-   :Author:   Michael C. Feathers
-   :END:
+  :PROPERTIES:
+  :CAPTURE: [2025-11-13 Thu 20:37]
+  :SUBJECT: Chinese
+  :PAGE: 4
+  :END:
 
-有不有一个人是电脑工程师和用Emacs的编辑?
-编辑 bian1ji2: editor
-编码 bian1ma3: pinyin
-改变 gai3bian4: change
-怎么你可以写普通话用编辑的Modes？
-每一次我用fcitx5编码的拼音我必须改变对英文所以我可以用Emacs编辑的Modes。
-比如Emacs编辑有Insert／Select／等等的modes所以你不需要用鼠标
-操作系统 cao1zuo4 xi4tong3
-
-*** New
-杜利特 du4li4te4: dolittle
-杜利特医生: Dr. Dolittle
-热爱 re4ai4: adore
-动物 dong4wu4: animal
-言 yan2: say
-鸟 niao3: bird
-专 zhuan1: specialize
-治病 zhi4bing4: treatment
-兽语 shou4yu3: animal/beast languague
-慕名 mu4ming2: admire's one reputation
-著名 zhuming2: famous
-名 ming2: reputation
-各地 ge4di4: various places
-地方 di4fang: place
-星球 xing1qiu2: celetial body/planet
-岂 qi3: how
-怎么 zenme: how
-童话 tong2hua4: fairytale
-鼎鼎 ding3ding3: very important
-人物 ren2wu4: person
-*** Notes
-*** Sentences
-一位圆滚滚的好好先生
-滚滚 gun3gun3: round
-先生 xian1sheng: Sir/gentleman/husband
+极其 ji2qi2 extremely
+木 mu4 tree (radical) 极
+因此 yin3ci1 thus/as a result
+止 zhi3 stop (radical)
+通常 tong1chang2 regularly/usually
+辶 chuo4 to walk
+收集 shou1ji1 to gather/collect
+手机 shou3ji1 cellphone
+鸟蛋 niao3dan4 bird egg
+钓鱼 diao4yu2 to fish
+钅jin1 metal (radical)
+采 cai3 pick
+黑莓 hei1mei2 black berry
+艹 cao2 grass (radical)
+田野 tian1ye3 field 片 (pian M.W.)
+快乐 kuaile4 happy
+帮助 bang1zhu4 help
+蚌 bang4 mussels
+虫 chong2 insect (radical)
+渔网 yu2wang fisherman's net
+虽然 sui1ran2 although
+总是 zong3shi4 always
+喝 he drink
+渴望 ke3wang4 to thrist for
+允许 yun3xu3 to permit/allow
+离开 li2kai1 to leave
+乘 cheng2 to ride/to mount
+漂亮船 pretty boat
+沿 yan2 to follow
+河 he river
+沼泽 zhao3zh2 marsh/swamp
+幸运 xing4yun4 luck/lucky

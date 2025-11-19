@@ -1,0 +1,52 @@
+* Code
+** Linux - create bootable usb
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-11 Tue 20:57]
+   :LANGUAGE: bash
+   :USE_CASE: Linux
+   :END:
+
+ #+begin_src bash
+ dd if=nixos-minimal-xx.xx.iso of=/dev/sdX bs=4M status=progress
+ #+end_src
+** Emacs - org - tables
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-16 Sun 15:08]
+   :LANGUAGE: elisp
+   :USE_CASE: orgmode
+   :END:
+
+ #+begin_comment
+| exercise          | weight (kg) | set | reps | done | total |
+|-------------------+-------------+-----+------+------+-------|
+| Kettlebell swings |          64 |   1 |   20 |   20 |  1280 |
+| Kettlebell swings |          64 |   2 |   20 |   18 |  1152 |
+| Kettlebell swings |          64 |   3 |   20 |   18 |  1152 |
+#+TBLFM: $6=$2*$5
+ #+end_comment
+run ~C-c C-c~ on the TBLFM line to update all
+** Elisp - Open file for read only
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-11 Tue 10:10]
+   :LANGUAGE: elisp
+   :USE_CASE: scripting
+   :END:
+
+ #+begin_src elisp
+   (defun my-process-file (fPath)
+"Process the file at path FPATH"
+(with-temp-buffer
+  (insert-file-contents fPath)
+  ;; do something
+  ))
+ #+end_src
+** Eisp - Write to file
+  :PROPERTIES:
+  :CAPTURE:  [2025-11-11 Tue 10:19]
+  :LANGUAGE: elisp
+  :USE_CASE: scripting
+  :END:
+
+#+begin_src elisp
+  (write-region "something something" nil "~/temp.txt")
+#+end_src
