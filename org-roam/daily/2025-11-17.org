@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       f8649bd3-2c99-40c7-b384-6bdec8d55b63
+:END:
+#+title: 2025-11-17
+#+filetags: :org-roam:
+* test
+* Org-roam tags
+You can tags your org-roam cards using =org-roam-tags=. This allows for ease of classification, for searching.
+[[https://systemcrafters.net/build-a-second-brain-in-emacs/5-org-roam-hacks/][5 Org Roam Hacks for Better Productivity in Emacs - System Crafters]]
+[[https://www.orgroam.com/manual.html#Tags-1][Org-roam User Manual]]
+* Executing code blocks
+#+begin_src elisp
+(setq my-cosh
+  (lambda (x)
+    "Return the hyperbolic cosine of X."
+    (* 0.5 (+ (exp x) (exp (- x)))))
+)
+(funcall my-cosh 3)
+#+end_src
+
+#+RESULTS:
+: 10.067661995777765
+
+To execute, run ~C-c C-v e~ or ~, m b/e~
+* Org-mode Scheduled/deadline
+[[https://www.youtube.com/watch?v=zqAYHWv36X0][Org Mode Time and Task Tools – Straightforward Emacs - YouTube]]
