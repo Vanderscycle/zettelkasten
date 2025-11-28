@@ -50,3 +50,41 @@ run ~C-c C-c~ on the TBLFM line to update all
 #+begin_src elisp
   (write-region "something something" nil "~/temp.txt")
 #+end_src
+** Golang - project init
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-24 Mon 20:54]
+   :LANGUAGE: go
+   :USE_CASE: greenfield project
+   :END:
+
+ #+begin_src bash
+ go mod init example/hello
+ #+end_src
+
+*** References
+ [[https://go.dev/doc/tutorial/getting-started][Tutorial: Get started with Go - The Go Programming Language]]
+** golang - nix flake integration
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-25 Tue 21:08]
+   :LANGUAGE: go
+   :USE_CASE: set-up
+   :END:
+
+*** Init the new project
+  #+begin_src bash
+  nix flake init -t github:nix-community/gomod2nix#app
+  nix develop .#default
+  # inside the shell
+  gomod2nix develop
+  #+end_src
+
+*** Compile the files
+  #+begin_src bash
+  nix build
+  # run the lint/test
+  nix flake check
+  # run the bins
+  ./result
+  #+end_src
+*** reference
+[[https://haseebmajid.dev/posts/2023-10-26-how-to-setup-a-go-development-shell-with-nix-flakes/][How to Setup a Go Development Shell With Nix Flakes | Haseeb Majid]]

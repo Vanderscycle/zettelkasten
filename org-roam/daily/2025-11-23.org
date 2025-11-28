@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       fe42e7e6-7110-4366-84dc-f89bc521d821
+:END:
+#+title: 2025-11-23
+* nixos/cli wifi
+Enable nixos network manager
+#+begin_src nix
+{
+networking.networkmanager.enable = true;
+}
+#+end_src
+
+In the cli, run the following
+#+begin_src bash
+nmcli device wifi connect <SSID> password <password>
+#+end_src

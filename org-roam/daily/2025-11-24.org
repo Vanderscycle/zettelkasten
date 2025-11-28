@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0bc45f63-ae0c-4209-8cb4-82b49a292a19
+:END:
+#+title: 2025-11-24
+* make it possible for latest of the doots/monolith to be pulled (https), updated (weekly), and have an alarm if it fails.

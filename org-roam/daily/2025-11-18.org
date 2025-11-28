@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       9abdce34-b055-49c7-b5cf-1361017caa5f
+:END:
+#+title: 2025-11-18
+* github - pre commit
+
+Hooks can be added to the ~git commit~ in the ~./git/hooks/~ folder. Other libraries like Python ~pre-commit~ exist and can be integrated in flakes.
+
+[[https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks][Git - Git Hooks]]
+[[https://github.com/cachix/git-hooks.nix][GitHub - cachix/git-hooks.nix: Seamless integration of https://pre-commit.com...]]
+* Latex writing
+Hard coded latex writting is time consuming, and I found myself putting the learning off for so long. Use org-mode -> latex export to speed up the process.
+~, m e e~ org-export-dispatch

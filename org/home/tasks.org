@@ -9,6 +9,10 @@
 *** Ideas:
 - Guitar
 - Books/stickers
+** TODO [#B] zettelkasten encrypt.nix run as a script
+   DEADLINE: <2025-11-21 Fri>
+** TODO [#B] Order a cake for the wife
+   DEADLINE: <2025-11-21 Fri>
 * Links to buffer/files
 ** TODO [#C] spacemacs
  [[file:~/.spacemacs.d/user/org.el::file+headline ,(concat org-directory "/home/tasks.org") "Links to buffer/files"]]

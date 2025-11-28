@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       e712c9b4-0eee-4536-8b30-fad042e2e87f
+:END:
+#+title: 2025-11-25
+* The lack of attention to detail is causing extreme issues at work/life and else
+* napoleon - company
+** Combat
+usually split in two sections of equal strenght
+** Personel
+ - 120 privates
+ - 8 corporals
+ - 1 corporal fourrier (logistic guy for the company)
+ - 2 drummers
+ - 4 sargeants
+ - 1 sargeant major
+ - 1 sub-leftenant
+ - 1 lieutenant
+ - 1 captain
+* napoleon - battalion
+number of companies in a battalion varies over time
+
+** Combat
+about 200 m wide
+flag bearer is protected by 8 fannion guardsmen
+all the company drummers group together
+**  composition
+*** Command + support staff
+   - 1x chef de battalion (major)
+   - 1x adjudant major
+   - 1x sous adjudant
+   - 1x flag bearer
+   - 4x drivers
+   - 2x wagon (ammo + rations)
+   - 4x pack horses
+   - 4x cantinieres (soldier's wifes)
+
+*** Light infantry battalion
+   - 1x voltigeurs
+   - 4x chasseurs
+   - 1x carabiniers
+
+*** Line infantry battalion
+   - 1x voltigeurs
+   - 4x fusilers
+   - 1x grenadies

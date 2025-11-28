@@ -22,5 +22,25 @@ You can tags your org-roam cards using =org-roam-tags=. This allows for ease of 
 : 10.067661995777765
 
 To execute, run ~C-c C-v e~ or ~, m b/e~
-* Org-mode Scheduled/deadline
+* [#A] Org-mode Scheduled/deadline
+  SCHEDULED: <2025-11-19 Wed> DEADLINE: <2025-11-19 Wed>
+  :LOGBOOK:
+  CLOCK: [2025-11-18 Tue 22:10]
+  :END:
+ <2025-11-18 Tue>
+~C-c C-c~ org-mode "checkbox"
+~C-c C-t~ org-mode todo
+~C-c C-d~ org-mode deadline
+~C-c C-s~ org-mode schedule
+~C-c C-x C-i/C-o/C-j~ org-clock-in/out/jump(to current clock) ~SPC a o C i/o/g~
+
+~C-c .~ org-mode timestamp
+~, T l~  (custom adds a checkbox)
+~, P~ org priority
+   ~Shift~ up/down increase/decrease priority
+~C-c l~ org-mode link ~SPC a o l~
+
 [[https://www.youtube.com/watch?v=zqAYHWv36X0][Org Mode Time and Task Tools – Straightforward Emacs - YouTube]]
+* Org-mode To investigate
+~C-c C-a~ org-mode attach
+~SPC a o /~ org-mode rifle
