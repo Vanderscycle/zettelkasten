@@ -256,3 +256,21 @@ frozen fish balls (etc.)
  #+end_quote
 *** Instructions
 [[https://www.koreanbapsang.com/gungjung-tteokbokki-and-lunar-new-year/][Gungjung Tteokbokki (Korean Royal Rice Cake) - Korean Bapsang]]
+** french tacos
+   :PROPERTIES:
+   :CAPTURE:  [2025-12-04 Thu 21:11]
+   :PLATE:    lunch
+   :END:
+
+*** Ingredients
+ #+begin_quote
+- ground meat
+- onions + garlic
+- spices
+- pickles
+- french fries
+- some veggies
+- burritos
+ #+end_quote
+*** Instructions
+[[https://www.youtube.com/watch?v=vz7gGD0ws4c][French Tacos - You Suck at Cooking (episode 157) - YouTube]]

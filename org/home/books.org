@@ -47,3 +47,27 @@ Legacy code is code without tests
 河 he river
 沼泽 zhao3zh2 marsh/swamp
 幸运 xing4yun4 luck/lucky
+** Fight Right
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-30 Sun 15:00]
+   :SUBJECT:  relationship
+   :PAGE:     27
+   :END:
+
+The 4 horsemen of the apocalype during a fight
+ #+begin_quote
+criticism
+contempt
+defensiveness
+stonewalling
+ #+end_quote
+** fight right
+   :PROPERTIES:
+   :CAPTURE:  [2025-12-02 Tue 10:10]
+   :SUBJECT:  relationship
+   :PAGE:     41
+   :END:
+
+ #+begin_quote
+There are three prossible conflict style: avoiding, validating and volatile. We are not 100% of them.
+ #+end_quote

@@ -88,3 +88,98 @@ run ~C-c C-c~ on the TBLFM line to update all
   #+end_src
 *** reference
 [[https://haseebmajid.dev/posts/2023-10-26-how-to-setup-a-go-development-shell-with-nix-flakes/][How to Setup a Go Development Shell With Nix Flakes | Haseeb Majid]]
+** golang - import cycles
+   :PROPERTIES:
+   :CAPTURE:  [2025-11-30 Sun 15:44]
+   :LANGUAGE: golang
+   :USE_CASE: structure
+   :END:
+
+Interdependent packages e.g. units/pops/nation may cause a cycle import that prevents go from compiling.
+The only solution is proper architecture of the program.
+** golang - references/pointers
+   :PROPERTIES:
+   :CAPTURE:  [2025-12-02 Tue 21:12]
+   :LANGUAGE: go
+   :USE_CASE: all
+   :END:
+
+ #+begin_src go :imports "fmt"
+ // package main
+
+ // import (
+ // 	"fmt"
+ // )
+
+ // func main() {
+
+ 	var a = 5
+ 	var p *int = &a // copy by reference
+ 	// p is assigned the value that is the
+ 	// address of where variable a is stored
+ 	var x = a // copy by value
+
+ 	fmt.Println("a = ", a)   // a =  5
+ 	fmt.Println("p = ", p)   // p =  0x10414020
+ 	fmt.Println("*p = ", *p) // *p =  5
+ 	fmt.Println("&p = ", &p) // &p =  0x1040c128
+ 	fmt.Println("x = ", x)   // x =  5
+
+ 	fmt.Println("\n Change *p = 3")
+ 	,*p = 3
+ 	fmt.Println("a = ", a)   // a =  3
+ 	fmt.Println("p = ", p)   // p =  0x10414020
+ 	fmt.Println("*p = ", *p) // *p =  3
+ 	fmt.Println("&p = ", &p) // &p =  0x1040c128
+ 	fmt.Println("x = ", x)   // x =  5
+
+ 	fmt.Println("\n Change a = 888")
+ 	a = 888
+ 	fmt.Println("a = ", a)   // a =  888
+ 	fmt.Println("p = ", p)   // p =  0x10414020
+ 	fmt.Println("*p = ", *p) // *p =  888
+ 	fmt.Println("&p = ", &p) // &p =  0x1040c128
+ 	fmt.Println("x = ", x)   // x =  5
+
+ 	fmt.Println("\n Change x = 1")
+ 	x = 1
+ 	fmt.Println("a = ", a)   // a =  888
+ 	fmt.Println("p = ", p)   // p =  0x10414020
+ 	fmt.Println("*p = ", *p) // *p =  888
+ 	fmt.Println("&p = ", &p) // &p =  0x1040c128
+ 	fmt.Println("x = ", x)   // x =  1
+
+ 	//&p = 3 // error: Cannot assign to &p because this is the address of variable a
+ //}
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+a =  5
+p =  0xc00011a008
+,*p =  5
+&p =  0xc00011c028
+x =  5
+
+ Change *p = 3
+a =  3
+p =  0xc00011a008
+,*p =  3
+&p =  0xc00011c028
+x =  5
+
+ Change a = 888
+a =  888
+p =  0xc00011a008
+,*p =  888
+&p =  0xc00011c028
+x =  5
+
+ Change x = 1
+a =  888
+p =  0xc00011a008
+,*p =  888
+&p =  0xc00011c028
+x =  1
+#+end_example
