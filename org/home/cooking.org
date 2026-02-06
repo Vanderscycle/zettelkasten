@@ -274,3 +274,18 @@ frozen fish balls (etc.)
  #+end_quote
 *** Instructions
 [[https://www.youtube.com/watch?v=vz7gGD0ws4c][French Tacos - You Suck at Cooking (episode 157) - YouTube]]
+** Friuli (cheese/potato/onion pancake)
+   :PROPERTIES:
+   :CAPTURE:  [2025-12-08 Mon 20:42]
+   :PLATE:    snak
+   :END:
+
+*** Ingredients
+ #+begin_quote
+- potato
+- cheese
+- onions
+ #+end_quote
+*** Instructions
+cook the onions, boils the potatoes, shred the cheese and potatoes, mix all. Ensure that its rather thin.
+[[https://www.youtube.com/shorts/8LwivRYUsmA][#66 of forgotten italian classics: frico friulano - YouTube]]

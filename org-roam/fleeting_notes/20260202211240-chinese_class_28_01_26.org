@@ -1,0 +1,76 @@
+#+title: chinese-class-28/01/26
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: chinese
+- Date: [2026-02-02 Mon]
+
+* Vocabulary
+| Hanzi   | Pinyin                | Meaning                  | Status |
+|---------+-----------------------+--------------------------+--------|
+| 不管    | bu4guan3              | in spiute of             | *      |
+| 帐户    | zhang4hu4             | account                  | new    |
+| 收拾    | shou1shi              | to take care of a mess   | new    |
+| 照顾    | zhao4gu4              | care for someone         | new    |
+| 保养    | bao3yang3             | to maintain/service care | new    |
+| 感觉    | gan3jue2              | I feel (emotionaly)      | *      |
+| 原来    | yuan2lai2             | original                 | **     |
+| 助教    | zhu4jiao4             | teaching assistant       | new    |
+| 谈判    | tan2pan4              | negotiate                | *      |
+| 通货膨胀 | tong1huo4 peng2zhang4 | inflation                | *      |
+| 律师    | lvshi                 | lawyer                   | new    |
+| 法律    | falv                  | law                      | *      |
+| 通膨    | tong1peng2            | inflation                | *      |
+| 按摩    | an4mo2                | massage                  | new    |
+| 福利    | fu2li4                | welfare                  | new    |
+| 总是    | zong3shi4             | always                   | *      |
+| 青少年   | qing1shao4nian2       | teenager                 | new    |
+| 痴呆症   | chi1dai1zheng4        | dementia                 | new    |
+| 癌症    | ai2zheng4             | cancer                   | new    |
+| 遗传    | yi2chuan2             | hereditary               | new    |
+| 老人院   | laorenyuan            | old folks home           | *      |
+| 影响    | ying3xiang3           | influence                | *      |
+| 冰球队   | bing1qiu2dui4         | ice hockey team          | new    |
+| 球队    | qiu2gui4              | team                     | *      |
+| 篮球队   | lan2qiu2gui4          | basketball               | *      |
+| 水球    | shui3qiu2             | waterpolo                | new    |
+| 假期    | jia4qi1               | holiday                  | *      |
+| 数学    | shu4xue2              | math                     | new    |
+| 科学    | ke1xue2               | science                  | new    |
+| 成为    | cheng2wei2            | become                   | *      |
+| 变成    | bian4cheng2           | become                   | *      |
+| 晚期    | wan3qi2               | late                     | *      |
+| 早期    | zao3qi2               | early                    | *      |
+| 森林    | sen1lin2              | forest                   | *      |
+| 基地    | ji1di4                | base                     | *      |
+| 海军基地 | hai3jun1 ji1di4       | naval base               | new    |
+| 门毯    | mentan3               | doormat                  | new    |
+| 地毯    | di4tan3               | carpet                   | new    |
+| 擦家    | ca1jia1               | wipe                     | *      |
+| 烤干    | kao3gan               | to dry                   | *      |
+| 烤肉    | kao3rou4              | bbq                      | *      |
+| 迷路    | mi2lu4                | to get lost              | new    |
+| 主人    | zhu3ren2              | owner                    | *      |
+| 炉火    | lu2huo3               | fire                     | new    |
+| 得      | dei                   | have to 必须/应该         | *      |
+|         |                       |                          |        |
+
+* Sentence Patterns
+原来的工作 original job
+留下来久的工作 the job I stayed for a long time
+工作的市场 job market
+唯一的工作 the only job
+政府的工人 gov workers
+ zhu4jiao4 te
+一回,二回 once, twice, 等等
+我的家庭旁边海军基地 my home is next to a naval base
+* Grammar & Usage Notes
+聊天聊得高兴
+游泳游得快点
+煮米饭煮的好吃
+工作工的快乐
+* Practice / TODOs
+** TODO Review new words from this lesson :drill:
+   :PROPERTIES:
+   :ID:       2b4cc9c6-1e6e-45c9-b5f9-1e5398aedb4f
+   :END:

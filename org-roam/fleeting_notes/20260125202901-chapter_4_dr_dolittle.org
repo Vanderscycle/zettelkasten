@@ -1,0 +1,58 @@
+#+title: chapter 4 dr dolittle
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: dr dolittle
+- Date: [2026-01-25 Sun]
+
+* Vocabulary
+| Hanzi | Pinyin     | Meaning                 | Status |
+|-------+------------+-------------------------+--------|
+| 当真  | dang4zhen  | seriour                 | New    |
+| 满    | man3       | full/packed             | new    |
+| 厅    | ting1      | office                  | new    |
+| 乡    | xiang1     | coutnry/villate/town    | new    |
+| 乎    | hu1        | in/at/from （particle） | *      |
+| 鸽子  | ge1zi      | dove/pigeon             | new    |
+| 白鼠  | bai1shu3   | rat/mouse               | *      |
+| 赢    | ying1      | eagle/falcon            | new    |
+| 甚    | shen2      | 什 （what）              |        |
+| 獾    | huan1      | badger          u       | new    |
+| 刚    | gang       | hard                    | *      |
+| 毯    | tan3       | carpet/rug              | new    |
+| 泥水  | ni2shui3   | muddy waters            | *      |
+| 船    | chuan2     | boat                    | *      |
+| 袜子  | wa4zi      | socks                   | *      |
+| 脚    | jiao3      | foot                    | *      |
+| 烛光  | zhu2guang1 | candle light            | new    |
+| 蜡烛  | la4zhu2    | candle                  | new    |
+| 鸭子  | ya1zi      | duck                    | *      |
+| 淋    | lin        | sprinkle/pour           | *      |
+| 粉    | fen3       | powder                  | new    |
+| 湿    | shi1       | moist/wet               | *      |
+| 背部  | bei4bu4    | back/of an object/smthg | new    |
+| 鞋匠  | xie2jiang  | shoemaker               | new    |
+| 穿    | chuan1     | wear                    | **     |
+| 靴子  | xue1zi     | boot                    | new    |
+| 衣服  | yi1gu      | clothes                 | *      |
+| 掉    | diao4      | to frop/to lose/to drop | **     |
+| 换    | huan4      | to exchange/to switch   | **     |
+| 炉    | lu2        | stove                   | new    |
+| 旁边  | pang2bian  | side/next               | **     |
+| 烤干  | kaogan     | dry?                    | new    |
+| 卧室  | wo4shi5    | bedroom                 | new    |
+| 接受  | jie1shou4  | to accept/to receive    | **     |
+| 接    | jie1       | to receive/to answer    |        |
+| 帮忙  | bang1mang2 | to lend a hand/help     | *      |
+
+* Sentence Patterns
+甚到还有猪 there were even pigs
+
+* Grammar & Usage Notes
+斯塔滨斯 sitabinsi dr dollitle name
+雅名不 ya3ming2bu name
+* Practice / TODOs
+** TODO Review new words from this lesson :drill:
+   :PROPERTIES:
+   :ID:       5e7665fb-4ed8-4ba7-8fa8-163fe39696bd
+   :END:

@@ -1,0 +1,21 @@
+#+title: chinese-class-21/01/26
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: chinese
+- Date: [2026-01-24 Sat]
+
+* Vocabulary
+| Hanzi | Pinyin | Meaning | Status |
+|-------+--------+---------+--------|
+| 维他命 |        |         | New    |
+
+* Sentence Patterns
+
+* Grammar & Usage Notes
+
+* Practice / TODOs
+** TODO Review new words from this lesson :drill:
+   :PROPERTIES:
+   :ID:       08819e3a-f0c9-4e71-9bce-4c837853558f
+   :END:

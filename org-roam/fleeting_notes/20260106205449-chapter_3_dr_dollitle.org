@@ -1,0 +1,168 @@
+#+title: chapter 3 dr dollitle
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: dr dollitle
+- Date: [2026-01-06 Tue]
+
+* Vocabulary
+** Page 11
+| Hanzi   | Pinyin             | Meaning                         | Status  |
+|---------+--------------------+---------------------------------+---------|
+| 月初    | yue4chu1           | beginning of the  month         | *       |
+| 月中    | yue4zhong          | middle of the month             | *       |
+| 月底    | yue4di3            | end of the month                | *       |
+| 补      | bu3                | repair                          | new     |
+| 修理    | xiuli3             | repair                          | tones   |
+| 鞋子    | xie2zi1            | shoes                           | *       |
+| 鞋      | xie2zi1            | leather                         | new     |
+| 送到    | songdao            | sent to/dropped off             | *       |
+| 顾客    | gu4ke4             | client/customer                 | char    |
+| 上校    | shang4xiao4        | high ranking officer            | new     |
+| 按下    | an4xia4            | press down                      | new     |
+| 铃      | ling2              | bell                            | new     |
+| 伸出    | shen1chu1          | extend                          | new     |
+| 脸      | lian3              | face                            | new     |
+| 转      | zhuan4             | turn                            | new     |
+| 机器    | ji1qi4             | machine                         | new     |
+| 买卖人   | mai3mai4ren        | (buying and selling) vendor     | new     |
+| 声      | sheng1             | voice/sound/tone                | new     |
+| 把门关上 | ba1men guan1shang4 | hey! close the door             | new     |
+| 扔垃圾   | reng1 laji/le4se4  | throw the trash                 | new-ish |
+| 较      | jiao4              | to compare                      | new     |
+| 接      | jie1               | receive                         | *       |
+| 项目    | ang4mu4            | project                         | *       |
+| 需要    | xu1yao4            | need                            | *       |
+| 其      | qi2                | his/her/it (subject preceeding) | *       |
+| 害怕    | hai4pa4            | to be afraid                    | *       |
+| 丈夫    | zhang4fu1          | husband                         | *       |
+| 仍旧    | reng2jiu4          | still (careful with 扔)         | *       |
+| 跺脚    | duo4jiao3          | to stamp one's feet             | new     |
+| 嘟哝    | du1nong            | mutter/to complaint             | new     |
+| 悄悄    | qiao1qiao1         | stealthy/quietly/secretly       | new     |
+| 牛奶    | niunai             | milk                            | *       |
+| 杯      | bei                | cup                             | *      |
+
+** Page 12
+| Hanzi   | Pinyin          | Meaning                           | Status |
+|---------+-----------------+-----------------------------------+--------|
+| 月初    | yue4chu1        | beginning of the  month           | *      |
+| 天公    | tian1gong1      | heaven                            | *      |
+| 天空    | tiankong        | sky                               | new    |
+| 云彩    | yun2cai         | cloud                             | new    |
+| 像      | xiang4          | to resemble/to look like          | *      |
+| 院      | yuan4           | courtyard/unstitution             | *      |
+| 锁      | suo3            | locked/to lock/a lock             | new    |
+| 泄气    | xie4qi4         | to be discouraged/to despair      | new    |
+| 泄      | xie4            | to leak/to drip/to drain          | new    |
+| 注      | zhu4            | to register                       | new    |
+| 照旧    | zhao4jiu4       | as before/as in the past          | new    |
+| 摆      | bai3            | to arrange/to exhibit             | new    |
+| 接      | jie1            | receive                           | *      |
+| 蹲      | dun1            | to crouch/to squat                | new    |
+| 紧紧    | jin3jin3        | urgently/tightly                  | new    |
+| 松鼠    | song1shu3       | squirrle                          | *      |
+| 死掉了   | si3diao4le      | to die                            | *      |
+| 难过    | nan2guo4        | to be sad                         | *      |
+| 转身    | zhuan3shen1     | to turn aroudn                    | *      |
+| 转      | zhuan4          | to turn                           | *      |
+| 挂表    | gua4biao3       | to look over/to watch             | new    |
+| 先生    | xian1sheng1     | husband/mister                    | *      |
+| 散步    | san4bu4         | walk                              | *      |
+| 身上    | shen1shang      | on him/on youselft                | *      |
+| 穿      | chuan4          | wear                              | *      |
+| 大衣    | da4yi1          | coat                              | new    |
+| 围着围巾 | wei2zhewei2jin1 | wear a scarf                      | new    |
+| 围      | wei2            | to encircle                       | new    |
+| 明亮    | ming2liang4     | bright/shiny                      | new    |
+| 颜色    | yan2se4         | color                             | *      |
+| 戴      | dai4            | wear (accessories e.g. hat/gloves | *      |
+| 枕头    | zhen3tou        | pillow                            | new    |
+| 嘟哝    | du1nong         | to mutter/grumble                 | new    |
+| 停下来   | ting2xialai2    | stop                              | *      |
+| 低头    | di1tou2         | bow head/to yield                 | *      |
+| 脸      | lian3           | face                              | *      |
+| 声音    | sheng1yin1      | voice                             | *      |
+| 汽水    | qi4shui3        | soda/pop                          | new    |
+| 瓶塞    | ping2sai1       | bottle cork                       | new    |
+| 背影    | bei4ying3       | rear view/view of the back        | new    |
+|         |                 |                                   |        |
+
+** Page 15
+| 挂表  | gua4biao3     | to look over/to watch          | *   |
+| 麻烦  | ma2fan        | to trouble/inconvenience smoe  | *   |
+| 拿出来 | na2chu1lai2   | take it out                    | new |
+| 突然  | tu1ran2       | suddenly/adruptly              | *   |
+| 之间  | zhi1jian1     | between/among                  |     |
+| 瓢泼  | piao2po1      | pouring rain                   | new |
+| 深夜  | shen1ye4      | late at night                  | new |
+| 夜    | ye4           | night                          | new |
+| 市场  | shi4chang3    | market                         | *   |
+| 夜市  | ye4shi4       | night market                   | *   |
+| 电闪  | dian4shan3    | lightning flashes              | new |
+| 雷鸣  | lei2ming2     | thunder rolls                  | new |
+| 流    | liu2          | 脱欧flow                       | new |
+| 风    | feng          | wind                           | *   |
+| 抬起  | tai2qi3       | to lift up                     | new |
+| 圆滚滚 | yuan2gun3gun3 | plump                          | new |
+| 远    | yuan4         | distant                        | *   |
+| 购    | gou1          | ravine/gutter                  | new |
+| 像    | xiang4        | ressemble                      | *   |
+| 撞    | zuang4        | to knocik against/to bump into | new |
+| 脸    | lian3         | face                           | new |
+| 笑容  | xiao4rong2    | smile/smiling expression       | new |
+| 皮包  | pi2bao1       | handbag/briefcase              | new |
+| 破旧  | po4jiu4       | shabby                         | new |
+| 高帽子 | gao1mao4zi    | dunce cap                      | new |
+| 低    | di            | bow                            | *   |
+| 极其  | ji2qi2        | extremely                      | *   |
+| 惊讶  | jing1ya4      | amazed/astonished              | new |
+| 反而  | fan2er3       | on the contrary                | new |
+| 过错  | guo4cuo4      | mistake/fault                  | new |
+| 湿透  | shi1tou4      | drenched/soaked                | new |
+| 镇    | zhen4         | small town/to guard/etc.       | *   |
+| 说道  | shuo1dao4     | to state/to say                | new |
+| 身体  | shen1ti3      | the body                       | *   |
+| 抓    | zhua4         | grab                           | *   |
+| 跑    | pao3          | to run/to escape               | *   |
+| 跑步  | pao3bu4       | to run                         | *   |
+| 住    | zhu1          | live                           | *   |
+| 滑稽  | hua2ji1       | comical/funny/amusing          | new |
+
+** Page 16
+| 楼上 | lou2shang4  | upstairs               | new |
+| 房间 | fang2jian1  | room                   | *   |
+| 事情 | shi4qing    | affair                 | new |
+| 熊   | xiong       | bear                   | *   |
+| 灯火 | denghuo4    | lights                 | *   |
+| 问道 | wen4dao4    | to ask                 | *   |
+| 知道 | zhidao4     | to know                | *   |
+| 麻了 | ma2le       | to feel numb           | new |
+| 脚   | jioa        | legs                   | *   |
+| 动物 | dong4wu4    | animal                 | *   |
+| 楼梯 | lou2ti1     | staircase              | new |
+| 烁烁 | shuo4shuo4  | bright                 | new |
+| 光   | guang       | light                  | new |
+| 蜡烛 | la4zhu2     | candle                 | new |
+| 单独 | dan1du2     | alone                  | new |
+| 抬头 | tai2tou2    | raise head             | new |
+| 清楚 | qing1chu1   | clear                  | *   |
+| 传来 | chuang2lai2 | a sound coming through | *   |
+| 古怪 | gu3guai4    | stange/weird           | new |
+| 古代 | gu3dai      | ancient/old            | *   |
+| 奇怪 | qi2guai4    | strange/weird          | *   |
+| 脚步 | jiao4bu     | footsteps              | new |
+| 声   | sheng3      | voice/tone/noise       | new |
+* nouns
+上校 shangjiao name
+台阶 tai2jie1 name (dr dollitle first name)
+
+* Sentence Patterns
+
+* Grammar & Usage Notes
+
+* Practice / TODOs
+** TODO Review new words from this lesson :drill:
+   :PROPERTIES:
+   :ID:       153932ea-1d0c-4acb-8d41-c6bb612c04a1
+   :END:

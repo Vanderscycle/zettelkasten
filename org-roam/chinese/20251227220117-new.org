@@ -1,0 +1,36 @@
+#+title: Last class 2025
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: class
+- Date: [2025-12-27 Sat]
+
+* Vocabulary
+| Hanzi   | Pinyin            | Meaning           | Status |
+|---------+-------------------+-------------------+--------|
+| 交通    | jiao1tong1        | traffic           | old    |
+| 塞车    | sai4che1          | traffic jam       | new    |
+| 比赛篮球 | bi3sao4 lan2qiu2  | basketball game   | old    |
+| 到处    | dao4chu4          | everywhere        | new    |
+| 绒毛玩具 | rong2mao2 wan2ju2 | plusies/plush toy | new    |
+| 大叔    | da4shu1           | uncle             | new    |
+| 凹      | ao1               | concave           | new    |
+| 凸      | tu2               | convex            | new    |
+| 幸运    | xing4yun4         | lucky             | old    |
+|         |                   |                   |        |
+
+* Sentence Patterns
+为了岳母, 为了..., for my mother in law
+
+* Grammar & Usage Notes
+
+* Practice :drill:
+   :PROPERTIES:
+   :DRILL_CARD_TYPE: twosided
+   :ID:       653f6ff9-520f-4efd-8f6e-3ad0638b4cc7
+   :END:
+
+** Characters
+学习
+** Meaning:
+To study / To learn

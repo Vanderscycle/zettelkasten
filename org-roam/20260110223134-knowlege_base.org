@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       7846d893-751a-414d-8d70-16a3fbefe151
+:END:
+#+title: Knowlege base
+#+date: [2026-01-10 Sat 22:31]
+
+Where it all start
+* Topics
+** Linux
+  [[id:9012ebf4-f165-44b5-8d33-7f0311c24fd7][systemd]]
+** Cloud providers
+[[id:a40c77ae-32fd-4991-9d57-5ffab68ad53d][Amazon Web Services]]
+
+** Maintenance
+[[id:7bd8b9cb-d82f-456b-b7cd-08e9cddb948f][Home]]

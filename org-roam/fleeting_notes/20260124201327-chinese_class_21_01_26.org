@@ -1,0 +1,50 @@
+#+title: chinese-class-21/01/26
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: chinese
+- Date: [2026-01-24 Sat]
+
+* Vocabulary
+| Hanzi     | Pinyin          | Meaning               | Status |
+|-----------+-----------------+-----------------------+--------|
+| 维他命     | wei2ta1ming4    | vitamins              | New    |
+| 你的想法   | xiang3fa3       | the way you think     | new    |
+| 你的做法   | zuo4fa3         | the way you do things | new    |
+| 西方人     | xifangren       | weesterners           | new    |
+| 东方人     | dongfan4gren    | asian                 | new    |
+| 想念      | xiangnian       | to miss               | *      |
+| 变成      | biancheng       | to become             | *      |
+| 靠近      | kaojin          | near                  | *      |
+| 最近      | zuijin          | recently              | *      |
+| 大学的学费 | daxue de xuefei | college tuition       | *      |
+| 洗衣服     | xi3 yifu2       | wash clothes          | new    |
+| 寄宿家庭   | ji4su4 jiating2 | boarding home         | new    |
+| 合约      | he2yue1         | contract/agreement    | new    |
+| 相信      | xiang1xing4     | belive                | **     |
+| 品质      | pinzhi2         | quality               | *      |
+| 功能      | gongneng        | ability               | *      |
+| 自己驾驶   | ziji3 jiazhu3   | self-driving(formal)  | new    |
+| 驾驶      | jia4shi3        | drive (formal)        | *      |
+| 开车      | kaiche          | drive(formal)         | *      |
+| 兜风      | dou1feng1       | drive                 | new    |
+| 杂货店     | za2OU4dian4     | grocery store         | *      |
+| 责任      | ze2ren4         | responsibility        | *      |
+| 负责      | fu4ze           | in charge             | *      |
+| 按钮      | an4niu3         | button                | new    |
+|           |                 |                       |        |
+
+* Sentence Patterns
+什么都不会做 can't do anything
+打扫一层楼 clean a floor
+我们兜风去砸后殿
+是谁的责任
+是谁的负责
+不但。。。而且。。。
+* Grammar & Usage Notes
+
+* Practice / TODOs
+** TODO Review new words from this lesson :drill:
+   :PROPERTIES:
+   :ID:       7628a2dd-effb-4310-a53d-3279f9efbdf6
+   :END:

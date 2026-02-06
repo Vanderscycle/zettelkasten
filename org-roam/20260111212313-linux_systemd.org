@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       9012ebf4-f165-44b5-8d33-7f0311c24fd7
+:END:
+#+title: Linux - systemd
+#+date: [2026-01-11 Sun 21:23]
+
+* SystemD
+Considered the antichrist by some, but a benefit to all. It runs as ~PID 1~ allows for management of all process (background/foreground) for the linux kernel.
+
+** Systemctl
+The cli for it
+#+begin_src bash
+# can also stop/start/restart/etc/
+systemctl -u status emacs
+# list the logs
+journalctl -u home-manager-henri.service
+#+end_src
+** References
+[[https://wiki.archlinux.org/title/Systemd][systemd - ArchWiki]]

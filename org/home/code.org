@@ -183,3 +183,62 @@ p =  0xc00011a008
 &p =  0xc00011c028
 x =  1
 #+end_example
+** nixpkgs
+   :PROPERTIES:
+   :CAPTURE:  [2025-12-08 Mon 20:15]
+   :LANGUAGE: nix
+   :USE_CASE: daily
+   :END:
+
+
+[[https://ryantm.github.io/nixpkgs/languages-frameworks/go/#sec-language-go][Go | nixpkgs]]
+** nix stores
+   :PROPERTIES:
+   :CAPTURE:  [2025-12-29 Mon 08:38]
+   :LANGUAGE: nix
+   :USE_CASE: can't update
+   :END:
+
+ #+begin_src bash
+ # list
+ sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+ # switch and then delete old gen
+ sudo nix-env --set-generations 454 -p /nix/var/nix/profiles/system
+ sudo nix-env --delete-generations 456 --profile /nix/var/nix/profiles/system
+ # fix grub
+ sudo /run/current-system/bin/switch-to-configuration boot
+ #+end_src
+** helm-mini buffers
+   :PROPERTIES:
+   :CAPTURE:  [2026-01-02 Fri 20:05]
+   :LANGUAGE: lisp
+   :USE_CASE: selection
+   :END:
+
+| Keybinding | Action                                     |
+|------------+--------------------------------------------|
+| ~C-SPC~    | Mark current candidate                     |
+| ~M-a~      | Mark all visible candidates                |
+| ~M-D~      | Immediate kill on all marked candidates    |
+| ~TAB~      | Open action menu (to select Kill manually) |
+| ~C-c C-k~  | Alternative kill command in some layouts   |
+** emacs
+   :PROPERTIES:
+   :CAPTURE:  [2026-01-05 Mon 19:40]
+   :LANGUAGE: elisp
+   :USE_CASE: magit
+   :END:
+
+~space g f m~ magit-file-dispatch to browse a file version in time
+** copy files
+   :PROPERTIES:
+   :CAPTURE:  [2026-01-13 Tue 20:25]
+   :LANGUAGE: bash
+   :USE_CASE: ssh
+   :END:
+
+To copy files from a remote server -> locally without leaving your machine
+ #+begin_src bash
+
+ scp -r monolith@monolith:~/saves-move ~/Documents/monolith/saves/
+ #+end_src

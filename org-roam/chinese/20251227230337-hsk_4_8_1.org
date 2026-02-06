@@ -1,0 +1,26 @@
+#+title: hsk 4 - 8.1
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: hsk 4
+- Date: [2025-12-27 Sat]
+
+* Vocabulary
+| Hanzi | Pinyin | Meaning | Status |
+|-------+--------+---------+--------|
+| %?    |        |         | New    |
+
+* Sentence Patterns
+
+* Grammar & Usage Notes
+
+* Practice :drill:
+   :PROPERTIES:
+   :DRILL_CARD_TYPE: twosided
+   :ID:       653f6ff9-520f-4efd-8f6e-3ad0638b4cc7
+   :END:
+
+** Characters
+幸运
+** Meaning:
+lucky

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       2f450449-c16b-4670-98f4-ab13d11b66af
+:END:
+#+title: Maintenance - Home - Water tank
+#+date: [2026-01-11 Sun 14:49]
+
+* How water tank maintenance
+** Procedure
+- prepare the area
+- Shut the cold water inlet valve
+- With a drain tray to collect drips, connect a hose to the bottom of the water tank that leads outside
+- Open the valve, drain the tank, open a hot water tap to allow for air to escape
+- Once drained, close the valve, reopen the cold water inlet, and clean the area
+
+** Timeframe
+Done yearly, and more often if the water is hard
+
+** Completed maintenance
+<2026-01-11 Sun>

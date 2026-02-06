@@ -2,17 +2,26 @@
 ** DONE [#B] testing tasks for the day
    CLOSED: [2025-11-11 Tue 21:13] DEADLINE: <2025-11-14 Fri>
    - State "DONE"       from "TODO"       [2025-11-11 Tue 21:13]
-** TODO [#A] Call for car insurances
-   DEADLINE: <2025-11-12 Wed>
-** TODO [#B] Buy gift for wife's birthday + christmas
-    DEADLINE: <2025-11-21 Fri>
+** DONE [#A] Call for car insurances
+   CLOSED: [2025-12-27 Sat 15:21] DEADLINE: <2025-11-12 Wed>
+** DONE [#B] Buy gift for wife's birthday + christmas
+    CLOSED: [2025-12-27 Sat 15:21] DEADLINE: <2025-11-21 Fri>
+    - State "DONE"       from "TODO"       [2025-12-27 Sat 15:21]
 *** Ideas:
 - Guitar
 - Books/stickers
-** TODO [#B] zettelkasten encrypt.nix run as a script
-   DEADLINE: <2025-11-21 Fri>
-** TODO [#B] Order a cake for the wife
-   DEADLINE: <2025-11-21 Fri>
+** DONE [#B] zettelkasten encrypt.nix run as a script
+   CLOSED: [2025-12-27 Sat 15:21] DEADLINE: <2025-11-21 Fri>
+** DONE [#B] Order a cake for the wife
+   CLOSED: [2025-12-27 Sat 15:21] DEADLINE: <2025-11-21 Fri>
+   - State "DONE"       from "TODO"       [2025-12-27 Sat 15:21]
+** TODO [#B] replace the cpu in the wife's computer
+   DEADLINE: <2026-01-17 Sat>
+   Ensure that you have backed up all the data in the homelab + update
+** TODO [#B] craete a small website where I can see my org-roam notes and access them
+   DEADLINE: <2026-01-31 Sat>
 * Links to buffer/files
 ** TODO [#C] spacemacs
  [[file:~/.spacemacs.d/user/org.el::file+headline ,(concat org-directory "/home/tasks.org") "Links to buffer/files"]]
+
+ 你哈市大家简单介绍的就

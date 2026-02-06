@@ -1,0 +1,9 @@
+#+title: 2026-01-04
+* nyxt
+  ~C-space~ command palette
+~C-j~ select interface
+~C-l~ set url
+  Vi-mode hjkl navigation
+
+[[https://nyxt.atlas.engineer/documentation#keybindings-and-commands][Nyxt browser: Documentation]]
+[[https://wiki.archlinux.org/title/Nyxt][Nyxt - ArchWiki]]

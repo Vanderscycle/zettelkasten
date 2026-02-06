@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a40c77ae-32fd-4991-9d57-5ffab68ad53d
+:END:
+#+title: Cloud - Amazon Web Services
+#+date: [2026-01-10 Sat 22:34]
+
+* Amazon Web Services
+** S3
+*** Storage Class
+[[https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-compare][Storage sumary]]

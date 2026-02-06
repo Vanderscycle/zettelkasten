@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       70085987-f2a8-4cb3-9a62-4b41feab643c
+:END:
+#+title: 2025-12-07
+* dired bookmarks (like nnn)
+~c-x r m~ add bookmark
+~c-x r b~ go to bookmark

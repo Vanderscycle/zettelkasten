@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       4ca6e29b-6bd3-4bc0-bc22-3743430e5fe5
+:END:
+#+title: Structure and interpertation of computer programs
+* Source
+
+Author: Harold Abelson
+Title: Structure and interpertation of computer programs
+Year: 1996
+
+* Snippet
+** Page 4
+Each programming languages must be able to express simple ideas into complex ones. It is done through the following
+*** Primitive expressions: the simplest *** Means of combinations: how simple data can be compounded into more complex
+*** Means of abstractions: how compound elements can be named and used
+There are two kinds of elements in programming:
+*** data: the stuff we want to manipulate (strings,numbers,etc)
+*** procedures: the rules for manipulating the data (functions)
+
+ #+begin_src elisp
+ ;;primitive data
+  486
+ ;;primitive procedure
+ ;; * +
+ ;;compound expression
+( + 1 2)
+ #+end_src
+
+ #+RESULTS:
+ : 23
+* Basic Symbolic Expressions (sexps)
+  uses prefix notation, which is confusing as it changes from the basic mathematical convention
+#+begin_src elisp
+
+;; addition
+( + 3 2)
+;; substraction
+( - 3 2)
+;; multiplication
+( * 3 2)
+;; divison
+( / 20 2 10)
+#+end_src
+
+You can combine into multiple ~subexpressions~, no real limit other than readability
+#+begin_src elisp
+(+ (* 3 5) (- 10 6))
+#+end_src
+
+#+RESULTS:
+: 19
+
+* Naming
+Lisp uses define but ~elisp~ uses ~setq~. This is the simplest way of abstracting.
+#+begin_src elisp
+(setq size 2)
+(* size 7)
+#+end_src
+
+#+RESULTS:
+: 14

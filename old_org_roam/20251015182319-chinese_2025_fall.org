@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       d02acfe1-71b7-4e07-bae5-dea4b2dba8bc
-:END:
-#+title: Chinese 2025 fall
-#+date: [2025-10-15 Wed 18:23]

@@ -1,0 +1,54 @@
+#+title: chinese-class-14/01/26
+#+filetags: :chinese:lesson:
+
+* Metadata
+- Source: chinese
+- Date: [2026-01-15 Thu]
+
+* Vocabulary
+| Hanzi       | Pinyin                     | Meaning               | Status |
+|-------------+----------------------------+-----------------------+--------|
+| 健康食物     | jian4kang1 shi2wu4         | healthy food          | *      |
+| 举重        | ju3zhong4                  | lift weight           | new    |
+| 举重量70公斤 | ju3zhong4liang4 70 gongjin | lift 70 kg            | new    |
+| 摄氏度       | she4shi4du4                | celcius               | *      |
+| 华氏度       | hua2shi4du4                | farenheit             | *      |
+| 清楚        | qingchu3                   | clear                 | *      |
+| 困苦        | kun4ku3                    | hardship              | new    |
+| 兴趣        | xing4qu4                   | interest              | *      |
+| 比利时       | bi34shi2                   | belgium               | *      |
+| 泰国        | taiguo1                    | thailand              | *      |
+| 台湾        | taiwan                     | taiwan                | *      |
+| 希腊        | xila4                      | Greece                | *      |
+| 护照        | xhu4zhao4                  | passport              | new    |
+| 健身房       | jian4shen1fang2            | gym                   | *      |
+| 新年行希望   | xin1nian2 xing2 xiwang4    | new year's resolution | *      |
+| 发现        | faxian                     | discover              | *      |
+| 马上开始     | ma3shang4 kai1shi3         | right away/start      | new    |
+| 习惯        | xiguan                     | habbit                | *      |
+| 作者        | zuo4zhe3                   | author                | new    |
+| 结果        | jie2guo3                   | outcome/result        | new    |
+| 站起来       | zhna4qi3lai2               | stand up              | *      |
+| 抓住        | zhua1zhu4                  | hold                  | *      |
+| 水煮        | shui3zhu3                  | boil                  | *      |
+| 牙齿        | yachi                      | teeth                 | *      |
+| 尤其        | youqi                      | especially            | *      |
+| 熊          | xiong                      | bear                  | *      |
+| 芒果        | mang2guo3                  | mango                 | new    |
+| 国内        | guo2nei4                   | domestic              | new    |
+| 国外        | guo2wait                   | foreign               | *      |
+| 纪念品       | ji4nian4pin3               | souvenir              | *      |
+
+* Sentence Patterns
+他抓住一个东西的时候他自己站起来 stood by himself when he grabbed smthg
+当我越叫他的名字的时候他越拍越快
+人口 population
+几口 how many people in the family
+家人 family
+* Grammar & Usage Notes
+
+* Practice / TODOs
+** TODO Review new words from this lesson :drill:
+   :PROPERTIES:
+   :ID:       e2e3d4be-d461-47b6-89dd-b47580bc9fb7
+   :END:

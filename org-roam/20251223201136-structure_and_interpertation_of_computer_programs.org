@@ -1,0 +1,109 @@
+:PROPERTIES:
+:ID:       3c30a7e6-9fbb-44d6-987f-3085666a7e92
+:END:
+#+title: Structure and interpertation of computer programs
+* Source
+
+Author: Harold
+Title: Structure and interpertation of computer programs
+Year: 1990
+
+* Scheme
+The book uses MIT scheme
+[[https://eecs390.github.io/notes/functional.html][Introduction to Scheme — Programming Language Principles and Paradigms 0.4 do...]]
+
+** Def symbols
+[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Definitions.html][Definitions (GNU Emacs Lisp Reference Manual)]]
+*** Functions vs macros
+lisp functions ~defun~ are evaluated and then applied while macros ~defmacro~ pass the code prior applying
+#+begin_example
+(defun add-plus-one (x)
+  (+ x 1))
+
+;; Calling: (add-plus-one (+ 2 2))
+;; 1. (+ 2 2) is evaluated to 4.
+;; 2. (add-plus-one 4) is executed.
+;; 3. Result: 5
+---
+(defmacro set-to-zero (variable)
+  (list 'setq variable 0))
+
+;; Calling: (set-to-zero my-var)
+;; 1. The macro receives the symbol 'my-var' (not its value).
+;; 2. The macro returns the list: (setq my-var 0).
+;; 3. Emacs then executes that returned list.
+#+end_example
+
+#+begin_src elisp
+(defmacro love ()
+print "I love lisp"))
+(love)
+#+end_src
+
+#+RESULTS:
+: love
+*** defvar vs defconst
+When the scoping needs to be global
+#+begin_src elisp
+(let ((bob 12)) (print bob))
+(defvar *global* "bro") ;; elisp doesn't have defparameter
+(defvar *global2*) ;; doesn't have to take a parameter
+(print *global*)
+;; (print bob) because bob
+#+end_src
+
+#+RESULTS:
+: bro
+
+* Snippet
+** Page 12
+*** Compound procedure
+In emacs to define a function you use ~defun~
+~(* x x)~ is the body of the compound procedure
+~(x)~ after the square name are the ~formal parameters~
+#+begin_src elisp
+;; Mit Scheme (lisp dialect)
+;; (degine (square x)(* x x))
+(defun square (x)(* x x))
+(square 2)
+(square (* 2 4))
+#+end_src
+
+#+RESULTS:
+: 64
+
+** Page 16
+*** Normal order evaluation
+    Is for the interpreter to reduce everything to its primitive and then evaluate. There's duplicate work done this way.
+#+begin_comment
+(square (* 2 4))
+(* (* 2 4)(* 2 4))
+#+end_comment
+*** applicative order evalution
+    eval and then apply. the lisp way
+#+begin_comment
+(square (* 2 4))
+(square 8)
+(* 8 8)
+#+end_comment
+** Page 17
+*** Conditionals
+#+begin_src elisp
+(defun m-abs (x)
+(cond ((> x 0 )x ) ;; each cond statements are clauses
+      ((= x 0 )0 )
+      ((< x 0 ) (- x) )));; funny quick to reverse the x you must allow for the space (- x).
+(m-abs -2)
+#+end_src
+
+Another way without the if statement
+#+begin_src elisp
+(defun m-abs2 (x)
+(if (< x 0)
+ (- x)
+ x))
+(m-abs2 -2)
+#+end_src
+
+#+RESULTS:
+: 2

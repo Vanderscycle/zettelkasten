@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       33528ff5-89f2-4ef7-89cf-c31ff91bb250
+:END:
+#+title: chapter 3 dr dollitle
+* Source
+
+Author: idk
+Title: chapter 3 dr dollitle
+Year: idk
+
+* Summary
+
+TODO: add lit notes for chinese books + french books

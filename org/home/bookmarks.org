@@ -1,0 +1,22 @@
+* Bookmarks
+** SystemCrafter
+   :PROPERTIES:
+   :END:
+
+[[https://systemcrafters.net/guides/][Guides - System Crafters]]
+** nixos-flakes
+   :PROPERTIES:
+   :END:
+
+[[https://nixos-and-flakes.thiscute.world/][NixOS & Flakes Book | Home Page]]
+** emacs-docs
+   :PROPERTIES:
+   :END:
+
+[[https://emacsdocs.org/][Hello from Emacs Docs | Emacs Docs]]
+** nyxt
+   :PROPERTIES:
+   :END:
+
+future browser?
+[[https://nyxt.atlas.engineer/documentation][Nyxt browser: Documentation]]

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7bd8b9cb-d82f-456b-b7cd-08e9cddb948f
+:END:
+#+title: Maintenance - Home
+#+date: [2026-01-11 Sun 14:45]
+
+* Maintenance - Home
+** Hot water tank
+Should be done yearly following this procedure [[id:2f450449-c16b-4670-98f4-ab13d11b66af][Maintenance - Home - Water tank]].
