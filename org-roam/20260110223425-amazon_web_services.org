@@ -8,3 +8,45 @@
 ** S3
 *** Storage Class
 [[https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-compare][Storage sumary]]
+** VPC
+*** EBS Elastic Block Store
+Object storage
+** Compute
+*** Lambda
+*** EC2
+*** ECS Elastic Container Service
+*** EKS Elastic Kubernetes Service
+** Storage
+*** S3 Simple Storage Service
+*** EFS Elastic File System
+*** FSx
+*** RDS
+*** DocumentDB
+*** DynamoDB
+*** Neptune
+** AI
+*** Rekognition
+*** Sagemaker
+*** Quicksight
+*** Rekognition
+*** Lex
+*** Polly
+*** Comprehend
+*** Textract
+*** Transcribe
+*** Translate
+** Migration/transfer
+*** Migration hub
+*** Elastic disaster Recovery
+** Misc/UNK
+*** Opensearch
+*** IAM
+*** CloudFormation
+*** SNS
+*** SQS
+*** STS
+*** MQ
+*** EventBridge
+*** Step Functions
+*** Athena
+*** Glue
